@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func buttonPressed(_ sender: Any) {
-        mainLabel.text = "This app rocks!"
+        mainLabel.text = "This app doesn't rock!"
     }
 
 
