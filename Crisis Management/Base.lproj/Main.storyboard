@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SyE-Wi-zmt">
+    <device id="ipad10_5" orientation="landscape" layout="fullscreen" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -8,38 +8,139 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Crisis_Management" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                <viewController title="Home" id="BYZ-38-t0r" customClass="ViewController" customModule="Crisis_Management" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleAspectFit" id="hsK-CG-Zmu">
+                        <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5gM-Vu-UvH">
-                                <rect key="frame" x="157" y="425" width="99" height="46"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="H8b-vs-7w0">
+                                <rect key="frame" x="-146" y="-284" width="1425" height="1343"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="CISDLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Y9s-FH-Fr7">
+                                <rect key="frame" x="452" y="750" width="208" height="54"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ziv-na-f62">
+                                <rect key="frame" x="334" y="630" width="444" height="112"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Press"/>
+                                <buttonConfiguration key="configuration" style="plain" image="Emergency Call 911"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="I'm learning how to make really awsome apps!" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pNv-gm-EGC">
-                                <rect key="frame" x="32" y="353" width="348" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xbb-66-ANA">
+                                <rect key="frame" x="1000" y="20" width="92" height="82"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="Gear"/>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="0C6-Xb-QD2">
+                                <rect key="frame" x="358" y="229" width="396" height="376"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zUL-4E-qhV">
+                                        <rect key="frame" x="0.0" y="0.0" width="396" height="188"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="geS-HH-4Jd">
+                                                <rect key="frame" x="0.0" y="0.0" width="198" height="188"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="Report an Issue" imagePadding="0.0"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="60X-0j-CJu">
+                                                <rect key="frame" x="198" y="0.0" width="198" height="188"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="Student Search" imagePadding="0.0"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AS8-bC-ptX">
+                                        <rect key="frame" x="0.0" y="188" width="396" height="188"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cFs-a0-WHq">
+                                                <rect key="frame" x="0.0" y="0.0" width="198" height="188"/>
+                                                <state key="normal" title="Button" backgroundImage="bg"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="Call an Admin" imagePadding="0.0"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w1s-K8-5hX">
+                                                <rect key="frame" x="198" y="0.0" width="198" height="188"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="Resources" imagePadding="0.0"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="CHS Crisis Management" translatesAutoresizingMaskIntoConstraints="NO" id="B7z-Zp-HT1">
+                                <rect key="frame" x="256" y="120" width="600" height="59"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="B7z-Zp-HT1" secondAttribute="height" multiplier="600:59" id="R9M-IF-Hyg"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do Not Email/Text that a student is in crisis. Respond immediately with verbal contact." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UgE-YR-kxS">
+                                <rect key="frame" x="231" y="606.5" width="650" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20.5" id="yqF-Ec-YfF"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="Wjt-fm-OYy"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Y9s-FH-Fr7" firstAttribute="centerX" secondItem="hsK-CG-Zmu" secondAttribute="centerX" id="1UY-dH-u7Y"/>
+                            <constraint firstItem="ziv-na-f62" firstAttribute="top" secondItem="UgE-YR-kxS" secondAttribute="bottom" constant="3" id="8sO-hY-ifY"/>
+                            <constraint firstItem="B7z-Zp-HT1" firstAttribute="top" secondItem="Wjt-fm-OYy" secondAttribute="top" constant="50" id="C5m-34-PAl"/>
+                            <constraint firstItem="0C6-Xb-QD2" firstAttribute="centerX" secondItem="hsK-CG-Zmu" secondAttribute="centerX" id="FnC-xA-d78"/>
+                            <constraint firstItem="H8b-vs-7w0" firstAttribute="top" secondItem="hsK-CG-Zmu" secondAttribute="top" constant="-284" id="H4c-lT-Bh7"/>
+                            <constraint firstItem="ziv-na-f62" firstAttribute="centerX" secondItem="hsK-CG-Zmu" secondAttribute="centerX" id="Ko4-6m-ACN"/>
+                            <constraint firstAttribute="trailing" secondItem="H8b-vs-7w0" secondAttribute="trailing" constant="-167" id="N57-1w-W5y"/>
+                            <constraint firstItem="Wjt-fm-OYy" firstAttribute="bottom" secondItem="Y9s-FH-Fr7" secondAttribute="bottom" constant="30" id="OdW-Mf-BeE"/>
+                            <constraint firstItem="Wjt-fm-OYy" firstAttribute="trailing" secondItem="Xbb-66-ANA" secondAttribute="trailing" constant="20" id="VfN-AJ-kvA"/>
+                            <constraint firstAttribute="bottom" secondItem="H8b-vs-7w0" secondAttribute="bottom" constant="-225" id="cJ7-F8-oil"/>
+                            <constraint firstItem="Xbb-66-ANA" firstAttribute="top" secondItem="Wjt-fm-OYy" secondAttribute="top" constant="-50" id="hBk-lb-n9k"/>
+                            <constraint firstItem="Y9s-FH-Fr7" firstAttribute="top" secondItem="ziv-na-f62" secondAttribute="bottom" constant="8" symbolic="YES" id="hxd-eu-5R9"/>
+                            <constraint firstItem="0C6-Xb-QD2" firstAttribute="centerY" secondItem="hsK-CG-Zmu" secondAttribute="centerY" id="mAy-ZD-ELn"/>
+                            <constraint firstItem="UgE-YR-kxS" firstAttribute="centerX" secondItem="hsK-CG-Zmu" secondAttribute="centerX" id="ou8-Ud-1Et"/>
+                            <constraint firstItem="B7z-Zp-HT1" firstAttribute="centerX" secondItem="hsK-CG-Zmu" secondAttribute="centerX" id="pR6-Tv-ohn"/>
+                            <constraint firstItem="UgE-YR-kxS" firstAttribute="leading" secondItem="Wjt-fm-OYy" secondAttribute="leading" constant="231" id="qly-rg-kLC"/>
+                            <constraint firstItem="H8b-vs-7w0" firstAttribute="leading" secondItem="hsK-CG-Zmu" secondAttribute="leading" constant="-146" id="rx9-NW-6Ke"/>
+                            <constraint firstItem="B7z-Zp-HT1" firstAttribute="centerX" secondItem="hsK-CG-Zmu" secondAttribute="centerX" id="uUm-se-aTK"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="gZZ-1e-p5k"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20" y="94"/>
+            <point key="canvasLocation" x="480" y="94"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="FmY-e7-B8D">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SyE-Wi-zmt" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2DT-4E-Fyp">
+                        <rect key="frame" x="0.0" y="20" width="1112" height="50"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ge4-QE-Obb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uaL-tG-BZn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-247" y="94"/>
         </scene>
     </scenes>
     <resources>
+        <image name="CHS Crisis Management" width="600" height="59"/>
+        <image name="CISDLogo" width="208" height="54"/>
+        <image name="Call an Admin" width="174" height="174"/>
+        <image name="Emergency Call 911" width="420" height="98"/>
+        <image name="Gear" width="68" height="68"/>
+        <image name="Report an Issue" width="174" height="174"/>
+        <image name="Resources" width="174" height="174"/>
+        <image name="Student Search" width="174" height="174"/>
+        <image name="bg" width="3420" height="2224"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
