@@ -46,6 +46,9 @@
                                                 <rect key="frame" x="198" y="0.0" width="198" height="188"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="Student Search" imagePadding="0.0"/>
+                                                <connections>
+                                                    <segue destination="9v5-0m-o52" kind="show" id="cba-ar-e9a"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -127,6 +130,31 @@
             </objects>
             <point key="canvasLocation" x="480" y="94"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="zsZ-Sd-NN1">
+            <objects>
+                <viewController id="9v5-0m-o52" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JmJ-JH-RLp">
+                        <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Student Search" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="my8-gV-DGN">
+                                <rect key="frame" x="386" y="59" width="341" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="42"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="oDt-xB-g2j"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="RzM-NT-Lyp"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2h0-as-4Dh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="480" y="863"/>
+        </scene>
         <!--Recources-->
         <scene sceneID="uvg-uB-H5E">
             <objects>
@@ -163,7 +191,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VeD-Pc-33E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1976" y="863"/>
+            <point key="canvasLocation" x="3927" y="863"/>
         </scene>
         <!--Settings-->
         <scene sceneID="96X-9v-V2Z">
@@ -292,7 +320,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qX9-H0-6SQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1228" y="863"/>
+            <point key="canvasLocation" x="1228" y="94"/>
         </scene>
         <!--Admin Call Location-->
         <scene sceneID="xQQ-Sj-sAq">
@@ -398,7 +426,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oQd-uT-4qa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-247" y="863"/>
+            <point key="canvasLocation" x="2150" y="863"/>
         </scene>
         <!--OutContact-->
         <scene sceneID="WdC-Rc-LwG">
@@ -494,7 +522,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3rO-Ua-OKq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-247" y="1596"/>
+            <point key="canvasLocation" x="3138" y="1701"/>
         </scene>
         <!--Emergancy Contacts-->
         <scene sceneID="wbH-os-pD9">
@@ -688,7 +716,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kcl-8x-IFa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-247" y="2306"/>
+            <point key="canvasLocation" x="3138" y="2494"/>
         </scene>
         <!--Principal Contact-->
         <scene sceneID="Th0-yh-GEN">
@@ -846,7 +874,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g1V-wu-z9l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1653" y="2306"/>
+            <point key="canvasLocation" x="1434" y="2494"/>
         </scene>
         <!--Counselor Contact-->
         <scene sceneID="Nr3-P8-hg1">
@@ -996,7 +1024,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dAW-0y-R6m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-969" y="2306"/>
+            <point key="canvasLocation" x="2251" y="2494"/>
         </scene>
         <!--InContact-->
         <scene sceneID="nul-Sj-44g">
@@ -1108,7 +1136,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EGa-gd-3uF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-969" y="1596"/>
+            <point key="canvasLocation" x="1832" y="1701"/>
         </scene>
         <!--Student Help Location-->
         <scene sceneID="TtS-pS-jRD">
@@ -1206,7 +1234,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eRq-1X-bYi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="479.67625899280574" y="862.58992805755406"/>
+            <point key="canvasLocation" x="-1358" y="863"/>
         </scene>
         <!--Checklist-->
         <scene sceneID="xy1-zT-aJk">
@@ -1564,7 +1592,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Hy-ic-JP4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="480" y="1586"/>
+            <point key="canvasLocation" x="-1358" y="1590"/>
         </scene>
         <!--HelpProtocols-->
         <scene sceneID="LU9-wD-xjf">
@@ -1794,7 +1822,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aVQ-Cf-ZZ1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="479.67625899280574" y="2306.4748201438852"/>
+            <point key="canvasLocation" x="-1358" y="2401"/>
         </scene>
         <!--ReportIssue-->
         <scene sceneID="8ca-02-e9U">
@@ -1988,7 +2016,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eEF-s0-aTz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="480" y="3032"/>
+            <point key="canvasLocation" x="-367" y="863"/>
         </scene>
         <!--Privacy Policy-->
         <scene sceneID="SRk-Td-a3d">
@@ -5488,7 +5516,7 @@ Cg
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lrx-rg-qdl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1228" y="1596"/>
+            <point key="canvasLocation" x="1976" y="94"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="FmY-e7-B8D">
@@ -5506,7 +5534,7 @@ Cg
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uaL-tG-BZn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-247" y="94"/>
+            <point key="canvasLocation" x="480" y="-642"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
