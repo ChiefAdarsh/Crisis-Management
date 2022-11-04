@@ -39,7 +39,7 @@ class Resource{
 
 func createResources() -> [Resource] {
     var myArray: [Resource] = []
-    var res = Resource(category: "Crisis Lines", name: "Child Protective Services", contact: "1-800-252-5400", address: "", city: "", state: "", zip: "", website: "", addInfo: "Texas law says anyone who thinks a child, or person 65 years or older, or an adult with disabilities is being abused, neglected, or exploited must report it to DFPS. A person who reports abuse in good faith is immune from civil or criminal liability")
+    var res = Resource(category: "Crisis Lines", name: "Child Protective Services", contact: "1-800-252-5400", address: "", city: "", state: "", zip: "", website: "", addInfo: "Texas law says anyone who thinks a child or person 65 years or older, or an adult with disabilities is being abused, neglected, or exploited must report it to DFPS. A person who reports abuse in good faith is immune from civil or criminal liability")
     myArray.append(res)
     res = Resource(category: "Crisis Lines", name: "National Suicide Prevention Lifeline", contact: "Call or text 988 or 1-800-273-8255", address: "", city: "", state: "", zip: "", website: "https://suicidepreventionlifeline.org/", addInfo: "24/7 free, confidential support for anyone in distress; Prevention and crisis resources for you or loved ones")
     myArray.append(res)
