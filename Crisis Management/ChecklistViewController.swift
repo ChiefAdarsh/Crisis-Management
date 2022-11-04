@@ -19,6 +19,11 @@ class ChecklistViewController: UIViewController {
     @IBOutlet var check4: UIButton!
     @IBOutlet var check5: UIButton!
     
+    @IBSegueAction func segueAction(_ coder: NSCoder) -> HelpProtocolViewController? {
+        let helpVC = HelpProtocolViewController(coder: coder)!
+        helpVC.inOrOut = inOrOut
+        return helpVC
+    }
     @IBOutlet var subtitle: UILabel!
     var inOrOut: String!
     

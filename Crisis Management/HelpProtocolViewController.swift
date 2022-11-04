@@ -19,6 +19,8 @@ class HelpProtocolViewController: UIViewController {
 
     @IBOutlet var infoTextView: UITextView!
     
+    @IBOutlet var subtitle: UIButton!
+    var inOrOut: String!
     
     var placementAnswer = 0
     
@@ -29,6 +31,8 @@ class HelpProtocolViewController: UIViewController {
         pickerView.delegate = self
         pickerView.dataSource = self
         // Do any additional setup after loading the view.
+        
+        self.subtitle.setTitle(inOrOut, for: .normal)
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {

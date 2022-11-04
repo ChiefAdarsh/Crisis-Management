@@ -1493,7 +1493,7 @@
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="submitPressed:" destination="k5E-cY-0RC" eventType="touchUpInside" id="4Yn-Mu-9wg"/>
-                                            <segue destination="AvP-Qf-QEF" kind="show" id="0Wr-Ac-fB7"/>
+                                            <segue destination="AvP-Qf-QEF" kind="show" destinationCreationSelector="segueAction:" id="0Wr-Ac-fB7"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1728,7 +1728,7 @@
                                 <color key="tintColor" red="0.69019609689999994" green="0.14901961389999999" blue="0.20784312490000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="In School">
-                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="35"/>
                                     <color key="baseBackgroundColor" red="0.69019609689999994" green="0.14901961389999999" blue="0.20784312490000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                             </button>
@@ -1789,6 +1789,7 @@
                     <connections>
                         <outlet property="infoTextView" destination="bOu-Gb-ub8" id="0ok-nt-5h3"/>
                         <outlet property="pickerView" destination="OvO-Vz-Vt8" id="TCI-kv-79k"/>
+                        <outlet property="subtitle" destination="chH-gd-jYk" id="ROd-Zc-bmG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aVQ-Cf-ZZ1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1799,11 +1800,11 @@
         <scene sceneID="8ca-02-e9U">
             <objects>
                 <viewController title="ReportIssue" id="Rad-aI-puw" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="skt-aG-k8g">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="skt-aG-k8g">
                         <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="p9D-Qx-HgJ">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" ambiguous="YES" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="p9D-Qx-HgJ">
                                 <rect key="frame" x="-226" y="-375.5" width="1564" height="1585"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="1564" id="RGZ-eE-3tM"/>
@@ -1850,7 +1851,7 @@
                                     <constraint firstAttribute="height" constant="363" id="lfz-zA-uo0"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Jg-aq-YAy" userLabel="settings">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Jg-aq-YAy" userLabel="settings">
                                 <rect key="frame" x="1018" y="43" width="74" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="AYY-S8-M52"/>
