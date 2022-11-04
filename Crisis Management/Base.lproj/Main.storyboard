@@ -130,8 +130,8 @@
         <!--Recources-->
         <scene sceneID="uvg-uB-H5E">
             <objects>
-                <tableViewController title="Recources" id="qGU-35-bvw" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" id="Kuh-ny-3Vb">
+                <tableViewController title="Recources" id="qGU-35-bvw" customClass="resourcesTableViewController" customModule="Crisis_Management" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" id="Kuh-ny-3Vb" customClass="resour">
                         <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <prototypes>
@@ -1113,7 +1113,7 @@
         <!--Student Help Location-->
         <scene sceneID="TtS-pS-jRD">
             <objects>
-                <viewController title="Student Help Location" id="hvc-MZ-6ba" sceneMemberID="viewController">
+                <viewController title="Student Help Location" id="hvc-MZ-6ba" customClass="LocHelpViewController" customModule="Crisis_Management" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9m2-zk-r1M">
                         <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1167,7 +1167,7 @@
                                     <color key="baseForegroundColor" systemColor="tertiarySystemBackgroundColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="k5E-cY-0RC" kind="show" id="FA6-k9-uSU"/>
+                                    <segue destination="k5E-cY-0RC" kind="show" destinationCreationSelector="inSchoolSegueAction:" id="FA6-k9-uSU"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TFS-Xv-mEh">
@@ -1181,7 +1181,7 @@
                                     <color key="baseForegroundColor" systemColor="tertiarySystemBackgroundColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="k5E-cY-0RC" kind="show" id="bQI-ah-0g4"/>
+                                    <segue destination="k5E-cY-0RC" kind="show" destinationCreationSelector="outSchoolSegueAction:" id="bQI-ah-0g4"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -5474,7 +5474,7 @@ Cg
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="FA6-k9-uSU"/>
+        <segue reference="bQI-ah-0g4"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Background" width="1874" height="1405"/>
