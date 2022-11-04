@@ -7,17 +7,17 @@
 
 import UIKit
 
-struct Resource {
-    var category: String
-    var name: String
-    var contact: String
-    var address: String
-    var city: String
-    var state: String
-    var zip: String
-    var website: String
-    var addInfo: String
-}
+//struct Resource {
+//    var category: String
+//    var name: String
+//    var contact: String
+//    var address: String
+//    var city: String
+//    var state: String
+//    var zip: String
+//    var website: String
+//    var addInfo: String
+//}
 
 /*struct categorySection {
     var categoryType: String
