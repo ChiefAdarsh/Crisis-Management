@@ -1211,7 +1211,7 @@
         <!--Checklist-->
         <scene sceneID="xy1-zT-aJk">
             <objects>
-                <viewController title="Checklist" id="k5E-cY-0RC" sceneMemberID="viewController">
+                <viewController title="Checklist" id="k5E-cY-0RC" customClass="ChecklistViewController" customModule="Crisis_Management" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Kpf-sk-TCu">
                         <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1298,6 +1298,9 @@
                                                                 <integer key="value" value="5"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="check1Pressed:" destination="k5E-cY-0RC" eventType="touchUpInside" id="6Yj-Zb-eEh"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Student verbalizes suicidal thoughts or other dangerous behaviors" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q40-lG-4wc">
                                                         <rect key="frame" x="35" y="0.0" width="565" height="35"/>
@@ -1335,6 +1338,9 @@
                                                                 <integer key="value" value="5"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="check2Pressed:" destination="k5E-cY-0RC" eventType="touchUpInside" id="jhL-w0-HVk"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Student has written something disturbing indicating he/she may be thinking of suicide or hurting him/herself" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="78Y-WP-GmM">
                                                         <rect key="frame" x="35" y="0.0" width="565" height="42"/>
@@ -1373,6 +1379,9 @@
                                                                 <integer key="value" value="5"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="check3Pressed:" destination="k5E-cY-0RC" eventType="touchUpInside" id="Gp3-ss-2jf"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Student expresses a suicidal thought on social media" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KhT-BN-x5L">
                                                         <rect key="frame" x="35" y="0.0" width="565" height="35"/>
@@ -1410,6 +1419,9 @@
                                                                 <integer key="value" value="5"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="check4Pressed:" destination="k5E-cY-0RC" eventType="touchUpInside" id="2nQ-ML-j02"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Student has drawn a disturbing picture depicting suicide" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ffz-Y3-6C3">
                                                         <rect key="frame" x="35" y="0.0" width="565" height="35"/>
@@ -1447,6 +1459,9 @@
                                                                 <integer key="value" value="5"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="check5Pressed:" destination="k5E-cY-0RC" eventType="touchUpInside" id="iGE-Qh-Nbw"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Student reports another student is suicidal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vqj-Uh-UWo">
                                                         <rect key="frame" x="35" y="0.0" width="565" height="35"/>
@@ -1477,6 +1492,7 @@
                                             <color key="baseBackgroundColor" red="0.69019609689999994" green="0.14901961389999999" blue="0.20784312490000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
                                         <connections>
+                                            <action selector="submitPressed:" destination="k5E-cY-0RC" eventType="touchUpInside" id="4Yn-Mu-9wg"/>
                                             <segue destination="AvP-Qf-QEF" kind="show" id="0Wr-Ac-fB7"/>
                                         </connections>
                                     </button>
@@ -1522,7 +1538,29 @@
                             <constraint firstItem="X7v-Rf-dtO" firstAttribute="leading" secondItem="Kpf-sk-TCu" secondAttribute="leading" id="ygo-nY-vBW"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="jkJ-tb-sK8"/>
+                    <navigationItem key="navigationItem" id="uQE-Q0-Lb4">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="YtN-g7-8Vt">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="zNr-7m-ir3">
+                                <rect key="frame" x="1000" y="3" width="92" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="Gear" title=""/>
+                            </button>
+                            <connections>
+                                <action selector="settingsPressed:" destination="k5E-cY-0RC" id="Htx-qc-Jry"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="check1" destination="SlB-rI-vg2" id="U0r-pz-SDy"/>
+                        <outlet property="check2" destination="psY-HA-JXJ" id="C62-TD-JGY"/>
+                        <outlet property="check3" destination="ytb-e4-aab" id="eRw-pi-ZTw"/>
+                        <outlet property="check4" destination="LW8-hk-Fpa" id="e3F-Y2-aun"/>
+                        <outlet property="check5" destination="tnI-dc-Qec" id="w2l-rV-LT5"/>
+                        <outlet property="settingsButton" destination="YtN-g7-8Vt" id="U4e-JE-ax1"/>
+                        <outlet property="submitButton" destination="LMD-RJ-z0N" id="5P2-Wt-TqI"/>
+                        <outlet property="subtitle" destination="cPA-h9-RBn" id="aY1-fr-s9q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Hy-ic-JP4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
