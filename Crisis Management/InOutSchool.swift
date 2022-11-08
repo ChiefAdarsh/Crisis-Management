@@ -1,13 +1,13 @@
 //
-//  LocHelpViewController.swift
+//  ViewController.swift
 //  Crisis Management
 //
-//  Created by Adarsh Goura on 11/4/22.
+//  Created by Adarsh Goura on 11/1/22.
 //
 
 import UIKit
 
-class LocHelpViewController: UIViewController {
+class InOutSchoolController: UIViewController {
 
     /* Variables from Interface Builder */
     
@@ -18,15 +18,14 @@ class LocHelpViewController: UIViewController {
     @IBOutlet var reportSubtitleLabel: UILabel!
     
     @IBOutlet var settingsButton: UIBarButtonItem!
-    
-    @IBOutlet var homeButton: UIButton!
     @IBOutlet var inSchoolButton: UIButton!
     @IBOutlet var outSchoolButton: UIButton!
     
     @IBOutlet var stackView: UIStackView!
     
-    // In School View Controller
-    var checklistController: ChecklistViewController!
+    // Home View Controller
+    var homeViewController: HomeViewController!
+    static var insideSchool: Bool!
     
     // When the view is initially loaded
     override func viewDidLoad() {
@@ -58,20 +57,15 @@ class LocHelpViewController: UIViewController {
         print("Settings button pressed")
     }
     
-    // When the home button is pressed
-    @IBAction func homePressed(_ sender: Any) {
-        print("Home button pressed")
-    }
-    
     // When the In School button is pressed
-    @IBSegueAction func inSchoolSegueAction(_ coder: NSCoder, sender: UIButton?) -> ChecklistViewController? {
-        return ChecklistViewController(coder: coder, inOrOut: "In School")
+    @IBSegueAction func inSchoolSegueAction(_ coder: NSCoder, sender: UIButton?) -> HomeViewController? {
+        InOutSchoolController.insideSchool = true
+        return HomeViewController(coder: coder)
     }
     
     // When the Out of School button is pressed
-    @IBSegueAction func outSchoolSegueAction(_ coder: NSCoder, sender: UIButton?) -> ChecklistViewController? {
-        return ChecklistViewController(coder: coder, inOrOut: "Out of School")
+    @IBSegueAction func outSchoolSegueAction(_ coder: NSCoder, sender: UIButton?) -> HomeViewController? {
+        InOutSchoolController.insideSchool = false
+        return HomeViewController(coder: coder)
     }
-    
-
 }

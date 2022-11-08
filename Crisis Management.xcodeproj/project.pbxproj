@@ -7,37 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1783567C2919938E00B33C56 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1783567B2919938E00B33C56 /* HomeViewController.swift */; };
-		1783567E291993FD00B33C56 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1783567D291993FD00B33C56 /* SettingsController.swift */; };
-		652A84C02914E1100025B2E6 /* ChecklistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652A84BF2914E1100025B2E6 /* ChecklistViewController.swift */; };
-		652A84CC291561F80025B2E6 /* LocHelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652A84CB291561F80025B2E6 /* LocHelpViewController.swift */; };
-		652A84CE291566E50025B2E6 /* resourcesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652A84CD291566E50025B2E6 /* resourcesTableViewController.swift */; };
-		652A84D829157D7C0025B2E6 /* HelpProtocolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652A84D729157D7C0025B2E6 /* HelpProtocolViewController.swift */; };
-		652A84DA29157F260025B2E6 /* resData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652A84D929157F260025B2E6 /* resData.swift */; };
+		1783567C2919938E00B33C56 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1783567B2919938E00B33C56 /* Home.swift */; };
+		1783567E291993FD00B33C56 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1783567D291993FD00B33C56 /* Settings.swift */; };
+		652A84C02914E1100025B2E6 /* StudentProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652A84BF2914E1100025B2E6 /* StudentProtocols.swift */; };
+		652A84CE291566E50025B2E6 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652A84CD291566E50025B2E6 /* Resources.swift */; };
 		6578089E29118D2C00E72F43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6578089D29118D2C00E72F43 /* AppDelegate.swift */; };
 		657808A029118D2C00E72F43 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6578089F29118D2C00E72F43 /* SceneDelegate.swift */; };
-		657808A229118D2C00E72F43 /* InOutSchoolController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657808A129118D2C00E72F43 /* InOutSchoolController.swift */; };
+		657808A229118D2C00E72F43 /* InOutSchool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657808A129118D2C00E72F43 /* InOutSchool.swift */; };
 		657808A529118D2C00E72F43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 657808A329118D2C00E72F43 /* Main.storyboard */; };
 		657808A729118D2D00E72F43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 657808A629118D2D00E72F43 /* Assets.xcassets */; };
 		657808AA29118D2D00E72F43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 657808A829118D2D00E72F43 /* LaunchScreen.storyboard */; };
+		7A8943F82919CAA700C53543 /* ReportIssue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8943F72919CAA700C53543 /* ReportIssue.swift */; };
+		7A8943FA2919DBAB00C53543 /* CallAdmin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8943F92919DBAB00C53543 /* CallAdmin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1783567B2919938E00B33C56 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		1783567D291993FD00B33C56 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
-		652A84BF2914E1100025B2E6 /* ChecklistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistViewController.swift; sourceTree = "<group>"; };
-		652A84CB291561F80025B2E6 /* LocHelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocHelpViewController.swift; sourceTree = "<group>"; };
-		652A84CD291566E50025B2E6 /* resourcesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = resourcesTableViewController.swift; sourceTree = "<group>"; };
-		652A84D729157D7C0025B2E6 /* HelpProtocolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpProtocolViewController.swift; sourceTree = "<group>"; };
-		652A84D929157F260025B2E6 /* resData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = resData.swift; sourceTree = "<group>"; };
+		1783567B2919938E00B33C56 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		1783567D291993FD00B33C56 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		652A84BF2914E1100025B2E6 /* StudentProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProtocols.swift; sourceTree = "<group>"; };
+		652A84CD291566E50025B2E6 /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
 		6578089A29118D2C00E72F43 /* Crisis Management.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Crisis Management.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6578089D29118D2C00E72F43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6578089F29118D2C00E72F43 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		657808A129118D2C00E72F43 /* InOutSchoolController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InOutSchoolController.swift; sourceTree = "<group>"; };
+		657808A129118D2C00E72F43 /* InOutSchool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InOutSchool.swift; sourceTree = "<group>"; };
 		657808A429118D2C00E72F43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		657808A629118D2D00E72F43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		657808A929118D2D00E72F43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		657808AB29118D2D00E72F43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A8943F72919CAA700C53543 /* ReportIssue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportIssue.swift; sourceTree = "<group>"; };
+		7A8943F92919DBAB00C53543 /* CallAdmin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallAdmin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,14 +70,13 @@
 			children = (
 				6578089D29118D2C00E72F43 /* AppDelegate.swift */,
 				6578089F29118D2C00E72F43 /* SceneDelegate.swift */,
-				657808A129118D2C00E72F43 /* InOutSchoolController.swift */,
-				1783567B2919938E00B33C56 /* HomeViewController.swift */,
-				1783567D291993FD00B33C56 /* SettingsController.swift */,
-				652A84BF2914E1100025B2E6 /* ChecklistViewController.swift */,
-				652A84CD291566E50025B2E6 /* resourcesTableViewController.swift */,
-				652A84CB291561F80025B2E6 /* LocHelpViewController.swift */,
-				652A84D729157D7C0025B2E6 /* HelpProtocolViewController.swift */,
-				652A84D929157F260025B2E6 /* resData.swift */,
+				657808A129118D2C00E72F43 /* InOutSchool.swift */,
+				1783567B2919938E00B33C56 /* Home.swift */,
+				1783567D291993FD00B33C56 /* Settings.swift */,
+				7A8943F72919CAA700C53543 /* ReportIssue.swift */,
+				652A84BF2914E1100025B2E6 /* StudentProtocols.swift */,
+				7A8943F92919DBAB00C53543 /* CallAdmin.swift */,
+				652A84CD291566E50025B2E6 /* Resources.swift */,
 				657808A329118D2C00E72F43 /* Main.storyboard */,
 				657808A629118D2D00E72F43 /* Assets.xcassets */,
 				657808A829118D2D00E72F43 /* LaunchScreen.storyboard */,
@@ -159,14 +156,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				652A84D829157D7C0025B2E6 /* HelpProtocolViewController.swift in Sources */,
-				657808A229118D2C00E72F43 /* InOutSchoolController.swift in Sources */,
-				652A84C02914E1100025B2E6 /* ChecklistViewController.swift in Sources */,
-				652A84CC291561F80025B2E6 /* LocHelpViewController.swift in Sources */,
-				652A84DA29157F260025B2E6 /* resData.swift in Sources */,
-				1783567C2919938E00B33C56 /* HomeViewController.swift in Sources */,
-				1783567E291993FD00B33C56 /* SettingsController.swift in Sources */,
-				652A84CE291566E50025B2E6 /* resourcesTableViewController.swift in Sources */,
+				657808A229118D2C00E72F43 /* InOutSchool.swift in Sources */,
+				652A84C02914E1100025B2E6 /* StudentProtocols.swift in Sources */,
+				1783567C2919938E00B33C56 /* Home.swift in Sources */,
+				1783567E291993FD00B33C56 /* Settings.swift in Sources */,
+				652A84CE291566E50025B2E6 /* Resources.swift in Sources */,
+				7A8943F82919CAA700C53543 /* ReportIssue.swift in Sources */,
+				7A8943FA2919DBAB00C53543 /* CallAdmin.swift in Sources */,
 				6578089E29118D2C00E72F43 /* AppDelegate.swift in Sources */,
 				657808A029118D2C00E72F43 /* SceneDelegate.swift in Sources */,
 			);
