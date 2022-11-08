@@ -18,6 +18,12 @@ class ChecklistViewController: UIViewController {
     @IBOutlet var check5: UIButton!
     
     @IBSegueAction func segueAction(_ coder: NSCoder) -> ProtocolsViewController? {
+        if check1.title(for: .normal)!.isEmpty && check2.title(for: .normal)!.isEmpty && check3.title(for: .normal)!.isEmpty && check4.title(for: .normal)!.isEmpty && check5.title(for: .normal)!.isEmpty {
+            let alertController = UIAlertController(title: "No Criteria Selected", message: "Please check one of the criteria from the checklist", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "Ok", style: .default))
+            present(alertController, animated: true, completion: nil)
+        }
+        
         return ProtocolsViewController(coder: coder)
     }
     

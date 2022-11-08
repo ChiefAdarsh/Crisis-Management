@@ -41,7 +41,15 @@
                             <outlet property="delegate" destination="qGU-35-bvw" id="Qfc-Yc-scc"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Ykh-AV-LIJ"/>
+                    <navigationItem key="navigationItem" id="Ykh-AV-LIJ">
+                        <barButtonItem key="rightBarButtonItem" title="Gear" image="Gear-2" id="AMq-VV-NuE">
+                            <inset key="imageInsets" minX="0.0" minY="5" maxX="5" maxY="0.0"/>
+                            <color key="tintColor" systemColor="labelColor"/>
+                            <connections>
+                                <segue destination="ppe-sh-VxT" kind="show" id="Y7c-N1-6u9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VeD-Pc-33E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -259,7 +267,9 @@
                             <constraint firstItem="xFr-FU-jdM" firstAttribute="leading" secondItem="lyI-GD-p6a" secondAttribute="leading" id="yc0-mV-ZYy"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" id="xRR-MV-WWh"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3rO-Ua-OKq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -270,21 +280,21 @@
             <objects>
                 <tableViewController title="Emergency Contacts" id="5Yv-wR-p4o" customClass="EmergencyContactsTableViewController" customModule="Crisis_Management" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Ite-Mv-Vi7">
-                        <rect key="frame" x="0.0" y="0.0" width="704" height="794"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <sections>
                             <tableViewSection id="dr3-5y-TAq">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="Yq3-OU-8Fl" style="IBUITableViewCellStyleDefault" id="5sP-5p-T1H">
-                                        <rect key="frame" x="0.0" y="44.5" width="704" height="47.5"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="1112" height="47.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5sP-5p-T1H" id="Nb8-Vx-Kgy">
-                                            <rect key="frame" x="0.0" y="0.0" width="704" height="47.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="1112" height="47.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Emergency  -  extension (214-496-XXXX)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Yq3-OU-8Fl">
-                                                    <rect key="frame" x="20" y="0.0" width="664" height="47.5"/>
+                                                    <rect key="frame" x="20" y="0.0" width="1072" height="47.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                     <nil key="textColor"/>
@@ -294,14 +304,14 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="vfu-BP-RL6" style="IBUITableViewCellStyleDefault" id="rYN-Yv-Ev5">
-                                        <rect key="frame" x="0.0" y="92" width="704" height="47.5"/>
+                                        <rect key="frame" x="0.0" y="92" width="1112" height="47.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rYN-Yv-Ev5" id="HxX-IV-DdJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="704" height="47.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="1112" height="47.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vfu-BP-RL6">
-                                                    <rect key="frame" x="20" y="0.0" width="664" height="47.5"/>
+                                                    <rect key="frame" x="20" y="0.0" width="1072" height="47.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <string key="text">Principal: Laura Springer                      6110
 </string>
@@ -313,14 +323,14 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="BC0-HM-S2s" style="IBUITableViewCellStyleDefault" id="dsr-D4-cgW">
-                                        <rect key="frame" x="0.0" y="139.5" width="704" height="47.5"/>
+                                        <rect key="frame" x="0.0" y="139.5" width="1112" height="47.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dsr-D4-cgW" id="gcH-Lk-EMd">
-                                            <rect key="frame" x="0.0" y="0.0" width="704" height="47.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="1112" height="47.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BC0-HM-S2s">
-                                                    <rect key="frame" x="20" y="0.0" width="664" height="47.5"/>
+                                                    <rect key="frame" x="20" y="0.0" width="1072" height="47.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <string key="text">Associate Principal: Melissa Arnold    6122
 </string>
@@ -332,14 +342,14 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="rev-if-WAR" style="IBUITableViewCellStyleDefault" id="G4N-s0-u3M">
-                                        <rect key="frame" x="0.0" y="187" width="704" height="47.5"/>
+                                        <rect key="frame" x="0.0" y="187" width="1112" height="47.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="G4N-s0-u3M" id="H6Q-fq-GEF">
-                                            <rect key="frame" x="0.0" y="0.0" width="704" height="47.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="1112" height="47.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Lead Counselor: Ann Cinelli                 6112" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rev-if-WAR">
-                                                    <rect key="frame" x="20" y="0.0" width="664" height="47.5"/>
+                                                    <rect key="frame" x="20" y="0.0" width="1072" height="47.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <nil key="textColor"/>
@@ -349,14 +359,14 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="Bvc-Ge-njQ" style="IBUITableViewCellStyleDefault" id="7CF-d9-gX4">
-                                        <rect key="frame" x="0.0" y="234.5" width="704" height="47.5"/>
+                                        <rect key="frame" x="0.0" y="234.5" width="1112" height="47.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7CF-d9-gX4" id="oDx-lM-WK4">
-                                            <rect key="frame" x="0.0" y="0.0" width="704" height="47.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="1112" height="47.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Bvc-Ge-njQ">
-                                                    <rect key="frame" x="20" y="0.0" width="664" height="47.5"/>
+                                                    <rect key="frame" x="20" y="0.0" width="1072" height="47.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <string key="text">Coppell Police Department                 972-304-3600
 </string>
@@ -368,14 +378,14 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="hKB-RG-bkx" style="IBUITableViewCellStyleDefault" id="H4t-1i-W76">
-                                        <rect key="frame" x="0.0" y="282" width="704" height="47.5"/>
+                                        <rect key="frame" x="0.0" y="282" width="1112" height="47.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="H4t-1i-W76" id="lXd-eR-J32">
-                                            <rect key="frame" x="0.0" y="0.0" width="704" height="47.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="1112" height="47.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hKB-RG-bkx">
-                                                    <rect key="frame" x="20" y="0.0" width="664" height="47.5"/>
+                                                    <rect key="frame" x="20" y="0.0" width="1072" height="47.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <string key="text">Dallas Police Department                    214-744-4444
 </string>
@@ -387,14 +397,14 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="5sI-mc-qFX" style="IBUITableViewCellStyleDefault" id="Xlg-6Y-0PU">
-                                        <rect key="frame" x="0.0" y="329.5" width="704" height="47.5"/>
+                                        <rect key="frame" x="0.0" y="329.5" width="1112" height="47.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Xlg-6Y-0PU" id="0d3-A6-3kD">
-                                            <rect key="frame" x="0.0" y="0.0" width="704" height="47.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="1112" height="47.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5sI-mc-qFX">
-                                                    <rect key="frame" x="20" y="0.0" width="664" height="47.5"/>
+                                                    <rect key="frame" x="20" y="0.0" width="1072" height="47.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <string key="text">Irving Police Department                     972-723-1010
 </string>
@@ -406,14 +416,14 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="V2p-lR-ZEp" style="IBUITableViewCellStyleDefault" id="5sH-Vh-eE6">
-                                        <rect key="frame" x="0.0" y="377" width="704" height="47.5"/>
+                                        <rect key="frame" x="0.0" y="377" width="1112" height="47.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5sH-Vh-eE6" id="mya-PV-rCu">
-                                            <rect key="frame" x="0.0" y="0.0" width="704" height="47.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="1112" height="47.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="V2p-lR-ZEp">
-                                                    <rect key="frame" x="20" y="0.0" width="664" height="47.5"/>
+                                                    <rect key="frame" x="20" y="0.0" width="1072" height="47.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <string key="text">Lewisville Police Department              972-219-3600
 </string>
@@ -425,14 +435,14 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="fYu-cF-Smp" style="IBUITableViewCellStyleDefault" id="riq-8K-srP">
-                                        <rect key="frame" x="0.0" y="424.5" width="704" height="47.5"/>
+                                        <rect key="frame" x="0.0" y="424.5" width="1112" height="47.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="riq-8K-srP" id="lJF-6G-X5s">
-                                            <rect key="frame" x="0.0" y="0.0" width="704" height="47.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="1112" height="47.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fYu-cF-Smp">
-                                                    <rect key="frame" x="20" y="0.0" width="664" height="47.5"/>
+                                                    <rect key="frame" x="20" y="0.0" width="1072" height="47.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <string key="text">Child Protective Services                     800-252-5400
 </string>
@@ -444,14 +454,14 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="8pM-ms-4TQ" style="IBUITableViewCellStyleDefault" id="oSr-q0-khU">
-                                        <rect key="frame" x="0.0" y="472" width="704" height="47.5"/>
+                                        <rect key="frame" x="0.0" y="472" width="1112" height="47.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oSr-q0-khU" id="dXN-ta-nOm">
-                                            <rect key="frame" x="0.0" y="0.0" width="704" height="47.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="1112" height="47.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8pM-ms-4TQ">
-                                                    <rect key="frame" x="20" y="0.0" width="664" height="47.5"/>
+                                                    <rect key="frame" x="20" y="0.0" width="1072" height="47.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <string key="text">Dallas County Mobile Crisis                 866-260-8000
 </string>
@@ -1253,7 +1263,17 @@
                             <constraint firstItem="X7v-Rf-dtO" firstAttribute="leading" secondItem="Kpf-sk-TCu" secondAttribute="leading" id="ygo-nY-vBW"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="uQE-Q0-Lb4"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="uQE-Q0-Lb4">
+                        <barButtonItem key="rightBarButtonItem" title="Gear" image="Gear-2" id="Efp-d0-MyE">
+                            <inset key="imageInsets" minX="0.0" minY="5" maxX="5" maxY="0.0"/>
+                            <color key="tintColor" systemColor="labelColor"/>
+                            <connections>
+                                <segue destination="ppe-sh-VxT" kind="show" id="m3t-iw-ZtJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="check1" destination="SlB-rI-vg2" id="U0r-pz-SDy"/>
                         <outlet property="check2" destination="psY-HA-JXJ" id="C62-TD-JGY"/>
@@ -1681,7 +1701,15 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="efQ-Fu-n4a"/>
+                    <navigationItem key="navigationItem" id="efQ-Fu-n4a">
+                        <barButtonItem key="rightBarButtonItem" title="Gear" image="Gear-2" id="zSW-in-4ct">
+                            <inset key="imageInsets" minX="0.0" minY="5" maxX="5" maxY="0.0"/>
+                            <color key="tintColor" systemColor="labelColor"/>
+                            <connections>
+                                <segue destination="ppe-sh-VxT" kind="show" id="NvR-zf-qBQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="inOrOut" destination="MiR-I5-eef" id="1uC-Pd-caM"/>
@@ -1700,7 +1728,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GTX-6e-NCM">
-                                <rect key="frame" x="20" y="70" width="1072" height="744"/>
+                                <rect key="frame" x="20" y="70" width="1072" height="694"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <attributedString key="attributedText">
                                     <fragment content="CHS Crisis Management ">
@@ -5508,7 +5536,7 @@ Cg
     <inferredMetricsTieBreakers>
         <segue reference="onY-RW-VIk"/>
         <segue reference="at3-4h-HVg"/>
-        <segue reference="nKW-bZ-WCm"/>
+        <segue reference="m3t-iw-ZtJ"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Background" width="1874" height="1405"/>
