@@ -12,8 +12,6 @@ class HelpProtocolViewController: UIViewController {
     
     @IBOutlet var pickerView: UIPickerView!
     
-    let resourcesArray = createResources()
-    
     let cities: [String] = ["Lewisville", "Denton","Plano", "Coppell", "Dallas", "Fort Worth", "Frisco", "Carollton", "Farmers Branch", "Richardson", "Colleyville", "Addison", "Houston", "Canton", "Lemont", "Judsonia"]
     
 
@@ -57,7 +55,7 @@ extension HelpProtocolViewController: UIPickerViewDelegate, UIPickerViewDataSour
     @IBAction func Enter(_ sender: Any) {
         var infoString = ""
         var selectedList: [Resource] = []
-        for resource in resourcesArray {
+        for resource in Resource.myArray {
             if resource.city == cities[placementAnswer] {
                 selectedList.append(resource)
             }

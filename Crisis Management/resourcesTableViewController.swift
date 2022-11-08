@@ -25,7 +25,7 @@ import UIKit
 }*/
 
 //fileprivate func categoryType()
-
+var myIndex = 0
 class resourcesTableViewController: UITableViewController {
 
     var resources = [
@@ -115,6 +115,12 @@ class resourcesTableViewController: UITableViewController {
         return "Section \(section)"
     }
 
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        myIndex = indexPath.row
+        //performSegue(withIdentifier: "resIden", sender: self)
+        
+        
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

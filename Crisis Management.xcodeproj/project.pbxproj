@@ -18,6 +18,7 @@
 		657808A529118D2C00E72F43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 657808A329118D2C00E72F43 /* Main.storyboard */; };
 		657808A729118D2D00E72F43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 657808A629118D2D00E72F43 /* Assets.xcassets */; };
 		657808AA29118D2D00E72F43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 657808A829118D2D00E72F43 /* LaunchScreen.storyboard */; };
+		B2FB2BE2291993BF0053E838 /* specificResourceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FB2BE1291993BF0053E838 /* specificResourceViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		657808A629118D2D00E72F43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		657808A929118D2D00E72F43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		657808AB29118D2D00E72F43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2FB2BE1291993BF0053E838 /* specificResourceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = specificResourceViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 				652A84D729157D7C0025B2E6 /* HelpProtocolViewController.swift */,
 				652A84D929157F260025B2E6 /* resData.swift */,
 				657808A129118D2C00E72F43 /* ViewController.swift */,
+				B2FB2BE1291993BF0053E838 /* specificResourceViewController.swift */,
 				657808A329118D2C00E72F43 /* Main.storyboard */,
 				657808A629118D2D00E72F43 /* Assets.xcassets */,
 				657808A829118D2D00E72F43 /* LaunchScreen.storyboard */,
@@ -157,6 +160,7 @@
 				657808A229118D2C00E72F43 /* ViewController.swift in Sources */,
 				652A84C02914E1100025B2E6 /* ChecklistViewController.swift in Sources */,
 				652A84CC291561F80025B2E6 /* LocHelpViewController.swift in Sources */,
+				B2FB2BE2291993BF0053E838 /* specificResourceViewController.swift in Sources */,
 				652A84DA29157F260025B2E6 /* resData.swift in Sources */,
 				652A84CE291566E50025B2E6 /* resourcesTableViewController.swift in Sources */,
 				6578089E29118D2C00E72F43 /* AppDelegate.swift in Sources */,
