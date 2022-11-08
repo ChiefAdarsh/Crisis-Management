@@ -81,6 +81,8 @@ class ChecklistViewController: UIViewController {
         updateCheckTitle(button: check5)
         print("Current title of check 5 is: \"\(check5.currentTitle ?? "nil")\"")
     }
+    
+    
 }
 
 class ProtocolsViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
@@ -105,7 +107,16 @@ class ProtocolsViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         
         subtitle.text = InOutSchoolController.insideSchool ? "In School" : "Out of School"
     }
-    
+    //Goes to Call Recommended people screen
+    @IBAction func CallRecommended(_ sender: Any) {
+        var callAdminController: UIViewController!
+        if InOutSchoolController.insideSchool {
+            callAdminController = storyboard!.instantiateViewController(withIdentifier: "adminInSchool") as! CallAdminInSchoolController
+        } else {
+            callAdminController = storyboard!.instantiateViewController(withIdentifier: "adminOutSchool") as! CallAdminOutSchoolController
+        }
+        self.navigationController?.pushViewController(callAdminController, animated: true)
+    }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         placementAnswer = row
     }

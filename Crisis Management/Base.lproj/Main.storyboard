@@ -1459,6 +1459,9 @@
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
                                     <color key="baseBackgroundColor" red="0.69019609689999994" green="0.14901961389999999" blue="0.20784312490000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="CallRecommended:" destination="AvP-Qf-QEF" eventType="touchUpInside" id="EvS-d1-GQW"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7qp-7d-XuG">
                                 <rect key="frame" x="264" y="143.5" width="584" height="49"/>
@@ -5507,8 +5510,8 @@ Cg
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="onY-RW-VIk"/>
-        <segue reference="at3-4h-HVg"/>
-        <segue reference="nKW-bZ-WCm"/>
+        <segue reference="fpY-Tg-cxH"/>
+        <segue reference="cEV-no-RyI"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Background" width="1874" height="1405"/>
