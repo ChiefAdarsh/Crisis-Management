@@ -231,7 +231,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mtj-hs-Czf">
-                                <rect key="frame" x="406" y="334" width="300" height="166"/>
+                                <rect key="frame" x="374" y="310.5" width="364" height="213"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="Emergency Contacts" title=""/>
@@ -5514,12 +5514,12 @@ Cg
         <image name="Background" width="1874" height="1405"/>
         <image name="CISDLogo" width="208" height="54"/>
         <image name="Coppell ISD" width="500" height="122"/>
-        <image name="Counselors" width="340" height="182"/>
-        <image name="Emergency Contacts" width="276" height="152"/>
+        <image name="Counselors" width="340" height="196"/>
+        <image name="Emergency Contacts" width="340" height="199"/>
         <image name="Gear-2" width="38" height="38"/>
         <image name="In School-3" width="400" height="231"/>
         <image name="Out of School-3" width="400" height="231"/>
-        <image name="Principals" width="340" height="182"/>
+        <image name="Principals" width="340" height="196"/>
         <image name="Screen Shot 2022-11-01 at 2.18.36 PM" width="1762" height="896"/>
         <image name="checkmark.circle.fill" catalog="system" width="128" height="121"/>
         <image name="doc.fill.badge.plus" catalog="system" width="122" height="128"/>
