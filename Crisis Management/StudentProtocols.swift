@@ -18,12 +18,6 @@ class ChecklistViewController: UIViewController {
     @IBOutlet var check5: UIButton!
     
     @IBSegueAction func segueAction(_ coder: NSCoder) -> ProtocolsViewController? {
-        if check1.title(for: .normal)!.isEmpty && check2.title(for: .normal)!.isEmpty && check3.title(for: .normal)!.isEmpty && check4.title(for: .normal)!.isEmpty && check5.title(for: .normal)!.isEmpty {
-            let alertController = UIAlertController(title: "No Criteria Selected", message: "Please check one of the criteria from the checklist", preferredStyle: .alert)
-            alertController.addAction(UIAlertAction(title: "Ok", style: .default))
-            present(alertController, animated: true, completion: nil)
-        }
-        
         return ProtocolsViewController(coder: coder)
     }
     
@@ -94,7 +88,7 @@ class ChecklistViewController: UIViewController {
 class ProtocolsViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     @IBOutlet var pickerView: UIPickerView!
-    let resourcesArray = createResources()
+    
     let cities: [String] = ["Lewisville", "Denton","Plano", "Coppell", "Dallas", "Fort Worth", "Frisco", "Carollton", "Farmers Branch", "Richardson", "Colleyville", "Addison", "Houston", "Canton", "Lemont", "Judsonia"]
     
 
@@ -142,7 +136,7 @@ class ProtocolsViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     @IBAction func Enter(_ sender: Any) {
         var infoString = ""
         var selectedList: [Resource] = []
-        for resource in resourcesArray {
+        for resource in Resource.myArray {
             if resource.city == cities[placementAnswer] {
                 selectedList.append(resource)
             }
