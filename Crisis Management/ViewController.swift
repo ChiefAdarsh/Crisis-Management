@@ -15,18 +15,19 @@ class ViewController: UIViewController {
     @IBOutlet weak var CallAdminBtn: UIButton!
     @IBOutlet weak var ResourcesBtn: UIButton!
     @IBOutlet var HomeBtns: [UIButton]!
-    
+    @IBOutlet weak var SettingsBtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        roundBtns(radius: 15)
+        for btn in HomeBtns {
+            roundBtn(radius: 15, btn: btn)
+        }
+        roundBtn(radius: 15, btn: Call911Btn)
         // Do any additional setup after loading the view.
     }
     
-    func roundBtns(radius: Double) {
-        for btn in HomeBtns {
-            btn.layer.cornerRadius = CGFloat(radius)
-            btn.layer.masksToBounds = true
-        }
+    func roundBtn(radius: Double, btn: UIButton) {
+        btn.layer.cornerRadius = CGFloat(radius)
+        btn.layer.masksToBounds = true
     }
 
     @IBAction func Call911(_ sender: Any) {
