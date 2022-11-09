@@ -6,8 +6,64 @@
 //
 
 import UIKit
+import SafariServices
+import MessageUI
 
-class ReportIssueController: UIViewController {
+class ReportIssueController: UIViewController, UINavigationControllerDelegate, MFMailComposeViewControllerDelegate {
+    
+    @IBOutlet weak var nameId: UITextField!
+    @IBOutlet weak var issue: UITextField!
+    @IBOutlet weak var counselor: UITextField!
+    @IBOutlet weak var addInfo: UITextField!
+    
+    @IBOutlet weak var missing: UILabel!
+    
+    
+    @IBAction func reportButtonClicked(_ sender: UIButton) {
+        guard nameId.text != "", counselor.text != "", issue.text != "" else {
+            missing.text = "FILL OUT ALL REQUIRED FEILDS"
+            if(nameId.text == "") {
+                nameId.backgroundColor = .systemRed
+            }
+            else{
+                nameId.backgroundColor = .clear
+            }
+            if(issue.text == "") {
+                issue.backgroundColor = .systemRed
+            }
+            else{
+                issue.backgroundColor = .clear
+            }
+            if(counselor.text == "") {
+                counselor.backgroundColor = .systemRed
+            }
+            else{
+                counselor.backgroundColor = .clear
+            }
+            return
+        }
+        if MFMailComposeViewController.canSendMail(){
+            let message = MFMailComposeViewController()
+            message.delegate = self
+            message.setSubject("Report An Issue")
+            var email = ""
+            message.setToRecipients([email])
+            message.setMessageBody("Student Name: \(nameId) \n Student ID: \(counselor) \n Student's Counselor: \(issue) \n Additional Information: \(addInfo)", isHTML: false)
+            present(UINavigationController(rootViewController: message), animated: true)
+        }
+        else {
+            guard let url = URL(string: "https://www.google.com") else {
+                return
+            }
+            let message = SFSafariViewController(url: url)
+            present(message, animated: true)
+        }
+    }
+    
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true, completion: nil)
+    }
     
     /* Variables from Interface Builder */
     
@@ -31,3 +87,4 @@ class ReportIssueController: UIViewController {
     */
 
 }
+
