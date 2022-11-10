@@ -1493,6 +1493,9 @@
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="baseBackgroundColor" red="0.63311452963917525" green="0.16052969875372478" blue="0.15571549695579232" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <segue destination="qGU-35-bvw" kind="show" id="Hfe-LV-YTH"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemGray4Color"/>
@@ -1518,6 +1521,9 @@
                                             <fontDescription key="titleFontDescription" type="boldSystem" pointSize="26"/>
                                             <color key="baseBackgroundColor" red="0.69019609689999994" green="0.14901961389999999" blue="0.20784312490000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="CallRecommended:" destination="AvP-Qf-QEF" eventType="touchUpInside" id="jhK-E8-CAe"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uGK-ed-pdV" userLabel="report">
                                         <rect key="frame" x="420" y="0.0" width="350" height="65"/>
@@ -1532,6 +1538,9 @@
                                             <fontDescription key="titleFontDescription" type="boldSystem" pointSize="26"/>
                                             <color key="baseBackgroundColor" red="0.69019609689999994" green="0.14901961389999999" blue="0.20784312490000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="Rad-aI-puw" kind="show" id="lNv-pm-lWT"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -5588,7 +5597,9 @@ Cg
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="onY-RW-VIk"/>
+        <segue reference="lNv-pm-lWT"/>
         <segue reference="uwC-fP-Xym"/>
+        <segue reference="Hfe-LV-YTH"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Background" width="1874" height="1405"/>
