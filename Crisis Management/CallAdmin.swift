@@ -14,6 +14,7 @@ var numberStart = "214-496-"
 var adminList: [Admin] = []
 var principalList: [Admin] = []
 var counselorList: [Admin] = []
+var emergencyContactsList: [String] = ["Principal: Laura Springer                      6110", "Associate Principal: Melissa Arnold    6122", "Lead Counselor: Ann Cinelli                 6112", "Coppell Police Department                 972-304-3600", "Dallas Police Department                    214-744-4444", "Irving Police Department                     972-723-1010", "Lewisville Police Department              972-219-3600", "Child Protective Services                     800-252-5400", "Dallas County Mobile Crisis                 866-260-8000"]
 
 var selectedAdmin: Admin = Admin(imgStr: "", adminType: AdminType.Counselor, lastName: "", firstName: "", username: "", callExt: 0, adminTypeDetailed: "")
 
@@ -49,7 +50,7 @@ class Admin {
     }
     
     var cellString: String {
-        return "\(fullName)\t-\t\(callExt)"
+        return "\(fullName)\t-\t\(callExt)\t-\t\(email)"
     }
     
     init(imgStr: String, adminType: AdminType, lastName: String, firstName: String, username: String, callExt: Int, adminTypeDetailed: String) {
@@ -120,10 +121,10 @@ func createAdmins() {
     
     for admin in adminList {
         if admin.adminType == AdminType.Principal {
-            print("Principal \(admin.fullName)")
+//            print("Principal \(admin.fullName)")
             principalList.append(admin)
         } else if admin.adminType == AdminType.Counselor {
-            print("Counselor \(admin.fullName)")
+//            print("Counselor \(admin.fullName)")
             counselorList.append(admin)
         } else {
             print(admin.fullName)
@@ -133,6 +134,7 @@ func createAdmins() {
 }
 
 func findAdmin(username: String) -> Admin {
+    createAdmins()
     for admin in adminList {
         if admin.username == username {
             return admin
@@ -209,7 +211,7 @@ class PrincipalContactsTableViewController: UITableViewController {
             if indexPath[1] == i {
                 selectedAdmin = principalList[i]
                 print(selectedAdmin.fullName)
-                var prinViewController = storyboard!.instantiateViewController(withIdentifier: "adminInfoInSchool") as! AdminInfoViewController
+                let prinViewController = storyboard!.instantiateViewController(withIdentifier: "adminInfoInSchool") as! AdminInfoViewController
                 self.navigationController?.pushViewController(prinViewController, animated: true)
             }
         }
@@ -330,7 +332,66 @@ class CallAdminOutSchoolController: UIViewController {
 }
 
 class EmergencyContactsTableViewController: UITableViewController {
+    
     override func viewDidLoad() {
+        createAdmins()
         super.viewDidLoad()
     }
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 1
+    }
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        return emergencyContactsList.count
+    }
+
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "EmergencyCell", for: indexPath)
+
+        // Configure the cell...
+
+        let label = cell.viewWithTag(3000) as! UILabel
+        
+        for i in 0...(emergencyContactsList.count - 1) {
+            if indexPath.row == i {
+                label.text = emergencyContactsList[i]
+                if emergencyContactsList[i].contains(":") {
+                    
+                }
+                cell.accessoryType = .disclosureIndicator
+            }
+        }
+        // End of new code block
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView,didSelectRowAt indexPath: IndexPath) {
+//        tableView.deselectRow(at: indexPath, animated: true)
+        
+        for i in 0...(counselorList.count - 1) {
+            if indexPath[1] == i {
+                switch i {
+                case 0:
+                    selectedAdmin = findAdmin(username: "lspringer")
+                    var adminViewController = storyboard!.instantiateViewController(withIdentifier: "adminInfoInSchool") as! AdminInfoViewController
+                    self.navigationController?.pushViewController(adminViewController, animated: true)
+                case 1:
+                    selectedAdmin = findAdmin(username: "marnold")
+                    var adminViewController = storyboard!.instantiateViewController(withIdentifier: "adminInfoInSchool") as! AdminInfoViewController
+                    self.navigationController?.pushViewController(adminViewController, animated: true)
+                case 2:
+                    selectedAdmin = findAdmin(username: "acinelli")
+                    var adminViewController = storyboard!.instantiateViewController(withIdentifier: "adminInfoInSchool") as! AdminInfoViewController
+                    self.navigationController?.pushViewController(adminViewController, animated: true)
+                default:
+                    print("Nothing would happen")
+                }
+            }
+        }
+    }
+    
+    
 }
