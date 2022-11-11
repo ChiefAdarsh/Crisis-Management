@@ -66,9 +66,9 @@ class ChecklistViewController: UIViewController {
         print("Current title of check 1 is: \"\(check1.currentTitle ?? "nil")\"")
     }
     
-    @IBAction func check2Pressed(_ sender: Any) {
-            updateCheckTitle(button: check2)
-            print("Current title of check 2 is: \"\(check2.currentTitle ?? "nil")\"")
+    @IBAction func check2Pressed(_ sender: UIButton) {
+        updateCheckTitle(button: check2)
+        print("Current title of check 2 is: \"\(check2.currentTitle ?? "nil")\"")
     }
     
     @IBAction func check3Pressed(_ sender: Any) {

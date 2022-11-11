@@ -1150,14 +1150,14 @@
                                                     <constraint firstAttribute="height" constant="35" id="tB1-WH-zZd"/>
                                                 </constraints>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VKJ-j4-fQK">
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="8QZ-vf-CpY">
                                                 <rect key="frame" x="176" y="57" width="600" height="42"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="psY-HA-JXJ">
-                                                        <rect key="frame" x="0.0" y="0.0" width="35" height="42"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ed0-2N-AN1">
+                                                        <rect key="frame" x="0.0" y="3.5" width="35" height="35"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="35" id="jbC-GK-a57"/>
-                                                            <constraint firstAttribute="height" constant="42" id="reN-SL-4lp"/>
+                                                            <constraint firstAttribute="width" constant="35" id="57p-On-SJ8"/>
+                                                            <constraint firstAttribute="height" constant="35" id="Dmy-oc-qYK"/>
                                                         </constraints>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain">
@@ -1172,14 +1172,14 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <action selector="check2Pressed:" destination="k5E-cY-0RC" eventType="touchUpInside" id="jhL-w0-HVk"/>
+                                                            <action selector="check2Pressed:" destination="k5E-cY-0RC" eventType="touchUpInside" id="lRs-Wn-SdR"/>
                                                         </connections>
                                                     </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Student has written something disturbing indicating he/she may be thinking of suicide or hurting him/herself" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="78Y-WP-GmM">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Student has written something disturbing indicating he/she may be thinking of suicide or hurting him/herself" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vq5-Gs-bgm">
                                                         <rect key="frame" x="35" y="0.0" width="565" height="42"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="531" id="1Hh-38-DPL"/>
-                                                            <constraint firstAttribute="height" constant="42" id="zyH-6p-p7d"/>
+                                                            <constraint firstAttribute="height" constant="42" id="3ZP-uZ-GtV"/>
+                                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="565" id="rwW-VT-EnR"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17.5"/>
                                                         <color key="textColor" red="0.2470588088" green="0.2470588088" blue="0.2470588088" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1187,8 +1187,8 @@
                                                     </label>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="42" id="9FW-zI-vX5"/>
-                                                    <constraint firstAttribute="width" constant="600" id="sjw-1R-z6D"/>
+                                                    <constraint firstAttribute="height" constant="42" id="HBo-2p-sJo"/>
+                                                    <constraint firstAttribute="width" constant="600" id="rES-Wd-Tnv"/>
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K00-zu-CvW">
@@ -1382,7 +1382,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="check1" destination="SlB-rI-vg2" id="U0r-pz-SDy"/>
-                        <outlet property="check2" destination="psY-HA-JXJ" id="C62-TD-JGY"/>
+                        <outlet property="check2" destination="ed0-2N-AN1" id="U66-m3-pKh"/>
                         <outlet property="check3" destination="ytb-e4-aab" id="eRw-pi-ZTw"/>
                         <outlet property="check4" destination="LW8-hk-Fpa" id="e3F-Y2-aun"/>
                         <outlet property="check5" destination="tnI-dc-Qec" id="w2l-rV-LT5"/>
@@ -5675,7 +5675,7 @@ Teachers Can:
     <inferredMetricsTieBreakers>
         <segue reference="onY-RW-VIk"/>
         <segue reference="at3-4h-HVg"/>
-        <segue reference="nKW-bZ-WCm"/>
+        <segue reference="3qc-EB-Mqv"/>
         <segue reference="DtQ-3O-eE1"/>
     </inferredMetricsTieBreakers>
     <resources>
