@@ -119,8 +119,6 @@ class resourcesViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         myIndex = indexPath.row
         //performSegue(withIdentifier: "resIden", sender: self)
-        
-        
     }
     /*
     // Override to support conditional editing of the table view.
