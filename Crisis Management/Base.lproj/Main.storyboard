@@ -1405,8 +1405,8 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="Background" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N3m-PE-cIU">
                                 <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8pB-5d-MGf">
-                                <rect key="frame" x="139" y="146" width="834" height="541"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8pB-5d-MGf">
+                                <rect key="frame" x="139" y="162" width="834" height="541"/>
                                 <subviews>
                                     <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="ixW-Se-cGo" userLabel="Info view">
                                         <rect key="frame" x="0.0" y="0.0" width="834" height="541"/>
@@ -1549,17 +1549,17 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="fN2-IE-KV2">
-                                <rect key="frame" x="345.5" y="28" width="421" height="72"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="fN2-IE-KV2">
+                                <rect key="frame" x="345.5" y="70" width="421" height="72"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Help A Student" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uqW-Fl-1Yc">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Help A Student" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uqW-Fl-1Yc">
                                         <rect key="frame" x="0.0" y="0.0" width="421" height="72"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="421" id="3we-NC-K6f"/>
                                             <constraint firstAttribute="width" secondItem="uqW-Fl-1Yc" secondAttribute="height" multiplier="421:72" id="gO8-UB-Zso"/>
                                             <constraint firstAttribute="height" constant="72" id="zii-ds-uHg"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="60"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="42"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -1574,11 +1574,12 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Ts1-2I-7Mq" firstAttribute="centerX" secondItem="eDO-vg-nUK" secondAttribute="centerX" id="0mZ-is-pYe"/>
-                            <constraint firstItem="8pB-5d-MGf" firstAttribute="top" secondItem="fN2-IE-KV2" secondAttribute="bottom" constant="80" id="20i-3b-sfz"/>
+                            <constraint firstItem="8pB-5d-MGf" firstAttribute="top" secondItem="fN2-IE-KV2" secondAttribute="bottom" constant="20" id="20i-3b-sfz"/>
                             <constraint firstItem="Ts1-2I-7Mq" firstAttribute="centerX" secondItem="eDO-vg-nUK" secondAttribute="centerX" id="5qh-sO-sxg"/>
-                            <constraint firstItem="N3m-PE-cIU" firstAttribute="bottom" secondItem="H3L-QL-Io8" secondAttribute="bottom" id="DKq-mJ-kNS"/>
+                            <constraint firstItem="N3m-PE-cIU" firstAttribute="bottom" secondItem="eDO-vg-nUK" secondAttribute="bottom" id="DKq-mJ-kNS"/>
                             <constraint firstItem="Ts1-2I-7Mq" firstAttribute="centerX" secondItem="eDO-vg-nUK" secondAttribute="centerX" id="ZeR-hg-kQb"/>
                             <constraint firstItem="8pB-5d-MGf" firstAttribute="centerX" secondItem="eDO-vg-nUK" secondAttribute="centerX" id="cyb-9j-X3i"/>
+                            <constraint firstItem="fN2-IE-KV2" firstAttribute="top" secondItem="eDO-vg-nUK" secondAttribute="topMargin" id="fze-6j-0Hf"/>
                             <constraint firstItem="Ts1-2I-7Mq" firstAttribute="centerX" secondItem="eDO-vg-nUK" secondAttribute="centerX" id="hqS-aB-bpP"/>
                             <constraint firstItem="Ts1-2I-7Mq" firstAttribute="centerY" secondItem="eDO-vg-nUK" secondAttribute="centerY" constant="350" id="jAa-ZY-AXe"/>
                             <constraint firstItem="N3m-PE-cIU" firstAttribute="leading" secondItem="H3L-QL-Io8" secondAttribute="leading" id="kyI-si-0xh"/>
@@ -1796,7 +1797,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GTX-6e-NCM">
-                                <rect key="frame" x="20" y="70" width="1072" height="694"/>
+                                <rect key="frame" x="20" y="70" width="1072" height="744"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <attributedString key="attributedText">
                                     <fragment content="CHS Crisis Management ">
@@ -5609,7 +5610,7 @@ Cg
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PLO-ZD-8rx">
-                                <rect key="frame" x="20" y="70" width="1072" height="694"/>
+                                <rect key="frame" x="20" y="70" width="1072" height="744"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <attributedString key="attributedText">
                                     <fragment>
@@ -5671,9 +5672,9 @@ Teachers Can:
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="onY-RW-VIk"/>
-        <segue reference="at3-4h-HVg"/>
-        <segue reference="ACt-UR-Qcx"/>
-        <segue reference="DtQ-3O-eE1"/>
+        <segue reference="lNv-pm-lWT"/>
+        <segue reference="uwC-fP-Xym"/>
+        <segue reference="Hfe-LV-YTH"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Background" width="1874" height="1405"/>
