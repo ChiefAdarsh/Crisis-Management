@@ -1610,10 +1610,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="fhq-tE-acF">
-                                <rect key="frame" x="0.0" y="-285.5" width="1112" height="1405"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="1112" id="53h-BL-6fc"/>
-                                </constraints>
+                                <rect key="frame" x="-381" y="-285.5" width="1874" height="1405"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iuE-OX-SvD">
                                 <rect key="frame" x="106" y="262" width="900" height="426"/>
@@ -1799,7 +1796,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GTX-6e-NCM">
-                                <rect key="frame" x="20" y="70" width="1072" height="744"/>
+                                <rect key="frame" x="20" y="70" width="1072" height="694"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <attributedString key="attributedText">
                                     <fragment content="CHS Crisis Management ">
@@ -5612,7 +5609,7 @@ Cg
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PLO-ZD-8rx">
-                                <rect key="frame" x="20" y="70" width="1072" height="744"/>
+                                <rect key="frame" x="20" y="70" width="1072" height="694"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <attributedString key="attributedText">
                                     <fragment>
@@ -5675,7 +5672,7 @@ Teachers Can:
     <inferredMetricsTieBreakers>
         <segue reference="onY-RW-VIk"/>
         <segue reference="at3-4h-HVg"/>
-        <segue reference="3qc-EB-Mqv"/>
+        <segue reference="ACt-UR-Qcx"/>
         <segue reference="DtQ-3O-eE1"/>
     </inferredMetricsTieBreakers>
     <resources>

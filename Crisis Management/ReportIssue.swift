@@ -70,7 +70,7 @@ class ReportIssueController: UIViewController, UINavigationControllerDelegate, M
             
             if let email = counselorEmail {
                 message.setToRecipients([email])
-                message.setMessageBody("Student Name: \(nameId.text!) \n Student ID: \(counselor.text!) \n Student's Counselor: \(issue.text!) \n Additional Information: \(addInfo.text!)", isHTML: false)
+                message.setMessageBody("Student Name/ID: \(nameId.text!) \n Student's Counselor': \(counselor.text!) \n Additional Information: \(addInfo.text!)", isHTML: false)
                 present(message, animated: true)
             }
         } else {
