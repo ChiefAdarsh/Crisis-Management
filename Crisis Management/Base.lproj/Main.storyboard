@@ -5587,7 +5587,8 @@ Cg
                                         <string key="content">Teacher App Description:
 </string>
                                         <attributes>
-                                            <font key="NSFont" metaFont="system" size="36"/>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="36" name="HelveticaNeue"/>
                                             <real key="NSKern" value="0.0"/>
                                             <font key="NSOriginalFont" metaFont="system" size="36"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="5.3333334922790527" defaultTabInterval="36" tighteningFactorForTruncation="0.0" headerLevel="3">
@@ -5608,7 +5609,8 @@ Teachers Can:
 - Access other resources and contact information of emergency centers
 </mutableString>
                                         <attributes>
-                                            <font key="NSFont" metaFont="system" size="36"/>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="36" name="HelveticaNeue"/>
                                             <real key="NSKern" value="0.0"/>
                                             <font key="NSOriginalFont" metaFont="system" size="36"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
