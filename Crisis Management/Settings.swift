@@ -36,3 +36,11 @@ class PrivacyNoticeController: UIViewController {
     
     // ...
 }
+
+class AboutController: UIViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    // ...
+}

@@ -180,7 +180,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="g1N-yk-VsB">
-                            <rect key="frame" x="0.0" y="328.5" width="1112" height="44"/>
+                            <rect key="frame" x="0.0" y="241.5" width="1112" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="filled" title="Log Out">
@@ -207,26 +207,12 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="Aft-6g-znA" style="IBUITableViewCellStyleDefault" id="D5R-7h-5fo">
-                                        <rect key="frame" x="0.0" y="132" width="1112" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="D5R-7h-5fo" id="DtU-50-ZVo">
-                                            <rect key="frame" x="0.0" y="0.0" width="1112" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Terms of Service" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Aft-6g-znA">
-                                                    <rect key="frame" x="20" y="0.0" width="1072" height="43.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="ztq-Dd-w4c" kind="show" id="ETN-QQ-WCk"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="5wS-NF-mdz" style="IBUITableViewCellStyleDefault" id="NTp-IB-lhW">
-                                        <rect key="frame" x="0.0" y="175.5" width="1112" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="132" width="1112" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NTp-IB-lhW" id="LdZ-cy-TRg">
                                             <rect key="frame" x="0.0" y="0.0" width="1112" height="43.5"/>
@@ -245,25 +231,8 @@
                                             <segue destination="FjE-wX-afa" kind="show" id="Bor-Uf-d1E"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="NQc-se-fy1" style="IBUITableViewCellStyleDefault" id="kp1-aC-8wI">
-                                        <rect key="frame" x="0.0" y="219" width="1112" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kp1-aC-8wI" id="OXh-XZ-yaR">
-                                            <rect key="frame" x="0.0" y="0.0" width="1112" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Accessibility" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NQc-se-fy1">
-                                                    <rect key="frame" x="20" y="0.0" width="1072" height="43.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="5Ls-fz-Wl8" style="IBUITableViewCellStyleDefault" id="tu7-co-cda">
-                                        <rect key="frame" x="0.0" y="262.5" width="1112" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="175.5" width="1112" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tu7-co-cda" id="mSJ-lS-wqc">
                                             <rect key="frame" x="0.0" y="0.0" width="1112" height="43.5"/>
@@ -5601,6 +5570,72 @@ Cg
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GrP-Eb-oZI" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="479.67625899280574" y="111.51079136690649"/>
+        </scene>
+        <!--Privacy Policy-->
+        <scene sceneID="en7-h8-1UB">
+            <objects>
+                <viewController title="Privacy Policy" id="ztq-Dd-w4c" customClass="AboutController" customModule="Crisis_Management" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4Eu-bv-z1k">
+                        <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PLO-ZD-8rx">
+                                <rect key="frame" x="20" y="70" width="1072" height="744"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">Teacher App Description:
+</string>
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="36"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <font key="NSOriginalFont" metaFont="system" size="36"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="5.3333334922790527" defaultTabInterval="36" tighteningFactorForTruncation="0.0" headerLevel="3">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <real key="NSStrokeWidth" value="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <mutableString key="content">
+The CHS Crisis Management app allows you to help the students that need immediate attention both in and out of school. Get the information that you need to react to the situation at hand and easily contact the recommended people for further assistance.
+
+Teachers Can:
+- Search for students by name or ID number
+- Report an issue and receive specified CISD protocols for a given scenario
+- Call the administrators of specific schools within the district
+- Access other resources and contact information of emergency centers
+</mutableString>
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="36"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <font key="NSOriginalFont" metaFont="system" size="36"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <real key="NSStrokeWidth" value="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="c23-5e-ZQc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="c23-5e-ZQc" firstAttribute="bottom" secondItem="PLO-ZD-8rx" secondAttribute="bottom" constant="20" id="9lx-qF-JsJ"/>
+                            <constraint firstItem="PLO-ZD-8rx" firstAttribute="trailing" secondItem="4Eu-bv-z1k" secondAttribute="trailingMargin" id="CLH-T9-js7"/>
+                            <constraint firstItem="PLO-ZD-8rx" firstAttribute="leading" secondItem="4Eu-bv-z1k" secondAttribute="leadingMargin" id="fLf-UM-d4l"/>
+                            <constraint firstItem="PLO-ZD-8rx" firstAttribute="top" secondItem="c23-5e-ZQc" secondAttribute="top" id="wPl-GA-ZZo"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="VIc-IF-xbJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kXr-Id-45c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1947" y="-1020"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
