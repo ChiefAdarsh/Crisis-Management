@@ -1401,6 +1401,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="Background" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N3m-PE-cIU">
+                                <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8pB-5d-MGf">
                                 <rect key="frame" x="139" y="146" width="834" height="541"/>
                                 <subviews>
@@ -1486,10 +1489,11 @@
                                                 <color key="highlightedColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oTf-zA-vuy">
-                                                <rect key="frame" x="185" y="221" width="169" height="31"/>
+                                                <rect key="frame" x="183" y="222" width="178" height="32"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="gray" title="Want more resources?">
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="baseBackgroundColor" red="0.63311452963917525" green="0.16052969875372478" blue="0.15571549695579232" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </buttonConfiguration>
@@ -1498,7 +1502,7 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                        <color key="backgroundColor" red="0.92156863209999995" green="0.92156863209999995" blue="0.92156863209999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="541" id="Si3-cC-fMo"/>
                                             <constraint firstAttribute="width" constant="834" id="xgZ-tb-Xpe"/>
@@ -1571,10 +1575,14 @@
                             <constraint firstItem="Ts1-2I-7Mq" firstAttribute="centerX" secondItem="eDO-vg-nUK" secondAttribute="centerX" id="0mZ-is-pYe"/>
                             <constraint firstItem="8pB-5d-MGf" firstAttribute="top" secondItem="fN2-IE-KV2" secondAttribute="bottom" constant="80" id="20i-3b-sfz"/>
                             <constraint firstItem="Ts1-2I-7Mq" firstAttribute="centerX" secondItem="eDO-vg-nUK" secondAttribute="centerX" id="5qh-sO-sxg"/>
+                            <constraint firstItem="N3m-PE-cIU" firstAttribute="bottom" secondItem="H3L-QL-Io8" secondAttribute="bottom" id="DKq-mJ-kNS"/>
                             <constraint firstItem="Ts1-2I-7Mq" firstAttribute="centerX" secondItem="eDO-vg-nUK" secondAttribute="centerX" id="ZeR-hg-kQb"/>
                             <constraint firstItem="8pB-5d-MGf" firstAttribute="centerX" secondItem="eDO-vg-nUK" secondAttribute="centerX" id="cyb-9j-X3i"/>
                             <constraint firstItem="Ts1-2I-7Mq" firstAttribute="centerX" secondItem="eDO-vg-nUK" secondAttribute="centerX" id="hqS-aB-bpP"/>
                             <constraint firstItem="Ts1-2I-7Mq" firstAttribute="centerY" secondItem="eDO-vg-nUK" secondAttribute="centerY" constant="350" id="jAa-ZY-AXe"/>
+                            <constraint firstItem="N3m-PE-cIU" firstAttribute="leading" secondItem="H3L-QL-Io8" secondAttribute="leading" id="kyI-si-0xh"/>
+                            <constraint firstItem="N3m-PE-cIU" firstAttribute="top" secondItem="eDO-vg-nUK" secondAttribute="top" id="pKi-Lw-gKU"/>
+                            <constraint firstItem="N3m-PE-cIU" firstAttribute="trailing" secondItem="H3L-QL-Io8" secondAttribute="trailing" id="th6-b1-weP"/>
                             <constraint firstItem="fN2-IE-KV2" firstAttribute="centerX" secondItem="eDO-vg-nUK" secondAttribute="centerX" id="uaM-hr-QLR"/>
                         </constraints>
                     </view>
@@ -1790,7 +1798,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GTX-6e-NCM">
-                                <rect key="frame" x="20" y="70" width="1072" height="694"/>
+                                <rect key="frame" x="20" y="70" width="1072" height="744"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <attributedString key="attributedText">
                                     <fragment content="CHS Crisis Management ">
@@ -5598,7 +5606,7 @@ Cg
     <inferredMetricsTieBreakers>
         <segue reference="onY-RW-VIk"/>
         <segue reference="lNv-pm-lWT"/>
-        <segue reference="ACt-UR-Qcx"/>
+        <segue reference="uwC-fP-Xym"/>
         <segue reference="Hfe-LV-YTH"/>
     </inferredMetricsTieBreakers>
     <resources>
@@ -5621,9 +5629,6 @@ Cg
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray4Color">
-            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
