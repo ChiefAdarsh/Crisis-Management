@@ -30,7 +30,8 @@ class InOutSchoolController: UIViewController {
     // When the view is initially loaded
     override func viewDidLoad() {
         super.viewDidLoad()
-        if UIDevice.current.orientation.isLandscape {
+        let size = UIScreen.main.bounds.size
+        if size.height < size.width {
             stackView.axis = .horizontal
         } else {
             stackView.axis = .vertical

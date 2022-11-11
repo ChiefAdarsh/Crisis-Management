@@ -22,9 +22,6 @@ class SettingsController: UITableViewController {
             }
             UIApplication.shared.open(url)
         }
-        
-        
-        //performSegue(withIdentifier: "resIden", sender: self)
     }
     
 }
