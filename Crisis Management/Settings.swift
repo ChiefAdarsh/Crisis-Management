@@ -16,7 +16,7 @@ class SettingsController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
         myIndex = indexPath.row
         
-        if (myIndex == 4){
+        if (myIndex == 2){
             guard let url = URL(string: "https://forms.gle/XVt2PCnT6WnN1ngb8") else {
                 return
             }
