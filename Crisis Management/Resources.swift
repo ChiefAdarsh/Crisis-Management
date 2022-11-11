@@ -27,6 +27,7 @@ import UIKit
 //fileprivate func categoryType()
 
 var myIndex = 0
+var count = 0
 class resourcesViewController: UITableViewController {
 
     var resources = [
@@ -94,12 +95,22 @@ class resourcesViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 6
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return resources.count
+        var tempArray: [Resource] = []
+        let categoryArray = ["Crisis Lines", "Inpatient/Outpatient Mental Health Facilities", "Counseling Centers", "Eating Disorders", "Drug and Alcohol Abuse", "Specialty Counseling"]
+        //var count = 0
+        for i in 1...resources.count {
+            if resources[i-1].category == categoryArray[section] {
+                tempArray.append(resources[i-1])
+            }
+            //count += 1
+        }
+        //count = tempArray.count
+        return tempArray.count
     }
 
     
@@ -109,11 +120,11 @@ class resourcesViewController: UITableViewController {
         // Configure the cell...
         let resource = resources[indexPath.row]
         cell.textLabel?.text = resource.name
-        
         return cell
     }
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Section \(section)"
+        let categoryArray = ["Crisis Lines", "Inpatient/Outpatient Mental Health Facilities", "Counseling Centers", "Eating Disorders", "Drug and Alcohol Abuse", "Specialty Counseling"]
+        return categoryArray[section]
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
