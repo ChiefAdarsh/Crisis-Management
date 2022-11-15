@@ -1095,8 +1095,8 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="X7v-Rf-dtO">
                                 <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Student Protocols" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tct-J4-vhz">
-                                <rect key="frame" x="375.5" y="78" width="361" height="56"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Help A Student" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tct-J4-vhz">
+                                <rect key="frame" x="393.5" y="78" width="325" height="50.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="tct-J4-vhz" secondAttribute="height" multiplier="341:53" id="MH7-al-RRe"/>
                                 </constraints>
@@ -1105,7 +1105,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cPA-h9-RBn">
-                                <rect key="frame" x="264" y="156.5" width="584" height="49"/>
+                                <rect key="frame" x="264" y="151" width="584" height="49"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="cPA-h9-RBn" secondAttribute="height" multiplier="584:49" id="6jS-9l-56o"/>
                                     <constraint firstAttribute="height" constant="49" id="WtP-42-Kvs"/>
@@ -1121,7 +1121,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do Not Email/Text that a student is in crisis. Respond immediately with verbal contact." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJu-GO-GOi">
-                                <rect key="frame" x="164.5" y="230.5" width="783" height="51.5"/>
+                                <rect key="frame" x="164.5" y="225" width="783" height="51.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="68A-BZ-b5x"/>
                                 </constraints>
@@ -1140,7 +1140,7 @@
                                 </variation>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BMt-iI-Ik4">
-                                <rect key="frame" x="50" y="307" width="1012" height="500"/>
+                                <rect key="frame" x="50" y="301.5" width="1012" height="500"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Identify Students in Crisis" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CeO-l2-9Hw">
                                         <rect key="frame" x="384" y="31" width="244.5" height="24"/>
@@ -1850,7 +1850,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GTX-6e-NCM">
-                                <rect key="frame" x="20" y="70" width="1072" height="694"/>
+                                <rect key="frame" x="20" y="70" width="1072" height="744"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <attributedString key="attributedText">
                                     <fragment content="CHS Crisis Management ">
@@ -5449,8 +5449,7 @@ Cg
                             <inset key="imageInsets" minX="0.0" minY="5" maxX="5" maxY="0.0"/>
                             <color key="tintColor" systemColor="labelColor"/>
                             <connections>
-                                <action selector="settingsPressed:" destination="d7l-md-VJ3" id="EMN-Gm-ZcR"/>
-                                <segue destination="ppe-sh-VxT" kind="show" id="cEV-no-RyI"/>
+                                <segue destination="ppe-sh-VxT" kind="show" destinationCreationSelector="settingsSegueAction:sender:" id="yAD-c9-Es3"/>
                             </connections>
                         </barButtonItem>
                         <userDefinedRuntimeAttributes>
@@ -5518,7 +5517,7 @@ Cg
                                                     <constraint firstAttribute="width" constant="168" id="3kf-Ae-eGG"/>
                                                     <constraint firstAttribute="height" constant="168" id="Oni-gZ-gjp"/>
                                                 </constraints>
-                                                <buttonConfiguration key="configuration" style="gray" imagePlacement="top" title="Student Protocols" imagePadding="15">
+                                                <buttonConfiguration key="configuration" style="gray" imagePlacement="top" title="Help A Student" imagePadding="15">
                                                     <imageReference key="image" image="list.bullet.rectangle.portrait.fill" catalog="system" symbolScale="large"/>
                                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="50" scale="large"/>
                                                     <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
@@ -5673,7 +5672,7 @@ Cg
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PLO-ZD-8rx">
-                                <rect key="frame" x="20" y="70" width="1072" height="694"/>
+                                <rect key="frame" x="20" y="70" width="1072" height="744"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <attributedString key="attributedText">
                                     <fragment>
@@ -5720,7 +5719,7 @@ Teachers Can:
     <inferredMetricsTieBreakers>
         <segue reference="onY-RW-VIk"/>
         <segue reference="at3-4h-HVg"/>
-        <segue reference="ACt-UR-Qcx"/>
+        <segue reference="yAD-c9-Es3"/>
         <segue reference="DtQ-3O-eE1"/>
     </inferredMetricsTieBreakers>
     <resources>

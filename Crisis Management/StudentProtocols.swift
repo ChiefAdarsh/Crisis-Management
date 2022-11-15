@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ChecklistViewController: UIViewController {
+class ChecklistViewController: UIViewController, BackTitle {
 
     @IBOutlet var submitButton: UIButton!
     
@@ -16,6 +16,7 @@ class ChecklistViewController: UIViewController {
     @IBOutlet var check3: UIButton!
     @IBOutlet var check4: UIButton!
     @IBOutlet var check5: UIButton!
+    var backTitle: String!
     
     @IBSegueAction func segueAction(_ coder: NSCoder) -> ProtocolsViewController? {
         if check1.title(for: .normal)!.isEmpty && check2.title(for: .normal)!.isEmpty && check3.title(for: .normal)!.isEmpty && check4.title(for: .normal)!.isEmpty && check5.title(for: .normal)!.isEmpty {
@@ -39,6 +40,14 @@ class ChecklistViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.backTitle = "Help A Student - Checklist"
+        
+        if let ctrs = self.navigationController?.viewControllers, ctrs.count > 1 {
+            let viewController = ctrs[ctrs.count - 2] as! BackTitle
+            let backButton = UIBarButtonItem()
+            backButton.title = viewController.backTitle
+            self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
+        }
         
         check1.setTitle("", for: .normal)
         check2.setTitle("", for: .normal)
@@ -88,21 +97,25 @@ class ChecklistViewController: UIViewController {
         print("Current title of check 5 is: \"\(check5.currentTitle ?? "nil")\"")
     }
     
-    
 }
 
-class ProtocolsViewController: UIViewController {
-    
-    
+class ProtocolsViewController: UIViewController, BackTitle {
     var inOrOut: String!
-    
+    var backTitle: String!
     
     override func viewDidLoad() {
-        
         super.viewDidLoad()
+        self.backTitle = "Help A Student - Protocols"
         
+        if let ctrs = self.navigationController?.viewControllers, ctrs.count > 1 {
+            let viewController = ctrs[ctrs.count - 2] as! BackTitle
+            let backButton = UIBarButtonItem()
+            backButton.title = viewController.backTitle
+            self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
+        }
     }
-    //Goes to Call Recommended people screen
+    
+    // Goes to Call Recommended people screen
 
     @IBAction func CallRecommended(_ sender: Any) {
         var callAdminController: UIViewController!
@@ -114,6 +127,3 @@ class ProtocolsViewController: UIViewController {
         self.navigationController?.pushViewController(callAdminController, animated: true)
     }
 }
-
-
-//  infolabel.text =

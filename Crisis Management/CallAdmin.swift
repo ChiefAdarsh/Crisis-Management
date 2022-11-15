@@ -9,6 +9,292 @@ import UIKit
 
 // MARK: - IN SCHOOL
 
+class CallAdminInSchoolController: UIViewController, BackTitle {
+    var backTitle: String!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.backTitle = "Call Admin"
+        
+        if let ctrs = self.navigationController?.viewControllers, ctrs.count > 1 {
+            let viewController = ctrs[ctrs.count - 2] as! BackTitle
+            let backButton = UIBarButtonItem()
+            backButton.title = viewController.backTitle
+            self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
+        }
+    }
+
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+    }
+}
+
+class PrincipalContactsTableViewController: UITableViewController, BackTitle {
+    var backTitle: String!
+    
+    override func viewDidLoad() {
+        createAdmins()
+        super.viewDidLoad()
+        self.backTitle = "Principals"
+        
+        if let ctrs = self.navigationController?.viewControllers, ctrs.count > 1 {
+            let viewController = ctrs[ctrs.count - 2] as! BackTitle
+            let backButton = UIBarButtonItem()
+            backButton.title = viewController.backTitle
+            self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
+        }
+    }
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 1
+    }
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        return principalList.count
+    }
+
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PrincipalCell", for: indexPath)
+
+        // Configure the cell...
+
+        let label = cell.viewWithTag(1000) as! UILabel
+        let image = cell.viewWithTag(1234) as! UIImageView
+        let subtitle = cell.viewWithTag(2468) as! UILabel
+        
+        for i in 0...(principalList.count - 1) {
+            if indexPath.row == i {
+                label.text = principalList[i].fullName
+                image.image = UIImage(named: principalList[i].imgStr!)
+                subtitle.text = principalList[i].adminTypeDetailed
+                cell.accessoryType = .disclosureIndicator
+            }
+        }
+        // End of new code block
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView,didSelectRowAt indexPath: IndexPath) {
+//        tableView.deselectRow(at: indexPath, animated: true)
+        
+        for i in 0...(principalList.count - 1) {
+            if indexPath[1] == i {
+                selectedAdmin = principalList[i]
+                print(selectedAdmin.fullName)
+                let prinViewController = storyboard!.instantiateViewController(withIdentifier: "adminInfoInSchool") as! AdminInfoViewController
+                self.navigationController?.pushViewController(prinViewController, animated: true)
+            }
+        }
+    }
+}
+
+class CounselorContactsTableViewController: UITableViewController, BackTitle {
+    var backTitle: String!
+    
+    override func viewDidLoad() {
+        createAdmins()
+        super.viewDidLoad()
+        self.backTitle = "Counselors"
+        
+        if let ctrs = self.navigationController?.viewControllers, ctrs.count > 1 {
+            let viewController = ctrs[ctrs.count - 2] as! BackTitle
+            let backButton = UIBarButtonItem()
+            backButton.title = viewController.backTitle
+            self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
+        }
+    }
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 1
+    }
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        return counselorList.count
+    }
+
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CounselorCell", for: indexPath)
+
+        // Configure the cell...
+
+        let label = cell.viewWithTag(2000) as! UILabel
+        let image = cell.viewWithTag(1357) as! UIImageView
+        let subtitle = cell.viewWithTag(1111) as! UILabel
+        
+        for i in 0...(counselorList.count - 1) {
+            if indexPath.row == i {
+                label.text = counselorList[i].fullName
+                image.image = UIImage(named: counselorList[i].imgStr!)
+                subtitle.text = counselorList[i].adminTypeDetailed
+                cell.accessoryType = .disclosureIndicator
+            }
+        }
+        // End of new code block
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView,didSelectRowAt indexPath: IndexPath) {
+//        tableView.deselectRow(at: indexPath, animated: true)
+        
+        for i in 0...(counselorList.count - 1) {
+            if indexPath[1] == i {
+                selectedAdmin = counselorList[i]
+                print(selectedAdmin.fullName)
+                let counViewController = storyboard!.instantiateViewController(withIdentifier: "adminInfoInSchool") as! AdminInfoViewController
+                self.navigationController?.pushViewController(counViewController, animated: true)
+            }
+        }
+    }
+}
+
+class AdminInfoViewController: UIViewController, BackTitle {
+    var backTitle: String!
+    
+    @IBOutlet var EmailBtn: UIButton!
+    @IBOutlet var CallBtn: UIButton!
+    @IBOutlet var AdminLbl: UILabel!
+    @IBOutlet var AdminPic: UIImageView!
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.backTitle = selectedAdmin.fullName
+        
+        if let ctrs = self.navigationController?.viewControllers, ctrs.count > 1 {
+            let viewController = ctrs[ctrs.count - 2] as! BackTitle
+            let backButton = UIBarButtonItem()
+            backButton.title = viewController.backTitle
+            self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
+        }
+        
+        AdminLbl.text = "\(selectedAdmin.fullName), \(selectedAdmin.adminTypeDetailed)"
+        AdminPic.image = UIImage(named: selectedAdmin.imgStr!)
+        
+        // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func call(_ sender: Any) {
+        if let url = NSURL(string: "https://teams.microsoft.com/l/call/0/0?users=myakubovsky@coppellisd.com"){
+            UIApplication.shared.open(url as URL)
+        }
+    }
+    
+    @IBAction func email(_ sender: Any) {
+        let email = selectedAdmin.email
+        if let url = URL(string: "mailto:\(email)") {
+          if #available(iOS 10.0, *) {
+            UIApplication.shared.open(url)
+          } else {
+            UIApplication.shared.openURL(url)
+          }
+        }
+    }
+}
+
+// MARK: - OUT OF SCHOOL
+
+class CallAdminOutSchoolController: UIViewController, BackTitle {
+    var backTitle: String!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.backTitle = "Call Admin"
+        
+        if let ctrs = self.navigationController?.viewControllers, ctrs.count > 1 {
+            let viewController = ctrs[ctrs.count - 2] as! BackTitle
+            let backButton = UIBarButtonItem()
+            backButton.title = viewController.backTitle
+            self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
+        }
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+    }
+}
+
+class EmergencyContactsTableViewController: UITableViewController, BackTitle {
+    var backTitle: String!
+    
+    override func viewDidLoad() {
+        createAdmins()
+        super.viewDidLoad()
+        self.backTitle = "Emergency Contacts"
+        
+        if let ctrs = self.navigationController?.viewControllers, ctrs.count > 1 {
+            let viewController = ctrs[ctrs.count - 2] as! BackTitle
+            let backButton = UIBarButtonItem()
+            backButton.title = viewController.backTitle
+            self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
+        }
+    }
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 1
+    }
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        return emergencyContactsList.count
+    }
+
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "EmergencyCell", for: indexPath)
+
+        // Configure the cell...
+
+        let label = cell.viewWithTag(3000) as! UILabel
+        
+        for i in 0...(emergencyContactsList.count - 1) {
+            if indexPath.row == i {
+                label.text = emergencyContactsList[i]
+                if emergencyContactsList[i].contains(":") {
+                    
+                }
+                cell.accessoryType = .disclosureIndicator
+            }
+        }
+        // End of new code block
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView,didSelectRowAt indexPath: IndexPath) {
+//        tableView.deselectRow(at: indexPath, animated: true)
+        
+        for i in 0...(counselorList.count - 1) {
+            if indexPath[1] == i {
+                switch i {
+                case 0:
+                    selectedAdmin = findAdmin(username: "lspringer")
+                    var adminViewController = storyboard!.instantiateViewController(withIdentifier: "adminInfoInSchool") as! AdminInfoViewController
+                    self.navigationController?.pushViewController(adminViewController, animated: true)
+                case 1:
+                    selectedAdmin = findAdmin(username: "marnold")
+                    var adminViewController = storyboard!.instantiateViewController(withIdentifier: "adminInfoInSchool") as! AdminInfoViewController
+                    self.navigationController?.pushViewController(adminViewController, animated: true)
+                case 2:
+                    selectedAdmin = findAdmin(username: "acinelli")
+                    var adminViewController = storyboard!.instantiateViewController(withIdentifier: "adminInfoInSchool") as! AdminInfoViewController
+                    self.navigationController?.pushViewController(adminViewController, animated: true)
+                default:
+                    print("Nothing would happen")
+                }
+            }
+        }
+    }
+}
+
 var numberStart = "214496"
 
 var adminList: [Admin] = []
@@ -144,266 +430,4 @@ func findAdmin(username: String) -> Admin {
         }
     }
     return Admin(imgStr: "AA", adminType: AdminType.Counselor, lastName: "NA", firstName: "NA", username: "NA", callExt: 0, adminTypeDetailed: "NA")
-}
-
-class CallAdminInSchoolController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-    }
-    
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-    }
-
-    /*
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-}
-
-class PrincipalContactsTableViewController: UITableViewController {
-    
-    override func viewDidLoad() {
-        createAdmins()
-        super.viewDidLoad()
-    }
-    
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return principalList.count
-    }
-
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PrincipalCell", for: indexPath)
-
-        // Configure the cell...
-
-        let label = cell.viewWithTag(1000) as! UILabel
-        let image = cell.viewWithTag(1234) as! UIImageView
-        let subtitle = cell.viewWithTag(2468) as! UILabel
-        
-        for i in 0...(principalList.count - 1) {
-            if indexPath.row == i {
-                label.text = principalList[i].fullName
-                image.image = UIImage(named: principalList[i].imgStr!)
-                subtitle.text = principalList[i].adminTypeDetailed
-                cell.accessoryType = .disclosureIndicator
-            }
-        }
-        // End of new code block
-        return cell
-    }
-    
-    override func tableView(_ tableView: UITableView,didSelectRowAt indexPath: IndexPath) {
-//        tableView.deselectRow(at: indexPath, animated: true)
-        
-        for i in 0...(principalList.count - 1) {
-            if indexPath[1] == i {
-                selectedAdmin = principalList[i]
-                print(selectedAdmin.fullName)
-                let prinViewController = storyboard!.instantiateViewController(withIdentifier: "adminInfoInSchool") as! AdminInfoViewController
-                self.navigationController?.pushViewController(prinViewController, animated: true)
-            }
-        }
-    }
-}
-
-class CounselorContactsTableViewController: UITableViewController {
-    
-    override func viewDidLoad() {
-        createAdmins()
-        super.viewDidLoad()
-    }
-    
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return counselorList.count
-    }
-
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CounselorCell", for: indexPath)
-
-        // Configure the cell...
-
-        let label = cell.viewWithTag(2000) as! UILabel
-        let image = cell.viewWithTag(1357) as! UIImageView
-        let subtitle = cell.viewWithTag(1111) as! UILabel
-        
-        for i in 0...(counselorList.count - 1) {
-            if indexPath.row == i {
-                label.text = counselorList[i].fullName
-                image.image = UIImage(named: counselorList[i].imgStr!)
-                subtitle.text = counselorList[i].adminTypeDetailed
-                cell.accessoryType = .disclosureIndicator
-            }
-        }
-        // End of new code block
-        return cell
-    }
-    
-    override func tableView(_ tableView: UITableView,didSelectRowAt indexPath: IndexPath) {
-//        tableView.deselectRow(at: indexPath, animated: true)
-        
-        for i in 0...(counselorList.count - 1) {
-            if indexPath[1] == i {
-                selectedAdmin = counselorList[i]
-                print(selectedAdmin.fullName)
-                let counViewController = storyboard!.instantiateViewController(withIdentifier: "adminInfoInSchool") as! AdminInfoViewController
-                self.navigationController?.pushViewController(counViewController, animated: true)
-            }
-        }
-    }
-}
-
-class AdminInfoViewController: UIViewController {
-    
-    
-    
-    @IBOutlet var EmailBtn: UIButton!
-    @IBOutlet var CallBtn: UIButton!
-    @IBOutlet var AdminLbl: UILabel!
-    @IBOutlet var AdminPic: UIImageView!
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        AdminLbl.text = "\(selectedAdmin.fullName), \(selectedAdmin.adminTypeDetailed)"
-        AdminPic.image = UIImage(named: selectedAdmin.imgStr!)
-        
-        // Do any additional setup after loading the view.
-    }
-    
-    @IBAction func call(_ sender: Any) {
-        if let url = NSURL(string: "https://teams.microsoft.com/l/call/0/0?users=myakubovsky@coppellisd.com"){
-            UIApplication.shared.open(url as URL)
-        }
-    }
-    
-   
-    @IBAction func email(_ sender: Any) {
-        let email = selectedAdmin.email
-        if let url = URL(string: "mailto:\(email)") {
-          if #available(iOS 10.0, *) {
-            UIApplication.shared.open(url)
-          } else {
-            UIApplication.shared.openURL(url)
-          }
-        }
-    }
-    
-}
-
-// MARK: - OUT OF SCHOOL
-
-class CallAdminOutSchoolController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-    
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-    }
-    
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-    }
-
-    /*
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-}
-
-class EmergencyContactsTableViewController: UITableViewController {
-    
-    override func viewDidLoad() {
-        createAdmins()
-        super.viewDidLoad()
-    }
-    
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return emergencyContactsList.count
-    }
-
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "EmergencyCell", for: indexPath)
-
-        // Configure the cell...
-
-        let label = cell.viewWithTag(3000) as! UILabel
-        
-        for i in 0...(emergencyContactsList.count - 1) {
-            if indexPath.row == i {
-                label.text = emergencyContactsList[i]
-                if emergencyContactsList[i].contains(":") {
-                    
-                }
-                cell.accessoryType = .disclosureIndicator
-            }
-        }
-        // End of new code block
-        return cell
-    }
-    
-    override func tableView(_ tableView: UITableView,didSelectRowAt indexPath: IndexPath) {
-//        tableView.deselectRow(at: indexPath, animated: true)
-        
-        for i in 0...(counselorList.count - 1) {
-            if indexPath[1] == i {
-                switch i {
-                case 0:
-                    selectedAdmin = findAdmin(username: "lspringer")
-                    var adminViewController = storyboard!.instantiateViewController(withIdentifier: "adminInfoInSchool") as! AdminInfoViewController
-                    self.navigationController?.pushViewController(adminViewController, animated: true)
-                case 1:
-                    selectedAdmin = findAdmin(username: "marnold")
-                    var adminViewController = storyboard!.instantiateViewController(withIdentifier: "adminInfoInSchool") as! AdminInfoViewController
-                    self.navigationController?.pushViewController(adminViewController, animated: true)
-                case 2:
-                    selectedAdmin = findAdmin(username: "acinelli")
-                    var adminViewController = storyboard!.instantiateViewController(withIdentifier: "adminInfoInSchool") as! AdminInfoViewController
-                    self.navigationController?.pushViewController(adminViewController, animated: true)
-                default:
-                    print("Nothing would happen")
-                }
-            }
-        }
-    }
-    
-    
 }

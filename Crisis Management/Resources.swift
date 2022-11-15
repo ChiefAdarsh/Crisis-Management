@@ -31,8 +31,8 @@ var count = 0
 var counter = 0
 var tempArrayLength = 0
 var mySection = 0
-class resourcesViewController: UITableViewController {
-
+class resourcesViewController: UITableViewController, BackTitle {
+    var backTitle: String!
     var resources = [
         [Resource(category: "Crisis Lines", name: "Child Protective Services", contact: "1-800-252-5400", address: "", city: "", state: "", zip: "", website: "", addInfo: "Texas law says anyone who thinks a child, or person 65 years or older, or an adult with disabilities is being abused, neglected, or exploited must report it to DFPS. A person who reports abuse in good faith is immune from civil or criminal liability"),
         Resource(category: "Crisis Lines", name: "National Suicide Prevention Lifeline", contact: "Call or text 988 or 1-800-273-8255", address: "", city: "", state: "", zip: "", website: "https://suicidepreventionlifeline.org/", addInfo: "24/7 free, confidential support for anyone in distress; Prevention and crisis resources for you or loved ones"),
@@ -86,6 +86,14 @@ class resourcesViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.backTitle = "Resources"
+        
+        if let ctrs = self.navigationController?.viewControllers, ctrs.count > 1 {
+            let viewController = ctrs[ctrs.count - 2] as! BackTitle
+            let backButton = UIBarButtonItem()
+            backButton.title = viewController.backTitle
+            self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
+        }
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -256,7 +264,8 @@ class Resource{
     }
     
 }
-class specificResourceViewController: UIViewController {
+class specificResourceViewController: UIViewController, BackTitle {
+    var backTitle: String!
     @IBOutlet var resNameLabel: UILabel!
     @IBOutlet var resCatLabel: UILabel!
     @IBOutlet var resDescLabel: UILabel!
@@ -267,10 +276,19 @@ class specificResourceViewController: UIViewController {
     var ci = Resource.myArray[mySection][myIndex].city
     var st = Resource.myArray[mySection][myIndex].state
     var zi = Resource.myArray[mySection][myIndex].zip
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        resNameLabel.text = Resource.myArray[mySection][myIndex].name
+        self.backTitle = Resource.myArray[mySection][myIndex].name
         
+        if let ctrs = self.navigationController?.viewControllers, ctrs.count > 1 {
+            let viewController = ctrs[ctrs.count - 2] as! BackTitle
+            let backButton = UIBarButtonItem()
+            backButton.title = viewController.backTitle
+            self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
+        }
+        
+        resNameLabel.text = Resource.myArray[mySection][myIndex].name
         resCatLabel.text = Resource.myArray[mySection][myIndex].category
         resDescLabel.text = Resource.myArray[mySection][myIndex].addInfo
         resWebLabel.text = Resource.myArray[mySection][myIndex].website
