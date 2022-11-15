@@ -9,7 +9,7 @@ import UIKit
 
 // MARK: - IN SCHOOL
 
-var numberStart = "214-496-"
+var numberStart = "214496"
 
 var adminList: [Admin] = []
 var principalList: [Admin] = []
@@ -31,14 +31,14 @@ class Admin {
     var firstName: String
     var username: String
     var callExt: Int
-    var imgStr: String
+    var imgStr: String?
     
     var fullName: String {
         return "\(firstName) \(lastName)"
     }
     
-    var number: String {
-        return numberStart + String(callExt)
+    var number: Int {
+        return Int(numberStart + String(callExt))!
     }
     
     var email: String {
@@ -46,21 +46,21 @@ class Admin {
     }
     
     var callLink: String {
-        return "https://teams.microsoft.com/l/chat/0/0?users=\(email)"
+        return "https://teams.microsoft.com/l/call/0/0?users=\(email)"
     }
     
-    var cellString: String {
-        return "\(fullName)\t-\t\(callExt)\t-\t\(email)"
-    }
-    
-    init(imgStr: String, adminType: AdminType, lastName: String, firstName: String, username: String, callExt: Int, adminTypeDetailed: String) {
+    init(imgStr: String?, adminType: AdminType, lastName: String, firstName: String, username: String, callExt: Int, adminTypeDetailed: String) {
         self.adminType = adminType
         self.lastName = lastName
         self.firstName = firstName
         self.username = username
         self.callExt = callExt
         self.adminTypeDetailed = adminTypeDetailed
-        self.imgStr = imgStr
+        if imgStr != nil {
+            self.imgStr = imgStr!
+        } else {
+            self.imgStr = "Blank_crop"
+        }
     }
     
 }
@@ -92,6 +92,9 @@ func createAdmins() {
     adminList.append(admin)
 
     admin = Admin(imgStr: "Girard_crop", adminType: AdminType.Principal, lastName: "Girard", firstName: "Brandon", username: "bgirard", callExt: 0, adminTypeDetailed: "Assistant Principal (Sg-Z)")
+    adminList.append(admin)
+    
+    admin = Admin(imgStr: nil, adminType: AdminType.Principal, lastName: "Yakubovsky", firstName: "Michael", username: "myakubovsky", callExt: 6237, adminTypeDetailed: "STEM Teacher")
     adminList.append(admin)
 
     // COUNSELORS
@@ -193,10 +196,14 @@ class PrincipalContactsTableViewController: UITableViewController {
         // Configure the cell...
 
         let label = cell.viewWithTag(1000) as! UILabel
+        let image = cell.viewWithTag(1234) as! UIImageView
+        let subtitle = cell.viewWithTag(2468) as! UILabel
         
         for i in 0...(principalList.count - 1) {
             if indexPath.row == i {
-                label.text = principalList[i].cellString
+                label.text = principalList[i].fullName
+                image.image = UIImage(named: principalList[i].imgStr!)
+                subtitle.text = principalList[i].adminTypeDetailed
                 cell.accessoryType = .disclosureIndicator
             }
         }
@@ -241,10 +248,14 @@ class CounselorContactsTableViewController: UITableViewController {
         // Configure the cell...
 
         let label = cell.viewWithTag(2000) as! UILabel
+        let image = cell.viewWithTag(1357) as! UIImageView
+        let subtitle = cell.viewWithTag(1111) as! UILabel
         
-        for i in 0...(principalList.count - 1) {
+        for i in 0...(counselorList.count - 1) {
             if indexPath.row == i {
-                label.text = counselorList[i].cellString
+                label.text = counselorList[i].fullName
+                image.image = UIImage(named: counselorList[i].imgStr!)
+                subtitle.text = counselorList[i].adminTypeDetailed
                 cell.accessoryType = .disclosureIndicator
             }
         }
@@ -259,7 +270,7 @@ class CounselorContactsTableViewController: UITableViewController {
             if indexPath[1] == i {
                 selectedAdmin = counselorList[i]
                 print(selectedAdmin.fullName)
-                var counViewController = storyboard!.instantiateViewController(withIdentifier: "adminInfoInSchool") as! AdminInfoViewController
+                let counViewController = storyboard!.instantiateViewController(withIdentifier: "adminInfoInSchool") as! AdminInfoViewController
                 self.navigationController?.pushViewController(counViewController, animated: true)
             }
         }
@@ -278,17 +289,18 @@ class AdminInfoViewController: UIViewController {
         super.viewDidLoad()
         
         AdminLbl.text = "\(selectedAdmin.fullName), \(selectedAdmin.adminTypeDetailed)"
-        AdminPic.image = UIImage(named: selectedAdmin.imgStr)
+        AdminPic.image = UIImage(named: selectedAdmin.imgStr!)
         
         // Do any additional setup after loading the view.
     }
     
     @IBAction func call(_ sender: Any) {
-        if let url = NSURL(string: selectedAdmin.callLink){
+        if let url = NSURL(string: "https://teams.microsoft.com/l/call/0/0?users=myakubovsky@coppellisd.com"){
             UIApplication.shared.open(url as URL)
         }
     }
     
+   
     @IBAction func email(_ sender: Any) {
         let email = selectedAdmin.email
         if let url = URL(string: "mailto:\(email)") {

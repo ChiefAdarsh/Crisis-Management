@@ -36,6 +36,12 @@ class InOutSchoolController: UIViewController {
         } else {
             stackView.axis = .vertical
         }
+        
+        let alertController = UIAlertController(title: "Calls", message:
+                "This app uses Microsoft Teams to make calls. Please make sure to set up Teams on your device before you call.", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "Ok", style: .default))
+
+        self.present(alertController, animated: true, completion: nil)
     }
     
     // Change layout of in and out of school buttons to vertical
