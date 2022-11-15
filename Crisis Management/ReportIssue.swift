@@ -94,6 +94,25 @@ class ReportIssueController: UIViewController, UINavigationControllerDelegate, M
 
         // Do any additional setup after loading the view.
         inOrOut.text = InOutSchoolController.insideSchool ? "In School" : "Out of School"
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        print("Hello")
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            if view.frame.origin.y == 0 {
+                self.view.frame.origin.y -= keyboardSize.height-4*nameId.frame.height
+                
+            }
+        }
+    }
+
+    @objc func keyboardWillHide(notification: NSNotification) {
+        if view.frame.origin.y != 0 {
+            self.view.frame.origin.y = 0
+        }
     }
 
     /*

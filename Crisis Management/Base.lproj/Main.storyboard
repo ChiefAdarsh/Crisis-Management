@@ -1643,7 +1643,7 @@
                                         <rect key="frame" x="448" y="43" width="281" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" red="0.92156863209999995" green="0.92156863209999995" blue="0.92156863209999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1771,7 +1771,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GTX-6e-NCM">
-                                <rect key="frame" x="20" y="70" width="1072" height="744"/>
+                                <rect key="frame" x="20" y="70" width="1072" height="694"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <attributedString key="attributedText">
                                     <fragment content="CHS Crisis Management ">
@@ -5594,7 +5594,7 @@ Cg
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PLO-ZD-8rx">
-                                <rect key="frame" x="20" y="70" width="1072" height="744"/>
+                                <rect key="frame" x="20" y="70" width="1072" height="694"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <attributedString key="attributedText">
                                     <fragment>
@@ -5641,7 +5641,7 @@ Teachers Can:
     <inferredMetricsTieBreakers>
         <segue reference="onY-RW-VIk"/>
         <segue reference="at3-4h-HVg"/>
-        <segue reference="3qc-EB-Mqv"/>
+        <segue reference="ACt-UR-Qcx"/>
         <segue reference="DtQ-3O-eE1"/>
     </inferredMetricsTieBreakers>
     <resources>
