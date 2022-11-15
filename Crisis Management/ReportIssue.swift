@@ -41,19 +41,19 @@ class ReportIssueController: UIViewController, UINavigationControllerDelegate, M
             if(nameId.text == "") {
                 nameId.backgroundColor = .systemRed
             }
-            else{
+            else {
                 nameId.backgroundColor = .clear
             }
             if(issue.text == "") {
                 issue.backgroundColor = .systemRed
             }
-            else{
+            else {
                 issue.backgroundColor = .clear
             }
             if(counselor.text == "") {
                 counselor.backgroundColor = .systemRed
             }
-            else{
+            else {
                 counselor.backgroundColor = .clear
             }
             return
