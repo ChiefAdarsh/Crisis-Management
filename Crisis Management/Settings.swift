@@ -7,16 +7,27 @@
 
 import UIKit
 
-class SettingsController: UITableViewController {
+class SettingsController: UITableViewController, BackTitle {
+    
     var myIndex = 0
+    var backTitle: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.backTitle = "Settings"
+        
+        if let ctrs = self.navigationController?.viewControllers, ctrs.count > 1 {
+            let viewController = ctrs[ctrs.count - 2] as! BackTitle
+            let backButton = UIBarButtonItem()
+            backButton.title = viewController.backTitle
+            self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
+        }
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         myIndex = indexPath.row
         
-        if (myIndex == 2){
+        if (myIndex == 2) {
             guard let url = URL(string: "https://forms.gle/XVt2PCnT6WnN1ngb8") else {
                 return
             }
@@ -26,17 +37,37 @@ class SettingsController: UITableViewController {
     
 }
 
-class PrivacyNoticeController: UIViewController {
+class PrivacyNoticeController: UIViewController, BackTitle {
+    var backTitle: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.backTitle = "Privacy Policy"
+        
+        if let ctrs = self.navigationController?.viewControllers, ctrs.count > 1 {
+            let viewController = ctrs[ctrs.count - 2] as! BackTitle
+            let backButton = UIBarButtonItem()
+            backButton.title = viewController.backTitle
+            self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
+        }
     }
     
     // ...
 }
 
-class AboutController: UIViewController {
+class AboutController: UIViewController, BackTitle {
+    var backTitle: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.backTitle = "About"
+        
+        if let ctrs = self.navigationController?.viewControllers, ctrs.count > 1 {
+            let viewController = ctrs[ctrs.count - 2] as! BackTitle
+            let backButton = UIBarButtonItem()
+            backButton.title = viewController.backTitle
+            self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
+        }
     }
     
     // ...

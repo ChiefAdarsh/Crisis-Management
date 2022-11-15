@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, BackTitle {
     
     /* Variables from Interface Builder */
     
@@ -18,12 +18,21 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var CallAdminBtn: UIButton!
     @IBOutlet weak var ResourcesBtn: UIButton!
     @IBOutlet var HomeBtns: [UIButton]!
+    var backTitle: String!
     
     // Storyboard instance
     
     override func viewDidLoad() {
         super.viewDidLoad()
         roundBtns(radius: 15)
+        self.backTitle = "Home"
+        
+        if let ctrs = self.navigationController?.viewControllers, ctrs.count > 1 {
+            let viewController = ctrs[ctrs.count - 2] as! BackTitle
+            let backButton = UIBarButtonItem()
+            backButton.title = viewController.backTitle
+            self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
+        }
     }
     
     // Round the corners of the buttons

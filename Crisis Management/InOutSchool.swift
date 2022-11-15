@@ -7,8 +7,8 @@
 
 import UIKit
 
-class InOutSchoolController: UIViewController {
-
+class InOutSchoolController: UIViewController, BackTitle {
+    
     /* Variables from Interface Builder */
     
     @IBOutlet weak var background: UIImageView!
@@ -22,6 +22,7 @@ class InOutSchoolController: UIViewController {
     @IBOutlet var outSchoolButton: UIButton!
     
     @IBOutlet var stackView: UIStackView!
+    var backTitle: String!
     
     // Home View Controller
     var homeViewController: HomeViewController!
@@ -54,19 +55,27 @@ class InOutSchoolController: UIViewController {
     /* Actions for buttons from Interface Builder */
     
     // When the settings button is pressed
-    @IBAction func settingsPressed(_ sender: Any) {
-        print("Settings button pressed")
+    @IBSegueAction func settingsSegueAction(_ coder: NSCoder, sender: UIBarButtonItem?) -> SettingsController? {
+        self.backTitle = "Select Location"
+        return SettingsController(coder: coder)
     }
+    
     
     // When the In School button is pressed
     @IBSegueAction func inSchoolSegueAction(_ coder: NSCoder, sender: UIButton?) -> HomeViewController? {
+        self.backTitle = "In School"
         InOutSchoolController.insideSchool = true
         return HomeViewController(coder: coder)
     }
     
     // When the Out of School button is pressed
     @IBSegueAction func outSchoolSegueAction(_ coder: NSCoder, sender: UIButton?) -> HomeViewController? {
+        self.backTitle = "Out of School"
         InOutSchoolController.insideSchool = false
         return HomeViewController(coder: coder)
     }
+}
+
+protocol BackTitle {
+    var backTitle: String! { get set }
 }
