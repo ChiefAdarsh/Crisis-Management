@@ -1380,35 +1380,51 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="Background" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N3m-PE-cIU">
                                 <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DDP-uc-TB2" userLabel="inOrOut">
+                                <rect key="frame" x="264" y="92.5" width="584" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="Hw4-hY-4lu"/>
+                                    <constraint firstAttribute="width" secondItem="DDP-uc-TB2" secondAttribute="height" multiplier="584:49" id="Lsr-ln-1DS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="30"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8pB-5d-MGf">
-                                <rect key="frame" x="139" y="162" width="834" height="541"/>
+                                <rect key="frame" x="56" y="146.5" width="1000" height="541"/>
                                 <subviews>
                                     <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="ixW-Se-cGo" userLabel="Info view">
-                                        <rect key="frame" x="0.0" y="0.0" width="834" height="541"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="1000" height="541"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Resources" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bhL-Xm-gcO">
-                                                <rect key="frame" x="25" y="216" width="148" height="36"/>
+                                                <rect key="frame" x="99" y="216" width="148" height="36"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="highlightedColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Children’s Medical Center 1935 Medical District Drive Dallas, TX 75235 214-456-8899 - Option 2" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="khh-o8-tyo" userLabel="5resource">
-                                                <rect key="frame" x="81" y="244" width="321" height="126"/>
+                                                <rect key="frame" x="165" y="244" width="321" height="126"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="highlightedColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Teacher cannot leave his/her classroom. Call a counselor, administrator or main number immediately for help" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NEI-ho-MG4">
-                                                <rect key="frame" x="25" y="36" width="839" height="88"/>
+                                                <rect key="frame" x="99" y="36" width="839" height="88"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="highlightedColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lgn-P7-HNn">
-                                                <rect key="frame" x="25" y="94" width="839" height="88"/>
+                                                <rect key="frame" x="99" y="94" width="839" height="88"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <string key="text">Teacher or other faculty member will walk the student to a counselor or someone on the administrative team to visit with the student</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -1416,56 +1432,56 @@
                                                 <color key="highlightedColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Student cannot be left unattended" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L8D-3M-rKu">
-                                                <rect key="frame" x="25" y="170" width="831" height="43"/>
+                                                <rect key="frame" x="99" y="170" width="831" height="43"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="highlightedColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Holiner Psychiatric Group 7777 Forest Lane Building Suite 833 Dallas, TX 75230-2501 972-566-4591" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pcj-oa-1uc" userLabel="4resource">
-                                                <rect key="frame" x="81" y="314" width="366" height="165"/>
+                                                <rect key="frame" x="165" y="314" width="366" height="165"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="highlightedColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Excel Center of Lewisville 190 Civic Circle #170 Lewisville, TX 75067 972-906-5522" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pdC-5O-mfe" userLabel="2resource">
-                                                <rect key="frame" x="279" y="417" width="277" height="126"/>
+                                                <rect key="frame" x="363" y="419" width="277" height="126"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="highlightedColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Do Not Email/Text that a student is in crisis. Respond immediately with verbal contact." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ytD-XQ-HGj">
-                                                <rect key="frame" x="293" y="11" width="570" height="21"/>
+                                                <rect key="frame" x="379" y="18" width="570" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="13"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Maintaining Safety" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zTK-Az-del">
-                                                <rect key="frame" x="25" y="7" width="218" height="30"/>
+                                                <rect key="frame" x="99" y="14" width="218" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="highlightedColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Seay Center - Texas Health 6110 W. Parker Road Plano, TX 75093 972-981-8301" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kek-EA-BhZ" userLabel="3resource">
-                                                <rect key="frame" x="448" y="333" width="277" height="126"/>
+                                                <rect key="frame" x="557" y="333" width="277" height="126"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="highlightedColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Parkland Hospital (Emergency Room) 5200 Harry Hines Dallas, TX 75235 214-590-8000" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggF-3c-dbo" userLabel="6resource">
-                                                <rect key="frame" x="448" y="256" width="305" height="103"/>
+                                                <rect key="frame" x="557" y="256" width="305" height="103"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="highlightedColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oTf-zA-vuy">
-                                                <rect key="frame" x="183" y="222" width="178" height="32"/>
+                                                <rect key="frame" x="255" y="222" width="178" height="32"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="gray" title="Want more resources?">
@@ -1481,13 +1497,19 @@
                                         <color key="backgroundColor" red="0.92156863209999995" green="0.92156863209999995" blue="0.92156863209999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="541" id="Si3-cC-fMo"/>
-                                            <constraint firstAttribute="width" constant="834" id="xgZ-tb-Xpe"/>
+                                            <constraint firstAttribute="width" constant="1000" id="xgZ-tb-Xpe"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="Ts1-2I-7Mq">
-                                <rect key="frame" x="171" y="734.5" width="770" height="65"/>
+                                <rect key="frame" x="171" y="729" width="770" height="65"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ylo-7G-bUD" userLabel="recCall">
                                         <rect key="frame" x="0.0" y="0.0" width="350" height="65"/>
@@ -1525,7 +1547,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="fN2-IE-KV2">
-                                <rect key="frame" x="345.5" y="70" width="421" height="72"/>
+                                <rect key="frame" x="345.5" y="20" width="421" height="72"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Help A Student" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uqW-Fl-1Yc">
                                         <rect key="frame" x="0.0" y="0.0" width="421" height="72"/>
@@ -1534,13 +1556,14 @@
                                             <constraint firstAttribute="width" secondItem="uqW-Fl-1Yc" secondAttribute="height" multiplier="421:72" id="gO8-UB-Zso"/>
                                             <constraint firstAttribute="height" constant="72" id="zii-ds-uHg"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="42"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="72" id="6MY-E6-BVX"/>
+                                    <constraint firstItem="uqW-Fl-1Yc" firstAttribute="topMargin" secondItem="fN2-IE-KV2" secondAttribute="top" constant="58" id="E55-4P-dgj"/>
                                     <constraint firstAttribute="width" constant="421" id="ZC5-5T-L23"/>
                                 </constraints>
                             </stackView>
@@ -1548,15 +1571,15 @@
                         <viewLayoutGuide key="safeArea" id="H3L-QL-Io8"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Ts1-2I-7Mq" firstAttribute="centerX" secondItem="eDO-vg-nUK" secondAttribute="centerX" id="0mZ-is-pYe"/>
-                            <constraint firstItem="8pB-5d-MGf" firstAttribute="top" secondItem="fN2-IE-KV2" secondAttribute="bottom" constant="20" id="20i-3b-sfz"/>
-                            <constraint firstItem="Ts1-2I-7Mq" firstAttribute="centerX" secondItem="eDO-vg-nUK" secondAttribute="centerX" id="5qh-sO-sxg"/>
+                            <constraint firstItem="8pB-5d-MGf" firstAttribute="centerY" secondItem="eDO-vg-nUK" secondAttribute="centerY" id="1Xe-Xw-QkM"/>
+                            <constraint firstItem="DDP-uc-TB2" firstAttribute="width" secondItem="DDP-uc-TB2" secondAttribute="height" multiplier="584:49" id="8y1-Bl-NnN"/>
                             <constraint firstItem="N3m-PE-cIU" firstAttribute="bottom" secondItem="eDO-vg-nUK" secondAttribute="bottom" id="DKq-mJ-kNS"/>
-                            <constraint firstItem="Ts1-2I-7Mq" firstAttribute="centerX" secondItem="eDO-vg-nUK" secondAttribute="centerX" id="ZeR-hg-kQb"/>
+                            <constraint firstItem="H3L-QL-Io8" firstAttribute="bottom" secondItem="Ts1-2I-7Mq" secondAttribute="bottom" constant="40" id="IaP-ET-8e2"/>
+                            <constraint firstItem="DDP-uc-TB2" firstAttribute="centerX" secondItem="eDO-vg-nUK" secondAttribute="centerX" id="OqY-bq-bN1"/>
+                            <constraint firstItem="DDP-uc-TB2" firstAttribute="top" secondItem="H3L-QL-Io8" secondAttribute="top" constant="22.5" id="csw-eY-Fg4"/>
                             <constraint firstItem="8pB-5d-MGf" firstAttribute="centerX" secondItem="eDO-vg-nUK" secondAttribute="centerX" id="cyb-9j-X3i"/>
-                            <constraint firstItem="fN2-IE-KV2" firstAttribute="top" secondItem="eDO-vg-nUK" secondAttribute="topMargin" id="fze-6j-0Hf"/>
+                            <constraint firstItem="fN2-IE-KV2" firstAttribute="top" secondItem="eDO-vg-nUK" secondAttribute="topMargin" constant="-50" id="fze-6j-0Hf"/>
                             <constraint firstItem="Ts1-2I-7Mq" firstAttribute="centerX" secondItem="eDO-vg-nUK" secondAttribute="centerX" id="hqS-aB-bpP"/>
-                            <constraint firstItem="Ts1-2I-7Mq" firstAttribute="centerY" secondItem="eDO-vg-nUK" secondAttribute="centerY" constant="350" id="jAa-ZY-AXe"/>
                             <constraint firstItem="N3m-PE-cIU" firstAttribute="leading" secondItem="H3L-QL-Io8" secondAttribute="leading" id="kyI-si-0xh"/>
                             <constraint firstItem="N3m-PE-cIU" firstAttribute="top" secondItem="eDO-vg-nUK" secondAttribute="top" id="pKi-Lw-gKU"/>
                             <constraint firstItem="N3m-PE-cIU" firstAttribute="trailing" secondItem="H3L-QL-Io8" secondAttribute="trailing" id="th6-b1-weP"/>
@@ -1572,6 +1595,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="inOrOut" destination="DDP-uc-TB2" id="gUN-wH-MAE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aVQ-Cf-ZZ1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -5640,9 +5666,9 @@ Teachers Can:
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="onY-RW-VIk"/>
-        <segue reference="at3-4h-HVg"/>
-        <segue reference="3qc-EB-Mqv"/>
-        <segue reference="DtQ-3O-eE1"/>
+        <segue reference="lNv-pm-lWT"/>
+        <segue reference="uwC-fP-Xym"/>
+        <segue reference="Hfe-LV-YTH"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Background" width="1874" height="1405"/>

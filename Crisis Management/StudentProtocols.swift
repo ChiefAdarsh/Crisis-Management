@@ -93,14 +93,13 @@ class ChecklistViewController: UIViewController {
 
 class ProtocolsViewController: UIViewController {
     
-    
-    var inOrOut: String!
-    
+    @IBOutlet var inOrOut: UILabel!
+
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
+        inOrOut.text = InOutSchoolController.insideSchool ? "In School" : "Out of School"
     }
     //Goes to Call Recommended people screen
 
