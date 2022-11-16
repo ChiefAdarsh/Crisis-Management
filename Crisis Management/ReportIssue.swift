@@ -17,11 +17,27 @@ class ReportIssueController: UIViewController, UINavigationControllerDelegate, M
     @IBOutlet weak var addInfo: UITextField!
     
     @IBOutlet weak var missing: UILabel!
-    
+    var counselorEmail: String? {
+        let str: String = counselor.text!
+        var email: String = "@coppellisd.com"
+        
+        if let firstIndex = str.firstIndex(of: " "), str.index(firstIndex, offsetBy: 1) != str.endIndex {
+            let startIndex = str.index(firstIndex, offsetBy: 1)
+            email = str[startIndex...str.index(str.endIndex, offsetBy: -1)].lowercased() + email
+            email = str.prefix(1).lowercased() + email
+        } else {
+            let alertController = UIAlertController(title: "Invalid Counselor Name", message: "Please provide the first and last name of the student's counselor", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "Ok", style: .default))
+            present(alertController, animated: true, completion: nil)
+            return nil
+        }
+        
+        return email
+    }
     
     @IBAction func reportButtonClicked(_ sender: UIButton) {
         guard nameId.text != "", counselor.text != "", issue.text != "" else {
-            missing.text = "FILL OUT ALL REQUIRED FEILDS"
+            missing.text = "Fill Out All Required Fields"
             if(nameId.text == "") {
                 nameId.backgroundColor = .systemRed
             }
@@ -42,27 +58,31 @@ class ReportIssueController: UIViewController, UINavigationControllerDelegate, M
             }
             return
         }
-        if MFMailComposeViewController.canSendMail(){
+        
+        if addInfo.text!.isEmpty {
+            addInfo.text = "None"
+        }
+        
+        if MFMailComposeViewController.canSendMail() {
             let message = MFMailComposeViewController()
             message.delegate = self
             message.setSubject("Report An Issue")
-            var email = ""
-            message.setToRecipients([email])
-            message.setMessageBody("Student Name: \(nameId) \n Student ID: \(counselor) \n Student's Counselor: \(issue) \n Additional Information: \(addInfo)", isHTML: false)
-            present(UINavigationController(rootViewController: message), animated: true)
-        }
-        else {
-            guard let url = URL(string: "https://www.google.com") else {
-                return
+            
+            if let email = counselorEmail {
+                message.setToRecipients([email])
+                message.setMessageBody("Student Name/ID: \(nameId.text!) \n Student's Counselor': \(counselor.text!) \n Additional Information: \(addInfo.text!)", isHTML: false)
+                present(message, animated: true)
             }
-            let message = SFSafariViewController(url: url)
-            present(message, animated: true)
+        } else {
+            let alertController = UIAlertController(title: "Mail Not Enabled", message: "Your device is not configured to send email", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "Ok", style: .default))
+            present(alertController, animated: true, completion: nil)
         }
     }
     
     
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
-        controller.dismiss(animated: true, completion: nil)
+        controller.dismiss(animated: true)
     }
     
     /* Variables from Interface Builder */
@@ -74,6 +94,25 @@ class ReportIssueController: UIViewController, UINavigationControllerDelegate, M
 
         // Do any additional setup after loading the view.
         inOrOut.text = InOutSchoolController.insideSchool ? "In School" : "Out of School"
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        print("Hello")
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            if view.frame.origin.y == 0 {
+                self.view.frame.origin.y -= keyboardSize.height-4*nameId.frame.height
+                
+            }
+        }
+    }
+
+    @objc func keyboardWillHide(notification: NSNotification) {
+        if view.frame.origin.y != 0 {
+            self.view.frame.origin.y = 0
+        }
     }
 
     /*
