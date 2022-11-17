@@ -9,14 +9,16 @@ import UIKit
 import SafariServices
 import MessageUI
 
-class ReportIssueController: UIViewController, UINavigationControllerDelegate, MFMailComposeViewControllerDelegate {
+class ReportIssueController: UIViewController, UINavigationControllerDelegate, MFMailComposeViewControllerDelegate, BackTitle {
     
     @IBOutlet weak var nameId: UITextField!
     @IBOutlet weak var issue: UITextField!
     @IBOutlet weak var counselor: UITextField!
     @IBOutlet weak var addInfo: UITextField!
+    @IBOutlet var counselorSelect: UIButton!
     
     @IBOutlet weak var missing: UILabel!
+    var backTitle: String!
     var counselorEmail: String? {
         let str: String = counselor.text!
         var email: String = "@coppellisd.com"
@@ -35,25 +37,64 @@ class ReportIssueController: UIViewController, UINavigationControllerDelegate, M
         return email
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.backTitle = "Report An Issue"
+        counselorSelect.showsMenuAsPrimaryAction = true
+        
+        counselorSelect.showsMenuAsPrimaryAction = true
+        counselorSelect.changesSelectionAsPrimaryAction = true
+            
+            let optionClosure = {(action: UIAction) in
+                
+//                if ((action.index(ofAccessibilityElement: (Any).self)) != 0)
+            }
+            
+        counselorSelect.menu = UIMenu(children: [
+            UIAction(title: "Tap to select Counselor", state: .on, handler: optionClosure),
+                UIAction(title: "Cheryl Abreu (A - Cham)", handler: optionClosure),
+                UIAction(title: "Laura McMillin (Cham - Gow)", handler: optionClosure),
+                UIAction(title: "Michael Kennington (Goy - Kiv)", handler: optionClosure),
+                UIAction(title: "Kelly Guevara (Kiw - Nai)", handler: optionClosure),
+                UIAction(title: "Lindsey Oh (Nah - Roc)", handler: optionClosure),
+                UIAction(title: "Ann Cinelli (Rod - Som)", handler: optionClosure),
+                UIAction(title: "Keith Tremethick (Son - Z)", handler: optionClosure),
+            ])
+        
+        if let ctrs = self.navigationController?.viewControllers, ctrs.count > 1 {
+            let viewController = ctrs[ctrs.count - 2] as! BackTitle
+            let backButton = UIBarButtonItem()
+            backButton.title = viewController.backTitle
+            self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
+        }
+
+        // Do any additional setup after loading the view.
+        inOrOut.text = InOutSchoolController.insideSchool ? "In School" : "Out of School"
+    }
+    
+    @IBAction func counselorPressed(_ sender: UIButton) {
+        
+    }
+    
     @IBAction func reportButtonClicked(_ sender: UIButton) {
         guard nameId.text != "", counselor.text != "", issue.text != "" else {
             missing.text = "Fill Out All Required Fields"
             if(nameId.text == "") {
                 nameId.backgroundColor = .systemRed
             }
-            else{
+            else {
                 nameId.backgroundColor = .clear
             }
             if(issue.text == "") {
                 issue.backgroundColor = .systemRed
             }
-            else{
+            else {
                 issue.backgroundColor = .clear
             }
             if(counselor.text == "") {
                 counselor.backgroundColor = .systemRed
             }
-            else{
+            else {
                 counselor.backgroundColor = .clear
             }
             return
@@ -80,7 +121,6 @@ class ReportIssueController: UIViewController, UINavigationControllerDelegate, M
         }
     }
     
-    
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         controller.dismiss(animated: true)
     }
@@ -88,42 +128,6 @@ class ReportIssueController: UIViewController, UINavigationControllerDelegate, M
     /* Variables from Interface Builder */
     
     @IBOutlet var inOrOut: UILabel!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        inOrOut.text = InOutSchoolController.insideSchool ? "In School" : "Out of School"
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
-    }
-    
-    @objc func keyboardWillShow(notification: NSNotification) {
-        print("Hello")
-        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
-            if view.frame.origin.y == 0 {
-                self.view.frame.origin.y -= keyboardSize.height-4*nameId.frame.height
-                
-            }
-        }
-    }
-
-    @objc func keyboardWillHide(notification: NSNotification) {
-        if view.frame.origin.y != 0 {
-            self.view.frame.origin.y = 0
-        }
-    }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 
