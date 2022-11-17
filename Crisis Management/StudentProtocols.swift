@@ -100,11 +100,12 @@ class ChecklistViewController: UIViewController, BackTitle {
 }
 
 class ProtocolsViewController: UIViewController, BackTitle {
-    var inOrOut: String!
+    @IBOutlet var inOrOut: UILabel!
     var backTitle: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        inOrOut.text = InOutSchoolController.insideSchool ? "In School" : "Out of School"
         self.backTitle = "Help A Student - Protocols"
         
         if let ctrs = self.navigationController?.viewControllers, ctrs.count > 1 {
@@ -117,8 +118,8 @@ class ProtocolsViewController: UIViewController, BackTitle {
     
     // Goes to Call Recommended people screen
 
-    @IBAction func CallRecommended(_ sender: Any) {
-        var callAdminController: UIViewController!
+    @IBAction func CallRecommended(_ sender: Any){
+         var callAdminController: UIViewController!
         if InOutSchoolController.insideSchool {
             callAdminController = storyboard!.instantiateViewController(withIdentifier: "adminInSchool") as! CallAdminInSchoolController
         } else {
