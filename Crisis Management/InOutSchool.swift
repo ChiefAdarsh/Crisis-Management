@@ -24,6 +24,8 @@ class InOutSchoolController: UIViewController, BackTitle {
     @IBOutlet var stackView: UIStackView!
     var backTitle: String!
     
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    
     // Home View Controller
     var homeViewController: HomeViewController!
     static var insideSchool: Bool!
@@ -37,12 +39,13 @@ class InOutSchoolController: UIViewController, BackTitle {
         } else {
             stackView.axis = .vertical
         }
+        inSchoolButton.layer.cornerRadius = 25
+        inSchoolButton.layer.masksToBounds = true
         
-        let alertController = UIAlertController(title: "Calls", message:
-                "This app uses Microsoft Teams to make calls. Please make sure to set up Teams on your device before you call.", preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "Ok", style: .default))
-
-        self.present(alertController, animated: true, completion: nil)
+        outSchoolButton.layer.cornerRadius = 25
+        outSchoolButton.layer.masksToBounds = true
+        
+        
     }
     
     // Change layout of in and out of school buttons to vertical
@@ -56,8 +59,23 @@ class InOutSchoolController: UIViewController, BackTitle {
         } else {
             stackView.axis = .vertical
         }
+        print(appDelegate.hasAlreadyLaunched!)
+        if(!appDelegate.hasAlreadyLaunched){
+            //set hasAlreadyLaunched to false
+            appDelegate.sethasAlreadyLaunched()
+            //display teams alert
+            teamsAlert()
+        }
     }
 
+    // Show Teams Alert
+    func teamsAlert() {
+        let alertController = UIAlertController(title: "Calls", message:
+                "This app uses Microsoft Teams to make calls. Please make sure to set up Teams on your device before you call.", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "Ok", style: .default))
+
+        self.present(alertController, animated: true, completion: nil)
+    }
     /* Actions for buttons from Interface Builder */
     
     // When the settings button is pressed

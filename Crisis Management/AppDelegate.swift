@@ -25,6 +25,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         return true
     }
+    
+    func sethasAlreadyLaunched(){
+        hasAlreadyLaunched = true
+    }
 
     // MARK: UISceneSession Lifecycle
 

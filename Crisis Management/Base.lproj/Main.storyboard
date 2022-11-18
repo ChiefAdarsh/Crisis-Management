@@ -5184,24 +5184,34 @@ Cg
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8gv-eP-UEP">
                                         <rect key="frame" x="0.0" y="0.0" width="410" height="250"/>
+                                        <color key="backgroundColor" red="0.69019609689999994" green="0.14901961389999999" blue="0.20784312490000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="250" id="bfK-aO-VZT"/>
                                             <constraint firstAttribute="width" secondItem="8gv-eP-UEP" secondAttribute="height" multiplier="410:250" id="rlQ-Qt-zFX"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="In School-3"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="pencil" catalog="system" imagePlacement="bottom" title="In School">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="90"/>
+                                            <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="50"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
                                         <connections>
                                             <segue destination="mZL-HH-Ccl" kind="show" destinationCreationSelector="inSchoolSegueAction:sender:" id="onY-RW-VIk"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EfZ-3G-thS">
                                         <rect key="frame" x="487" y="0.0" width="410" height="250"/>
+                                        <color key="backgroundColor" red="0.69019609689999994" green="0.14901961389999999" blue="0.20784312490000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="EfZ-3G-thS" secondAttribute="height" multiplier="410:250" id="kHk-zh-Czp"/>
                                             <constraint firstAttribute="height" constant="250" id="wgf-uM-Xwa"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="Out of School-3" title=""/>
+                                        <buttonConfiguration key="configuration" style="plain" image="house.fill" catalog="system" imagePlacement="bottom" title="Out of School">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="90"/>
+                                            <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="50"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
                                         <connections>
                                             <segue destination="mZL-HH-Ccl" kind="show" destinationCreationSelector="outSchoolSegueAction:sender:" id="X3q-Oe-BrU"/>
                                         </connections>
@@ -5886,7 +5896,7 @@ Teachers Can:
     <inferredMetricsTieBreakers>
         <segue reference="6ag-yE-coX"/>
         <segue reference="onY-RW-VIk"/>
-        <segue reference="nKW-bZ-WCm"/>
+        <segue reference="yAD-c9-Es3"/>
         <segue reference="DtQ-3O-eE1"/>
     </inferredMetricsTieBreakers>
     <resources>
@@ -5897,14 +5907,14 @@ Teachers Can:
         <image name="Counselors" width="340" height="196"/>
         <image name="Emergency Contacts" width="340" height="199"/>
         <image name="Gear-2" width="38" height="38"/>
-        <image name="In School-3" width="400" height="231"/>
-        <image name="Out of School-3" width="400" height="231"/>
         <image name="Principals" width="340" height="196"/>
         <image name="Springer_crop" width="350" height="350"/>
         <image name="checkmark.circle.fill" catalog="system" width="128" height="121"/>
         <image name="doc.fill.badge.plus" catalog="system" width="122" height="128"/>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="info.circle.fill" catalog="system" width="128" height="121"/>
         <image name="list.bullet.rectangle.portrait.fill" catalog="system" width="115" height="128"/>
+        <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="phone.fill" catalog="system" width="128" height="114"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
