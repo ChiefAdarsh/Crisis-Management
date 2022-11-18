@@ -5571,10 +5571,10 @@ Teachers Can:
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eTG-4q-Egb">
-                                <rect key="frame" x="206" y="91" width="700" height="35"/>
+                                <rect key="frame" x="6" y="45" width="1100" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="700" id="8Zc-iT-bvu"/>
-                                    <constraint firstAttribute="height" constant="35" id="BNa-9W-0P3"/>
+                                    <constraint firstAttribute="width" constant="1100" id="8Zc-iT-bvu"/>
+                                    <constraint firstAttribute="height" constant="100" id="BNa-9W-0P3"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <nil key="textColor"/>
@@ -5641,7 +5641,7 @@ Teachers Can:
                         <constraints>
                             <constraint firstItem="cgp-UN-533" firstAttribute="centerY" secondItem="bLo-WA-wLZ" secondAttribute="centerY" id="1gS-uw-ptb"/>
                             <constraint firstItem="eTG-4q-Egb" firstAttribute="centerX" secondItem="bLo-WA-wLZ" secondAttribute="centerX" id="85A-xK-sf4"/>
-                            <constraint firstItem="eTG-4q-Egb" firstAttribute="top" secondItem="pMh-tt-PcH" secondAttribute="top" constant="71" id="jbZ-ep-ZF2"/>
+                            <constraint firstItem="eTG-4q-Egb" firstAttribute="top" secondItem="pMh-tt-PcH" secondAttribute="top" constant="25" id="jbZ-ep-ZF2"/>
                             <constraint firstItem="cgp-UN-533" firstAttribute="centerX" secondItem="bLo-WA-wLZ" secondAttribute="centerX" id="wjy-yf-6bl"/>
                         </constraints>
                     </view>
