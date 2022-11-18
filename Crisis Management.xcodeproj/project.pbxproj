@@ -314,6 +314,7 @@
 				DEVELOPMENT_TEAM = VW94992H5U;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Crisis Management/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Crisis Help";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -342,6 +343,7 @@
 				DEVELOPMENT_TEAM = VW94992H5U;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Crisis Management/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Crisis Help";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
