@@ -172,19 +172,19 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Pmg-Q3-Wdb">
                         <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.89803922179999995" green="0.89803922179999995" blue="0.89803922179999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cWQ-Dx-qU4">
-                            <rect key="frame" x="0.0" y="0.0" width="1112" height="44"/>
+                            <rect key="frame" x="0.0" y="0.0" width="1112" height="54"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="42"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <sections>
-                            <tableViewSection headerTitle="Settings" id="e5N-FR-9Eg">
+                            <tableViewSection id="e5N-FR-9Eg">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="Xcm-N1-smG" style="IBUITableViewCellStyleDefault" id="RxR-QZ-iEn">
-                                        <rect key="frame" x="0.0" y="88.5" width="1112" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="98.5" width="1112" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RxR-QZ-iEn" id="8Wj-Ho-Quw">
                                             <rect key="frame" x="0.0" y="0.0" width="1112" height="43.5"/>
@@ -199,12 +199,13 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.89803922179999995" green="0.89803922179999995" blue="0.89803922179999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
                                             <segue destination="ztq-Dd-w4c" kind="show" id="ETN-QQ-WCk"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="5wS-NF-mdz" style="IBUITableViewCellStyleDefault" id="NTp-IB-lhW">
-                                        <rect key="frame" x="0.0" y="132" width="1112" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="142" width="1112" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NTp-IB-lhW" id="LdZ-cy-TRg">
                                             <rect key="frame" x="0.0" y="0.0" width="1112" height="43.5"/>
@@ -219,12 +220,13 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.89803922179999995" green="0.89803922179999995" blue="0.89803922179999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
                                             <segue destination="FjE-wX-afa" kind="show" id="Bor-Uf-d1E"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="5Ls-fz-Wl8" style="IBUITableViewCellStyleDefault" id="tu7-co-cda">
-                                        <rect key="frame" x="0.0" y="175.5" width="1112" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="185.5" width="1112" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tu7-co-cda" id="mSJ-lS-wqc">
                                             <rect key="frame" x="0.0" y="0.0" width="1112" height="43.5"/>
@@ -239,9 +241,10 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.89803922179999995" green="0.89803922179999995" blue="0.89803922179999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="CTQ-hC-7CM" style="IBUITableViewCellStyleDefault" id="t2l-TI-zfR">
-                                        <rect key="frame" x="0.0" y="219" width="1112" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="229" width="1112" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="t2l-TI-zfR" id="V5V-p5-hdj">
                                             <rect key="frame" x="0.0" y="0.0" width="1112" height="43.5"/>
@@ -256,6 +259,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.89803922179999995" green="0.89803922179999995" blue="0.89803922179999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
                                             <segue destination="Rh8-Im-fqb" kind="show" id="9SS-ND-wyZ"/>
                                         </connections>
@@ -272,7 +276,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qX9-H0-6SQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1256" y="-315"/>
+            <point key="canvasLocation" x="1255.5755395683454" y="-315.10791366906477"/>
         </scene>
         <!--Call Admin Out School-->
         <scene sceneID="WdC-Rc-LwG">
@@ -1646,9 +1650,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="Va7-aJ-lLy">
+                                <rect key="frame" x="-225" y="-363" width="1874" height="1405"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GTX-6e-NCM">
                                 <rect key="frame" x="20" y="70" width="1072" height="744"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <attributedString key="attributedText">
                                     <fragment content="CHS Crisis Management ">
                                         <attributes>
@@ -2295,7 +2302,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content">We may request to send you push notifications regarding your account or the Application. If you  wish to opt-out from receiving these types of communications, you may turn them off in your  device’s settings. </string>
+                                        <string key="content">We may request to send you push notifications regarding your account or the Application. If you  wish to opt-out from receiving these types of communications, you may turn them off in your device’s settings. </string>
                                         <attributes>
                                             <font key="NSFont" size="14.720000267028809" name="ArialMT"/>
                                             <real key="NSKern" value="0.0"/>
@@ -5132,7 +5139,7 @@ Cg
                             <constraint firstItem="GTX-6e-NCM" firstAttribute="leading" secondItem="z21-jT-2vM" secondAttribute="leadingMargin" id="d4G-AP-bRp"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="1Vd-IQ-Y5U"/>
+                    <navigationItem key="navigationItem" title="Privacy Policy" id="1Vd-IQ-Y5U"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lrx-rg-qdl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -5195,7 +5202,7 @@ Cg
                                             <constraint firstAttribute="width" secondItem="8gv-eP-UEP" secondAttribute="height" multiplier="410:250" id="rlQ-Qt-zFX"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="pencil" catalog="system" imagePlacement="bottom" title="In School">
+                                        <buttonConfiguration key="configuration" style="plain" image="pencil" catalog="system" imagePlacement="bottom" title="In School" imagePadding="10">
                                             <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="90"/>
                                             <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="50"/>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -5212,7 +5219,7 @@ Cg
                                             <constraint firstAttribute="height" constant="250" id="wgf-uM-Xwa"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="house.fill" catalog="system" imagePlacement="bottom" title="Out of School">
+                                        <buttonConfiguration key="configuration" style="plain" image="house.fill" catalog="system" imagePlacement="bottom" title="Out of School" imagePadding="25">
                                             <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="90"/>
                                             <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="50"/>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -5478,9 +5485,12 @@ Cg
                         <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="1W5-ze-SZm">
+                                <rect key="frame" x="-225" y="-363" width="1874" height="1405"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PLO-ZD-8rx">
                                 <rect key="frame" x="20" y="70" width="1072" height="744"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <attributedString key="attributedText">
                                     <fragment>
                                         <string key="content">The CHS Crisis Management app allows you to help the students that need immediate attention both in and out of school. Get the information that you need to react to the situation at hand and easily contact the recommended people for further assistance.
@@ -5516,7 +5526,7 @@ Teachers Can:
                             <constraint firstItem="PLO-ZD-8rx" firstAttribute="top" secondItem="c23-5e-ZQc" secondAttribute="top" id="wPl-GA-ZZo"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="VIc-IF-xbJ"/>
+                    <navigationItem key="navigationItem" title="About" id="VIc-IF-xbJ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kXr-Id-45c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -5571,10 +5581,10 @@ Teachers Can:
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eTG-4q-Egb">
-                                <rect key="frame" x="6" y="45" width="1100" height="100"/>
+                                <rect key="frame" x="206" y="91" width="700" height="35"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="1100" id="8Zc-iT-bvu"/>
-                                    <constraint firstAttribute="height" constant="100" id="BNa-9W-0P3"/>
+                                    <constraint firstAttribute="width" constant="700" id="8Zc-iT-bvu"/>
+                                    <constraint firstAttribute="height" constant="35" id="BNa-9W-0P3"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <nil key="textColor"/>
@@ -5641,7 +5651,7 @@ Teachers Can:
                         <constraints>
                             <constraint firstItem="cgp-UN-533" firstAttribute="centerY" secondItem="bLo-WA-wLZ" secondAttribute="centerY" id="1gS-uw-ptb"/>
                             <constraint firstItem="eTG-4q-Egb" firstAttribute="centerX" secondItem="bLo-WA-wLZ" secondAttribute="centerX" id="85A-xK-sf4"/>
-                            <constraint firstItem="eTG-4q-Egb" firstAttribute="top" secondItem="pMh-tt-PcH" secondAttribute="top" constant="25" id="jbZ-ep-ZF2"/>
+                            <constraint firstItem="eTG-4q-Egb" firstAttribute="top" secondItem="pMh-tt-PcH" secondAttribute="top" constant="71" id="jbZ-ep-ZF2"/>
                             <constraint firstItem="cgp-UN-533" firstAttribute="centerX" secondItem="bLo-WA-wLZ" secondAttribute="centerX" id="wjy-yf-6bl"/>
                         </constraints>
                     </view>
@@ -5738,7 +5748,7 @@ Teachers Can:
                                     <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Room #" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wA8-6U-iY9" userLabel="studentNameIDText">
                                         <rect key="frame" x="348" y="323" width="513" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" pointerInteraction="YES" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aHM-Tx-FBh">
                                         <rect key="frame" x="348" y="176" width="513" height="34"/>
@@ -5907,10 +5917,10 @@ Teachers Can:
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Imf-eC-aWA"/>
+        <segue reference="YFM-d9-O2o"/>
         <segue reference="onY-RW-VIk"/>
         <segue reference="3qc-EB-Mqv"/>
-        <segue reference="yqY-e6-jnH"/>
+        <segue reference="DtQ-3O-eE1"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Background" width="1874" height="1405"/>
