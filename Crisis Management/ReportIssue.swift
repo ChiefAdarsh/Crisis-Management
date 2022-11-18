@@ -41,41 +41,7 @@ class ReportIssueController: UIViewController, UINavigationControllerDelegate, M
         return email
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.backTitle = "Report An Issue"
-        counselorSelect.showsMenuAsPrimaryAction = true
-        counselorSelect.changesSelectionAsPrimaryAction = true
-        
-        let placeholderClosure = {(action: UIAction) in
-            self.counselorSelect.setTitleColor(.systemGray3, for: .normal)
-            return
-        }
-        let optionClosure = {(action: UIAction) in
-            self.counselorSelect.setTitleColor(.black, for: .normal)
-            return
-        }
-        counselorSelect.menu = UIMenu(children: [
-            UIAction(title: "Tap to select Counselor", state: .on, handler: placeholderClosure),
-                UIAction(title: "Cheryl Abreu (A - Cham)", handler: optionClosure),
-                UIAction(title: "Laura McMillin (Cham - Gow)", handler: optionClosure),
-                UIAction(title: "Michael Kennington (Goy - Kiv)", handler: optionClosure),
-                UIAction(title: "Kelly Guevara (Kiw - Nai)", handler: optionClosure),
-                UIAction(title: "Lindsey Oh (Nah - Roc)", handler: optionClosure),
-                UIAction(title: "Ann Cinelli (Rod - Som)", handler: optionClosure),
-                UIAction(title: "Keith Tremethick (Son - Z)", handler: optionClosure),
-            ])
-        
-        if let ctrs = self.navigationController?.viewControllers, ctrs.count > 1 {
-            let viewController = ctrs[ctrs.count - 2] as! BackTitle
-            let backButton = UIBarButtonItem()
-            backButton.title = viewController.backTitle
-            self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
-        }
-
-        // Do any additional setup after loading the view.
-        inOrOut.text = InOutSchoolController.insideSchool ? "In School" : "Out of School"
-    }
+    
     
     @IBAction func counselorPressed(_ sender: UIButton) {
         
@@ -159,6 +125,63 @@ class ReportIssueController: UIViewController, UINavigationControllerDelegate, M
     /* Variables from Interface Builder */
     
     @IBOutlet var inOrOut: UILabel!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.backTitle = "Report An Issue"
+        counselorSelect.showsMenuAsPrimaryAction = true
+        counselorSelect.changesSelectionAsPrimaryAction = true
+        
+        let placeholderClosure = {(action: UIAction) in
+            self.counselorSelect.setTitleColor(.systemGray3, for: .normal)
+            return
+        }
+        let optionClosure = {(action: UIAction) in
+            self.counselorSelect.setTitleColor(.black, for: .normal)
+            return
+        }
+        
+        
+        counselorSelect.menu = UIMenu(children: [
+            UIAction(title: "Tap to select Counselor", state: .on, handler: placeholderClosure),
+                UIAction(title: "Cheryl Abreu (A - Cham)", handler: optionClosure),
+                UIAction(title: "Laura McMillin (Cham - Gow)", handler: optionClosure),
+                UIAction(title: "Michael Kennington (Goy - Kiv)", handler: optionClosure),
+                UIAction(title: "Kelly Guevara (Kiw - Nai)", handler: optionClosure),
+                UIAction(title: "Lindsey Oh (Nah - Roc)", handler: optionClosure),
+                UIAction(title: "Ann Cinelli (Rod - Som)", handler: optionClosure),
+                UIAction(title: "Keith Tremethick (Son - Z)", handler: optionClosure),
+            ])
+        
+        if let ctrs = self.navigationController?.viewControllers, ctrs.count > 1 {
+            let viewController = ctrs[ctrs.count - 2] as! BackTitle
+            let backButton = UIBarButtonItem()
+            backButton.title = viewController.backTitle
+            self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
+        }
+
+        // Do any additional setup after loading the view.
+        inOrOut.text = InOutSchoolController.insideSchool ? "In School" : "Out of School"
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        print("Hello")
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            if view.frame.origin.y == 0 {
+                self.view.frame.origin.y -= keyboardSize.height-4*nameId.frame.height
+                
+            }
+        }
+    }
+
+    @objc func keyboardWillHide(notification: NSNotification) {
+        if view.frame.origin.y != 0 {
+            self.view.frame.origin.y = 0
+        }
+    }
 
 }
 
