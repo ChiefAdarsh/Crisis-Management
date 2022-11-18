@@ -11,12 +11,38 @@ class ChecklistViewController: UIViewController, BackTitle {
 
     @IBOutlet var submitButton: UIButton!
     
+    @IBOutlet var check1Label: UILabel!
+    @IBOutlet var check2Label: UILabel!
+    @IBOutlet var check3Label: UILabel!
+    @IBOutlet var check4Label: UILabel!
+    @IBOutlet var check5Label: UILabel!
+    
     @IBOutlet var check1: UIButton!
     @IBOutlet var check2: UIButton!
     @IBOutlet var check3: UIButton!
     @IBOutlet var check4: UIButton!
     @IBOutlet var check5: UIButton!
     var backTitle: String!
+    static var situations: [String] = []
+    var criterias: [String] {
+        var texts: [String] = []
+        if !check1.title(for: .normal)!.isEmpty {
+            texts.append(check1Label.text!)
+        }
+        if !check2.title(for: .normal)!.isEmpty {
+            texts.append(check2Label.text!)
+        }
+        if !check3.title(for: .normal)!.isEmpty {
+            texts.append(check3Label.text!)
+        }
+        if !check4.title(for: .normal)!.isEmpty {
+            texts.append(check4Label.text!)
+        }
+        if !check5.title(for: .normal)!.isEmpty {
+            texts.append(check5Label.text!)
+        }
+        return texts
+    }
     
     @IBSegueAction func segueAction(_ coder: NSCoder) -> ProtocolsViewController? {
         if check1.title(for: .normal)!.isEmpty && check2.title(for: .normal)!.isEmpty && check3.title(for: .normal)!.isEmpty && check4.title(for: .normal)!.isEmpty && check5.title(for: .normal)!.isEmpty {
@@ -60,6 +86,7 @@ class ChecklistViewController: UIViewController, BackTitle {
     }
     
     @IBAction func submitPressed(_ sender: Any) {
+        ChecklistViewController.situations = criterias
         print("Submit button pressed")
     }
     
