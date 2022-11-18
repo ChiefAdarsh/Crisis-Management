@@ -41,53 +41,56 @@ class ReportIssueController: UIViewController, UINavigationControllerDelegate, M
         return email
     }
     
-    
+    func updateColors() {
+        if(nameId.text == "") {
+            nameId.backgroundColor = .systemRed
+        }
+        else {
+            nameId.backgroundColor = .clear
+        }
+
+        if(issue.text == "") {
+            issue.backgroundColor = .systemRed
+        }
+        else {
+            issue.backgroundColor = .clear
+        }
+
+        if(teacherName.text == "") {
+            teacherName.backgroundColor = .systemRed
+        }
+        else {
+            teacherName.backgroundColor = .clear
+        }
+
+        if(roomNum.text == "") {
+            roomNum.backgroundColor = .systemRed
+        }
+        else {
+            roomNum.backgroundColor = .clear
+        }
+
+        if(counselorText! == "Tap to select Counselor") {
+            counselorSelect.backgroundColor = .systemRed
+        }
+        else {
+            counselorSelect.backgroundColor = .clear
+        }
+    }
     
     @IBAction func counselorPressed(_ sender: UIButton) {
         
     }
     
     @IBAction func reportButtonClicked(_ sender: UIButton) {
-        guard nameId.text != "", counselorText != "", issue.text != "" else {
+        guard issue.text != "", counselorText != "Tap to select Counselor", nameId.text != "", roomNum.text != "", teacherName.text != "" else {
             missing.text = "Fill Out All Required Fields"
-            
-            if(nameId.text == "") {
-                nameId.backgroundColor = .systemRed
-            }
-            else {
-                nameId.backgroundColor = .clear
-            }
-            
-            if(issue.text == "") {
-                issue.backgroundColor = .systemRed
-            }
-            else {
-                issue.backgroundColor = .clear
-            }
-            
-            if(teacherName.text == "") {
-                teacherName.backgroundColor = .systemRed
-            }
-            else {
-                teacherName.backgroundColor = .clear
-            }
-            
-            if(roomNum.text == "") {
-                roomNum.backgroundColor = .systemRed
-            }
-            else {
-                roomNum.backgroundColor = .clear
-            }
-            
-            if(counselorText! == "Tap to select Counselor") {
-                counselorSelect.backgroundColor = .systemRed
-            }
-            else {
-                counselorSelect.backgroundColor = .clear
-            }
+            updateColors()
             return
         }
         
+        updateColors()
+        missing.text = ""
         if addInfo.text!.isEmpty {
             addInfo.text = "None"
         }
