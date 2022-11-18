@@ -240,6 +240,26 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="CTQ-hC-7CM" style="IBUITableViewCellStyleDefault" id="t2l-TI-zfR">
+                                        <rect key="frame" x="0.0" y="219" width="1112" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="t2l-TI-zfR" id="V5V-p5-hdj">
+                                            <rect key="frame" x="0.0" y="0.0" width="1112" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="FAQ and Notes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CTQ-hC-7CM">
+                                                    <rect key="frame" x="20" y="0.0" width="1072" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Rh8-Im-fqb" kind="show" id="9SS-ND-wyZ"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -1679,7 +1699,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GTX-6e-NCM">
-                                <rect key="frame" x="20" y="70" width="1072" height="694"/>
+                                <rect key="frame" x="20" y="70" width="1072" height="744"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <attributedString key="attributedText">
                                     <fragment content="CHS Crisis Management ">
@@ -5501,7 +5521,7 @@ Cg
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PLO-ZD-8rx">
-                                <rect key="frame" x="20" y="70" width="1072" height="694"/>
+                                <rect key="frame" x="20" y="70" width="1072" height="744"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <attributedString key="attributedText">
                                     <fragment>
@@ -5784,12 +5804,52 @@ Teachers Can:
             </objects>
             <point key="canvasLocation" x="-259.53237410071944" y="876.97841726618708"/>
         </scene>
+        <!--FAQ and Notes-->
+        <scene sceneID="Lvx-yD-aV6">
+            <objects>
+                <viewController id="Rh8-Im-fqb" customClass="faqNotesViewController" customModule="Crisis_Management" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="n5d-ir-02g">
+                        <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="lhf-UE-qoy">
+                                <rect key="frame" x="-225" y="-363" width="1874" height="1405"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sWp-tp-6lc">
+                                <rect key="frame" x="53" y="101" width="1006" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="Dcu-bl-nDL"/>
+                                </constraints>
+                                <string key="text">Q: Why am I unable to make a call?                                                                                                                                            A: Log in using microsoft teams in order to successfully complete a call.</string>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="o34-og-sRf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="sWp-tp-6lc" firstAttribute="top" secondItem="o34-og-sRf" secondAttribute="top" constant="31" id="H09-SU-4QF"/>
+                            <constraint firstAttribute="trailing" secondItem="lhf-UE-qoy" secondAttribute="trailing" constant="-537" id="KMy-Ex-2JB"/>
+                            <constraint firstItem="o34-og-sRf" firstAttribute="trailing" secondItem="sWp-tp-6lc" secondAttribute="trailing" constant="53" id="L46-yq-DeT"/>
+                            <constraint firstItem="lhf-UE-qoy" firstAttribute="top" secondItem="n5d-ir-02g" secondAttribute="top" constant="-363" id="Lum-f1-NbS"/>
+                            <constraint firstItem="sWp-tp-6lc" firstAttribute="leading" secondItem="o34-og-sRf" secondAttribute="leading" constant="53" id="a0e-rc-ljb"/>
+                            <constraint firstItem="lhf-UE-qoy" firstAttribute="leading" secondItem="n5d-ir-02g" secondAttribute="leading" constant="-225" id="q91-pC-gNZ"/>
+                            <constraint firstAttribute="bottom" secondItem="lhf-UE-qoy" secondAttribute="bottom" constant="-208" id="ypz-fq-hFf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="FAQ and Notes" id="NAt-m6-fTC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JEV-tR-iu6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1256" y="-1020"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="bgV-Ht-yoW"/>
+        <segue reference="6ag-yE-coX"/>
         <segue reference="onY-RW-VIk"/>
-        <segue reference="qtD-Cd-XK0"/>
-        <segue reference="yqY-e6-jnH"/>
+        <segue reference="nKW-bZ-WCm"/>
+        <segue reference="DtQ-3O-eE1"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Background" width="1874" height="1405"/>
