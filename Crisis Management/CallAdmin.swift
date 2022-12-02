@@ -180,7 +180,7 @@ class AdminInfoViewController: UIViewController, BackTitle {
     }
     
     @IBAction func call(_ sender: Any) {
-        if let url = NSURL(string: "https://teams.microsoft.com/l/call/0/0?users=myakubovsky@coppellisd.com"){
+        if let url = NSURL(string: "https://teams.microsoft.com/l/call/0/0?users=\(selectedAdmin.email)"){
             UIApplication.shared.open(url as URL)
         }
     }
@@ -380,8 +380,8 @@ func createAdmins() {
     admin = Admin(imgStr: "Girard_crop", adminType: AdminType.Principal, lastName: "Girard", firstName: "Brandon", username: "bgirard", callExt: 0, adminTypeDetailed: "Assistant Principal (Sg-Z)")
     adminList.append(admin)
     
-    admin = Admin(imgStr: nil, adminType: AdminType.Principal, lastName: "Yakubovsky", firstName: "Michael", username: "myakubovsky", callExt: 6237, adminTypeDetailed: "STEM Teacher")
-    adminList.append(admin)
+//    admin = Admin(imgStr: nil, adminType: AdminType.Principal, lastName: "Yakubovsky", firstName: "Michael", username: "myakubovsky", callExt: 6237, adminTypeDetailed: "STEM Teacher")
+//    adminList.append(admin)
 
     // COUNSELORS
 
