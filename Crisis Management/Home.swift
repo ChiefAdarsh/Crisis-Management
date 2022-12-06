@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, BackTitle {
     
     /* Variables from Interface Builder */
     
@@ -18,12 +18,21 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var CallAdminBtn: UIButton!
     @IBOutlet weak var ResourcesBtn: UIButton!
     @IBOutlet var HomeBtns: [UIButton]!
+    var backTitle: String!
     
     // Storyboard instance
     
     override func viewDidLoad() {
         super.viewDidLoad()
         roundBtns(radius: 15)
+        self.backTitle = "Home"
+        
+        if let ctrs = self.navigationController?.viewControllers, ctrs.count > 1 {
+            let viewController = ctrs[ctrs.count - 2] as! BackTitle
+            let backButton = UIBarButtonItem()
+            backButton.title = viewController.backTitle
+            self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
+        }
     }
     
     // Round the corners of the buttons
@@ -36,12 +45,15 @@ class HomeViewController: UIViewController {
 
     // Call 911 if necessary
     @IBAction func call911(_ sender: UIButton) {
-        //        let alertController = UIAlertController(title: "Alert", message: "Are you sure you want to call 911", preferredStyle: .alert)
-        //        alertController.addAction(UIAlertAction(title: "No", style: .default))
-        //        alertController.addAction(UIAlertAction(title: "Call", style: .destructive, handler: { (_) in
-        //            print("911")
-        //        }))
-        print("911")
+        let alertController = UIAlertController(title: "Alert", message: "Are you sure you want to call 911", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "No", style: .default))
+        alertController.addAction(UIAlertAction(title: "Call", style: .destructive, handler: { (_) in
+            let alertController = UIAlertController(title: "Calling 911", message: "If this was the final app you'd be calling 911 right now.", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+            self.present(alertController, animated: true, completion: nil)
+            print("911")
+        }))
+        self.present(alertController, animated: true, completion: nil)
     }
     
     // Call In School or Out of School Version of 'Call An Admin' Screen
