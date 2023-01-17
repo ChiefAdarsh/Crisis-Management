@@ -7,17 +7,50 @@
 
 import UIKit
 
-class ChecklistViewController: UIViewController {
+class ChecklistViewController: UIViewController, BackTitle {
 
     @IBOutlet var submitButton: UIButton!
+    
+    @IBOutlet var check1Label: UILabel!
+    @IBOutlet var check2Label: UILabel!
+    @IBOutlet var check3Label: UILabel!
+    @IBOutlet var check4Label: UILabel!
+    @IBOutlet var check5Label: UILabel!
     
     @IBOutlet var check1: UIButton!
     @IBOutlet var check2: UIButton!
     @IBOutlet var check3: UIButton!
     @IBOutlet var check4: UIButton!
     @IBOutlet var check5: UIButton!
+    var backTitle: String!
+    static var situations: [String] = []
+    var criterias: [String] {
+        var texts: [String] = []
+        if !check1.title(for: .normal)!.isEmpty {
+            texts.append(check1Label.text!)
+        }
+        if !check2.title(for: .normal)!.isEmpty {
+            texts.append(check2Label.text!)
+        }
+        if !check3.title(for: .normal)!.isEmpty {
+            texts.append(check3Label.text!)
+        }
+        if !check4.title(for: .normal)!.isEmpty {
+            texts.append(check4Label.text!)
+        }
+        if !check5.title(for: .normal)!.isEmpty {
+            texts.append(check5Label.text!)
+        }
+        return texts
+    }
     
     @IBSegueAction func segueAction(_ coder: NSCoder) -> ProtocolsViewController? {
+        if check1.title(for: .normal)!.isEmpty && check2.title(for: .normal)!.isEmpty && check3.title(for: .normal)!.isEmpty && check4.title(for: .normal)!.isEmpty && check5.title(for: .normal)!.isEmpty {
+            let alertController = UIAlertController(title: "No Criteria Selected", message: "Please check one of the criteria from the checklist", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "Ok", style: .default))
+            present(alertController, animated: true, completion: nil)
+        }
+        
         return ProtocolsViewController(coder: coder)
     }
     
@@ -33,6 +66,14 @@ class ChecklistViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.backTitle = "Help A Student - Checklist"
+        
+        if let ctrs = self.navigationController?.viewControllers, ctrs.count > 1 {
+            let viewController = ctrs[ctrs.count - 2] as! BackTitle
+            let backButton = UIBarButtonItem()
+            backButton.title = viewController.backTitle
+            self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
+        }
         
         check1.setTitle("", for: .normal)
         check2.setTitle("", for: .normal)
@@ -45,6 +86,7 @@ class ChecklistViewController: UIViewController {
     }
     
     @IBAction func submitPressed(_ sender: Any) {
+        ChecklistViewController.situations = criterias
         print("Submit button pressed")
     }
     
@@ -60,9 +102,9 @@ class ChecklistViewController: UIViewController {
         print("Current title of check 1 is: \"\(check1.currentTitle ?? "nil")\"")
     }
     
-    @IBAction func check2Pressed(_ sender: Any) {
-            updateCheckTitle(button: check2)
-            print("Current title of check 2 is: \"\(check2.currentTitle ?? "nil")\"")
+    @IBAction func check2Pressed(_ sender: UIButton) {
+        updateCheckTitle(button: check2)
+        print("Current title of check 2 is: \"\(check2.currentTitle ?? "nil")\"")
     }
     
     @IBAction func check3Pressed(_ sender: Any) {
@@ -81,71 +123,35 @@ class ChecklistViewController: UIViewController {
         updateCheckTitle(button: check5)
         print("Current title of check 5 is: \"\(check5.currentTitle ?? "nil")\"")
     }
+    
 }
 
-class ProtocolsViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
-    
-    @IBOutlet var pickerView: UIPickerView!
-    let resourcesArray = createResources()
-    let cities: [String] = ["Lewisville", "Denton","Plano", "Coppell", "Dallas", "Fort Worth", "Frisco", "Carollton", "Farmers Branch", "Richardson", "Colleyville", "Addison", "Houston", "Canton", "Lemont", "Judsonia"]
-    
-
-    @IBOutlet var infoTextView: UITextView!
-    @IBOutlet var subtitle: UILabel!
-    var inOrOut: String!
-    var placementAnswer = 0
+class ProtocolsViewController: UIViewController, BackTitle {
+    @IBOutlet var inOrOut: UILabel!
+    var backTitle: String!
     
     override func viewDidLoad() {
-        
         super.viewDidLoad()
+        inOrOut.text = InOutSchoolController.insideSchool ? "In School" : "Out of School"
+        self.backTitle = "Help A Student - Protocols"
         
-        pickerView.delegate = self
-        pickerView.dataSource = self
-        // Do any additional setup after loading the view.
-        
-        subtitle.text = InOutSchoolController.insideSchool ? "In School" : "Out of School"
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        placementAnswer = row
-    }
-    
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return cities.count
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return cities[row]
-    }
-    
-    @IBAction func Enter(_ sender: Any) {
-        var infoString = ""
-        var selectedList: [Resource] = []
-        for resource in resourcesArray {
-            if resource.city == cities[placementAnswer] {
-                selectedList.append(resource)
-            }
+        if let ctrs = self.navigationController?.viewControllers, ctrs.count > 1 {
+            let viewController = ctrs[ctrs.count - 2] as! BackTitle
+            let backButton = UIBarButtonItem()
+            backButton.title = viewController.backTitle
+            self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
         }
-        
-        infoString.append("Resources in \(cities[placementAnswer])\n")
-        for resource in selectedList {
-            infoString.append(resource.category + "\n")
-            infoString.append(resource.name + "\n")
-            infoString.append(resource.contact + "\n")
-            infoString.append(resource.address + "\n")
-            infoString.append(resource.city + "\n")
-            infoString.append(resource.state + "\n")
-            infoString.append(resource.zip + "\n")
-            infoString.append(resource.website + "\n\n")
-//            infoString.append(resource.addInfo + "\n\n")
+    }
+    
+    // Goes to Call Recommended people screen
+
+    @IBAction func CallRecommended(_ sender: Any){
+         var callAdminController: UIViewController!
+        if InOutSchoolController.insideSchool {
+            callAdminController = storyboard!.instantiateViewController(withIdentifier: "adminInSchool") as! CallAdminInSchoolController
+        } else {
+            callAdminController = storyboard!.instantiateViewController(withIdentifier: "adminOutSchool") as! CallAdminOutSchoolController
         }
-        
-        infoTextView.text = infoString
+        self.navigationController?.pushViewController(callAdminController, animated: true)
     }
 }
-
-//  infolabel.text =
