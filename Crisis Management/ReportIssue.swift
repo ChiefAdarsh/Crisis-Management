@@ -148,10 +148,10 @@ class ReportIssueController: UIViewController, UINavigationControllerDelegate, M
         counselorSelect.menu = UIMenu(children: [
             UIAction(title: "Tap to select Counselor", state: .on, handler: placeholderClosure),
                 UIAction(title: "Cheryl Abreu (A - Cham)", handler: optionClosure),
-                UIAction(title: "Laura McMillin (Cham - Gow)", handler: optionClosure),
+                UIAction(title: "Laura McMillin (Chan - Gox)", handler: optionClosure),
                 UIAction(title: "Michael Kennington (Goy - Kiv)", handler: optionClosure),
-                UIAction(title: "Kelly Guevara (Kiw - Nai)", handler: optionClosure),
-                UIAction(title: "Lindsey Oh (Nah - Roc)", handler: optionClosure),
+                UIAction(title: "Heather Crumpton (Kiw - Nah)", handler: optionClosure),
+                UIAction(title: "Lindsey Oh (Nal - Roc)", handler: optionClosure),
                 UIAction(title: "Ann Cinelli (Rod - Som)", handler: optionClosure),
                 UIAction(title: "Keith Tremethick (Son - Z)", handler: optionClosure),
             ])
