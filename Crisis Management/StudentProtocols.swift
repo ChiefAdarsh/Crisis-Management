@@ -129,12 +129,20 @@ class ChecklistViewController: UIViewController, BackTitle {
 class ProtocolsViewController: UIViewController, BackTitle {
     @IBOutlet var inOrOut: UILabel!
     var backTitle: String!
-    
+    @IBOutlet var on1: UILabel!
+    @IBOutlet var tw2: UILabel!
+    @IBOutlet var th3: UILabel!
+    @IBOutlet var fo4: UILabel!
+    @IBOutlet var fi5: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         inOrOut.text = InOutSchoolController.insideSchool ? "In School" : "Out of School"
         self.backTitle = "Help A Student - Protocols"
-        
+        on1.text = "Children’s Medical Center\n1935 Medical District Drive\nDallas, TX 75235\n214-456-8899 "
+        tw2.text = "Parkland Hospital (ER)\n5200 Harry Hines\nDallas, TX 75235\n214-590-8000"
+        th3.text = "Seay Center - Texas Health\n6110 W. Parker Road\nPlano, TX 75093\n972-981-8301"
+        fo4.text = "Holiner Psychiatric Group\n7777 Forest Lane Building Suite 833\nDallas, TX 75230-2501\n972-566-4591"
+        fi5.text = "Excel Center of Lewisville\n190 Civic Circle #170\nLewisville, TX 75067\n972-906-5522"
         if let ctrs = self.navigationController?.viewControllers, ctrs.count > 1 {
             let viewController = ctrs[ctrs.count - 2] as! BackTitle
             let backButton = UIBarButtonItem()
