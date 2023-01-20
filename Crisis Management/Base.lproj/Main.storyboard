@@ -3231,6 +3231,9 @@ Teachers Can:
                                             <fontDescription key="titleFontDescription" type="boldSystem" pointSize="26"/>
                                             <color key="baseBackgroundColor" red="0.69019609689999994" green="0.14901961389999999" blue="0.20784312490000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="TTh-OY-bch" kind="show" id="ikP-HX-Kxx"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -3302,6 +3305,7 @@ Teachers Can:
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="YFM-d9-O2o"/>
         <segue reference="onY-RW-VIk"/>
         <segue reference="Qfa-kA-Ts4"/>
         <segue reference="085-TL-hB3"/>
