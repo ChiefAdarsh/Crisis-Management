@@ -175,7 +175,7 @@ class ReportIssueController: UIViewController, UINavigationControllerDelegate, M
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
             if view.frame.origin.y == 0 {
                 self.view.frame.origin.y -= keyboardSize.height-4*nameId.frame.height
-                
+
             }
         }
     }
