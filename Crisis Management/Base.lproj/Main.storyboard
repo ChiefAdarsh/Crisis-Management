@@ -121,7 +121,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="F5q-WH-SlC"/>
-                        <color key="backgroundColor" red="0.94901961089999998" green="0.94901961089999998" blue="0.94901961089999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="7S5-xu-rfE" firstAttribute="top" secondItem="Loo-xH-dcZ" secondAttribute="bottom" constant="8" id="1VV-gw-mYn"/>
                             <constraint firstItem="glJ-3B-pAQ" firstAttribute="top" secondItem="7S5-xu-rfE" secondAttribute="bottom" constant="48" id="78L-oo-paB"/>
@@ -2533,7 +2533,7 @@ Teachers Can:
     <inferredMetricsTieBreakers>
         <segue reference="YFM-d9-O2o"/>
         <segue reference="onY-RW-VIk"/>
-        <segue reference="Qfa-kA-Ts4"/>
+        <segue reference="cZ3-jH-vf4"/>
         <segue reference="DtQ-3O-eE1"/>
     </inferredMetricsTieBreakers>
     <resources>
