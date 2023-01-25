@@ -92,7 +92,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dqz-SY-1XB">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dqz-SY-1XB">
                                 <rect key="frame" x="58" y="266" width="996" height="54"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="7Zq-h4-Avz"/>
@@ -686,6 +686,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="fu1-dK-1Vi" kind="show" id="lg3-Jq-xbV"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="fl2-qx-nFy" style="IBUITableViewCellStyleDefault" id="UtH-2F-7md">
                                 <rect key="frame" x="0.0" y="557.5" width="704" height="100"/>
@@ -1509,7 +1512,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">CHS Crisis Management we respect the privacy of our users. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our mobile communication  application. Please read this Privacy Policy carefully. IF YOU DO NOT AGREE WITH THE  TERMS OF THIS PRIVACY POLICY, PLEASE DO NOT ACCESS THE APPLICATION.</mutableString>
+                                        <string key="content">CHS Crisis Management we respect the privacy of our users. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our mobile communication  application. Please read this Privacy Policy carefully. IF YOU DO NOT AGREE WITH THE  TERMS OF THIS PRIVACY POLICY, PLEASE DO NOT ACCESS THE APPLICATION.</string>
                                         <attributes>
                                             <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="16" name="ArialMT"/>
@@ -1558,7 +1561,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">We reserve the right to make changes to this Privacy Policy at any time and for any reason. We will alert you about any changes by updating the “Last updated” date of this Privacy Policy. You are encouraged to periodically review this Privacy Policy to stay informed of updates. You will be deemed to have been made aware of, will be subject to, and will be deemed to have  accepted the changes in any revised Privacy Policy by your continued use of the Application  after the date such revised Privacy Policy is posted.  </mutableString>
+                                        <string key="content">We reserve the right to make changes to this Privacy Policy at any time and for any reason. We will alert you about any changes by updating the “Last updated” date of this Privacy Policy. You are encouraged to periodically review this Privacy Policy to stay informed of updates. You will be deemed to have been made aware of, will be subject to, and will be deemed to have  accepted the changes in any revised Privacy Policy by your continued use of the Application  after the date such revised Privacy Policy is posted.  </string>
                                         <attributes>
                                             <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="16" name="ArialMT"/>
@@ -1607,7 +1610,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">This Privacy Policy does not apply to the third-party online/mobile store from which you install  the Application, including any in-game virtual items, which may also collect and use data about  you. We are not responsible for any of the data collected by any such third party.</mutableString>
+                                        <string key="content">This Privacy Policy does not apply to the third-party online/mobile store from which you install  the Application, including any in-game virtual items, which may also collect and use data about  you. We are not responsible for any of the data collected by any such third party.</string>
                                         <attributes>
                                             <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="16" name="ArialMT"/>
@@ -1753,7 +1756,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">We do not collect personally identifiable information (PII) about you unless you choose to provide that information to us.  Any PII you choose to provide is protected by security protocols and consistent with standards. Any PII (such as name, email, and other contacts) will be stored privately. It may be shared with counselors and other administrators but will not be public information.</mutableString>
+                                        <string key="content">We do not collect personally identifiable information (PII) about you unless you choose to provide that information to us.  Any PII you choose to provide is protected by security protocols and consistent with standards. Any PII (such as name, email, and other contacts) will be stored privately. It may be shared with counselors and other administrators but will not be public information.</string>
                                         <attributes>
                                             <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="16" name="ArialMT"/>
@@ -1972,7 +1975,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">We may use information about your location depending on the permissions you have set on your device. We use this information to provide features of our Service, to improve and customize our Service. You can enable or disable location services when you use our Service at any time, through your mobile device settings.</mutableString>
+                                        <string key="content">We may use information about your location depending on the permissions you have set on your device. We use this information to provide features of our Service, to improve and customize our Service. You can enable or disable location services when you use our Service at any time, through your mobile device settings.</string>
                                         <attributes>
                                             <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="16" name="ArialMT"/>
@@ -2310,7 +2313,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">If we believe the release of information (such as name and email) about you is necessary to respond to legal process, to investigate or remedy potential violations of our policies, or to protect the rights, property, and safety of others, we may share your information as permitted or required by any applicable law, rule, or regulation.</mutableString>
+                                        <string key="content">If we believe the release of information (such as name and email) about you is necessary to respond to legal process, to investigate or remedy potential violations of our policies, or to protect the rights, property, and safety of others, we may share your information as permitted or required by any applicable law, rule, or regulation.</string>
                                         <attributes>
                                             <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="16" name="ArialMT"/>
@@ -2456,7 +2459,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">The Application may contain links to third-party websites and applications of interest, including advertisements and external services, that are not affiliated with us. Once you have used these links to leave the Application, any information you provide to these third parties is not covered  by this Privacy Policy, and we cannot guarantee the safety and privacy of your information.  Before visiting and providing any information to any third-party websites, you should inform  yourself of the privacy policies and practices (if any) of the third party responsible for that website, and should take those steps necessary to, in your discretion, protect the privacy of your  information. We are not responsible for the content or privacy and security practices and  policies of any third parties, including other sites, services or applications that may be linked to  or from the Application. </mutableString>
+                                        <string key="content">The Application may contain links to third-party websites and applications of interest, including advertisements and external services, that are not affiliated with us. Once you have used these links to leave the Application, any information you provide to these third parties is not covered  by this Privacy Policy, and we cannot guarantee the safety and privacy of your information.  Before visiting and providing any information to any third-party websites, you should inform  yourself of the privacy policies and practices (if any) of the third party responsible for that website, and should take those steps necessary to, in your discretion, protect the privacy of your  information. We are not responsible for the content or privacy and security practices and  policies of any third parties, including other sites, services or applications that may be linked to  or from the Application. </string>
                                         <attributes>
                                             <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="16" name="ArialMT"/>
@@ -2529,7 +2532,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">We use administrative, technical, and physical security measures to help protect your personal  information. While we have taken reasonable steps to secure the personal information you provide to us, please be aware that despite our efforts, no security measures are perfect or  impenetrable, and no method of data transmission can be guaranteed against any interception or other type of misuse.</mutableString>
+                                        <string key="content">We use administrative, technical, and physical security measures to help protect your personal  information. While we have taken reasonable steps to secure the personal information you provide to us, please be aware that despite our efforts, no security measures are perfect or  impenetrable, and no method of data transmission can be guaranteed against any interception or other type of misuse.</string>
                                         <attributes>
                                             <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="16" name="ArialMT"/>
@@ -3222,101 +3225,6 @@ Teachers Can:
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JEV-tR-iu6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1256" y="-1020"/>
-        </scene>
-        <!--Admin Info View Controller-->
-        <scene sceneID="kbc-je-LHu">
-            <objects>
-                <viewController storyboardIdentifier="adminInfoInSchool" id="Kdr-G8-pB8" customClass="AdminInfoViewController" customModule="Crisis_Management" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="bLo-WA-wLZ">
-                        <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eTG-4q-Egb">
-                                <rect key="frame" x="206" y="91" width="700" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="700" id="8Zc-iT-bvu"/>
-                                    <constraint firstAttribute="height" constant="35" id="BNa-9W-0P3"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="175" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cgp-UN-533">
-                                <rect key="frame" x="156" y="211" width="736" height="412"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jXE-G3-zTJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="285" height="412"/>
-                                    </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="wrp-Gi-aP8">
-                                        <rect key="frame" x="460" y="0.0" width="276" height="412"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uxr-De-AfJ">
-                                                <rect key="frame" x="0.0" y="0.0" width="276" height="156"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="276" id="OYL-85-mVv"/>
-                                                    <constraint firstAttribute="height" constant="156" id="UWY-rq-K36"/>
-                                                </constraints>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Email">
-                                                    <fontDescription key="titleFontDescription" type="system" pointSize="50"/>
-                                                    <color key="baseBackgroundColor" red="0.69019609689999994" green="0.14901961389999999" blue="0.20784312490000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                </buttonConfiguration>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="20"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="email:" destination="Kdr-G8-pB8" eventType="touchUpInside" id="fX4-HB-Ia4"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oTr-Gt-gfz">
-                                                <rect key="frame" x="0.0" y="256" width="276" height="156"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="156" id="4f5-0Z-8RS"/>
-                                                    <constraint firstAttribute="width" constant="274" id="ENh-Ml-bKZ"/>
-                                                </constraints>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Call with Teams">
-                                                    <fontDescription key="titleFontDescription" type="system" pointSize="50"/>
-                                                    <color key="baseBackgroundColor" red="0.69019609689999994" green="0.14901961389999999" blue="0.20784312490000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                </buttonConfiguration>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="20"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="call:" destination="Kdr-G8-pB8" eventType="touchUpInside" id="Bs9-tN-PUL"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                            </stackView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="pMh-tt-PcH"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="cgp-UN-533" firstAttribute="centerY" secondItem="bLo-WA-wLZ" secondAttribute="centerY" id="1gS-uw-ptb"/>
-                            <constraint firstItem="eTG-4q-Egb" firstAttribute="centerX" secondItem="bLo-WA-wLZ" secondAttribute="centerX" id="85A-xK-sf4"/>
-                            <constraint firstItem="eTG-4q-Egb" firstAttribute="top" secondItem="pMh-tt-PcH" secondAttribute="top" constant="71" id="jbZ-ep-ZF2"/>
-                            <constraint firstItem="cgp-UN-533" firstAttribute="centerX" secondItem="bLo-WA-wLZ" secondAttribute="centerX" id="wjy-yf-6bl"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="2Qg-pw-3Zf"/>
-                    <connections>
-                        <outlet property="AdminLbl" destination="eTG-4q-Egb" id="zcu-h5-2fx"/>
-                        <outlet property="AdminPic" destination="jXE-G3-zTJ" id="Cp5-b6-jpv"/>
-                        <outlet property="CallBtn" destination="oTr-Gt-gfz" id="b3B-Q0-XXh"/>
-                        <outlet property="EmailBtn" destination="uxr-De-AfJ" id="qBb-cx-uat"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ax6-a1-XkH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1255.5755395683454" y="2339.5683453237411"/>
         </scene>
         <!--ReportIssue-->
         <scene sceneID="4Q3-Cb-FRv">
@@ -7229,11 +7137,192 @@ Teachers Can:
             </objects>
             <point key="canvasLocation" x="6972" y="-2073"/>
         </scene>
+        <!--Admin Info View Controller-->
+        <scene sceneID="nOw-hZ-0o8">
+            <objects>
+                <viewController storyboardIdentifier="adminInfoInSchool" id="fu1-dK-1Vi" customClass="AdminInfoViewController" customModule="Crisis_Management" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="D9A-bk-ij2">
+                        <rect key="frame" x="0.0" y="0.0" width="704" height="794"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JRs-AH-Hjm">
+                                <rect key="frame" x="127" y="-10" width="450" height="750"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Eiu-vA-evr">
+                                        <rect key="frame" x="113" y="135" width="224" height="224"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="224" id="QVw-kc-jxX"/>
+                                            <constraint firstAttribute="width" constant="224" id="bS5-eT-KTr"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coppell High School" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QGG-Tq-WUB">
+                                        <rect key="frame" x="76" y="61.5" width="298" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yap-1R-CqB">
+                                        <rect key="frame" x="0.0" y="411" width="450" height="75"/>
+                                        <color key="backgroundColor" red="0.69019609689999994" green="0.14901961389999999" blue="0.20784312490000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="450" id="egx-dG-pDX"/>
+                                            <constraint firstAttribute="height" constant="75" id="k9M-dk-2vq"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="CoppellCowboys" translatesAutoresizingMaskIntoConstraints="NO" id="Xmb-zA-4Uf">
+                                        <rect key="frame" x="299" y="411" width="75" height="75"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="75" id="Jrx-UK-jtF"/>
+                                            <constraint firstAttribute="width" constant="75" id="UXY-SA-aPX"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PX2-l4-jJC">
+                                        <rect key="frame" x="0.0" y="367" width="450" height="41"/>
+                                        <color key="backgroundColor" systemColor="labelColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="41" id="7rh-W7-Xjh"/>
+                                            <constraint firstAttribute="width" constant="450" id="KCb-ye-hQJ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Watermark" translatesAutoresizingMaskIntoConstraints="NO" id="dJ9-G7-j5G">
+                                        <rect key="frame" x="50" y="618" width="350" height="116"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="350" id="BYM-7z-h76"/>
+                                            <constraint firstAttribute="height" constant="116" id="wsw-Hf-eQ2"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N9S-w5-bIW">
+                                        <rect key="frame" x="252" y="525" width="140" height="55"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="YbB-3b-ZQY"/>
+                                            <constraint firstAttribute="width" constant="140" id="l9n-4l-LEK"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Call with Teams">
+                                                    <attributes>
+                                                        <font key="NSFont" metaFont="system" size="20"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <color key="baseBackgroundColor" red="0.69019609689999994" green="0.14901961389999999" blue="0.20784312490000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="call:" destination="fu1-dK-1Vi" eventType="touchUpInside" id="Yec-5Q-Q9N"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5G6-Ia-1kA">
+                                        <rect key="frame" x="50" y="525" width="140" height="55"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="140" id="I18-Tz-yfk"/>
+                                            <constraint firstAttribute="height" constant="55" id="puD-K9-4By"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Email">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                            <color key="baseBackgroundColor" red="0.69019609689999994" green="0.14901961389999999" blue="0.20784312490000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="email:" destination="fu1-dK-1Vi" eventType="touchUpInside" id="JUF-kt-qND"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="fwR-N6-1gy">
+                                        <rect key="frame" x="76" y="415" width="151" height="66"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STAFF" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lz0-JR-P6h">
+                                                <rect key="frame" x="0.0" y="0.0" width="76" height="30"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <color key="highlightedColor" systemColor="systemBackgroundColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2022  -  2023" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qXc-Ew-Xqi">
+                                                <rect key="frame" x="0.0" y="36" width="151" height="30"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <color key="highlightedColor" systemColor="systemBackgroundColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Yap-1R-CqB" firstAttribute="centerX" secondItem="JRs-AH-Hjm" secondAttribute="centerX" id="3aX-2Z-bQV"/>
+                                    <constraint firstItem="fwR-N6-1gy" firstAttribute="leading" secondItem="JRs-AH-Hjm" secondAttribute="leading" constant="76" id="4T1-bU-T9l"/>
+                                    <constraint firstItem="QGG-Tq-WUB" firstAttribute="centerX" secondItem="JRs-AH-Hjm" secondAttribute="centerX" id="6SK-za-lbZ"/>
+                                    <constraint firstItem="N9S-w5-bIW" firstAttribute="top" secondItem="Yap-1R-CqB" secondAttribute="bottom" constant="39" id="CXp-mE-bfr"/>
+                                    <constraint firstItem="Yap-1R-CqB" firstAttribute="leading" secondItem="JRs-AH-Hjm" secondAttribute="leading" id="Dcr-Mr-wNg"/>
+                                    <constraint firstItem="dJ9-G7-j5G" firstAttribute="centerX" secondItem="JRs-AH-Hjm" secondAttribute="centerX" id="EUF-Ms-Lv4"/>
+                                    <constraint firstAttribute="trailing" secondItem="Yap-1R-CqB" secondAttribute="trailing" id="Fx5-b4-Ur7"/>
+                                    <constraint firstItem="5G6-Ia-1kA" firstAttribute="top" secondItem="fwR-N6-1gy" secondAttribute="bottom" constant="44" id="IhL-5m-sOo"/>
+                                    <constraint firstItem="PX2-l4-jJC" firstAttribute="leading" secondItem="JRs-AH-Hjm" secondAttribute="leading" id="Klg-JI-j66"/>
+                                    <constraint firstItem="PX2-l4-jJC" firstAttribute="top" secondItem="Eiu-vA-evr" secondAttribute="bottom" constant="8" symbolic="YES" id="Njw-07-oA1"/>
+                                    <constraint firstItem="N9S-w5-bIW" firstAttribute="leading" secondItem="5G6-Ia-1kA" secondAttribute="trailing" constant="62" id="OCl-zj-9Vm"/>
+                                    <constraint firstAttribute="trailing" secondItem="PX2-l4-jJC" secondAttribute="trailing" id="OUN-N5-jPE"/>
+                                    <constraint firstItem="Eiu-vA-evr" firstAttribute="top" secondItem="QGG-Tq-WUB" secondAttribute="bottom" constant="32.5" id="SK8-cf-fM0"/>
+                                    <constraint firstItem="N9S-w5-bIW" firstAttribute="top" secondItem="Xmb-zA-4Uf" secondAttribute="bottom" constant="39" id="Ub1-hH-ZaW"/>
+                                    <constraint firstItem="Xmb-zA-4Uf" firstAttribute="top" secondItem="PX2-l4-jJC" secondAttribute="bottom" constant="3" id="Uhi-At-e5k"/>
+                                    <constraint firstItem="PX2-l4-jJC" firstAttribute="centerX" secondItem="JRs-AH-Hjm" secondAttribute="centerX" id="Vpe-Iq-0dn"/>
+                                    <constraint firstItem="dJ9-G7-j5G" firstAttribute="top" secondItem="5G6-Ia-1kA" secondAttribute="bottom" constant="38" id="YWr-wy-VY6"/>
+                                    <constraint firstItem="fwR-N6-1gy" firstAttribute="top" secondItem="PX2-l4-jJC" secondAttribute="bottom" constant="7" id="aBD-I2-GEj"/>
+                                    <constraint firstAttribute="trailing" secondItem="Xmb-zA-4Uf" secondAttribute="trailing" constant="76" id="c1f-1n-uuE"/>
+                                    <constraint firstItem="5G6-Ia-1kA" firstAttribute="leading" secondItem="JRs-AH-Hjm" secondAttribute="leading" constant="50" id="c8c-AY-pki"/>
+                                    <constraint firstAttribute="trailing" secondItem="N9S-w5-bIW" secondAttribute="trailing" constant="58" id="hK2-a0-gPa"/>
+                                    <constraint firstItem="Eiu-vA-evr" firstAttribute="centerX" secondItem="JRs-AH-Hjm" secondAttribute="centerX" id="jcP-M3-b4v"/>
+                                    <constraint firstAttribute="bottom" secondItem="dJ9-G7-j5G" secondAttribute="bottom" constant="16" id="mBZ-FO-EcY"/>
+                                    <constraint firstItem="QGG-Tq-WUB" firstAttribute="top" secondItem="JRs-AH-Hjm" secondAttribute="top" constant="61.5" id="nXa-oJ-WXp"/>
+                                    <constraint firstItem="dJ9-G7-j5G" firstAttribute="top" secondItem="N9S-w5-bIW" secondAttribute="bottom" constant="38" id="orm-ok-r3G"/>
+                                    <constraint firstItem="N9S-w5-bIW" firstAttribute="width" secondItem="5G6-Ia-1kA" secondAttribute="width" id="ria-HR-PxI"/>
+                                    <constraint firstItem="dJ9-G7-j5G" firstAttribute="top" secondItem="N9S-w5-bIW" secondAttribute="bottom" constant="38" id="syd-qf-E51"/>
+                                    <constraint firstItem="Yap-1R-CqB" firstAttribute="top" secondItem="PX2-l4-jJC" secondAttribute="bottom" constant="3" id="wrr-gD-wO7"/>
+                                    <constraint firstItem="Xmb-zA-4Uf" firstAttribute="leading" secondItem="fwR-N6-1gy" secondAttribute="trailing" constant="72" id="zfm-17-AcY"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jKU-Fl-3qz"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jKU-Fl-3qz" firstAttribute="trailing" secondItem="JRs-AH-Hjm" secondAttribute="trailing" constant="127" id="ZbV-bi-zcJ"/>
+                            <constraint firstItem="JRs-AH-Hjm" firstAttribute="leading" secondItem="jKU-Fl-3qz" secondAttribute="leading" constant="127" id="jMU-Ym-HTe"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="FuD-YF-cUJ"/>
+                    <connections>
+                        <outlet property="AdminLbl" destination="PX2-l4-jJC" id="RsS-FS-mAe"/>
+                        <outlet property="AdminPic" destination="Eiu-vA-evr" id="6gJ-HA-fyl"/>
+                        <outlet property="CallBtn" destination="N9S-w5-bIW" id="Saf-GZ-dCh"/>
+                        <outlet property="EmailBtn" destination="5G6-Ia-1kA" id="SoP-cs-H0N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vTU-rv-fxb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1256" y="2340"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="YFM-d9-O2o"/>
         <segue reference="onY-RW-VIk"/>
-        <segue reference="Qfa-kA-Ts4"/>
+        <segue reference="cZ3-jH-vf4"/>
         <segue reference="ta3-hx-8wv"/>
     </inferredMetricsTieBreakers>
     <resources>
@@ -7241,6 +7330,7 @@ Teachers Can:
         <image name="CISDLogo" width="208" height="54"/>
         <image name="Cinelli_crop" width="350" height="350"/>
         <image name="Coppell ISD" width="500" height="122"/>
+        <image name="CoppellCowboys" width="400" height="400"/>
         <image name="Counselors" width="340" height="196"/>
         <image name="Emergency Contacts" width="340" height="199"/>
         <image name="Gear-2" width="38" height="38"/>
@@ -7248,6 +7338,7 @@ Teachers Can:
         <image name="Principals" width="340" height="196"/>
         <image name="Screen Shot 2022-12-01 at 1.23.53 PM" width="1920" height="1004"/>
         <image name="Springer_crop" width="350" height="350"/>
+        <image name="Watermark" width="500" height="116"/>
         <image name="checkmark.circle.fill" catalog="system" width="128" height="123"/>
         <image name="doc.fill.badge.plus" catalog="system" width="120" height="128"/>
         <image name="house.fill" catalog="system" width="128" height="104"/>

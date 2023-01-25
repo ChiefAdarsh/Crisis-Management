@@ -37,6 +37,9 @@ class PrincipalContactsTableViewController: UITableViewController, BackTitle {
     var backTitle: String!
     
     override func viewDidLoad() {
+        
+        
+        
         createAdmins()
         super.viewDidLoad()
         self.backTitle = "Principals"
@@ -46,6 +49,7 @@ class PrincipalContactsTableViewController: UITableViewController, BackTitle {
             let backButton = UIBarButtonItem()
             backButton.title = viewController.backTitle
             self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
+            
         }
     }
     
@@ -81,15 +85,18 @@ class PrincipalContactsTableViewController: UITableViewController, BackTitle {
     }
     
     override func tableView(_ tableView: UITableView,didSelectRowAt indexPath: IndexPath) {
-//        tableView.deselectRow(at: indexPath, animated: true)
+        
+
+        tableView.deselectRow(at: indexPath, animated: true)
         
         for i in 0...(principalList.count - 1) {
             if indexPath[1] == i {
                 selectedAdmin = principalList[i]
                 print(selectedAdmin.fullName)
-                let prinViewController = storyboard!.instantiateViewController(withIdentifier: "adminInfoInSchool") as! AdminInfoViewController
-                self.navigationController?.pushViewController(prinViewController, animated: true)
+                let targetViewController = storyboard!.instantiateViewController(withIdentifier: "adminInfoInSchool") as! AdminInfoViewController
+                self.navigationController?.showDetailViewController(targetViewController, sender: self)
             }
+            
         }
     }
 }
@@ -142,14 +149,15 @@ class CounselorContactsTableViewController: UITableViewController, BackTitle {
     }
     
     override func tableView(_ tableView: UITableView,didSelectRowAt indexPath: IndexPath) {
-//        tableView.deselectRow(at: indexPath, animated: true)
+        tableView.deselectRow(at: indexPath, animated: true)
         
         for i in 0...(counselorList.count - 1) {
+            print(indexPath[1])
             if indexPath[1] == i {
                 selectedAdmin = counselorList[i]
                 print(selectedAdmin.fullName)
-                let counViewController = storyboard!.instantiateViewController(withIdentifier: "adminInfoInSchool") as! AdminInfoViewController
-                self.navigationController?.pushViewController(counViewController, animated: true)
+                let targetViewController = storyboard!.instantiateViewController(withIdentifier: "adminInfoInSchool") as! AdminInfoViewController
+                self.navigationController?.showDetailViewController(targetViewController, sender: self)
             }
         }
     }
@@ -397,6 +405,9 @@ func createAdmins() {
 
     admin = Admin(imgStr: "Kennington_crop", adminType: AdminType.Counselor, lastName: "Kennington", firstName: "Michael", username: "mkennington", callExt: 6133, adminTypeDetailed: "Counselor (Goy-Kiv)")
     adminList.append(admin)
+    
+    admin = Admin(imgStr: "Crumpton_crop", adminType: AdminType.Counselor, lastName: "Crumpton", firstName: "Heather", username: "hcrumpton", callExt: 6135, adminTypeDetailed: "Counselor (Kiw-Nah)")
+    adminList.append(admin)
 
     admin = Admin(imgStr: "Oh_crop", adminType: AdminType.Counselor, lastName: "Oh", firstName: "Lindsey", username: "loh", callExt: 6136, adminTypeDetailed: "Counselor (Nal-Roc)")
     adminList.append(admin)
@@ -404,8 +415,7 @@ func createAdmins() {
     admin = Admin(imgStr: "Tremethick_crop", adminType: AdminType.Counselor, lastName: "Tremethick", firstName: "Keith", username: "ktremethick", callExt: 6131, adminTypeDetailed: "Counselor (Son-Z)")
     adminList.append(admin)
 
-    admin = Admin(imgStr: "Crumpton_crop", adminType: AdminType.Counselor, lastName: "Crumpton", firstName: "Heather", username: "hcrumpton", callExt: 6135, adminTypeDetailed: "Counselor (Kiw-Nah)")
-    adminList.append(admin)
+    
 
     // Sort
     
