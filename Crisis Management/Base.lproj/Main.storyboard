@@ -14,7 +14,7 @@
         <!--Resources-->
         <scene sceneID="uvg-uB-H5E">
             <objects>
-                <tableViewController title="Resources" id="qGU-35-bvw" customClass="resourcesViewController" customModule="Crisis_Management" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Resources" id="qGU-35-bvw" customClass="resourcesCrisisViewController" customModule="Crisis_Management" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" id="Kuh-ny-3Vb" customClass="Resources">
                         <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3909,7 +3909,7 @@ Teachers Can:
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Crisis Lines Phone Numbers"/>
                                 <connections>
-                                    <segue destination="qGU-35-bvw" kind="show" id="nsq-2E-tpB"/>
+                                    <segue destination="qGU-35-bvw" kind="show" id="ta3-hx-8wv"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WQj-3I-dS0">
@@ -4206,7 +4206,7 @@ Teachers Can:
         <!--Shelters-->
         <scene sceneID="Hbe-Gs-lD1">
             <objects>
-                <tableViewController title="Shelters" id="Tku-WA-J1S" customClass="shelterResource" customModule="Student_Central" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Shelters" id="Tku-WA-J1S" customClass="shelterResource" customModule="Crisis_Management" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="GQo-zL-6Zk">
                         <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4408,7 +4408,7 @@ Teachers Can:
         <!--Housing Table View-->
         <scene sceneID="Me1-v2-VMT">
             <objects>
-                <tableViewController id="aS9-L6-h4M" customClass="HousingTableView" customModule="Student_Central" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="aS9-L6-h4M" customClass="HousingTableView" customModule="Crisis_Management" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="i9d-Po-383">
                         <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4644,7 +4644,7 @@ Teachers Can:
         <!--specShel-->
         <scene sceneID="g3Y-bH-JHI">
             <objects>
-                <viewController storyboardIdentifier="specsh" title="specShel" id="t5h-7q-Qaq" customClass="SpecShel" customModule="Student_Central" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="specsh" title="specShel" id="t5h-7q-Qaq" customClass="SpecShel" customModule="Crisis_Management" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="asS-uM-oxa">
                         <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4760,7 +4760,7 @@ Teachers Can:
         <!--Housing View Controller-->
         <scene sceneID="amV-S0-ABH">
             <objects>
-                <viewController storyboardIdentifier="housinginfo" id="dsK-Yx-WLJ" customClass="HousingViewController" customModule="Student_Central" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="housinginfo" id="dsK-Yx-WLJ" customClass="HousingViewController" customModule="Crisis_Management" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rQU-PQ-8mB">
                         <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4835,7 +4835,7 @@ Teachers Can:
         <!--Resource-->
         <scene sceneID="Pj0-QL-s2A">
             <objects>
-                <tableViewController id="NTz-99-6sn" customClass="sResource" customModule="Student_Central" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="NTz-99-6sn" customClass="sResource" customModule="Crisis_Management" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="jK5-CQ-dPf">
                         <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4949,7 +4949,7 @@ Teachers Can:
         <!--Ah Spec-->
         <scene sceneID="hXE-NE-vB8">
             <objects>
-                <viewController storyboardIdentifier="ahSpec" id="JFx-I0-RJo" customClass="ahSpec" customModule="Student_Central" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ahSpec" id="JFx-I0-RJo" customClass="ahSpec" customModule="Crisis_Management" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xpX-Sb-GkN">
                         <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -5015,7 +5015,7 @@ Teachers Can:
         <!--Resource-->
         <scene sceneID="Mm2-Uk-mDs">
             <objects>
-                <tableViewController id="4CY-rA-Bho" customClass="hResource" customModule="Student_Central" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="4CY-rA-Bho" customClass="hResource" customModule="Crisis_Management" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="0gY-Gv-P8l">
                         <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -5129,7 +5129,7 @@ Teachers Can:
         <!--Spec-->
         <scene sceneID="nUv-ub-aar">
             <objects>
-                <viewController storyboardIdentifier="pSpec" id="cev-U7-dwF" customClass="pSpec" customModule="Student_Central" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="pSpec" id="cev-U7-dwF" customClass="pSpec" customModule="Crisis_Management" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="y2S-gb-aCL">
                         <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -5195,7 +5195,7 @@ Teachers Can:
         <!--Spec-->
         <scene sceneID="Do1-xg-HnK">
             <objects>
-                <viewController storyboardIdentifier="hSpec" id="NsX-gn-dRK" customClass="hSpec" customModule="Student_Central" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="hSpec" id="NsX-gn-dRK" customClass="hSpec" customModule="Crisis_Management" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PxF-Kt-dxI">
                         <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -5261,7 +5261,7 @@ Teachers Can:
         <!--Genh Spec-->
         <scene sceneID="O7k-2d-Y8t">
             <objects>
-                <viewController storyboardIdentifier="genSpec" id="No6-UX-sJe" customClass="genhSpec" customModule="Student_Central" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="genSpec" id="No6-UX-sJe" customClass="genhSpec" customModule="Crisis_Management" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yMn-0H-5pk">
                         <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -5490,7 +5490,7 @@ Teachers Can:
         <!--Gen Health Resource-->
         <scene sceneID="S96-qe-xwL">
             <objects>
-                <tableViewController id="yrr-WL-Xd7" customClass="genHealthResource" customModule="Student_Central" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="yrr-WL-Xd7" customClass="genHealthResource" customModule="Crisis_Management" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="U2n-1c-jod">
                         <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -5604,7 +5604,7 @@ Teachers Can:
         <!--Resource-->
         <scene sceneID="TT4-hW-ufP">
             <objects>
-                <tableViewController id="ovx-ig-z0u" customClass="hResource" customModule="Student_Central" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="ovx-ig-z0u" customClass="hResource" customModule="Crisis_Management" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="4YW-vM-n0r">
                         <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -5718,7 +5718,7 @@ Teachers Can:
         <!--Ah Resource-->
         <scene sceneID="KVh-vU-Uun">
             <objects>
-                <tableViewController id="C5s-wb-MEh" customClass="ahResource" customModule="Student_Central" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="C5s-wb-MEh" customClass="ahResource" customModule="Crisis_Management" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="QG2-aC-Uo8">
                         <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -5832,7 +5832,7 @@ Teachers Can:
         <!--Spec-->
         <scene sceneID="sJk-YH-2RJ">
             <objects>
-                <viewController storyboardIdentifier="sSpec" id="Pht-gl-Ngl" customClass="sSpec" customModule="Student_Central" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="sSpec" id="Pht-gl-Ngl" customClass="sSpec" customModule="Crisis_Management" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cJR-2I-K0P">
                         <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -5899,8 +5899,8 @@ Teachers Can:
     <inferredMetricsTieBreakers>
         <segue reference="YFM-d9-O2o"/>
         <segue reference="onY-RW-VIk"/>
-        <segue reference="nKW-bZ-WCm"/>
-        <segue reference="nsq-2E-tpB"/>
+        <segue reference="Qfa-kA-Ts4"/>
+        <segue reference="ta3-hx-8wv"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Background 1" width="2048" height="1536"/>
