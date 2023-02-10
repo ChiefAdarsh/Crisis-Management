@@ -11,8 +11,12 @@ import UIKit
 
 class CallAdminInSchoolController: UIViewController, BackTitle {
     var backTitle: String!
+    @IBOutlet weak var IDScreen: UIView!
     
     override func viewDidLoad() {
+        
+        // Create a view with rounded corners
+        
         super.viewDidLoad()
         self.backTitle = "Call Admin"
         
@@ -39,6 +43,12 @@ class PrincipalContactsTableViewController: UITableViewController, BackTitle {
     override func viewDidLoad() {
         
         
+        let imageView = UIImageView(image: UIImage(named: "Background 1"))
+        tableView.backgroundView = imageView
+        
+        let tableImageView = UIImageView(image: UIImage(named: "Background-1"))
+        tableImageView.alpha = 0.8
+        tableView.backgroundView = tableImageView
         
         createAdmins()
         super.viewDidLoad()
@@ -166,12 +176,26 @@ class CounselorContactsTableViewController: UITableViewController, BackTitle {
 class AdminInfoViewController: UIViewController, BackTitle {
     var backTitle: String!
     
+    @IBOutlet var IDView: UIView!
+    
     @IBOutlet var EmailBtn: UIButton!
     @IBOutlet var CallBtn: UIButton!
     @IBOutlet var AdminLbl: UILabel!
     @IBOutlet var AdminPic: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        let path = UIBezierPath(roundedRect: view.layer.bounds, cornerRadius: 10.0)
+
+        // Create a CAShapeLayer with the path
+        let maskLayer = CAShapeLayer()
+        maskLayer.path = path.cgPath
+
+        // Set the mask of the view
+        IDView.layer.mask = maskLayer
+        IDView.clipsToBounds = true
+        IDView.layer.masksToBounds = true
+        IDView.layer.cornerRadius = 10.0
+        
         self.backTitle = selectedAdmin.fullName
         
         if let ctrs = self.navigationController?.viewControllers, ctrs.count > 1 {
