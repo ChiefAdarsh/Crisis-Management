@@ -309,7 +309,8 @@ var numberStart = "214496"
 var adminList: [Admin] = []
 var principalList: [Admin] = []
 var counselorList: [Admin] = []
-var emergencyContactsList: [String] = ["Principal: Laura Springer                      6110", "Associate Principal: Melissa Arnold    6122", "Lead Counselor: Ann Cinelli                 6112", "Coppell Police Department                 972-304-3600", "Dallas Police Department                    214-744-4444", "Irving Police Department                     972-723-1010", "Lewisville Police Department              972-219-3600", "Child Protective Services                     800-252-5400", "Dallas County Mobile Crisis                 866-260-8000"]
+//var emergencyContactsList: [String] = ["Principal: Laura Springer                      6110", "Associate Principal: Melissa Arnold    6122", "Lead Counselor: Ann Cinelli                 6112", "Coppell Police Department                 972-304-3600", "Dallas Police Department                    214-744-4444", "Irving Police Department                     972-723-1010", "Lewisville Police Department              972-219-3600", "Child Protective Services                     800-252-5400", "Dallas County Mobile Crisis                 866-260-8000"]
+var emergencyContactsList: [String] = []
 
 var selectedAdmin: Admin = Admin(imgStr: "", adminType: AdminType.Counselor, lastName: "", firstName: "", username: "", callExt: 0, adminTypeDetailed: "")
 
@@ -368,52 +369,52 @@ func createAdmins() {
     
     // PRINCIPALS
 
-    var admin = Admin(imgStr: "Springer_crop", adminType: AdminType.Principal, lastName: "Springer", firstName: "Laura", username: "lspringer", callExt: 6104, adminTypeDetailed: "Principal")
-    adminList.append(admin)
-
-    admin = Admin(imgStr: "Arnold_crop", adminType: AdminType.Principal, lastName: "Arnold", firstName: "Melissa", username: "marnold", callExt: 6122, adminTypeDetailed: "Associate Principal")
-    adminList.append(admin)
-
-    admin = Admin(imgStr: "Rix_crop", adminType: AdminType.Principal, lastName: "Rix", firstName: "Aylor", username: "arix", callExt: 6124, adminTypeDetailed: "Assistant Principal (A-C)")
-    adminList.append(admin)
-
-    admin = Admin(imgStr: "Osborne_crop", adminType: AdminType.Principal, lastName: "Osborne", firstName: "Cindi", username: "cosborne", callExt: 6126, adminTypeDetailed: "Assistant Principal (D-J)")
-    adminList.append(admin)
-
-    admin = Admin(imgStr: "Gollner_crop", adminType: AdminType.Principal, lastName: "Gollner", firstName: "Chris", username: "cgollner", callExt: 6123, adminTypeDetailed: "Assistant Principal (K-M)")
-    adminList.append(admin)
-
-    admin = Admin(imgStr: "Porter_crop", adminType: AdminType.Principal, lastName: "Porter", firstName: "Zane", username: "zporter", callExt: 0, adminTypeDetailed: "Assistant Principal (N-Sf)")
-    adminList.append(admin)
-
-    admin = Admin(imgStr: "Girard_crop", adminType: AdminType.Principal, lastName: "Girard", firstName: "Brandon", username: "bgirard", callExt: 0, adminTypeDetailed: "Assistant Principal (Sg-Z)")
-    adminList.append(admin)
-    
-//    admin = Admin(imgStr: nil, adminType: AdminType.Principal, lastName: "Yakubovsky", firstName: "Michael", username: "myakubovsky", callExt: 6237, adminTypeDetailed: "STEM Teacher")
+//    var admin = Admin(imgStr: "Springer_crop", adminType: AdminType.Principal, lastName: "Springer", firstName: "Laura", username: "lspringer", callExt: 6104, adminTypeDetailed: "Principal")
 //    adminList.append(admin)
-
-    // COUNSELORS
-
-    admin = Admin(imgStr: "Cinelli_crop", adminType: AdminType.Counselor, lastName: "Cinelli", firstName: "Ann", username: "acinelli", callExt: 6112, adminTypeDetailed: "Lead Counselor (Rod-Som)")
-    adminList.append(admin)
-
-    admin = Admin(imgStr: "Abreu_crop", adminType: AdminType.Counselor, lastName: "Abreu", firstName: "Cheryl", username: "cabreu", callExt: 6132, adminTypeDetailed: "Counselor (A-Cham)")
-    adminList.append(admin)
-
-    admin = Admin(imgStr: "McMillin_crop", adminType: AdminType.Counselor, lastName: "McMillin", firstName: "Laura", username: "lmcmillin", callExt: 6106, adminTypeDetailed: "Counselor (Chan-Gox)")
-    adminList.append(admin)
-
-    admin = Admin(imgStr: "Kennington_crop", adminType: AdminType.Counselor, lastName: "Kennington", firstName: "Michael", username: "mkennington", callExt: 6133, adminTypeDetailed: "Counselor (Goy-Kiv)")
-    adminList.append(admin)
-    
-    admin = Admin(imgStr: "Crumpton_crop", adminType: AdminType.Counselor, lastName: "Crumpton", firstName: "Heather", username: "hcrumpton", callExt: 6135, adminTypeDetailed: "Counselor (Kiw-Nah)")
-    adminList.append(admin)
-
-    admin = Admin(imgStr: "Oh_crop", adminType: AdminType.Counselor, lastName: "Oh", firstName: "Lindsey", username: "loh", callExt: 6136, adminTypeDetailed: "Counselor (Nal-Roc)")
-    adminList.append(admin)
-
-    admin = Admin(imgStr: "Tremethick_crop", adminType: AdminType.Counselor, lastName: "Tremethick", firstName: "Keith", username: "ktremethick", callExt: 6131, adminTypeDetailed: "Counselor (Son-Z)")
-    adminList.append(admin)
+//
+//    admin = Admin(imgStr: "Arnold_crop", adminType: AdminType.Principal, lastName: "Arnold", firstName: "Melissa", username: "marnold", callExt: 6122, adminTypeDetailed: "Associate Principal")
+//    adminList.append(admin)
+//
+//    admin = Admin(imgStr: "Rix_crop", adminType: AdminType.Principal, lastName: "Rix", firstName: "Aylor", username: "arix", callExt: 6124, adminTypeDetailed: "Assistant Principal (A-C)")
+//    adminList.append(admin)
+//
+//    admin = Admin(imgStr: "Osborne_crop", adminType: AdminType.Principal, lastName: "Osborne", firstName: "Cindi", username: "cosborne", callExt: 6126, adminTypeDetailed: "Assistant Principal (D-J)")
+//    adminList.append(admin)
+//
+//    admin = Admin(imgStr: "Gollner_crop", adminType: AdminType.Principal, lastName: "Gollner", firstName: "Chris", username: "cgollner", callExt: 6123, adminTypeDetailed: "Assistant Principal (K-M)")
+//    adminList.append(admin)
+//
+//    admin = Admin(imgStr: "Porter_crop", adminType: AdminType.Principal, lastName: "Porter", firstName: "Zane", username: "zporter", callExt: 0, adminTypeDetailed: "Assistant Principal (N-Sf)")
+//    adminList.append(admin)
+//
+//    admin = Admin(imgStr: "Girard_crop", adminType: AdminType.Principal, lastName: "Girard", firstName: "Brandon", username: "bgirard", callExt: 0, adminTypeDetailed: "Assistant Principal (Sg-Z)")
+//    adminList.append(admin)
+//
+////    admin = Admin(imgStr: nil, adminType: AdminType.Principal, lastName: "Yakubovsky", firstName: "Michael", username: "myakubovsky", callExt: 6237, adminTypeDetailed: "STEM Teacher")
+////    adminList.append(admin)
+//
+//    // COUNSELORS
+//
+//    admin = Admin(imgStr: "Cinelli_crop", adminType: AdminType.Counselor, lastName: "Cinelli", firstName: "Ann", username: "acinelli", callExt: 6112, adminTypeDetailed: "Lead Counselor (Rod-Som)")
+//    adminList.append(admin)
+//
+//    admin = Admin(imgStr: "Abreu_crop", adminType: AdminType.Counselor, lastName: "Abreu", firstName: "Cheryl", username: "cabreu", callExt: 6132, adminTypeDetailed: "Counselor (A-Cham)")
+//    adminList.append(admin)
+//
+//    admin = Admin(imgStr: "McMillin_crop", adminType: AdminType.Counselor, lastName: "McMillin", firstName: "Laura", username: "lmcmillin", callExt: 6106, adminTypeDetailed: "Counselor (Chan-Gox)")
+//    adminList.append(admin)
+//
+//    admin = Admin(imgStr: "Kennington_crop", adminType: AdminType.Counselor, lastName: "Kennington", firstName: "Michael", username: "mkennington", callExt: 6133, adminTypeDetailed: "Counselor (Goy-Kiv)")
+//    adminList.append(admin)
+//
+//    admin = Admin(imgStr: "Crumpton_crop", adminType: AdminType.Counselor, lastName: "Crumpton", firstName: "Heather", username: "hcrumpton", callExt: 6135, adminTypeDetailed: "Counselor (Kiw-Nah)")
+//    adminList.append(admin)
+//
+//    admin = Admin(imgStr: "Oh_crop", adminType: AdminType.Counselor, lastName: "Oh", firstName: "Lindsey", username: "loh", callExt: 6136, adminTypeDetailed: "Counselor (Nal-Roc)")
+//    adminList.append(admin)
+//
+//    admin = Admin(imgStr: "Tremethick_crop", adminType: AdminType.Counselor, lastName: "Tremethick", firstName: "Keith", username: "ktremethick", callExt: 6131, adminTypeDetailed: "Counselor (Son-Z)")
+//    adminList.append(admin)
 
     
 
@@ -440,5 +441,5 @@ func findAdmin(username: String) -> Admin {
             return admin
         }
     }
-    return Admin(imgStr: "AA", adminType: AdminType.Counselor, lastName: "NA", firstName: "NA", username: "NA", callExt: 0, adminTypeDetailed: "NA")
+    return Admin(imgStr: "NA", adminType: AdminType.Counselor, lastName: "NA", firstName: "NA", username: "NA", callExt: 0, adminTypeDetailed: "NA")
 }
