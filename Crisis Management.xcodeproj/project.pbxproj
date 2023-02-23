@@ -79,25 +79,33 @@
 			isa = PBXGroup;
 			children = (
 				6578089D29118D2C00E72F43 /* AppDelegate.swift */,
+				B2446FF829A7F4B00077691B /* Resources */,
 				6578089F29118D2C00E72F43 /* SceneDelegate.swift */,
 				657808A129118D2C00E72F43 /* InOutSchool.swift */,
 				1783567B2919938E00B33C56 /* Home.swift */,
 				1783567D291993FD00B33C56 /* Settings.swift */,
 				7A8943F72919CAA700C53543 /* ReportIssue.swift */,
 				652A84BF2914E1100025B2E6 /* StudentProtocols.swift */,
-				7A8943F92919DBAB00C53543 /* CallAdmin.swift */,
-				65E79A0729A6B28900E848F1 /* MedicalViewController.swift */,
-				65E79A0929A6B2A400E848F1 /* StudentHelpResources.swift */,
 				65E79A0B29A6B2E200E848F1 /* Teacher Files.swift */,
-				65E79A0D29A6B39200E848F1 /* StudentHelpTableViewController.swift */,
-				65BCCCCC29A6B3F6003CA681 /* ViewControllerResource.swift */,
-				65BCCCCE29A6B410003CA681 /* ViewControllerHelps.swift */,
+				7A8943F92919DBAB00C53543 /* CallAdmin.swift */,
 				657808A329118D2C00E72F43 /* Main.storyboard */,
 				657808A629118D2D00E72F43 /* Assets.xcassets */,
 				657808A829118D2D00E72F43 /* LaunchScreen.storyboard */,
 				657808AB29118D2D00E72F43 /* Info.plist */,
 			);
 			path = "Crisis Management";
+			sourceTree = "<group>";
+		};
+		B2446FF829A7F4B00077691B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				65E79A0729A6B28900E848F1 /* MedicalViewController.swift */,
+				65E79A0929A6B2A400E848F1 /* StudentHelpResources.swift */,
+				65E79A0D29A6B39200E848F1 /* StudentHelpTableViewController.swift */,
+				65BCCCCC29A6B3F6003CA681 /* ViewControllerResource.swift */,
+				65BCCCCE29A6B410003CA681 /* ViewControllerHelps.swift */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
