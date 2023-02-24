@@ -11,61 +11,16 @@ class HelpViewController: UIViewController {
     
 
     var wordd : String = ""
-    
-    
+    var mt = Set<String>()
+    var empty = [String]()
+    @IBOutlet weak var sheesh: UITableView!
     
     
     @IBOutlet var stackView: UIStackView!
-    @IBOutlet weak var chekchek: UIButton!
-    @IBOutlet weak var FamilyButton: UIButton!
-    @IBOutlet weak var DomesticButton: UIButton!
-    @IBOutlet weak var SpecialtyButton: UIButton!
-    @IBOutlet weak var DrugButton: UIButton!
-    @IBOutlet weak var EatingButton: UIButton!
-    @IBOutlet weak var CounselButton: UIButton!
-    @IBOutlet weak var CrisisButton: UIButton!
-    @IBOutlet weak var InoutButton: UIButton!
-    @IBOutlet var bropLEASE: UIButton!
     
     
-    @IBAction func chekcheckTap(_ sender: Any) {
-        wordd = "Psychiatrists"
-    }
-    @IBAction func CrisisTap(_ sender: Any) {
-        wordd = "Crisis Lines"
-    }
-    
-    @IBAction func bropLEASETap(_ sender: Any) {
-        wordd = "Support Groups and Resources"
-    }
     
     
-    @IBAction func InoutTap(_ sender: Any) {
-        wordd = "Inpatient/Outpatient Mental Health Facilities"
-    }
-    
-    @IBAction func CounselingTap(_ sender: Any) {
-        wordd = "Counseling Centers"
-    }
-    
-    @IBAction func EatingTap(_ sender: Any) {
-        wordd = "Eating Disorders"
-    }
-    
-    @IBAction func DrugTap(_ sender: Any) {
-        wordd = "Drug and Alcohol Abuse"
-    }
-    @IBAction func SpecialtyTap(_ sender: Any) {
-        wordd = "Specialty Counseling"
-    }
-    
-    @IBAction func domesticTap(_ sender: Any) {
-        wordd = "Domestic Violence"
-    }
-    
-    @IBAction func familyTap(_ sender: Any) {
-        wordd = "Family Assistance"
-    }
     @IBAction func housingTap(_ sender: Any) {
         wordd = "Housing"
     }
@@ -77,13 +32,22 @@ class HelpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        sheesh.delegate = self
+        sheesh.dataSource = self
         wordd = ""
+        for yeahh in yourArray{
+            mt.insert(yeahh.category)
+        }
+        for okayy in mt{
+            empty.append(okayy)
+        }
         let size = UIScreen.main.bounds.size
         if size.height < size.width {
             stackView.axis = .horizontal
         } else {
             stackView.axis = .vertical
         }
+        sheesh.separatorStyle = .none
         // Do any additional setup after loading the view.
     }
     
@@ -113,4 +77,22 @@ class HelpViewController: UIViewController {
     }
     */
 
+}
+extension HelpViewController: UITableViewDataSource, UITableViewDelegate{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return empty.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell2 = sheesh.dequeueReusableCell(withIdentifier: "SHOOOSH") as! TableViewCellSHEESH
+        
+        
+        cell2.labelSheesh.text = empty[indexPath.row]
+        
+        return cell2
+    }
+    
+    
+    
+    
 }

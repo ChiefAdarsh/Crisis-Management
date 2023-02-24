@@ -24,6 +24,7 @@
 		65E79A0E29A6B39200E848F1 /* StudentHelpTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E79A0D29A6B39200E848F1 /* StudentHelpTableViewController.swift */; };
 		7A8943F82919CAA700C53543 /* ReportIssue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8943F72919CAA700C53543 /* ReportIssue.swift */; };
 		7A8943FA2919DBAB00C53543 /* CallAdmin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8943F92919DBAB00C53543 /* CallAdmin.swift */; };
+		B2FA6DB129A9167200E1C2DA /* TableViewCellSHEESH.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FA6DB029A9167200E1C2DA /* TableViewCellSHEESH.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		65E79A0D29A6B39200E848F1 /* StudentHelpTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentHelpTableViewController.swift; sourceTree = "<group>"; };
 		7A8943F72919CAA700C53543 /* ReportIssue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportIssue.swift; sourceTree = "<group>"; };
 		7A8943F92919DBAB00C53543 /* CallAdmin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallAdmin.swift; sourceTree = "<group>"; };
+		B2FA6DB029A9167200E1C2DA /* TableViewCellSHEESH.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellSHEESH.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				65E79A0D29A6B39200E848F1 /* StudentHelpTableViewController.swift */,
 				65BCCCCC29A6B3F6003CA681 /* ViewControllerResource.swift */,
 				65BCCCCE29A6B410003CA681 /* ViewControllerHelps.swift */,
+				B2FA6DB029A9167200E1C2DA /* TableViewCellSHEESH.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -179,6 +182,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2FA6DB129A9167200E1C2DA /* TableViewCellSHEESH.swift in Sources */,
 				657808A229118D2C00E72F43 /* InOutSchool.swift in Sources */,
 				65E79A0829A6B28900E848F1 /* MedicalViewController.swift in Sources */,
 				65E79A0E29A6B39200E848F1 /* StudentHelpTableViewController.swift in Sources */,

@@ -3779,16 +3779,16 @@ Teachers Can:
         <!--View Controller Res Page-->
         <scene sceneID="rdF-x1-5IQ">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="if0-zd-7iE" customClass="ViewControllerResPage" customModule="Student_Central_v2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="if0-zd-7iE" customClass="ViewControllerResPage" customModule="Crisis_Management" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2gQ-wD-jmO">
                         <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background 1" translatesAutoresizingMaskIntoConstraints="NO" id="yzV-tH-3to">
-                                <rect key="frame" x="0.0" y="0.0" width="1112" height="1536"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="FX2-b1-uIc">
-                                <rect key="frame" x="0.0" y="0.0" width="450" height="1536"/>
+                                <rect key="frame" x="0.0" y="0.0" width="450" height="834"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="450" id="Qw5-xD-XOQ"/>
@@ -3796,7 +3796,7 @@ Teachers Can:
                                 <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="someCell" id="FgZ-bU-bQC" customClass="TVC" customModule="Student_Central_v2" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="someCell" id="FgZ-bU-bQC" customClass="TVC" customModule="Crisis_Management" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="450" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FgZ-bU-bQC" id="DBS-07-1Lc">
@@ -3841,7 +3841,7 @@ Teachers Can:
                                 </prototypes>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="58" translatesAutoresizingMaskIntoConstraints="NO" id="ohf-Mw-9l8">
-                                <rect key="frame" x="470" y="98" width="622" height="1353"/>
+                                <rect key="frame" x="470" y="98" width="622" height="651"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Res Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dEb-nN-iQe">
                                         <rect key="frame" x="0.0" y="0.0" width="622" height="59"/>
@@ -3889,7 +3889,7 @@ Teachers Can:
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Res Add Info" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="23" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IYE-7D-6bW">
-                                        <rect key="frame" x="0.0" y="564" width="622" height="789"/>
+                                        <rect key="frame" x="0.0" y="564" width="622" height="87"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="365" id="1ML-Ub-F2d"/>
                                         </constraints>
@@ -3941,7 +3941,7 @@ Teachers Can:
         <!--Medical View Controller-->
         <scene sceneID="0WH-jV-OrK">
             <objects>
-                <viewController id="zNK-ba-bLX" customClass="MedicalViewController" customModule="Student_Central_v2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="zNK-ba-bLX" customClass="MedicalViewController" customModule="Crisis_Management" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2lE-UY-bKe">
                         <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4184,7 +4184,7 @@ Teachers Can:
         <!--Student Help View Controller-->
         <scene sceneID="Fyu-P2-DhA">
             <objects>
-                <viewController title="Student Help View Controller" id="saK-Kf-fvs" customClass="HelpViewController" customModule="Student_Central_v2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Student Help View Controller" id="saK-Kf-fvs" customClass="HelpViewController" customModule="Crisis_Management" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EMx-NE-CBu">
                         <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4210,163 +4210,6 @@ Teachers Can:
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                 </variation>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="6Pu-5Z-yc3">
-                                <rect key="frame" x="70" y="436" width="972" height="358"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="A2z-jU-lT2">
-                                        <rect key="frame" x="0.0" y="0.0" width="466" height="358"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D39-sl-qL9">
-                                                <rect key="frame" x="0.0" y="0.0" width="466" height="47.5"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="gray" title="Crisis Lines Phone Numbers">
-                                                    <fontDescription key="titleFontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
-                                                </buttonConfiguration>
-                                                <connections>
-                                                    <action selector="CrisisTap:" destination="saK-Kf-fvs" eventType="touchUpInside" id="oLU-10-jYL"/>
-                                                    <segue destination="if0-zd-7iE" kind="show" id="9rR-6T-p9M"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CcB-IO-mu1">
-                                                <rect key="frame" x="0.0" y="77.5" width="466" height="47.5"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="gray" title="Inpatient/Outpatient Mental Health Facilities">
-                                                    <fontDescription key="titleFontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
-                                                </buttonConfiguration>
-                                                <connections>
-                                                    <action selector="InoutTap:" destination="saK-Kf-fvs" eventType="touchUpInside" id="NRl-TY-Fpx"/>
-                                                    <segue destination="if0-zd-7iE" kind="show" id="jpr-lx-sw3"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ose-iA-UUr">
-                                                <rect key="frame" x="0.0" y="155" width="466" height="48"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="gray" title="Counseling Centers">
-                                                    <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
-                                                </buttonConfiguration>
-                                                <connections>
-                                                    <action selector="CounselingTap:" destination="saK-Kf-fvs" eventType="touchUpInside" id="l6P-8b-ug3"/>
-                                                    <segue destination="if0-zd-7iE" kind="show" id="XCN-OW-WTY"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5kr-jr-pMC">
-                                                <rect key="frame" x="0.0" y="233" width="466" height="47.5"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="gray" title="Eating Disorders">
-                                                    <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
-                                                </buttonConfiguration>
-                                                <connections>
-                                                    <action selector="EatingTap:" destination="saK-Kf-fvs" eventType="touchUpInside" id="O8V-Ey-9yo"/>
-                                                    <segue destination="if0-zd-7iE" kind="show" id="SFZ-fc-JIX"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Poz-rd-7lh">
-                                                <rect key="frame" x="0.0" y="310.5" width="466" height="47.5"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="gray" title="Drug and Alchohol Abuse Resources">
-                                                    <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
-                                                </buttonConfiguration>
-                                                <connections>
-                                                    <action selector="DrugTap:" destination="saK-Kf-fvs" eventType="touchUpInside" id="6U1-7P-a79"/>
-                                                    <segue destination="if0-zd-7iE" kind="show" id="fce-Eg-wkI"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstItem="ose-iA-UUr" firstAttribute="height" secondItem="D39-sl-qL9" secondAttribute="height" id="87g-SM-Plp"/>
-                                            <constraint firstItem="Poz-rd-7lh" firstAttribute="height" secondItem="D39-sl-qL9" secondAttribute="height" id="BiO-a6-QyR"/>
-                                            <constraint firstItem="CcB-IO-mu1" firstAttribute="width" secondItem="D39-sl-qL9" secondAttribute="width" id="KfT-hJ-5fe"/>
-                                            <constraint firstItem="5kr-jr-pMC" firstAttribute="height" secondItem="D39-sl-qL9" secondAttribute="height" id="VMa-GX-Dd6"/>
-                                            <constraint firstItem="5kr-jr-pMC" firstAttribute="width" secondItem="D39-sl-qL9" secondAttribute="width" id="bY1-3I-dFO"/>
-                                            <constraint firstItem="CcB-IO-mu1" firstAttribute="height" secondItem="D39-sl-qL9" secondAttribute="height" id="j7b-OG-bG1"/>
-                                            <constraint firstItem="Poz-rd-7lh" firstAttribute="width" secondItem="D39-sl-qL9" secondAttribute="width" id="oqb-FU-vxg"/>
-                                            <constraint firstItem="ose-iA-UUr" firstAttribute="width" secondItem="D39-sl-qL9" secondAttribute="width" id="zSI-91-zRI"/>
-                                        </constraints>
-                                        <variation key="heightClass=compact-widthClass=compact" spacing="10"/>
-                                        <variation key="heightClass=compact-widthClass=regular" spacing="10"/>
-                                        <variation key="heightClass=regular-widthClass=compact" spacing="15"/>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="3fO-tT-unu">
-                                        <rect key="frame" x="506" y="0.0" width="466" height="358"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4hz-z2-EKH">
-                                                <rect key="frame" x="0.0" y="0.0" width="466" height="47.5"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="gray" title="Specialty Counseling">
-                                                    <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
-                                                </buttonConfiguration>
-                                                <connections>
-                                                    <action selector="SpecialtyTap:" destination="saK-Kf-fvs" eventType="touchUpInside" id="ELT-8I-h0h"/>
-                                                    <segue destination="if0-zd-7iE" kind="show" id="y0y-I5-mdp"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tob-lg-gIh">
-                                                <rect key="frame" x="0.0" y="77.5" width="466" height="47.5"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="gray" title="Domestic Violence Resources">
-                                                    <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
-                                                </buttonConfiguration>
-                                                <connections>
-                                                    <action selector="domesticTap:" destination="saK-Kf-fvs" eventType="touchUpInside" id="s9g-hw-XKG"/>
-                                                    <segue destination="if0-zd-7iE" kind="show" id="nQc-hK-Gs5"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EYw-lh-aNf">
-                                                <rect key="frame" x="0.0" y="155" width="466" height="48"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="gray" title="Psychiatrists">
-                                                    <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
-                                                </buttonConfiguration>
-                                                <connections>
-                                                    <action selector="chekcheckTap:" destination="saK-Kf-fvs" eventType="touchUpInside" id="AmV-TK-V3t"/>
-                                                    <segue destination="if0-zd-7iE" kind="show" id="ObX-Je-85B"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tmW-wi-Vol">
-                                                <rect key="frame" x="0.0" y="233" width="466" height="47.5"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="gray" title="Family Assistance">
-                                                    <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
-                                                </buttonConfiguration>
-                                                <connections>
-                                                    <action selector="familyTap:" destination="saK-Kf-fvs" eventType="touchUpInside" id="SqB-xw-uyY"/>
-                                                    <segue destination="if0-zd-7iE" kind="show" id="jqm-tp-MRR"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N9p-md-Gus">
-                                                <rect key="frame" x="0.0" y="310.5" width="466" height="47.5"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="gray" title="Support Groups" cornerStyle="small">
-                                                    <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
-                                                </buttonConfiguration>
-                                                <connections>
-                                                    <action selector="bropLEASETap:" destination="saK-Kf-fvs" eventType="touchUpInside" id="1FM-iL-YiE"/>
-                                                    <segue destination="if0-zd-7iE" kind="show" id="OK3-zo-MNz"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstItem="Tob-lg-gIh" firstAttribute="height" secondItem="4hz-z2-EKH" secondAttribute="height" id="7xb-aA-OqP"/>
-                                            <constraint firstItem="EYw-lh-aNf" firstAttribute="height" secondItem="4hz-z2-EKH" secondAttribute="height" id="Ghc-uP-Tgm"/>
-                                            <constraint firstItem="N9p-md-Gus" firstAttribute="width" secondItem="4hz-z2-EKH" secondAttribute="width" id="H6p-Db-nag"/>
-                                            <constraint firstItem="tmW-wi-Vol" firstAttribute="width" secondItem="4hz-z2-EKH" secondAttribute="width" id="WOc-TB-P27"/>
-                                            <constraint firstItem="Tob-lg-gIh" firstAttribute="width" secondItem="4hz-z2-EKH" secondAttribute="width" id="Zgf-0w-Yao"/>
-                                            <constraint firstItem="EYw-lh-aNf" firstAttribute="width" secondItem="4hz-z2-EKH" secondAttribute="width" id="a3e-IJ-zMc"/>
-                                            <constraint firstItem="N9p-md-Gus" firstAttribute="height" secondItem="4hz-z2-EKH" secondAttribute="height" id="fcC-Sq-1pP"/>
-                                            <constraint firstItem="tmW-wi-Vol" firstAttribute="height" secondItem="4hz-z2-EKH" secondAttribute="height" id="oQT-DP-NLa"/>
-                                        </constraints>
-                                        <variation key="heightClass=compact-widthClass=compact" spacing="10"/>
-                                        <variation key="heightClass=compact-widthClass=regular" spacing="10"/>
-                                        <variation key="heightClass=regular-widthClass=compact" spacing="15"/>
-                                    </stackView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="3fO-tT-unu" firstAttribute="width" secondItem="A2z-jU-lT2" secondAttribute="width" id="bGA-QK-ZLK"/>
-                                </constraints>
-                                <variation key="heightClass=compact-widthClass=compact" spacing="25"/>
-                                <variation key="heightClass=compact-widthClass=regular" spacing="25"/>
-                                <variation key="heightClass=regular-widthClass=compact" spacing="25"/>
-                            </stackView>
                             <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="xaU-as-kNi">
                                 <rect key="frame" x="166" y="155" width="780" height="150"/>
                                 <subviews>
@@ -4485,6 +4328,53 @@ Teachers Can:
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                 </variation>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="hfa-5A-DSW">
+                                <rect key="frame" x="50" y="431" width="1012" height="369"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SHOOOSH" id="UU4-J3-5jA" customClass="TableViewCellSHEESH" customModule="Crisis_Management" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="1012" height="45"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UU4-J3-5jA" id="FQi-jJ-1B9">
+                                            <rect key="frame" x="0.0" y="0.0" width="1012" height="45"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vjK-Ya-CNx">
+                                                    <rect key="frame" x="0.0" y="0.0" width="1012" height="45"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uYA-fm-U0g">
+                                                            <rect key="frame" x="8" y="12" width="996" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemTealColor"/>
+                                                    <constraints>
+                                                        <constraint firstItem="uYA-fm-U0g" firstAttribute="leading" secondItem="vjK-Ya-CNx" secondAttribute="leadingMargin" id="S3V-8W-e9v"/>
+                                                        <constraint firstItem="uYA-fm-U0g" firstAttribute="top" secondItem="vjK-Ya-CNx" secondAttribute="top" constant="12" id="bLz-aR-cWr"/>
+                                                        <constraint firstItem="uYA-fm-U0g" firstAttribute="centerY" secondItem="vjK-Ya-CNx" secondAttribute="centerY" id="qI5-rb-zzF"/>
+                                                        <constraint firstItem="uYA-fm-U0g" firstAttribute="trailing" secondItem="vjK-Ya-CNx" secondAttribute="trailingMargin" id="yjp-oF-V5U"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="vjK-Ya-CNx" firstAttribute="centerY" secondItem="FQi-jJ-1B9" secondAttribute="centerY" id="1wv-Mi-gjb"/>
+                                                <constraint firstItem="vjK-Ya-CNx" firstAttribute="leading" secondItem="FQi-jJ-1B9" secondAttribute="leadingMargin" constant="-16" id="IH8-hB-S3v"/>
+                                                <constraint firstItem="vjK-Ya-CNx" firstAttribute="centerX" secondItem="FQi-jJ-1B9" secondAttribute="centerX" id="pqC-X1-gJf"/>
+                                                <constraint firstItem="vjK-Ya-CNx" firstAttribute="top" secondItem="FQi-jJ-1B9" secondAttribute="topMargin" constant="-11" id="q2a-eK-nEE"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="labelSheesh" destination="uYA-fm-U0g" id="WdA-jj-GlH"/>
+                                            <outlet property="viewSHEESH" destination="vjK-Ya-CNx" id="09o-1S-1cP"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0PJ-gQ-amA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -4494,66 +4384,41 @@ Teachers Can:
                                 <variation key="heightClass=compact-widthClass=regular" constant="10"/>
                                 <variation key="heightClass=regular-widthClass=compact" constant="30"/>
                             </constraint>
-                            <constraint firstItem="6Pu-5Z-yc3" firstAttribute="top" secondItem="aeU-GW-ZQl" secondAttribute="bottom" constant="40" id="A3K-a6-dLh">
-                                <variation key="heightClass=compact-widthClass=compact" constant="5"/>
-                                <variation key="heightClass=compact-widthClass=regular" constant="5"/>
-                                <variation key="heightClass=regular-widthClass=compact" constant="20"/>
-                            </constraint>
                             <constraint firstItem="xaU-as-kNi" firstAttribute="top" secondItem="O6K-S8-Tpw" secondAttribute="bottom" constant="50" id="E7F-TL-r5n">
                                 <variation key="heightClass=compact-widthClass=compact" constant="10"/>
                                 <variation key="heightClass=compact-widthClass=regular" constant="10"/>
                                 <variation key="heightClass=regular-widthClass=compact" constant="30"/>
                             </constraint>
+                            <constraint firstItem="hfa-5A-DSW" firstAttribute="leading" secondItem="0PJ-gQ-amA" secondAttribute="leading" constant="50" id="KhE-k8-BEg"/>
                             <constraint firstItem="xaU-as-kNi" firstAttribute="centerX" secondItem="EMx-NE-CBu" secondAttribute="centerX" id="P7t-At-BSC"/>
+                            <constraint firstItem="hfa-5A-DSW" firstAttribute="top" secondItem="aeU-GW-ZQl" secondAttribute="bottom" constant="35" id="RwO-Kr-UDV"/>
                             <constraint firstAttribute="bottom" secondItem="2Cx-Wd-TpM" secondAttribute="bottom" id="T4O-5N-b1w"/>
-                            <constraint firstAttribute="bottom" secondItem="6Pu-5Z-yc3" secondAttribute="bottom" constant="40" id="XcR-vM-ccG">
-                                <variation key="heightClass=compact-widthClass=compact" constant="25"/>
-                                <variation key="heightClass=compact-widthClass=regular" constant="25"/>
-                                <variation key="heightClass=regular-widthClass=compact" constant="49"/>
-                            </constraint>
                             <constraint firstItem="O6K-S8-Tpw" firstAttribute="top" secondItem="EMx-NE-CBu" secondAttribute="top" constant="64" id="bO6-Dy-KBO">
                                 <variation key="heightClass=compact-widthClass=compact" constant="15"/>
                                 <variation key="heightClass=compact-widthClass=regular" constant="15"/>
                             </constraint>
+                            <constraint firstItem="hfa-5A-DSW" firstAttribute="centerX" secondItem="aeU-GW-ZQl" secondAttribute="centerX" id="epx-Xv-F8O"/>
+                            <constraint firstItem="0PJ-gQ-amA" firstAttribute="bottom" secondItem="hfa-5A-DSW" secondAttribute="bottom" constant="34" id="ktm-WV-9CL"/>
                             <constraint firstItem="2Cx-Wd-TpM" firstAttribute="leading" secondItem="EMx-NE-CBu" secondAttribute="leading" id="nFM-fR-h5H"/>
                             <constraint firstItem="2Cx-Wd-TpM" firstAttribute="top" secondItem="EMx-NE-CBu" secondAttribute="top" id="pFE-oh-d5D"/>
-                            <constraint firstItem="0PJ-gQ-amA" firstAttribute="trailing" secondItem="6Pu-5Z-yc3" secondAttribute="trailing" constant="70" id="qgh-Ne-Dqp">
-                                <variation key="heightClass=compact-widthClass=compact" constant="50"/>
-                                <variation key="heightClass=compact-widthClass=regular" constant="50"/>
-                                <variation key="heightClass=regular-widthClass=compact" constant="35"/>
-                            </constraint>
                             <constraint firstItem="2Cx-Wd-TpM" firstAttribute="trailing" secondItem="EMx-NE-CBu" secondAttribute="trailing" id="rYg-Np-0W3"/>
                             <constraint firstItem="O6K-S8-Tpw" firstAttribute="centerX" secondItem="EMx-NE-CBu" secondAttribute="centerX" id="vTm-9f-dGp"/>
                             <constraint firstItem="aeU-GW-ZQl" firstAttribute="centerX" secondItem="EMx-NE-CBu" secondAttribute="centerX" id="wZh-Gt-p4e"/>
-                            <constraint firstItem="6Pu-5Z-yc3" firstAttribute="leading" secondItem="0PJ-gQ-amA" secondAttribute="leading" constant="70" id="xYd-9l-nb6">
-                                <variation key="heightClass=compact-widthClass=compact" constant="50"/>
-                                <variation key="heightClass=compact-widthClass=regular" constant="50"/>
-                                <variation key="heightClass=regular-widthClass=compact" constant="35"/>
-                            </constraint>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6iT-51-ew7"/>
                     <connections>
-                        <outlet property="CounselButton" destination="ose-iA-UUr" id="du7-O5-5BI"/>
-                        <outlet property="CrisisButton" destination="D39-sl-qL9" id="0nw-VO-ky8"/>
-                        <outlet property="DomesticButton" destination="Tob-lg-gIh" id="iH4-8e-dvx"/>
-                        <outlet property="DrugButton" destination="Poz-rd-7lh" id="ZOG-Yc-3vQ"/>
-                        <outlet property="EatingButton" destination="5kr-jr-pMC" id="0TQ-M2-cKL"/>
-                        <outlet property="FamilyButton" destination="tmW-wi-Vol" id="OCg-Di-Tsc"/>
-                        <outlet property="InoutButton" destination="CcB-IO-mu1" id="Uag-QH-9mZ"/>
-                        <outlet property="SpecialtyButton" destination="4hz-z2-EKH" id="3d5-Kb-cOB"/>
-                        <outlet property="bropLEASE" destination="N9p-md-Gus" id="IyN-wV-ieW"/>
-                        <outlet property="chekchek" destination="EYw-lh-aNf" id="o4A-Eq-hjp"/>
+                        <outlet property="sheesh" destination="hfa-5A-DSW" id="vy0-rv-X34"/>
                         <outlet property="stackView" destination="xaU-as-kNi" id="4FP-kL-qir"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nPX-ml-zSf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2717" y="-581"/>
+            <point key="canvasLocation" x="2716.7266187050359" y="-581.29496402877703"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="tED-ko-NcQ"/>
+        <segue reference="6uj-S3-izJ"/>
         <segue reference="YFM-d9-O2o"/>
         <segue reference="onY-RW-VIk"/>
         <segue reference="nKW-bZ-WCm"/>
@@ -4603,6 +4468,9 @@ Teachers Can:
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tertiarySystemFillColor">
             <color red="0.46274509803921571" green="0.46274509803921571" blue="0.50196078431372548" alpha="0.12" colorSpace="custom" customColorSpace="sRGB"/>
