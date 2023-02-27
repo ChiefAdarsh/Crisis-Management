@@ -6,6 +6,16 @@
 //
 
 import UIKit
+import MobileCoreServices
+import UniformTypeIdentifiers
+
+extension String {
+
+    var numberOfLines: Int {
+        return self.components(separatedBy: "\n").count
+    }
+
+}
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {

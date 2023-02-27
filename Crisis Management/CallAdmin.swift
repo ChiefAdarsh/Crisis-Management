@@ -6,15 +6,26 @@
 //
 
 import UIKit
+import MobileCoreServices
+import UniformTypeIdentifiers
 
 // MARK: - IN SCHOOL
 
-class CallAdminInSchoolController: UIViewController, BackTitle {
+class CallAdminInSchoolController: UIViewController, BackTitle, UIDocumentPickerDelegate {
+    @IBOutlet var uploadBtn: UIButton!
+    var txtString: String!
     var backTitle: String!
+    let documentPicker = UIDocumentPickerViewController(documentTypes: ["public.text"], in: .import)
+    var archiveURLs: [URL] = []
+    
+    let documentsDirectory = FileManager.default.urls(for: .documentDirectory,in: .userDomainMask).first!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.backTitle = "Call Admin"
+        documentPicker.delegate = self
         
         if let ctrs = self.navigationController?.viewControllers, ctrs.count > 1 {
             let viewController = ctrs[ctrs.count - 2] as! BackTitle
@@ -23,7 +34,63 @@ class CallAdminInSchoolController: UIViewController, BackTitle {
             self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
         }
     }
+    
+    @IBAction func upload(_ sender: Any) {
+        let documentPicker = UIDocumentPickerViewController(documentTypes: ["public.text"], in: .import)
+        documentPicker.delegate = self
+        present(documentPicker, animated: true)
+    }
+    
+    func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
+        print("hi")
+        adminList.removeAll()
+        do {
+            let txtData = try Data(contentsOf: urls[0])
+            
+            //10. Convert the data to a string
+            txtString = String(data: txtData, encoding: .utf8)
+            print(txtString!)
+        } catch {
+            print("o no")
+        }
+        let numOfAdmins = txtString.numberOfLines / 7
+        let txtStringList = txtString.split(separator: "\n")
+//        self.archiveURLs.append(URL(fileURLWithPath: "www.apple.com"))
+        for i in 0...numOfAdmins-1 {
+            
+            let newAdmin = Admin(imgStr: String(txtStringList[(i*7)+0]), adminType: String(txtStringList[(i*7)+1]), lastName: String(txtStringList[(i*7)+2]), firstName: String(txtStringList[(i*7)+3]), username: String(txtStringList[(i*7)+4]), callExt: Int(txtStringList[(i*7)+5])!, adminTypeDetailed: String(txtStringList[(i*7)+6]))
+            print(self.archiveURLs)
+            let jsonEncoder = JSONEncoder()
+            if let jsonData = try? jsonEncoder.encode(newAdmin),
+               let jsonString = String(data: jsonData, encoding: .utf8) {
+                print(jsonString)
 
+                try? jsonData.write(to: self.archiveURLs[0], options: .noFileProtection)
+            }
+        
+            
+//            adminList.append(newAdmin)
+//            for admin in adminList {
+//
+//            }
+            print(self.archiveURLs)
+            
+            
+        }
+        for admin in adminList {
+            if admin.adminType == "p" {
+    //            print("Principal \(admin.fullName)")
+                principalList.append(admin)
+            } else if admin.adminType == "c" {
+    //            print("Counselor \(admin.fullName)")
+                counselorList.append(admin)
+            } else {
+                print(admin.fullName)
+            }
+        }
+        
+    }
+    
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
@@ -40,7 +107,7 @@ class PrincipalContactsTableViewController: UITableViewController, BackTitle {
         
         
         
-        createAdmins()
+//        createAdmins()
         super.viewDidLoad()
         self.backTitle = "Principals"
         
@@ -312,16 +379,16 @@ var counselorList: [Admin] = []
 //var emergencyContactsList: [String] = ["Principal: Laura Springer                      6110", "Associate Principal: Melissa Arnold    6122", "Lead Counselor: Ann Cinelli                 6112", "Coppell Police Department                 972-304-3600", "Dallas Police Department                    214-744-4444", "Irving Police Department                     972-723-1010", "Lewisville Police Department              972-219-3600", "Child Protective Services                     800-252-5400", "Dallas County Mobile Crisis                 866-260-8000"]
 var emergencyContactsList: [String] = []
 
-var selectedAdmin: Admin = Admin(imgStr: "", adminType: AdminType.Counselor, lastName: "", firstName: "", username: "", callExt: 0, adminTypeDetailed: "")
+var selectedAdmin: Admin = Admin(imgStr: "", adminType: "c", lastName: "", firstName: "", username: "", callExt: 0, adminTypeDetailed: "")
 
 enum AdminType {
     case Principal
     case Counselor
 }
 
-class Admin {
+class Admin: Codable {
     
-    var adminType: AdminType
+    var adminType: String
     var adminTypeDetailed: String
     var lastName: String
     var firstName: String
@@ -345,7 +412,11 @@ class Admin {
         return "https://teams.microsoft.com/l/call/0/0?users=\(email)"
     }
     
-    init(imgStr: String?, adminType: AdminType, lastName: String, firstName: String, username: String, callExt: Int, adminTypeDetailed: String) {
+    enum ChildKeys: CodingKey {
+            case adminType,adminTypeDetailed,lastName,firstName,username,callExt,imgStr,fullName,number,email,callLink
+        }
+    
+    init(imgStr: String?, adminType: String, lastName: String, firstName: String, username: String, callExt: Int, adminTypeDetailed: String) {
         self.adminType = adminType
         self.lastName = lastName
         self.firstName = firstName
@@ -359,14 +430,26 @@ class Admin {
         }
     }
     
+//    func encode(to encoder: Encoder) throws {
+//        var container = encoder.container(keyedBy: CodingKeys.self)
+//        try container.encode(adminType, forKey: .adminType)
+//    }
+    
+    
+//    required init(from decoder:Decoder) throws {
+//            let values = try decoder.container(keyedBy: CodingKeys.self)
+//            indexPath = try values.decode([Int].self, forKey: .indexPath)
+//            locationInText = try values.decode(Int.self, forKey: .locationInText)
+//        }
+    
 }
 
 func createAdmins() {
-    
-    adminList.removeAll()
-    principalList.removeAll()
-    counselorList.removeAll()
-    
+//
+//    adminList.removeAll()
+//    principalList.removeAll()
+//    counselorList.removeAll()
+//
     // PRINCIPALS
 
 //    var admin = Admin(imgStr: "Springer_crop", adminType: AdminType.Principal, lastName: "Springer", firstName: "Laura", username: "lspringer", callExt: 6104, adminTypeDetailed: "Principal")
@@ -420,17 +503,17 @@ func createAdmins() {
 
     // Sort
     
-    for admin in adminList {
-        if admin.adminType == AdminType.Principal {
-//            print("Principal \(admin.fullName)")
-            principalList.append(admin)
-        } else if admin.adminType == AdminType.Counselor {
-//            print("Counselor \(admin.fullName)")
-            counselorList.append(admin)
-        } else {
-            print(admin.fullName)
-        }
-    }
+//    for admin in adminList {
+//        if admin.adminType == AdminType.Principal {
+////            print("Principal \(admin.fullName)")
+//            principalList.append(admin)
+//        } else if admin.adminType == AdminType.Counselor {
+////            print("Counselor \(admin.fullName)")
+//            counselorList.append(admin)
+//        } else {
+//            print(admin.fullName)
+//        }
+//    }
 
 }
 
@@ -441,5 +524,5 @@ func findAdmin(username: String) -> Admin {
             return admin
         }
     }
-    return Admin(imgStr: "NA", adminType: AdminType.Counselor, lastName: "NA", firstName: "NA", username: "NA", callExt: 0, adminTypeDetailed: "NA")
+    return Admin(imgStr: "NA", adminType: "c", lastName: "NA", firstName: "NA", username: "NA", callExt: 0, adminTypeDetailed: "NA")
 }

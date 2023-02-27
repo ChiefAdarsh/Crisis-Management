@@ -1023,6 +1023,15 @@
                                     <segue destination="Q75-Rd-804" kind="show" id="Vgn-lM-er7"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sBb-yy-BaF">
+                                <rect key="frame" x="430" y="268" width="253" height="34.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Upload"/>
+                                <connections>
+                                    <action selector="upload:" destination="Bv8-8t-OAK" eventType="touchUpInside" id="akY-Zq-enr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="DZI-jy-PKE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1047,10 +1056,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="kTM-MS-0yj"/>
+                    <connections>
+                        <outlet property="uploadBtn" destination="sBb-yy-BaF" id="IEv-ce-cOb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EGa-gd-3uF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1594" y="863"/>
+            <point key="canvasLocation" x="1593.8848920863311" y="862.58992805755406"/>
         </scene>
         <!--Checklist-->
         <scene sceneID="xy1-zT-aJk">
