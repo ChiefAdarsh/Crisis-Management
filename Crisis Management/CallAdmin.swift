@@ -61,15 +61,15 @@ class CallAdminInSchoolController: UIViewController, BackTitle, UIDocumentPicker
             let newAdmin = Admin(imgStr: String(txtStringList[(i*7)+0]), adminType: String(txtStringList[(i*7)+1]), lastName: String(txtStringList[(i*7)+2]), firstName: String(txtStringList[(i*7)+3]), username: String(txtStringList[(i*7)+4]), callExt: Int(txtStringList[(i*7)+5])!, adminTypeDetailed: String(txtStringList[(i*7)+6]))
             print(self.archiveURLs)
             let jsonEncoder = JSONEncoder()
-            if let jsonData = try? jsonEncoder.encode(newAdmin),
-               let jsonString = String(data: jsonData, encoding: .utf8) {
-                print(jsonString)
-
-                try? jsonData.write(to: self.archiveURLs[0], options: .noFileProtection)
-            }
+//            if let jsonData = try? jsonEncoder.encode(newAdmin),
+//               let jsonString = String(data: jsonData, encoding: .utf8) {
+//                print(jsonString)
+//
+//                try? jsonData.write(to: self.archiveURLs[0], options: .noFileProtection)
+//            }
         
             
-//            adminList.append(newAdmin)
+            adminList.append(newAdmin)
 //            for admin in adminList {
 //
 //            }
