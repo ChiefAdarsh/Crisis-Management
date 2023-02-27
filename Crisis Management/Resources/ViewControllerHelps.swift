@@ -31,16 +31,25 @@ class HelpViewController: UIViewController {
     
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         sheesh.delegate = self
         sheesh.dataSource = self
-        wordd = ""
+        
+
+        
         for yeahh in yourArray{
-            mt.insert(yeahh.category)
+            if(!empty.contains(yeahh.category)){
+                if(yeahh.category != "Housing" && yeahh.category != "Shelter" && yeahh.category != "General Health" && yeahh.category != "Mental Health" && yeahh.category != "Aids and HIV" && yeahh.category != "Substance Abuse" && yeahh.category != "Pregnancy"){
+                    empty.append(yeahh.category)
+                }
+                
+            }
+            
         }
-        for okayy in mt{
-            empty.append(okayy)
-        }
+        //for okayy in mt{
+         //   empty.append(okayy)
+       // }
         let size = UIScreen.main.bounds.size
         if size.height < size.width {
             stackView.axis = .horizontal
@@ -48,8 +57,11 @@ class HelpViewController: UIViewController {
             stackView.axis = .vertical
         }
         sheesh.separatorStyle = .none
+        
         // Do any additional setup after loading the view.
     }
+    
+    
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
@@ -61,11 +73,7 @@ class HelpViewController: UIViewController {
             stackView.axis = .vertical
         }
     }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-                if let nextViewController = segue.destination as? ViewControllerResPage {
-                    nextViewController.order = wordd
-                }
-        }
+    
 
     /*
     // MARK: - Navigation
@@ -92,7 +100,13 @@ extension HelpViewController: UITableViewDataSource, UITableViewDelegate{
         return cell2
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        wordd = empty[indexPath.row]
+    }
     
-    
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+                if let nextViewController = segue.destination as? ViewControllerResPage {
+                    nextViewController.order = wordd
+                }
+    }
 }

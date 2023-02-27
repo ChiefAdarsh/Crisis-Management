@@ -52,7 +52,7 @@ class ViewControllerResPage: UIViewController {
 
     override func viewDidLoad() {
         resources.removeAll()
-        super.viewDidLoad()
+        
         someTableView.delegate = self
         someTableView.dataSource = self
         for res in yourArray{
@@ -60,6 +60,7 @@ class ViewControllerResPage: UIViewController {
                 resources.append(res)
             }
         }
+        super.viewDidLoad()
         someTableView.separatorStyle = .none
     }
 
