@@ -61,8 +61,6 @@ class HelpViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    
-    
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
         guard let _ = stackView else { return }
@@ -101,12 +99,9 @@ extension HelpViewController: UITableViewDataSource, UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        wordd = empty[indexPath.row]
+//        wordd = empty[indexPath.row]
+        ViewControllerResPage.category = empty[indexPath.row]
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-                if let nextViewController = segue.destination as? ViewControllerResPage {
-                    nextViewController.order = wordd
-                }
-    }
+    
 }
