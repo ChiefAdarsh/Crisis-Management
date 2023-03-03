@@ -25,6 +25,7 @@
 		7A8943F82919CAA700C53543 /* ReportIssue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8943F72919CAA700C53543 /* ReportIssue.swift */; };
 		7A8943FA2919DBAB00C53543 /* CallAdmin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8943F92919DBAB00C53543 /* CallAdmin.swift */; };
 		B2FA6DB129A9167200E1C2DA /* TableViewCellSHEESH.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FA6DB029A9167200E1C2DA /* TableViewCellSHEESH.swift */; };
+		F557581829B123CA00F2DFEA /* ResourcesPullDownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F557581729B123CA00F2DFEA /* ResourcesPullDownViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		7A8943F72919CAA700C53543 /* ReportIssue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportIssue.swift; sourceTree = "<group>"; };
 		7A8943F92919DBAB00C53543 /* CallAdmin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallAdmin.swift; sourceTree = "<group>"; };
 		B2FA6DB029A9167200E1C2DA /* TableViewCellSHEESH.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellSHEESH.swift; sourceTree = "<group>"; };
+		F557581729B123CA00F2DFEA /* ResourcesPullDownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourcesPullDownViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				65E79A0929A6B2A400E848F1 /* StudentHelpResources.swift */,
 				65E79A0D29A6B39200E848F1 /* StudentHelpTableViewController.swift */,
 				65BCCCCC29A6B3F6003CA681 /* ViewControllerResource.swift */,
+				F557581729B123CA00F2DFEA /* ResourcesPullDownViewController.swift */,
 				65BCCCCE29A6B410003CA681 /* ViewControllerHelps.swift */,
 				B2FA6DB029A9167200E1C2DA /* TableViewCellSHEESH.swift */,
 			);
@@ -197,6 +200,7 @@
 				6578089E29118D2C00E72F43 /* AppDelegate.swift in Sources */,
 				65BCCCCD29A6B3F6003CA681 /* ViewControllerResource.swift in Sources */,
 				657808A029118D2C00E72F43 /* SceneDelegate.swift in Sources */,
+				F557581829B123CA00F2DFEA /* ResourcesPullDownViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
