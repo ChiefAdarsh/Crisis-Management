@@ -2973,7 +2973,7 @@ Cg
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PLO-ZD-8rx">
-                                <rect key="frame" x="20" y="70" width="1072" height="744"/>
+                                <rect key="frame" x="20" y="70" width="1072" height="694"/>
                                 <attributedString key="attributedText">
                                     <fragment>
                                         <string key="content">The CHS Crisis Management app allows you to help the students that need immediate attention both in and out of school. Get the information that you need to react to the situation at hand and easily contact the recommended people for further assistance.
@@ -4516,7 +4516,7 @@ Teachers Can:
         <segue reference="tED-ko-NcQ"/>
         <segue reference="ikP-HX-Kxx"/>
         <segue reference="onY-RW-VIk"/>
-        <segue reference="nKW-bZ-WCm"/>
+        <segue reference="1t6-MS-5u2"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Background 1" width="2048" height="1536"/>
