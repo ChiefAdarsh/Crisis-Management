@@ -17,10 +17,10 @@ class CallAdminInSchoolController: UIViewController, BackTitle, UIDocumentPicker
     var backTitle: String!
     let documentPicker = UIDocumentPickerViewController(documentTypes: ["public.text"], in: .import)
     var archiveURLs: [URL] = []
-    
+    lazy var numAdminURL: URL = documentsDirectory.appendingPathComponent("numAdmin")
+        .appendingPathExtension("plist")
     let documentsDirectory = FileManager.default.urls(for: .documentDirectory,in: .userDomainMask).first!
-    
-    
+    var numOfAdmins: Int = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +33,41 @@ class CallAdminInSchoolController: UIViewController, BackTitle, UIDocumentPicker
             backButton.title = viewController.backTitle
             self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
         }
+        
+        let jsonDecoder = JSONDecoder()
+        if let retrievedData = try? Data(contentsOf: numAdminURL),
+            let decodedData = try?
+           jsonDecoder.decode(numAdmin.self,
+           from: retrievedData) {
+            print(decodedData)
+            numOfAdmins = decodedData.numOfAdmins
+        }
+        
+        for i in 0..<numOfAdmins {
+            archiveURLs.append(documentsDirectory.appendingPathComponent("admin\(i + 1)")
+               .appendingPathExtension("plist"))
+        }
+        
+        for i in 0..<numOfAdmins {
+            let jsonDecoder = JSONDecoder()
+            if let retrievedData = try? Data(contentsOf: archiveURLs[i]),
+                let decodedData = try?
+               jsonDecoder.decode(Admin.self,
+               from: retrievedData) {
+                print(decodedData)
+                let adminType = decodedData.adminType
+                adminList.append(decodedData)
+                
+                if adminType == "p" {
+                    principalList.append(decodedData)
+                } else {
+                    counselorList.append(decodedData)
+                }
+                
+//                teacherLabels[i]!.text = decodedData.name
+//                teacherMails[i]!.text = decodedData.email
+            }
+        }
     }
     
     @IBAction func upload(_ sender: Any) {
@@ -41,9 +76,14 @@ class CallAdminInSchoolController: UIViewController, BackTitle, UIDocumentPicker
         present(documentPicker, animated: true)
     }
     
+    struct numAdmin : Codable {
+        var numOfAdmins: Int
+    }
+    
     func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
         print("hi")
         adminList.removeAll()
+        
         do {
             let txtData = try Data(contentsOf: urls[0])
             
@@ -53,41 +93,56 @@ class CallAdminInSchoolController: UIViewController, BackTitle, UIDocumentPicker
         } catch {
             print("o no")
         }
-        let numOfAdmins = txtString.numberOfLines / 7
-        let txtStringList = txtString.split(separator: "\n")
-//        self.archiveURLs.append(URL(fileURLWithPath: "www.apple.com"))
-        for i in 0...numOfAdmins-1 {
-            
-            let newAdmin = Admin(imgStr: String(txtStringList[(i*7)+0]), adminType: String(txtStringList[(i*7)+1]), lastName: String(txtStringList[(i*7)+2]), firstName: String(txtStringList[(i*7)+3]), username: String(txtStringList[(i*7)+4]), callExt: Int(txtStringList[(i*7)+5])!, adminTypeDetailed: String(txtStringList[(i*7)+6]))
-            print(self.archiveURLs)
-            let jsonEncoder = JSONEncoder()
-//            if let jsonData = try? jsonEncoder.encode(newAdmin),
-//               let jsonString = String(data: jsonData, encoding: .utf8) {
-//                print(jsonString)
-//
-//                try? jsonData.write(to: self.archiveURLs[0], options: .noFileProtection)
-//            }
+        numOfAdmins = txtString.numberOfLines / 7
+        let numAdmin = numAdmin(numOfAdmins: numOfAdmins)
         
-            
-            adminList.append(newAdmin)
-//            for admin in adminList {
-//
-//            }
-            print(self.archiveURLs)
-            
-            
+        let jsonEncoder = JSONEncoder()
+        if let jsonData = try? jsonEncoder.encode(numAdmin),
+           let jsonString = String(data: jsonData, encoding: .utf8) {
+            print(jsonString)
+
+            try? jsonData.write(to: self.numAdminURL, options: .noFileProtection)
         }
-        for admin in adminList {
-            if admin.adminType == "p" {
-    //            print("Principal \(admin.fullName)")
-                principalList.append(admin)
-            } else if admin.adminType == "c" {
-    //            print("Counselor \(admin.fullName)")
-                counselorList.append(admin)
-            } else {
-                print(admin.fullName)
+        
+        if adminList.isEmpty {
+            let txtStringList = txtString.split(separator: "\n")
+    //        self.archiveURLs.append(URL(fileURLWithPath: "www.apple.com"))
+            for i in 0...numOfAdmins-1 {
+                
+                let newAdmin = Admin(imgStr: String(txtStringList[(i*7)+0]), adminType: String(txtStringList[(i*7)+1]), lastName: String(txtStringList[(i*7)+2]), firstName: String(txtStringList[(i*7)+3]), username: String(txtStringList[(i*7)+4]), callExt: Int(txtStringList[(i*7)+5])!, adminTypeDetailed: String(txtStringList[(i*7)+6]))
+                print(self.archiveURLs)
+                print("adminType:", String(txtStringList[(i*7)+1]))
+                
+                let jsonEncoder = JSONEncoder()
+                if let jsonData = try? jsonEncoder.encode(newAdmin),
+                   let jsonString = String(data: jsonData, encoding: .utf8) {
+                    print(jsonString)
+
+                    try? jsonData.write(to: self.archiveURLs[i], options: .noFileProtection)
+                }
+            
+                
+                adminList.append(newAdmin)
+    //            for admin in adminList {
+    //
+    //            }
+                print(self.archiveURLs)
+                
+                
+            }
+            for admin in adminList {
+                if admin.adminType == "p" {
+        //            print("Principal \(admin.fullName)")
+                    principalList.append(admin)
+                } else if admin.adminType == "c" {
+        //            print("Counselor \(admin.fullName)")
+                    counselorList.append(admin)
+                } else {
+                    print(admin.fullName)
+                }
             }
         }
+        
         
     }
     
@@ -472,6 +527,7 @@ func createAdmins() {
 //
 //    admin = Admin(imgStr: "Girard_crop", adminType: AdminType.Principal, lastName: "Girard", firstName: "Brandon", username: "bgirard", callExt: 0, adminTypeDetailed: "Assistant Principal (Sg-Z)")
 //    adminList.append(admin)
+    
 //
 ////    admin = Admin(imgStr: nil, adminType: AdminType.Principal, lastName: "Yakubovsky", firstName: "Michael", username: "myakubovsky", callExt: 6237, adminTypeDetailed: "STEM Teacher")
 ////    adminList.append(admin)

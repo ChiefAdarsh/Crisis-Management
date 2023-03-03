@@ -806,17 +806,6 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="Background 1" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TwO-lV-oU6">
                                 <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="School’s Main Number: 6147 or 214-496-6100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ok9-q1-yrQ">
-                                <rect key="frame" x="143" y="223" width="826" height="37"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="ok9-q1-yrQ" secondAttribute="height" multiplier="826:37" id="6uc-Ze-5gY"/>
-                                    <constraint firstAttribute="width" constant="670" id="LW3-2d-j8p"/>
-                                    <constraint firstAttribute="width" secondItem="ok9-q1-yrQ" secondAttribute="height" multiplier="826:37" id="owJ-IK-1CR"/>
-                                    <constraint firstAttribute="height" constant="37" id="w8e-Nf-ZV0"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Call An Admin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bo3-6T-BaK">
                                 <rect key="frame" x="354.5" y="45" width="403" height="53"/>
                                 <constraints>
@@ -846,8 +835,8 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LwC-J7-RgU">
-                                <rect key="frame" x="374" y="334" width="364" height="196"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LwC-J7-RgU">
+                                <rect key="frame" x="374" y="350" width="364" height="210"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="Principals" title="">
@@ -857,8 +846,8 @@
                                     <segue destination="icg-eg-Gxl" kind="show" id="pIj-EX-fec"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KwA-09-htL">
-                                <rect key="frame" x="374" y="560" width="364" height="196"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KwA-09-htL">
+                                <rect key="frame" x="374" y="580" width="364" height="210"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="Counselors" title="">
@@ -882,21 +871,17 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="DZI-jy-PKE" firstAttribute="bottom" secondItem="KwA-09-htL" secondAttribute="bottom" constant="44" id="36w-Qe-5uk"/>
-                            <constraint firstItem="ok9-q1-yrQ" firstAttribute="centerX" secondItem="ClY-xh-LgH" secondAttribute="centerX" id="3rw-e4-c0c"/>
                             <constraint firstItem="Bo3-6T-BaK" firstAttribute="top" secondItem="DZI-jy-PKE" secondAttribute="top" constant="25" id="9mH-I7-ceK"/>
                             <constraint firstItem="KwA-09-htL" firstAttribute="top" secondItem="LwC-J7-RgU" secondAttribute="bottom" constant="20" id="Axb-yE-F5u"/>
                             <constraint firstItem="Bo3-6T-BaK" firstAttribute="centerX" secondItem="ClY-xh-LgH" secondAttribute="centerX" id="ESB-Uy-uVZ"/>
                             <constraint firstItem="Bo3-6T-BaK" firstAttribute="centerX" secondItem="ClY-xh-LgH" secondAttribute="centerX" id="Eu8-ho-8dR"/>
-                            <constraint firstItem="ok9-q1-yrQ" firstAttribute="top" secondItem="cEi-9z-RsC" secondAttribute="bottom" constant="30" id="HKZ-sk-Ocb"/>
                             <constraint firstAttribute="bottom" secondItem="TwO-lV-oU6" secondAttribute="bottom" id="Hqa-7E-Dn8"/>
                             <constraint firstItem="LwC-J7-RgU" firstAttribute="centerX" secondItem="ClY-xh-LgH" secondAttribute="centerX" id="Rtj-Ie-Xk1"/>
                             <constraint firstItem="cEi-9z-RsC" firstAttribute="centerX" secondItem="ClY-xh-LgH" secondAttribute="centerX" id="URh-dX-ce4"/>
                             <constraint firstItem="TwO-lV-oU6" firstAttribute="leading" secondItem="DZI-jy-PKE" secondAttribute="leading" id="XNO-bC-pTI"/>
                             <constraint firstItem="TwO-lV-oU6" firstAttribute="top" secondItem="ClY-xh-LgH" secondAttribute="top" id="cCS-Zb-eFR"/>
-                            <constraint firstItem="ok9-q1-yrQ" firstAttribute="centerX" secondItem="ClY-xh-LgH" secondAttribute="centerX" id="cHA-Mg-0qd"/>
                             <constraint firstItem="KwA-09-htL" firstAttribute="centerX" secondItem="ClY-xh-LgH" secondAttribute="centerX" id="fpo-td-MPW"/>
                             <constraint firstItem="TwO-lV-oU6" firstAttribute="trailing" secondItem="DZI-jy-PKE" secondAttribute="trailing" id="nsT-1C-QfZ"/>
-                            <constraint firstItem="LwC-J7-RgU" firstAttribute="top" secondItem="ok9-q1-yrQ" secondAttribute="bottom" constant="40" id="pFk-Ar-eFv"/>
                             <constraint firstItem="cEi-9z-RsC" firstAttribute="top" secondItem="Bo3-6T-BaK" secondAttribute="bottom" constant="20" id="vzZ-vY-97Y"/>
                         </constraints>
                     </view>
@@ -2886,7 +2871,7 @@ Cg
                                         <rect key="frame" x="0.0" y="183" width="351" height="168"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fLi-as-vYm">
-                                                <rect key="frame" x="0.0" y="0.0" width="168" height="168"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="351" height="168"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="168" id="3oY-h9-e3W"/>
                                                     <constraint firstAttribute="width" constant="168" id="yLb-re-Xbg"/>
@@ -2900,23 +2885,6 @@ Cg
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="callAdminPressed:" destination="mZL-HH-Ccl" eventType="touchUpInside" id="2XA-3z-Uj4"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wb3-L0-0Gh">
-                                                <rect key="frame" x="183" y="0.0" width="168" height="168"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="168" id="TDE-Zh-cMJ"/>
-                                                    <constraint firstAttribute="height" constant="168" id="nlC-4g-Nwl"/>
-                                                </constraints>
-                                                <buttonConfiguration key="configuration" style="gray" imagePlacement="top" title="Resources" imagePadding="15">
-                                                    <imageReference key="image" image="info.circle.fill" catalog="system" symbolScale="large"/>
-                                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="50" scale="large"/>
-                                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
-                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="baseBackgroundColor" red="0.69019609689999994" green="0.14901961389999999" blue="0.20784312490000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                </buttonConfiguration>
-                                                <connections>
-                                                    <segue destination="saK-Kf-fvs" kind="show" id="mRh-xE-6f2"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -2983,10 +2951,8 @@ Cg
                         <outlet property="CallAdminBtn" destination="fLi-as-vYm" id="TFs-h6-sRZ"/>
                         <outlet property="ProtocolsBtn" destination="FlD-0x-eAw" id="5rn-p7-bIT"/>
                         <outlet property="ReportBtn" destination="TJQ-Uv-3pA" id="Mlu-N1-VPK"/>
-                        <outlet property="ResourcesBtn" destination="Wb3-L0-0Gh" id="yf0-9Y-ZaK"/>
                         <outletCollection property="HomeBtns" destination="TJQ-Uv-3pA" collectionClass="NSMutableArray" id="IPc-fR-xOx"/>
                         <outletCollection property="HomeBtns" destination="FlD-0x-eAw" collectionClass="NSMutableArray" id="NGr-OD-Ajx"/>
-                        <outletCollection property="HomeBtns" destination="Wb3-L0-0Gh" collectionClass="NSMutableArray" id="9sd-lj-NxO"/>
                         <outletCollection property="HomeBtns" destination="fLi-as-vYm" collectionClass="NSMutableArray" id="e1L-vB-qTb"/>
                     </connections>
                 </viewController>
@@ -3366,23 +3332,10 @@ Teachers Can:
                                                 <color key="highlightedColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VO4-7Z-Z31" userLabel="6resource">
-                                                <rect key="frame" x="395" y="349" width="262" height="117"/>
+                                                <rect key="frame" x="395" y="349" width="262" height="0.0"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                 <color key="highlightedColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MB1-wW-zNN">
-                                                <rect key="frame" x="437" y="474" width="178" height="37"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="37" id="2uy-4r-Gny"/>
-                                                    <constraint firstAttribute="width" constant="178" id="D1f-0f-Ooz"/>
-                                                </constraints>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="gray" title="Want more resources?">
-                                                    <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
-                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="baseBackgroundColor" red="0.63311452960000003" green="0.16052969880000001" blue="0.15571549700000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                </buttonConfiguration>
-                                            </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-Teacher cannot leave his/her classroom. Call a counselor, administrator or main number immediately for help" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PPd-Rc-3um">
                                                 <rect key="frame" x="51.5" y="143" width="949" height="48"/>
                                                 <constraints>
@@ -3440,22 +3393,18 @@ Teachers Can:
                                             <constraint firstAttribute="trailing" secondItem="DkT-T6-TbH" secondAttribute="trailing" constant="51.5" id="6Ci-i2-BPP"/>
                                             <constraint firstItem="DkT-T6-TbH" firstAttribute="centerX" secondItem="3KE-rO-Ep5" secondAttribute="centerX" id="9FO-UF-3L0"/>
                                             <constraint firstAttribute="trailing" secondItem="Rfx-31-y2O" secondAttribute="trailing" constant="52" id="9kR-DW-qs0"/>
-                                            <constraint firstItem="MB1-wW-zNN" firstAttribute="leading" secondItem="x6n-sh-Xdr" secondAttribute="trailing" constant="79" id="9sg-yL-jYL"/>
                                             <constraint firstAttribute="bottom" secondItem="qx2-B8-3rb" secondAttribute="bottom" constant="38" id="ATa-0m-90r"/>
                                             <constraint firstItem="Rfx-31-y2O" firstAttribute="top" secondItem="DkT-T6-TbH" secondAttribute="bottom" constant="12" id="BfC-G0-hMA"/>
                                             <constraint firstItem="Rfx-31-y2O" firstAttribute="leading" secondItem="VO4-7Z-Z31" secondAttribute="trailing" constant="36" id="Cf7-vg-s5K"/>
                                             <constraint firstItem="x6n-sh-Xdr" firstAttribute="leading" secondItem="3KE-rO-Ep5" secondAttribute="leading" constant="51" id="F7y-GE-oXw"/>
                                             <constraint firstItem="VO4-7Z-Z31" firstAttribute="centerX" secondItem="3KE-rO-Ep5" secondAttribute="centerX" id="IL4-Mz-Ilh"/>
                                             <constraint firstItem="xJj-bi-X5Y" firstAttribute="top" secondItem="DkT-T6-TbH" secondAttribute="bottom" constant="12" id="LDY-Tn-kzE"/>
-                                            <constraint firstItem="MB1-wW-zNN" firstAttribute="top" secondItem="VO4-7Z-Z31" secondAttribute="bottom" constant="2" id="P6x-Ty-U7P"/>
                                             <constraint firstItem="VO4-7Z-Z31" firstAttribute="leading" secondItem="x6n-sh-Xdr" secondAttribute="trailing" constant="37" id="RhC-Q9-EBE"/>
                                             <constraint firstItem="VO4-7Z-Z31" firstAttribute="top" secondItem="LqC-8N-ZAX" secondAttribute="bottom" constant="20" id="Sp1-NR-ElG"/>
                                             <constraint firstItem="hxr-P7-LvP" firstAttribute="centerX" secondItem="3KE-rO-Ep5" secondAttribute="centerX" id="Sw1-uG-N3v"/>
                                             <constraint firstItem="LqC-8N-ZAX" firstAttribute="leading" secondItem="xJj-bi-X5Y" secondAttribute="trailing" constant="94" id="TM4-fX-OWP"/>
-                                            <constraint firstItem="qx2-B8-3rb" firstAttribute="leading" secondItem="MB1-wW-zNN" secondAttribute="trailing" constant="78" id="VI7-EF-deq"/>
                                             <constraint firstAttribute="bottom" secondItem="x6n-sh-Xdr" secondAttribute="bottom" constant="38" id="VLn-RT-vS7"/>
                                             <constraint firstItem="ZeP-X5-Sp4" firstAttribute="centerX" secondItem="3KE-rO-Ep5" secondAttribute="centerX" id="XQb-7H-QDA"/>
-                                            <constraint firstItem="MB1-wW-zNN" firstAttribute="centerX" secondItem="3KE-rO-Ep5" secondAttribute="centerX" id="Xbq-Nb-iMx"/>
                                             <constraint firstItem="DkT-T6-TbH" firstAttribute="leading" secondItem="3KE-rO-Ep5" secondAttribute="leading" constant="51.5" id="Y2C-pB-VYf"/>
                                             <constraint firstItem="Za6-Se-wkh" firstAttribute="centerX" secondItem="3KE-rO-Ep5" secondAttribute="centerX" id="YRQ-ve-hS0"/>
                                             <constraint firstItem="Rfx-31-y2O" firstAttribute="leading" secondItem="VO4-7Z-Z31" secondAttribute="trailing" constant="36" id="a6z-Qt-Wug"/>
@@ -3477,7 +3426,6 @@ Teachers Can:
                                             <constraint firstItem="hxr-P7-LvP" firstAttribute="leading" secondItem="3KE-rO-Ep5" secondAttribute="leading" constant="51.5" id="nLA-9a-zpu"/>
                                             <constraint firstItem="Za6-Se-wkh" firstAttribute="top" secondItem="ZeP-X5-Sp4" secondAttribute="bottom" constant="5" id="oDL-oV-CRm"/>
                                             <constraint firstAttribute="trailing" secondItem="PPd-Rc-3um" secondAttribute="trailing" constant="51.5" id="osA-ZF-aZF"/>
-                                            <constraint firstAttribute="bottom" secondItem="MB1-wW-zNN" secondAttribute="bottom" constant="30" id="pci-J3-nUc"/>
                                             <constraint firstItem="PPd-Rc-3um" firstAttribute="leading" secondItem="3KE-rO-Ep5" secondAttribute="leading" constant="51.5" id="qKB-7x-GGo"/>
                                             <constraint firstItem="x6n-sh-Xdr" firstAttribute="top" secondItem="xJj-bi-X5Y" secondAttribute="bottom" constant="6" id="t99-kG-Gku"/>
                                             <constraint firstItem="LqC-8N-ZAX" firstAttribute="top" secondItem="DkT-T6-TbH" secondAttribute="bottom" constant="8" symbolic="YES" id="tPU-Yz-Ncu"/>
@@ -3791,7 +3739,7 @@ Teachers Can:
         <!--View Controller Res Page-->
         <scene sceneID="rdF-x1-5IQ">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="if0-zd-7iE" customClass="ViewControllerResPage" customModule="Student_Central_v2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="if0-zd-7iE" customClass="ViewControllerResPage" customModule="Crisis_Management" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2gQ-wD-jmO">
                         <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3808,7 +3756,7 @@ Teachers Can:
                                 <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="someCell" id="FgZ-bU-bQC" customClass="TVC" customModule="Student_Central_v2" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="someCell" id="FgZ-bU-bQC" customClass="TVC" customModule="Crisis_Management" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="450" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FgZ-bU-bQC" id="DBS-07-1Lc">
@@ -3953,16 +3901,16 @@ Teachers Can:
         <!--Medical View Controller-->
         <scene sceneID="0WH-jV-OrK">
             <objects>
-                <viewController id="zNK-ba-bLX" customClass="MedicalViewController" customModule="Student_Central_v2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="zNK-ba-bLX" customClass="MedicalViewController" customModule="Crisis_Management" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2lE-UY-bKe">
-                        <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
+                        <rect key="frame" x="0.0" y="0.0" width="704" height="794"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background 1" translatesAutoresizingMaskIntoConstraints="NO" id="rtg-Y7-RWB">
-                                <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
+                                <rect key="frame" x="0.0" y="0.0" width="704" height="794"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="88" translatesAutoresizingMaskIntoConstraints="NO" id="XDy-Lx-9zF">
-                                <rect key="frame" x="216" y="193" width="680" height="448"/>
+                                <rect key="frame" x="12" y="173" width="680" height="448"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="jHP-PJ-rLG">
                                         <rect key="frame" x="0.0" y="0.0" width="680" height="180"/>
@@ -4144,7 +4092,7 @@ Teachers Can:
                                 <variation key="heightClass=regular-widthClass=compact" axis="horizontal" spacing="20"/>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medical Care" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ipA-zr-r4Y">
-                                <rect key="frame" x="460" y="52" width="192" height="105"/>
+                                <rect key="frame" x="256" y="52" width="192" height="85"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -4196,7 +4144,7 @@ Teachers Can:
         <!--Student Help View Controller-->
         <scene sceneID="Fyu-P2-DhA">
             <objects>
-                <viewController title="Student Help View Controller" id="saK-Kf-fvs" customClass="HelpViewController" customModule="Student_Central_v2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Student Help View Controller" id="saK-Kf-fvs" customClass="HelpViewController" customModule="Crisis_Management" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EMx-NE-CBu">
                         <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4566,7 +4514,7 @@ Teachers Can:
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="tED-ko-NcQ"/>
-        <segue reference="YFM-d9-O2o"/>
+        <segue reference="ikP-HX-Kxx"/>
         <segue reference="onY-RW-VIk"/>
         <segue reference="nKW-bZ-WCm"/>
     </inferredMetricsTieBreakers>
@@ -4585,7 +4533,6 @@ Teachers Can:
         <image name="checkmark.circle.fill" catalog="system" width="128" height="123"/>
         <image name="doc.fill.badge.plus" catalog="system" width="120" height="128"/>
         <image name="house.fill" catalog="system" width="128" height="104"/>
-        <image name="info.circle.fill" catalog="system" width="128" height="123"/>
         <image name="list.bullet.rectangle.portrait.fill" catalog="system" width="115" height="128"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="phone.fill" catalog="system" width="128" height="114"/>
