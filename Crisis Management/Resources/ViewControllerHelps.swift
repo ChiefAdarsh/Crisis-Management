@@ -14,6 +14,7 @@ class HelpViewController: UIViewController {
     var mt = Set<String>()
     var empty = [String]()
     @IBOutlet weak var sheesh: UITableView!
+    static var tb: UITableView!
     
     
     @IBOutlet var stackView: UIStackView!
@@ -35,7 +36,7 @@ class HelpViewController: UIViewController {
         super.viewDidLoad()
         sheesh.delegate = self
         sheesh.dataSource = self
-        
+        HelpViewController.tb = sheesh
 
         
         for yeahh in yourArray{

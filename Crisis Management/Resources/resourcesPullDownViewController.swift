@@ -13,22 +13,92 @@ class CellClass: UITableViewCell {
 
 class ResourcesPullDownViewController: UIViewController {
     @IBOutlet weak var resourcesDropDownButton: UIButton!
-    
+    @IBOutlet weak var enterName: UITextField!
+    @IBOutlet weak var enterCat: UITextField!
+    @IBOutlet weak var enterContact: UITextField!
+    @IBOutlet weak var enterAddress: UITextField!
+    @IBOutlet weak var enterWebsite: UITextField!
+    @IBOutlet weak var enterAddInfo: UITextField!
+    @IBOutlet weak var erro: UILabel!
+    @IBOutlet weak var creat3: UIButton!
     let transparentView = UIView()
     let tableView = UITableView()
-    
+    var selectedCategory = ""
     var selectedButton = UIButton()
+    var sele = "";
     
     var dataSource = [String]()
     
-    var selectedCategory: String = ""
-
+    
+    //PARAMETERS
+    static var newCat: Bool!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        erro.isHidden = true
+        if ResourcesPullDownViewController.newCat{
+            resourcesDropDownButton.isHidden = true
+            enterCat.isHidden = false
+        }
+        else{
+            enterCat.isHidden = true
+            resourcesDropDownButton.isHidden = false
+        }
+        enterName.delegate = self
+        enterCat.delegate = self
+        enterContact.delegate = self
+        enterAddress.delegate = self
+        enterWebsite.delegate = self
+        enterAddInfo.delegate = self
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(CellClass.self, forCellReuseIdentifier: "Cell")
-        // Do any additional setup after loading the view.
+        
+    }
+    
+    @IBAction func createRes(_ sender: Any) {
+        if !enterCat.hasText && selectedCategory.isEmpty && !enterName.hasText {
+            erro.text = "Please Enter Name and Category"
+        }
+        else if !enterCat.hasText && selectedCategory.isEmpty {
+            erro.text = "Please Enter Category"
+            erro.isHidden = false
+        }
+        else if !enterName.hasText {
+            erro.text = "Please Enter Name"
+            erro.isHidden = false;
+        }
+        else if ResourcesPullDownViewController.newCat{
+            var make = Resource(category: enterCat.text ?? "", name: enterName.text ?? "", contact: enterContact.text ?? "", address: enterAddress.text ?? "", city: "", state: "", zip: "", website: enterWebsite.text ?? "", addInfo: enterAddInfo.text ?? "")
+            print(make.category + make.name + make.contact + make.address + make.website + make.addInfo)
+            yourArray.append(make)
+            
+            self.dismiss(animated: true)
+        }
+        else{
+            var make = Resource(category: selectedCategory ?? "", name: enterName.text ?? "", contact: enterContact.text ?? "", address: enterAddress.text ?? "", city: "", state: "", zip: "", website: enterWebsite.text ?? "", addInfo: enterAddInfo.text ?? "")
+            print(make.category + make.name + make.contact + make.address + make.website + make.addInfo)
+            yourArray.append(make)
+            self.dismiss(animated: true)
+        }
+            
+        
+        
+        //tableView.reloadData()
+        HelpViewController.tb.reloadData()
+        
+        
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+//        if let firstVC = presentingViewController as? HelpViewController {
+//            DispatchQueue.main.async {
+//                firstVC.sheesh.reloadData()
+//            }
+//        }
+        HelpViewController.tb.reloadData()
     }
     
     func addTransparentView(frames: CGRect) {
@@ -76,6 +146,14 @@ class ResourcesPullDownViewController: UIViewController {
 
 }
 
+extension ResourcesPullDownViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+}
+
+
 extension ResourcesPullDownViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataSource.count
@@ -91,5 +169,6 @@ extension ResourcesPullDownViewController: UITableViewDelegate, UITableViewDataS
         removeTransparentView()
         selectedCategory = dataSource[indexPath.row]
         print(selectedCategory)
+        sele = selectedCategory
     }
 }
