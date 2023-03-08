@@ -41,22 +41,19 @@ class HelpViewController: UIViewController {
         
         for yeahh in yourArray{
             if(!empty.contains(yeahh.category)){
-                if(yeahh.category != "Housing" && yeahh.category != "Shelter" && yeahh.category != "General Health" && yeahh.category != "Mental Health" && yeahh.category != "Aids and HIV" && yeahh.category != "Substance Abuse" && yeahh.category != "Pregnancy"){
+                //if(yeahh.category != "Housing" && yeahh.category != "Shelter" && yeahh.category != "General Health" && yeahh.category != "Mental Health" && yeahh.category != "Aids and HIV" && yeahh.category != "Substance Abuse" && yeahh.category != "Pregnancy"){
                     empty.append(yeahh.category)
-                }
+                //}
                 
             }
             
         }
+        empty.append("Food")
         //for okayy in mt{
          //   empty.append(okayy)
        // }
         let size = UIScreen.main.bounds.size
-        if size.height < size.width {
-            stackView.axis = .horizontal
-        } else {
-            stackView.axis = .vertical
-        }
+        
         sheesh.separatorStyle = .none
         
         // Do any additional setup after loading the view.

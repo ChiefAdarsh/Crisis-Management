@@ -4134,6 +4134,7 @@ Teachers Can:
                     </view>
                     <navigationItem key="navigationItem" id="Qfw-oT-B93"/>
                     <connections>
+                        <outlet property="chan" destination="yzV-tH-3to" id="l48-PQ-UkG"/>
                         <outlet property="resAddInfo" destination="IYE-7D-6bW" id="G5s-Yb-rvo"/>
                         <outlet property="resAddress" destination="biy-61-j0H" id="NTC-Kx-bfa"/>
                         <outlet property="resCat" destination="4yJ-tR-lCz" id="bbM-7u-ZPN"/>
@@ -4437,6 +4438,9 @@ Teachers Can:
                                                 <buttonConfiguration key="configuration" style="filled" title="Food" cornerStyle="small">
                                                     <color key="baseBackgroundColor" red="0.69019609689999994" green="0.14901961389999999" blue="0.20784312490000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <segue destination="3i3-jG-CXA" kind="show" id="5P6-lw-exQ"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YmM-yl-bJm">
                                                 <rect key="frame" x="200" y="0.0" width="180" height="150"/>
@@ -4632,6 +4636,33 @@ Teachers Can:
             </objects>
             <point key="canvasLocation" x="2716.7266187050359" y="-581.29496402877703"/>
         </scene>
+        <!--Meal Providers View Controller-->
+        <scene sceneID="6Yp-uQ-JmF">
+            <objects>
+                <viewController id="3i3-jG-CXA" customClass="MealProvidersViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VnO-hL-2Oz">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="mealproviderslight" translatesAutoresizingMaskIntoConstraints="NO" id="a0e-PB-2WD">
+                                <rect key="frame" x="0.0" y="22.5" width="1024" height="723"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ejV-OH-r1V"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="a0e-PB-2WD" firstAttribute="leading" secondItem="ejV-OH-r1V" secondAttribute="leading" id="3Co-Wv-w2K"/>
+                            <constraint firstItem="ejV-OH-r1V" firstAttribute="bottom" secondItem="a0e-PB-2WD" secondAttribute="bottom" constant="22.5" id="Lir-g5-Zhs"/>
+                            <constraint firstItem="a0e-PB-2WD" firstAttribute="centerY" secondItem="VnO-hL-2Oz" secondAttribute="centerY" id="eca-nq-ndp"/>
+                            <constraint firstItem="a0e-PB-2WD" firstAttribute="centerX" secondItem="VnO-hL-2Oz" secondAttribute="centerX" id="m6Y-3C-rH1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="PQh-zI-0KG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1v6-8r-oJk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3377" y="877"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="hiI-Ed-cr4"/>
@@ -4657,6 +4688,7 @@ Teachers Can:
         <image name="house.fill" catalog="system" width="128" height="104"/>
         <image name="info.circle.fill" catalog="system" width="128" height="123"/>
         <image name="list.bullet.rectangle.portrait.fill" catalog="system" width="115" height="128"/>
+        <image name="mealproviderslight" width="1414" height="820"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="phone.fill" catalog="system" width="128" height="114"/>
         <systemColor name="labelColor">

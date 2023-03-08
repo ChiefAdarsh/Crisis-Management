@@ -41,7 +41,7 @@ class ViewControllerResPage: UIViewController {
     @IBOutlet weak var resAddInfo: UILabel!
     @IBOutlet weak var resAddress: UILabel!
     @IBOutlet weak var resWeb: UILabel!
-    
+    @IBOutlet weak var chan: UIImageView!
     static var category: String!
     
     var order: String = ""
@@ -59,7 +59,12 @@ class ViewControllerResPage: UIViewController {
                 order = res.category
             }
         }
-        
+        if ViewControllerResPage.category == "Food"{
+            chan.image = UIImage(named: "mealproviderslight")
+        }
+        else{
+            chan.image = UIImage(named: "Background 1")
+        }
         someTableView.delegate = self
         someTableView.dataSource = self
         
