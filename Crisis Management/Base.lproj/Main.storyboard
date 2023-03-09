@@ -2970,9 +2970,11 @@ Cg
                         <outlet property="CallAdminBtn" destination="fLi-as-vYm" id="TFs-h6-sRZ"/>
                         <outlet property="ProtocolsBtn" destination="FlD-0x-eAw" id="5rn-p7-bIT"/>
                         <outlet property="ReportBtn" destination="TJQ-Uv-3pA" id="Mlu-N1-VPK"/>
+                        <outlet property="ResourcesBtn" destination="AQN-QX-r4v" id="cIh-Qm-Ba0"/>
                         <outletCollection property="HomeBtns" destination="TJQ-Uv-3pA" collectionClass="NSMutableArray" id="IPc-fR-xOx"/>
                         <outletCollection property="HomeBtns" destination="FlD-0x-eAw" collectionClass="NSMutableArray" id="NGr-OD-Ajx"/>
                         <outletCollection property="HomeBtns" destination="fLi-as-vYm" collectionClass="NSMutableArray" id="e1L-vB-qTb"/>
+                        <outletCollection property="HomeBtns" destination="AQN-QX-r4v" collectionClass="NSMutableArray" id="vVM-rD-cLU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GrP-Eb-oZI" sceneMemberID="firstResponder"/>
@@ -3583,17 +3585,17 @@ Teachers Can:
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JRs-AH-Hjm">
-                                <rect key="frame" x="127" y="-10" width="858" height="750"/>
+                                <rect key="frame" x="127" y="-10" width="450" height="750"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Eiu-vA-evr">
-                                        <rect key="frame" x="317" y="135" width="224" height="224"/>
+                                        <rect key="frame" x="113" y="135" width="224" height="224"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="224" id="QVw-kc-jxX"/>
                                             <constraint firstAttribute="width" constant="224" id="bS5-eT-KTr"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coppell High School" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QGG-Tq-WUB">
-                                        <rect key="frame" x="280" y="61.5" width="298" height="41"/>
+                                        <rect key="frame" x="76" y="61.5" width="298" height="41"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="34"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -3610,7 +3612,7 @@ Teachers Can:
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="CoppellCowboys" translatesAutoresizingMaskIntoConstraints="NO" id="Xmb-zA-4Uf">
-                                        <rect key="frame" x="707" y="411" width="75" height="75"/>
+                                        <rect key="frame" x="299" y="411" width="75" height="75"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="75" id="Jrx-UK-jtF"/>
                                             <constraint firstAttribute="width" constant="75" id="UXY-SA-aPX"/>
@@ -3628,7 +3630,7 @@ Teachers Can:
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Watermark" translatesAutoresizingMaskIntoConstraints="NO" id="dJ9-G7-j5G">
-                                        <rect key="frame" x="254" y="618" width="350" height="116"/>
+                                        <rect key="frame" x="50" y="618" width="350" height="116"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="350" id="BYM-7z-h76"/>
                                             <constraint firstAttribute="height" constant="116" id="wsw-Hf-eQ2"/>
@@ -3684,7 +3686,7 @@ Teachers Can:
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="fwR-N6-1gy">
-                                        <rect key="frame" x="76" y="415" width="559" height="66"/>
+                                        <rect key="frame" x="76" y="415" width="151" height="66"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STAFF" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lz0-JR-P6h">
                                                 <rect key="frame" x="0.0" y="0.0" width="76" height="30"/>
@@ -4177,17 +4179,17 @@ Teachers Can:
                                 <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SHOOOSH" id="PAE-ek-tQP" customClass="TableViewCellSHEESH" customModule="Crisis_Management" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="1012" height="45.5"/>
+                                        <rect key="frame" x="0.0" y="50" width="1012" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PAE-ek-tQP" id="Al3-Hb-PX5">
-                                            <rect key="frame" x="0.0" y="0.0" width="1012" height="45.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="1012" height="45"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IYV-eC-bfh">
-                                                    <rect key="frame" x="0.0" y="0.0" width="1012" height="45.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="1012" height="45"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Pd-BD-QUs">
-                                                            <rect key="frame" x="8" y="12" width="996" height="21.5"/>
+                                                            <rect key="frame" x="8" y="12" width="996" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -4267,10 +4269,10 @@ Teachers Can:
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background 1" translatesAutoresizingMaskIntoConstraints="NO" id="loL-s0-nqj">
-                                <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1112" height="1536"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="JVr-69-y73">
-                                <rect key="frame" x="0.0" y="0.0" width="450" height="834"/>
+                                <rect key="frame" x="0.0" y="0.0" width="450" height="1536"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="450" id="rB2-Ph-NNY"/>
@@ -4323,7 +4325,7 @@ Teachers Can:
                                 </prototypes>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="58" translatesAutoresizingMaskIntoConstraints="NO" id="2KG-Ve-HHN">
-                                <rect key="frame" x="470" y="98" width="622" height="651"/>
+                                <rect key="frame" x="470" y="98" width="622" height="1353"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NCl-1H-tfi">
                                         <rect key="frame" x="0.0" y="0.0" width="622" height="59"/>
@@ -4362,7 +4364,7 @@ Teachers Can:
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AZR-KP-NyX">
-                                        <rect key="frame" x="0.0" y="431" width="622" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="431" width="622" height="75"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="75" id="fyc-b4-9JT"/>
                                         </constraints>
@@ -4371,7 +4373,7 @@ Teachers Can:
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="23" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U3Z-Nu-Bvt">
-                                        <rect key="frame" x="0.0" y="489" width="622" height="162"/>
+                                        <rect key="frame" x="0.0" y="564" width="622" height="789"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="365" id="rww-OI-kNN"/>
                                         </constraints>
@@ -4513,7 +4515,7 @@ Teachers Can:
         <segue reference="LgA-Tc-Fjk"/>
         <segue reference="YFM-d9-O2o"/>
         <segue reference="onY-RW-VIk"/>
-        <segue reference="3qc-EB-Mqv"/>
+        <segue reference="nKW-bZ-WCm"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Background 1" width="2048" height="1536"/>
