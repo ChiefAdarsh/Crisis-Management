@@ -30,12 +30,6 @@ class ResourcesPullDownViewController: UIViewController {
     var selectedCategory = ""
     var selectedButton = UIButton()
     var sele = "";
-    lazy var numResourceURL: URL = documentsDirectory.appendingPathComponent("numResource")
-        .appendingPathExtension("plist")
-    let documentsDirectory = FileManager.default.urls(for: .documentDirectory,in: .userDomainMask).first!
-    var archiveURLs: [URL] = []
-    var numOfResources: Int = 0
-    var extraResources: [Resource] = []
     var dataSource = [String]()
     
     
@@ -62,38 +56,6 @@ class ResourcesPullDownViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(CellClass.self, forCellReuseIdentifier: "Cell")
-        
-        let jsonDecoder = JSONDecoder()
-        if let retrievedData = try? Data(contentsOf: numResourceURL),
-            let decodedData = try?
-           jsonDecoder.decode(numResource.self,
-           from: retrievedData) {
-            print(decodedData)
-            numOfResources = decodedData.numOfResources
-        }
-        
-        for i in 0..<numOfResources {
-            archiveURLs.append(documentsDirectory.appendingPathComponent("resource\(i + 1)")
-               .appendingPathExtension("plist"))
-        }
-        
-        for i in 0..<numOfResources {
-            let jsonDecoder = JSONDecoder()
-            if let retrievedData = try? Data(contentsOf: archiveURLs[i]),
-                let decodedData = try?
-               jsonDecoder.decode(Resource.self,
-               from: retrievedData) {
-                print(decodedData)
-                yourArray.append(decodedData)
-                extraResources.append(decodedData)
-                
-//                teacherLabels[i]!.text = decodedData.name
-//                teacherMails[i]!.text = decodedData.email
-            }
-        }
-        
-        HelpViewController.tb.reloadData()
-        
     }
     
     @IBAction func createRes(_ sender: Any) {
@@ -112,28 +74,28 @@ class ResourcesPullDownViewController: UIViewController {
             var make = Resource(category: enterCat.text ?? "", name: enterName.text ?? "", contact: enterContact.text ?? "", address: enterAddress.text ?? "", city: "", state: "", zip: "", website: enterWebsite.text ?? "", addInfo: enterAddInfo.text ?? "")
             print(make.category + make.name + make.contact + make.address + make.website + make.addInfo)
             yourArray.append(make)
-            extraResources.append(make)
+            AppDelegate.extraResources.append(make)
             HelpViewController.empty.append(enterCat.text ?? "")
             print(HelpViewController.empty)
-            numOfResources += 1
-            let numResource = numResource(numOfResources: numOfResources)
+            AppDelegate.numOfResources += 1
+            let numResource = numResource(numOfResources: AppDelegate.numOfResources)
             
             let jsonEncoder = JSONEncoder()
             if let jsonData = try? jsonEncoder.encode(numResource),
                let jsonString = String(data: jsonData, encoding: .utf8) {
                 print(jsonString)
 
-                try? jsonData.write(to: self.numResourceURL, options: .noFileProtection)
+                try? jsonData.write(to: AppDelegate.numResourceURL, options: .noFileProtection)
             }
             
-            for i in 0...extraResources.count-1 {
-                let resource = extraResources[i]
+            for i in 0...AppDelegate.extraResources.count-1 {
+                let resource = AppDelegate.extraResources[i]
                 let jsonEncoder = JSONEncoder()
                 if let jsonData = try? jsonEncoder.encode(resource),
                    let jsonString = String(data: jsonData, encoding: .utf8) {
                     print(jsonString)
 
-                    try? jsonData.write(to: self.archiveURLs[i], options: .noFileProtection)
+                    try? jsonData.write(to: AppDelegate.archiveURLs[i], options: .noFileProtection)
                 }
             }
             
@@ -164,31 +126,33 @@ class ResourcesPullDownViewController: UIViewController {
             self.dismiss(animated: true)
         }
         else{
-            var make = Resource(category: selectedCategory ?? "", name: enterName.text ?? "", contact: enterContact.text ?? "", address: enterAddress.text ?? "", city: "", state: "", zip: "", website: enterWebsite.text ?? "", addInfo: enterAddInfo.text ?? "")
+            var make = Resource(category: selectedCategory, name: enterName.text ?? "", contact: enterContact.text ?? "", address: enterAddress.text ?? "", city: "", state: "", zip: "", website: enterWebsite.text ?? "", addInfo: enterAddInfo.text ?? "")
             print(make.category + make.name + make.contact + make.address + make.website + make.addInfo)
             yourArray.append(make)
-            extraResources.append(make)
+            AppDelegate.extraResources.append(make)
             HelpViewController.empty.append(selectedCategory)
             print(HelpViewController.empty)
-            numOfResources += 1
-            let numResource = numResource(numOfResources: numOfResources)
+            AppDelegate.numOfResources += 1
+            let numResource = numResource(numOfResources: AppDelegate.numOfResources)
+            
+            AppDelegate.archiveURLs.append(AppDelegate.documentsDirectory.appendingPathComponent("resource\(AppDelegate.numOfResources)").appendingPathExtension("plist"))
             
             let jsonEncoder = JSONEncoder()
             if let jsonData = try? jsonEncoder.encode(numResource),
                let jsonString = String(data: jsonData, encoding: .utf8) {
                 print(jsonString)
 
-                try? jsonData.write(to: self.numResourceURL, options: .noFileProtection)
+                try? jsonData.write(to: AppDelegate.numResourceURL, options: .noFileProtection)
             }
             
-            for i in 0...extraResources.count-1 {
-                let resource = extraResources[i]
+            for i in 0...AppDelegate.extraResources.count-1 {
+                let resource = AppDelegate.extraResources[i]
                 let jsonEncoder = JSONEncoder()
                 if let jsonData = try? jsonEncoder.encode(resource),
                    let jsonString = String(data: jsonData, encoding: .utf8) {
                     print(jsonString)
 
-                    try? jsonData.write(to: self.archiveURLs[i], options: .noFileProtection)
+                    try? jsonData.write(to: AppDelegate.archiveURLs[i], options: .noFileProtection)
                 }
             }
             

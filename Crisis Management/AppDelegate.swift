@@ -21,6 +21,12 @@ extension String {
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var hasAlreadyLaunched: Bool!
+    static var numResourceURL: URL!
+    static let documentsDirectory = FileManager.default.urls(for: .documentDirectory,in: .userDomainMask).first!
+    static var numOfResources: Int = 0
+    static var alrExists: Bool = false
+    static var archiveURLs: [URL] = []
+    static var extraResources: [Resource] = []
     
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -33,6 +39,43 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }else{
             UserDefaults.standard.set(true, forKey: "hasAlreadyLaunched")
         }
+        
+        AppDelegate.numResourceURL = AppDelegate.documentsDirectory.appendingPathComponent("numResource")
+            .appendingPathExtension("plist")
+        
+        let jsonDecoder = JSONDecoder()
+        if let retrievedData = try? Data(contentsOf: AppDelegate.numResourceURL),
+            let decodedData = try?
+           jsonDecoder.decode(numResource.self,
+           from: retrievedData) {
+            print(decodedData)
+            AppDelegate.numOfResources = decodedData.numOfResources
+            AppDelegate.alrExists = true
+        }
+        
+        print(AppDelegate.alrExists)
+        print("resources: ",AppDelegate.numOfResources)
+        
+        for i in 0..<AppDelegate.numOfResources {
+            AppDelegate.archiveURLs.append(AppDelegate.documentsDirectory.appendingPathComponent("resource\(i + 1)")
+               .appendingPathExtension("plist"))
+        }
+        
+        for i in 0..<AppDelegate.numOfResources {
+            let jsonDecoder = JSONDecoder()
+            if let retrievedData = try? Data(contentsOf: AppDelegate.archiveURLs[i]),
+                let decodedData = try?
+               jsonDecoder.decode(Resource.self,
+               from: retrievedData) {
+                print(decodedData)
+                yourArray.append(decodedData)
+                AppDelegate.extraResources.append(decodedData)
+                
+//                teacherLabels[i]!.text = decodedData.name
+//                teacherMails[i]!.text = decodedData.email
+            }
+        }
+        
         return true
     }
     
