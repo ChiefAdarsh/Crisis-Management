@@ -857,9 +857,11 @@
                                     <segue destination="Q75-Rd-804" kind="show" id="Vgn-lM-er7"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sBb-yy-BaF">
-                                <rect key="frame" x="430" y="268" width="253" height="34.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sBb-yy-BaF">
+                                <rect key="frame" x="466" y="223" width="180" height="34.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="jIR-xA-NCy"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Upload"/>
                                 <connections>
@@ -876,12 +878,15 @@
                             <constraint firstItem="Bo3-6T-BaK" firstAttribute="centerX" secondItem="ClY-xh-LgH" secondAttribute="centerX" id="ESB-Uy-uVZ"/>
                             <constraint firstItem="Bo3-6T-BaK" firstAttribute="centerX" secondItem="ClY-xh-LgH" secondAttribute="centerX" id="Eu8-ho-8dR"/>
                             <constraint firstAttribute="bottom" secondItem="TwO-lV-oU6" secondAttribute="bottom" id="Hqa-7E-Dn8"/>
+                            <constraint firstItem="LwC-J7-RgU" firstAttribute="top" secondItem="sBb-yy-BaF" secondAttribute="bottom" constant="42.5" id="JNK-Di-wES"/>
+                            <constraint firstItem="sBb-yy-BaF" firstAttribute="centerX" secondItem="ClY-xh-LgH" secondAttribute="centerX" id="Mjp-2N-TDK"/>
                             <constraint firstItem="LwC-J7-RgU" firstAttribute="centerX" secondItem="ClY-xh-LgH" secondAttribute="centerX" id="Rtj-Ie-Xk1"/>
                             <constraint firstItem="cEi-9z-RsC" firstAttribute="centerX" secondItem="ClY-xh-LgH" secondAttribute="centerX" id="URh-dX-ce4"/>
                             <constraint firstItem="TwO-lV-oU6" firstAttribute="leading" secondItem="DZI-jy-PKE" secondAttribute="leading" id="XNO-bC-pTI"/>
                             <constraint firstItem="TwO-lV-oU6" firstAttribute="top" secondItem="ClY-xh-LgH" secondAttribute="top" id="cCS-Zb-eFR"/>
                             <constraint firstItem="KwA-09-htL" firstAttribute="centerX" secondItem="ClY-xh-LgH" secondAttribute="centerX" id="fpo-td-MPW"/>
                             <constraint firstItem="TwO-lV-oU6" firstAttribute="trailing" secondItem="DZI-jy-PKE" secondAttribute="trailing" id="nsT-1C-QfZ"/>
+                            <constraint firstItem="sBb-yy-BaF" firstAttribute="top" secondItem="cEi-9z-RsC" secondAttribute="bottom" constant="30" id="v5U-VV-n9T"/>
                             <constraint firstItem="cEi-9z-RsC" firstAttribute="top" secondItem="Bo3-6T-BaK" secondAttribute="bottom" constant="20" id="vzZ-vY-97Y"/>
                         </constraints>
                     </view>
