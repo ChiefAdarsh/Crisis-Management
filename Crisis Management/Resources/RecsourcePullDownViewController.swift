@@ -130,7 +130,7 @@ class ResourcesPullDownViewController: UIViewController {
             print(make.category + make.name + make.contact + make.address + make.website + make.addInfo)
             yourArray.append(make)
             AppDelegate.extraResources.append(make)
-            HelpViewController.empty.append(selectedCategory)
+            //HelpViewController.empty.append(selectedCategory)
             print(HelpViewController.empty)
             AppDelegate.numOfResources += 1
             let numResource = numResource(numOfResources: AppDelegate.numOfResources)
