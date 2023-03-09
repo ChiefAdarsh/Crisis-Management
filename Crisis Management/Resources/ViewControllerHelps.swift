@@ -46,9 +46,13 @@ class HelpViewController: UIViewController {
                 //}
                 
             }
+            if(!HelpViewController.empty.contains("Food")){
+                HelpViewController.empty.append("Food")
+            }
             
         }
-        HelpViewController.empty.append("Food")
+        
+            
         //for okayy in mt{
          //   empty.append(okayy)
        // }
