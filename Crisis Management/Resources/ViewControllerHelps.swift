@@ -11,61 +11,17 @@ class HelpViewController: UIViewController {
     
 
     var wordd : String = ""
-    
-    
+    var mt = Set<String>()
+    static var empty = [String]()
+    @IBOutlet weak var sheesh: UITableView!
+    static var tb: UITableView!
     
     
     @IBOutlet var stackView: UIStackView!
-    @IBOutlet weak var chekchek: UIButton!
-    @IBOutlet weak var FamilyButton: UIButton!
-    @IBOutlet weak var DomesticButton: UIButton!
-    @IBOutlet weak var SpecialtyButton: UIButton!
-    @IBOutlet weak var DrugButton: UIButton!
-    @IBOutlet weak var EatingButton: UIButton!
-    @IBOutlet weak var CounselButton: UIButton!
-    @IBOutlet weak var CrisisButton: UIButton!
-    @IBOutlet weak var InoutButton: UIButton!
-    @IBOutlet var bropLEASE: UIButton!
     
     
-    @IBAction func chekcheckTap(_ sender: Any) {
-        wordd = "Psychiatrists"
-    }
-    @IBAction func CrisisTap(_ sender: Any) {
-        wordd = "Crisis Lines"
-    }
-    
-    @IBAction func bropLEASETap(_ sender: Any) {
-        wordd = "Support Groups and Resources"
-    }
     
     
-    @IBAction func InoutTap(_ sender: Any) {
-        wordd = "Inpatient/Outpatient Mental Health Facilities"
-    }
-    
-    @IBAction func CounselingTap(_ sender: Any) {
-        wordd = "Counseling Centers"
-    }
-    
-    @IBAction func EatingTap(_ sender: Any) {
-        wordd = "Eating Disorders"
-    }
-    
-    @IBAction func DrugTap(_ sender: Any) {
-        wordd = "Drug and Alcohol Abuse"
-    }
-    @IBAction func SpecialtyTap(_ sender: Any) {
-        wordd = "Specialty Counseling"
-    }
-    
-    @IBAction func domesticTap(_ sender: Any) {
-        wordd = "Domestic Violence"
-    }
-    
-    @IBAction func familyTap(_ sender: Any) {
-        wordd = "Family Assistance"
-    }
     @IBAction func housingTap(_ sender: Any) {
         wordd = "Housing"
     }
@@ -76,32 +32,48 @@ class HelpViewController: UIViewController {
     
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
-        wordd = ""
-        let size = UIScreen.main.bounds.size
-        if size.height < size.width {
-            stackView.axis = .horizontal
-        } else {
-            stackView.axis = .vertical
+        sheesh.delegate = self
+        sheesh.dataSource = self
+        HelpViewController.tb = sheesh
+
+        
+        for yeahh in yourArray{
+            if(!HelpViewController.empty.contains(yeahh.category)){
+                //if(yeahh.category != "Housing" && yeahh.category != "Shelter" && yeahh.category != "General Health" && yeahh.category != "Mental Health" && yeahh.category != "Aids and HIV" && yeahh.category != "Substance Abuse" && yeahh.category != "Pregnancy"){
+                    HelpViewController.empty.append(yeahh.category)
+                //}
+                
+            }
+            
         }
+        HelpViewController.empty.append("Food")
+        //for okayy in mt{
+         //   empty.append(okayy)
+       // }
+//        let size = UIScreen.main.bounds.size
+//        if size.height < size.width {
+//            stackView.axis = .horizontal
+//        } else {
+//            stackView.axis = .vertical
+//        }
+//        sheesh.separatorStyle = .none
+//
         // Do any additional setup after loading the view.
     }
     
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        super.viewWillTransition(to: size, with: coordinator)
-        guard let _ = stackView else { return }
-        
-        if UIDevice.current.orientation.isLandscape {
-            stackView.axis = .horizontal
-        } else {
-            stackView.axis = .vertical
-        }
-    }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-                if let nextViewController = segue.destination as? ViewControllerResPage {
-                    nextViewController.order = wordd
-                }
-        }
+//    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+//        super.viewWillTransition(to: size, with: coordinator)
+//        guard let _ = stackView else { return }
+//
+//        if UIDevice.current.orientation.isLandscape {
+//            stackView.axis = .horizontal
+//        } else {
+//            stackView.axis = .vertical
+//        }
+//    }
+    
 
     /*
     // MARK: - Navigation
@@ -113,4 +85,26 @@ class HelpViewController: UIViewController {
     }
     */
 
+}
+extension HelpViewController: UITableViewDataSource, UITableViewDelegate{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return HelpViewController.empty.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell2 = sheesh.dequeueReusableCell(withIdentifier: "SHOOOSH") as! TableViewCellSHEESH
+        
+        
+        cell2.labelSheesh.text = HelpViewController.empty[indexPath.row]
+        
+        return cell2
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        wordd = empty[indexPath.row]
+        
+        ViewControllerResPage.category = HelpViewController.empty[indexPath.row]
+    }
+    
+    
 }

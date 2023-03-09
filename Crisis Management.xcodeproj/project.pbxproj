@@ -16,6 +16,9 @@
 		657808A529118D2C00E72F43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 657808A329118D2C00E72F43 /* Main.storyboard */; };
 		657808A729118D2D00E72F43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 657808A629118D2D00E72F43 /* Assets.xcassets */; };
 		657808AA29118D2D00E72F43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 657808A829118D2D00E72F43 /* LaunchScreen.storyboard */; };
+		659487D929BA4B1E00400A9C /* RecsourcePullDownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659487D829BA4B1E00400A9C /* RecsourcePullDownViewController.swift */; };
+		659487DB29BA4B5600400A9C /* TableViewLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659487DA29BA4B5600400A9C /* TableViewLabel.swift */; };
+		659487DD29BA4B7100400A9C /* newOrExisting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659487DC29BA4B7100400A9C /* newOrExisting.swift */; };
 		65BCCCCD29A6B3F6003CA681 /* ViewControllerResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BCCCCC29A6B3F6003CA681 /* ViewControllerResource.swift */; };
 		65BCCCCF29A6B410003CA681 /* ViewControllerHelps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BCCCCE29A6B410003CA681 /* ViewControllerHelps.swift */; };
 		65E79A0829A6B28900E848F1 /* MedicalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E79A0729A6B28900E848F1 /* MedicalViewController.swift */; };
@@ -38,6 +41,9 @@
 		657808A629118D2D00E72F43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		657808A929118D2D00E72F43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		657808AB29118D2D00E72F43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		659487D829BA4B1E00400A9C /* RecsourcePullDownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecsourcePullDownViewController.swift; sourceTree = "<group>"; };
+		659487DA29BA4B5600400A9C /* TableViewLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewLabel.swift; sourceTree = "<group>"; };
+		659487DC29BA4B7100400A9C /* newOrExisting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newOrExisting.swift; sourceTree = "<group>"; };
 		65BCCCCC29A6B3F6003CA681 /* ViewControllerResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerResource.swift; sourceTree = "<group>"; };
 		65BCCCCE29A6B410003CA681 /* ViewControllerHelps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerHelps.swift; sourceTree = "<group>"; };
 		65E79A0729A6B28900E848F1 /* MedicalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalViewController.swift; sourceTree = "<group>"; };
@@ -103,7 +109,10 @@
 				65E79A0929A6B2A400E848F1 /* StudentHelpResources.swift */,
 				65E79A0D29A6B39200E848F1 /* StudentHelpTableViewController.swift */,
 				65BCCCCC29A6B3F6003CA681 /* ViewControllerResource.swift */,
+				659487D829BA4B1E00400A9C /* RecsourcePullDownViewController.swift */,
 				65BCCCCE29A6B410003CA681 /* ViewControllerHelps.swift */,
+				659487DA29BA4B5600400A9C /* TableViewLabel.swift */,
+				659487DC29BA4B7100400A9C /* newOrExisting.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -180,12 +189,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				657808A229118D2C00E72F43 /* InOutSchool.swift in Sources */,
+				659487DD29BA4B7100400A9C /* newOrExisting.swift in Sources */,
 				65E79A0829A6B28900E848F1 /* MedicalViewController.swift in Sources */,
+				659487DB29BA4B5600400A9C /* TableViewLabel.swift in Sources */,
 				65E79A0E29A6B39200E848F1 /* StudentHelpTableViewController.swift in Sources */,
 				65BCCCCF29A6B410003CA681 /* ViewControllerHelps.swift in Sources */,
 				652A84C02914E1100025B2E6 /* StudentProtocols.swift in Sources */,
 				1783567C2919938E00B33C56 /* Home.swift in Sources */,
 				65E79A0A29A6B2A400E848F1 /* StudentHelpResources.swift in Sources */,
+				659487D929BA4B1E00400A9C /* RecsourcePullDownViewController.swift in Sources */,
 				1783567E291993FD00B33C56 /* Settings.swift in Sources */,
 				65E79A0C29A6B2E200E848F1 /* Teacher Files.swift in Sources */,
 				7A8943F82919CAA700C53543 /* ReportIssue.swift in Sources */,

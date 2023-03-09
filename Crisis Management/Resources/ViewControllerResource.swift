@@ -6,7 +6,7 @@
 //
 
 import UIKit
-class Resource{
+class Resource: Codable {
     var category: String
     var name: String
     var contact: String
@@ -42,6 +42,9 @@ class ViewControllerResPage: UIViewController {
     @IBOutlet weak var resAddress: UILabel!
     @IBOutlet weak var resWeb: UILabel!
     
+    @IBOutlet weak var ba: UIImageView!
+    static var category: String!
+    
     var order: String = ""
     var resources = [Resource]()
     //try adding to function on top of superview so expected declaratin doesnt arise
@@ -51,15 +54,22 @@ class ViewControllerResPage: UIViewController {
 
 
     override func viewDidLoad() {
-        resources.removeAll()
-        super.viewDidLoad()
-        someTableView.delegate = self
-        someTableView.dataSource = self
-        for res in yourArray{
-            if res.category == order{
+        for res in yourArray {
+            if res.category == ViewControllerResPage.category {
                 resources.append(res)
+                order = res.category
             }
         }
+        if ViewControllerResPage.category == "Food"{
+            ba.image = UIImage(named: "mealproviderslight")
+        }
+        else{
+            ba.image = UIImage(named: "Background 1")
+        }
+        someTableView.delegate = self
+        someTableView.dataSource = self
+        
+        super.viewDidLoad()
         someTableView.separatorStyle = .none
     }
 
@@ -73,7 +83,7 @@ extension ViewControllerResPage: UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = someTableView.dequeueReusableCell(withIdentifier: "someCell") as! TVC
-        
+//        print("row: ", indexPath.row)
         
         cell.someLabel.text = resources[indexPath.row].name
         
@@ -82,7 +92,8 @@ extension ViewControllerResPage: UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         var addy = ""
-        if(resources[indexPath.row].address != ""){
+//        print("row: ", indexPath.row)
+        if(resources[indexPath.row].address != "") {
            addy = resources[indexPath.row].address + " " + resources[indexPath.row].city + ", " + resources[indexPath.row].state + " " + resources[indexPath.row].zip
         }
         

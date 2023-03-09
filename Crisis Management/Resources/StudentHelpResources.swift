@@ -6,7 +6,7 @@
 //
 
 import Foundation
-var yourArray =
+var yourArray: [Resource] =
         [Resource(category: "Crisis Lines", name: "Child Protective Services", contact: "1-800-252-5400", address: "", city: "", state: "", zip: "", website: "", addInfo: "-Texas law says anyone who thinks a child, or person 65 years or older, or an adult with disabilities is being abused, neglected, or exploited must report it to DFPS.\n-A person who reports abuse in good faith is immune from civil or criminal liability."),
         Resource(category: "Crisis Lines", name: "National Suicide Prevention Lifeline", contact: "Call or text 988 or 1-800-273-8255", address: "", city: "", state: "", zip: "", website: "https://suicidepreventionlifeline.org/", addInfo: "-24/7 free, confidential support for anyone in distress\n-Prevention and crisis resources for you or loved ones"),
         Resource(category: "Crisis Lines", name: "Crisis Text Line", contact: "Text ‘HELLO’ to 741741 ", address: "", city: "", state: "", zip: "", website: "", addInfo: "-"),

@@ -8,7 +8,7 @@
 import UIKit
 
 class MedicalViewController: UIViewController {
-    var wordd : String = ""
+    var worddd : String = ""
     
     @IBOutlet weak var generalButton: UIButton!
     @IBOutlet weak var AIDSHIVButton: UIButton!
@@ -20,25 +20,25 @@ class MedicalViewController: UIViewController {
     
     
     @IBAction func generalTap(_ sender: Any) {
-        wordd = "General Health"
+        worddd = "General Health"
     }
     @IBAction func AIDSHIVTap(_ sender: Any) {
-        wordd = "Aids and HIV"
+        worddd = "Aids and HIV"
     }
     @IBAction func mentalTap(_ sender: Any) {
-        wordd = "Mental Health"
+        worddd = "Mental Health"
     }
     @IBAction func pregnancyTap(_ sender: Any) {
-        wordd = "Pregnancy"
+        worddd = "Pregnancy"
     }
     @IBAction func substanceTap(_ sender: Any) {
-        wordd = "Substance Abuse"
+        worddd = "Substance Abuse"
     }
     let deviceType = UIDevice.current.model
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        wordd = ""
+        worddd = ""
         if deviceType == "iPhone" {
             // iPhone
             for i in labelStack1 {
@@ -55,7 +55,7 @@ class MedicalViewController: UIViewController {
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
                 if let nextViewController = segue.destination as? ViewControllerResPage {
-                    nextViewController.order = wordd
+                    nextViewController.order = worddd
                 }
         }
 
