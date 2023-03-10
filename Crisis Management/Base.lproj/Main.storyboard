@@ -418,7 +418,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <label key="tableHeaderView" opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Principals      -    extension (214-496-XXXX)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Otw-PP-yzF">
+                        <label key="tableHeaderView" opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Principals      " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Otw-PP-yzF">
                             <rect key="frame" x="0.0" y="0.0" width="1112" height="47.5"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
@@ -594,7 +594,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <label key="tableHeaderView" opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Counselors  -  extension (214-496-XXXX)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" id="zQt-8p-NXf">
+                        <label key="tableHeaderView" opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Counselors  " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" id="zQt-8p-NXf">
                             <rect key="frame" x="0.0" y="0.0" width="1112" height="47.5"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
@@ -2888,9 +2888,8 @@ Cg
                         <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="Background 1" translatesAutoresizingMaskIntoConstraints="NO" id="1W5-ze-SZm">
-                                <rect key="frame" x="-225" y="-363" width="1874" height="1405"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="Background 1" translatesAutoresizingMaskIntoConstraints="NO" id="1W5-ze-SZm">
+                                <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PLO-ZD-8rx">
                                 <rect key="frame" x="20" y="70" width="1072" height="744"/>
@@ -2917,8 +2916,12 @@ Teachers Can:
                         <viewLayoutGuide key="safeArea" id="c23-5e-ZQc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="1W5-ze-SZm" secondAttribute="bottom" id="5pR-ma-Zcs"/>
                             <constraint firstItem="c23-5e-ZQc" firstAttribute="bottom" secondItem="PLO-ZD-8rx" secondAttribute="bottom" constant="20" id="9lx-qF-JsJ"/>
                             <constraint firstItem="PLO-ZD-8rx" firstAttribute="trailing" secondItem="4Eu-bv-z1k" secondAttribute="trailingMargin" id="CLH-T9-js7"/>
+                            <constraint firstItem="1W5-ze-SZm" firstAttribute="top" secondItem="4Eu-bv-z1k" secondAttribute="top" id="LQX-NS-O98"/>
+                            <constraint firstItem="1W5-ze-SZm" firstAttribute="leading" secondItem="4Eu-bv-z1k" secondAttribute="leading" id="QKB-Nu-t5K"/>
+                            <constraint firstAttribute="trailing" secondItem="1W5-ze-SZm" secondAttribute="trailing" id="XPr-46-nFa"/>
                             <constraint firstItem="PLO-ZD-8rx" firstAttribute="leading" secondItem="4Eu-bv-z1k" secondAttribute="leadingMargin" id="fLf-UM-d4l"/>
                             <constraint firstItem="PLO-ZD-8rx" firstAttribute="top" secondItem="c23-5e-ZQc" secondAttribute="top" id="wPl-GA-ZZo"/>
                         </constraints>
@@ -3484,17 +3487,17 @@ Teachers Can:
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JRs-AH-Hjm">
-                                <rect key="frame" x="127" y="-10" width="450" height="750"/>
+                                <rect key="frame" x="127" y="-10" width="858" height="750"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Eiu-vA-evr">
-                                        <rect key="frame" x="113" y="135" width="224" height="224"/>
+                                        <rect key="frame" x="317" y="135" width="224" height="224"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="224" id="QVw-kc-jxX"/>
                                             <constraint firstAttribute="width" constant="224" id="bS5-eT-KTr"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coppell High School" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QGG-Tq-WUB">
-                                        <rect key="frame" x="76" y="61.5" width="298" height="41"/>
+                                        <rect key="frame" x="280" y="61.5" width="298" height="41"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="34"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -3511,7 +3514,7 @@ Teachers Can:
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="CoppellCowboys" translatesAutoresizingMaskIntoConstraints="NO" id="Xmb-zA-4Uf">
-                                        <rect key="frame" x="299" y="411" width="75" height="75"/>
+                                        <rect key="frame" x="707" y="411" width="75" height="75"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="75" id="Jrx-UK-jtF"/>
                                             <constraint firstAttribute="width" constant="75" id="UXY-SA-aPX"/>
@@ -3529,7 +3532,7 @@ Teachers Can:
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Watermark" translatesAutoresizingMaskIntoConstraints="NO" id="dJ9-G7-j5G">
-                                        <rect key="frame" x="50" y="618" width="350" height="116"/>
+                                        <rect key="frame" x="254" y="618" width="350" height="116"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="350" id="BYM-7z-h76"/>
                                             <constraint firstAttribute="height" constant="116" id="wsw-Hf-eQ2"/>
@@ -3585,7 +3588,7 @@ Teachers Can:
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="fwR-N6-1gy">
-                                        <rect key="frame" x="76" y="415" width="151" height="66"/>
+                                        <rect key="frame" x="76" y="415" width="559" height="66"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STAFF" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lz0-JR-P6h">
                                                 <rect key="frame" x="0.0" y="0.0" width="76" height="30"/>
@@ -4025,10 +4028,10 @@ Teachers Can:
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background 1" translatesAutoresizingMaskIntoConstraints="NO" id="loL-s0-nqj">
-                                <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1112" height="1536"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="JVr-69-y73">
-                                <rect key="frame" x="0.0" y="0.0" width="450" height="834"/>
+                                <rect key="frame" x="0.0" y="0.0" width="450" height="1536"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="450" id="rB2-Ph-NNY"/>
@@ -4081,7 +4084,7 @@ Teachers Can:
                                 </prototypes>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="58" translatesAutoresizingMaskIntoConstraints="NO" id="2KG-Ve-HHN">
-                                <rect key="frame" x="470" y="98" width="622" height="651"/>
+                                <rect key="frame" x="470" y="98" width="622" height="1353"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NCl-1H-tfi">
                                         <rect key="frame" x="0.0" y="0.0" width="622" height="59"/>
@@ -4129,7 +4132,7 @@ Teachers Can:
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="23" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U3Z-Nu-Bvt">
-                                        <rect key="frame" x="0.0" y="564" width="622" height="87"/>
+                                        <rect key="frame" x="0.0" y="564" width="622" height="789"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="365" id="rww-OI-kNN"/>
                                         </constraints>
@@ -4475,7 +4478,7 @@ Teachers Can:
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fDx-Po-I3K">
-                                <rect key="frame" x="230.5" y="661" width="243" height="41"/>
+                                <rect key="frame" x="230.5" y="667.5" width="243" height="34.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="243" id="BiC-Jo-Wgv"/>
                                 </constraints>
@@ -4503,8 +4506,9 @@ Teachers Can:
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please Enter Category" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9pR-7W-Ex7">
-                                <rect key="frame" x="267.5" y="614" width="169.5" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please Enter Category" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9pR-7W-Ex7">
+                                <rect key="frame" x="163" y="614" width="378" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" systemColor="systemRedColor"/>
                                 <nil key="highlightedColor"/>
@@ -4530,7 +4534,6 @@ Teachers Can:
                             <constraint firstItem="bop-RV-L1c" firstAttribute="leading" secondItem="iHm-7M-3Ws" secondAttribute="leading" constant="171" id="IZ5-Dq-WMa"/>
                             <constraint firstItem="Y0W-S6-i45" firstAttribute="width" secondItem="6i8-i4-Bdv" secondAttribute="width" id="JqH-9n-JAj"/>
                             <constraint firstItem="JU1-ag-Ebg" firstAttribute="trailing" secondItem="iHm-7M-3Ws" secondAttribute="trailing" id="KL4-nV-fgZ"/>
-                            <constraint firstItem="9pR-7W-Ex7" firstAttribute="centerX" secondItem="PdA-DZ-zVm" secondAttribute="centerX" id="LcX-82-QGl"/>
                             <constraint firstItem="V2S-wv-Co1" firstAttribute="top" secondItem="GMS-Az-uqr" secondAttribute="bottom" constant="50" id="NOm-69-Bej"/>
                             <constraint firstItem="6i8-i4-Bdv" firstAttribute="top" secondItem="iHm-7M-3Ws" secondAttribute="top" constant="80" id="OrF-t9-6td"/>
                             <constraint firstItem="JU1-ag-Ebg" firstAttribute="top" secondItem="iHm-7M-3Ws" secondAttribute="top" id="P6A-8L-Ayb"/>
@@ -4539,13 +4542,11 @@ Teachers Can:
                             <constraint firstItem="GMS-Az-uqr" firstAttribute="leading" secondItem="iHm-7M-3Ws" secondAttribute="leading" constant="171" id="UAC-d8-pub"/>
                             <constraint firstAttribute="trailingMargin" secondItem="6i8-i4-Bdv" secondAttribute="trailing" constant="-148" id="VRW-0o-6qx"/>
                             <constraint firstItem="iHm-7M-3Ws" firstAttribute="trailing" secondItem="DAy-Zn-Aol" secondAttribute="trailing" constant="20" id="ZWW-67-2gc"/>
-                            <constraint firstItem="fDx-Po-I3K" firstAttribute="top" secondItem="9pR-7W-Ex7" secondAttribute="bottom" constant="26.5" id="a22-oQ-qha"/>
                             <constraint firstItem="JU1-ag-Ebg" firstAttribute="leading" secondItem="iHm-7M-3Ws" secondAttribute="leading" id="cs6-1r-FVO"/>
                             <constraint firstItem="V2S-wv-Co1" firstAttribute="leading" secondItem="iHm-7M-3Ws" secondAttribute="leading" constant="171" id="g2v-uk-s2A"/>
                             <constraint firstItem="V2S-wv-Co1" firstAttribute="top" secondItem="DAy-Zn-Aol" secondAttribute="bottom" constant="49" id="h1q-xj-yWd"/>
                             <constraint firstItem="iHm-7M-3Ws" firstAttribute="trailing" secondItem="Y0W-S6-i45" secondAttribute="trailing" constant="20" id="hnS-IK-Xn9"/>
                             <constraint firstItem="GMS-Az-uqr" firstAttribute="top" secondItem="6i8-i4-Bdv" secondAttribute="bottom" constant="58" id="kby-nt-Lqx"/>
-                            <constraint firstItem="9pR-7W-Ex7" firstAttribute="top" secondItem="Y0W-S6-i45" secondAttribute="bottom" constant="47" id="qUX-h4-CI5"/>
                             <constraint firstItem="iHm-7M-3Ws" firstAttribute="trailing" secondItem="V2S-wv-Co1" secondAttribute="trailing" constant="20" id="rAN-DB-7Vm"/>
                             <constraint firstItem="bop-RV-L1c" firstAttribute="width" secondItem="6i8-i4-Bdv" secondAttribute="width" id="t5f-9m-tpz"/>
                             <constraint firstItem="iHm-7M-3Ws" firstAttribute="trailing" secondItem="Flu-Jo-dDL" secondAttribute="trailing" constant="20" id="tGT-Ks-95e"/>
