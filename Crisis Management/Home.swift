@@ -42,7 +42,7 @@ class HomeViewController: UIViewController, BackTitle {
             btn.layer.masksToBounds = true
         }
     }
-
+    
     // Call 911 if necessary
     @IBAction func call911(_ sender: UIButton) {
         let alertController = UIAlertController(title: "Alert", message: "Are you sure you want to call 911", preferredStyle: .alert)
@@ -58,12 +58,13 @@ class HomeViewController: UIViewController, BackTitle {
     
     // Call In School or Out of School Version of 'Call An Admin' Screen
     @IBAction func callAdminPressed(_ sender: UIButton) {
-        var callAdminController: UIViewController!
-        if InOutSchoolController.insideSchool {
-            callAdminController = storyboard!.instantiateViewController(withIdentifier: "adminInSchool") as! CallAdminInSchoolController
-        } else {
-            callAdminController = storyboard!.instantiateViewController(withIdentifier: "adminInSchool") as! CallAdminOutSchoolController
-        }
-        self.navigationController?.pushViewController(callAdminController, animated: true)
+        //        var callAdminController: UIViewController!
+        //        if InOutSchoolController.insideSchool {
+        //            callAdminController = storyboard!.instantiateViewController(withIdentifier: "adminInSchool") as! CallAdminInSchoolController
+        //        } else {
+        //
+        //        }
+        //        self.navigationController?.pushViewController(callAdminController, animated: true)
+        //    }
     }
 }

@@ -16,7 +16,7 @@ class CallAdminInSchoolController: UIViewController, BackTitle, UIDocumentPicker
     var txtString: String!
     var backTitle: String!
     let documentPicker = UIDocumentPickerViewController(documentTypes: ["public.text"], in: .import)
-    var archiveURLs: [URL] = []
+    var archiveURLs: [URL] = [URL(fileURLWithPath: "www.apple.com"),URL(fileURLWithPath: "www.apple.com"),URL(fileURLWithPath: "www.apple.com"),URL(fileURLWithPath: "www.apple.com"),URL(fileURLWithPath: "www.apple.com"),URL(fileURLWithPath: "www.apple.com"),URL(fileURLWithPath: "www.apple.com"),URL(fileURLWithPath: "www.apple.com"),URL(fileURLWithPath: "www.apple.com"),URL(fileURLWithPath: "www.apple.com"),URL(fileURLWithPath: "www.apple.com"),URL(fileURLWithPath: "www.apple.com"),URL(fileURLWithPath: "www.apple.com"),URL(fileURLWithPath: "www.apple.com")]
     lazy var numAdminURL: URL = documentsDirectory.appendingPathComponent("numAdmin")
         .appendingPathExtension("plist")
     let documentsDirectory = FileManager.default.urls(for: .documentDirectory,in: .userDomainMask).first!

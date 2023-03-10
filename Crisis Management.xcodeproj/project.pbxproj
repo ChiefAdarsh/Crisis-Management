@@ -25,7 +25,6 @@
 		65E79A0A29A6B2A400E848F1 /* StudentHelpResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E79A0929A6B2A400E848F1 /* StudentHelpResources.swift */; };
 		65E79A0C29A6B2E200E848F1 /* Teacher Files.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E79A0B29A6B2E200E848F1 /* Teacher Files.swift */; };
 		65E79A0E29A6B39200E848F1 /* StudentHelpTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E79A0D29A6B39200E848F1 /* StudentHelpTableViewController.swift */; };
-		6953852929BBAFDA0037750F /* AdminContacts.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6953852829BBAFDA0037750F /* AdminContacts.txt */; };
 		7A8943F82919CAA700C53543 /* ReportIssue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8943F72919CAA700C53543 /* ReportIssue.swift */; };
 		7A8943FA2919DBAB00C53543 /* CallAdmin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8943F92919DBAB00C53543 /* CallAdmin.swift */; };
 /* End PBXBuildFile section */
@@ -51,7 +50,6 @@
 		65E79A0929A6B2A400E848F1 /* StudentHelpResources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentHelpResources.swift; sourceTree = "<group>"; };
 		65E79A0B29A6B2E200E848F1 /* Teacher Files.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Teacher Files.swift"; sourceTree = "<group>"; };
 		65E79A0D29A6B39200E848F1 /* StudentHelpTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentHelpTableViewController.swift; sourceTree = "<group>"; };
-		6953852829BBAFDA0037750F /* AdminContacts.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = AdminContacts.txt; path = "../../../school/3 & 7 Practicum in IT/AdminContacts.txt"; sourceTree = "<group>"; };
 		7A8943F72919CAA700C53543 /* ReportIssue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportIssue.swift; sourceTree = "<group>"; };
 		7A8943F92919DBAB00C53543 /* CallAdmin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallAdmin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,7 +94,6 @@
 				652A84BF2914E1100025B2E6 /* StudentProtocols.swift */,
 				65E79A0B29A6B2E200E848F1 /* Teacher Files.swift */,
 				7A8943F92919DBAB00C53543 /* CallAdmin.swift */,
-				6953852829BBAFDA0037750F /* AdminContacts.txt */,
 				657808A329118D2C00E72F43 /* Main.storyboard */,
 				657808A629118D2D00E72F43 /* Assets.xcassets */,
 				657808A829118D2D00E72F43 /* LaunchScreen.storyboard */,
@@ -181,7 +178,6 @@
 				657808AA29118D2D00E72F43 /* LaunchScreen.storyboard in Resources */,
 				657808A729118D2D00E72F43 /* Assets.xcassets in Resources */,
 				657808A529118D2C00E72F43 /* Main.storyboard in Resources */,
-				6953852929BBAFDA0037750F /* AdminContacts.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
