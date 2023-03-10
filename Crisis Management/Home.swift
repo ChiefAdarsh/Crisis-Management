@@ -62,7 +62,7 @@ class HomeViewController: UIViewController, BackTitle {
         if InOutSchoolController.insideSchool {
             callAdminController = storyboard!.instantiateViewController(withIdentifier: "adminInSchool") as! CallAdminInSchoolController
         } else {
-            callAdminController = storyboard!.instantiateViewController(withIdentifier: "adminOutSchool") as! CallAdminOutSchoolController
+            callAdminController = storyboard!.instantiateViewController(withIdentifier: "adminInSchool") as! CallAdminOutSchoolController
         }
         self.navigationController?.pushViewController(callAdminController, animated: true)
     }
