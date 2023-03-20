@@ -2801,8 +2801,8 @@ Cg
                                     <constraint firstAttribute="height" constant="351" id="ZIT-PV-EV0"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="CHS Crisis Management" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vic-b2-Job">
-                                <rect key="frame" x="293.5" y="130" width="525" height="60"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Crisis Management" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vic-b2-Job">
+                                <rect key="frame" x="346.5" y="130" width="419.5" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="c16-jC-3aZ"/>
                                 </constraints>
@@ -4214,10 +4214,14 @@ Teachers Can:
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="tin-ml-3hS" firstAttribute="height" secondItem="9wt-fI-eUr" secondAttribute="height" id="tS7-Pu-W5h"/>
+                                </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J4j-f1-wJh">
                                 <rect key="frame" x="277" y="673" width="150" height="100.5"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="100.5" id="nGh-rU-x4r"/>
                                     <constraint firstAttribute="width" constant="150" id="qqr-q8-nW8"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
@@ -4557,9 +4561,9 @@ Teachers Can:
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="g2K-FP-Mqr"/>
-        <segue reference="BlH-iu-oEn"/>
+        <segue reference="BDs-uR-BJj"/>
         <segue reference="heE-ca-QwX"/>
-        <segue reference="ikP-HX-Kxx"/>
+        <segue reference="YFM-d9-O2o"/>
         <segue reference="onY-RW-VIk"/>
         <segue reference="nKW-bZ-WCm"/>
     </inferredMetricsTieBreakers>
