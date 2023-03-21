@@ -77,6 +77,7 @@ class HomeViewController: UIViewController, BackTitle, UIDocumentPickerDelegate 
         var arrOfResourceData = [[String]]()
         
         arrOfResourceData.append(["test", "test", "test", "test", "test", "test"])
+        arrOfResourceData.append(["test1", "test1", "test1", "test1", "test1", "test1"])
         
         for(elements) in arrOfResourceData.enumerated()
         {
@@ -117,9 +118,18 @@ class HomeViewController: UIViewController, BackTitle, UIDocumentPickerDelegate 
     func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentAt url: URL) {
         
         print("a file was selected")
-        let rows = NSArray(contentsOfCSVURL: url, options: CHCSVParserOptions.sanitizesFields)!
+        let rows = NSArray(contentsOfCSVURL: url, options: CHCSVParserOptions.sanitizesFields) as! [[String]]
+        var countingHere = 0
         for row in rows{
-            print(row)
+            //print(row)
+            if countingHere == 0{
+                
+            }
+            else{
+                var tempResource = Resource(category: row[0], name: row[1], contact: row[2], address: row[3], city: "", state: "", zip: "", website: row[4], addInfo: row[5])
+                yourArray.append(tempResource)
+            }
+            countingHere+=1
         }
     }
     
