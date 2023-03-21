@@ -7,8 +7,8 @@
 
 import Foundation
 import UIKit
-
-class HomeViewController: UIViewController, BackTitle {
+import UniformTypeIdentifiers
+class HomeViewController: UIViewController, BackTitle, UIDocumentPickerDelegate {
     
     /* Variables from Interface Builder */
     
@@ -57,6 +57,77 @@ class HomeViewController: UIViewController, BackTitle {
     }
     
     // Call In School or Out of School Version of 'Call An Admin' Screen
+    @IBAction func generateCSVFile(_ sender: Any) {
+        
+        let sFileName = "test.csv"
+        let documentDirectoryPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
+        let documentURL = URL(fileURLWithPath: documentDirectoryPath).appendingPathComponent(sFileName)
+        let output = OutputStream.toMemory()
+        
+        let csvWriter = CHCSVWriter(outputStream: output, encoding: String.Encoding.utf8.rawValue, delimiter: ",".utf16.first!)
+        
+        csvWriter?.writeField("NAME")
+        csvWriter?.writeField("CATEGORY")
+        csvWriter?.writeField("CONTACT")
+        csvWriter?.writeField("ADDRESS")
+        csvWriter?.writeField("WEBSITE")
+        csvWriter?.writeField("ADDITIONAL_INFO")
+        csvWriter?.finishLine()
+        
+        var arrOfResourceData = [[String]]()
+        
+        arrOfResourceData.append(["test", "test", "test", "test", "test", "test"])
+        
+        for(elements) in arrOfResourceData.enumerated()
+        {
+            csvWriter?.writeField(elements.element[0])
+            csvWriter?.writeField(elements.element[1])
+            csvWriter?.writeField(elements.element[2])
+            csvWriter?.writeField(elements.element[3])
+            csvWriter?.writeField(elements.element[4])
+            csvWriter?.writeField(elements.element[5])
+            csvWriter?.finishLine()
+        }
+        
+        csvWriter?.closeStream()
+        
+        let buffer = (output.property(forKey: .dataWrittenToMemoryStreamKey) as? Data)!
+        
+        do{
+            try buffer.write(to: documentURL)
+        }
+        catch{
+            
+        }
+    }
+    
+    
+    
+    @IBAction func importCSV(_ sender: Any) {
+        let supportedFiles : [UTType] = [UTType.data]
+        
+        let controller = UIDocumentPickerViewController(forOpeningContentTypes: supportedFiles,asCopy: true)
+        
+        controller.delegate = self
+        controller.allowsMultipleSelection = false
+        present(controller, animated: true, completion: nil)
+        
+    }
+    
+    func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentAt url: URL) {
+        
+        print("a file was selected")
+        let rows = NSArray(contentsOfCSVURL: url, options: CHCSVParserOptions.sanitizesFields)!
+        for row in rows{
+            print(row)
+        }
+    }
+    
+    
+    
+    
+    
+    
     @IBAction func callAdminPressed(_ sender: UIButton) {
         //        var callAdminController: UIViewController!
         //        if InOutSchoolController.insideSchool {

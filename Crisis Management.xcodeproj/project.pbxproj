@@ -27,6 +27,7 @@
 		65E79A0E29A6B39200E848F1 /* StudentHelpTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E79A0D29A6B39200E848F1 /* StudentHelpTableViewController.swift */; };
 		7A8943F82919CAA700C53543 /* ReportIssue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8943F72919CAA700C53543 /* ReportIssue.swift */; };
 		7A8943FA2919DBAB00C53543 /* CallAdmin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8943F92919DBAB00C53543 /* CallAdmin.swift */; };
+		B2D16B4F29C8DEB7007A30B2 /* CHCSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = B2D16B4D29C8DEB7007A30B2 /* CHCSVParser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,9 @@
 		65E79A0D29A6B39200E848F1 /* StudentHelpTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentHelpTableViewController.swift; sourceTree = "<group>"; };
 		7A8943F72919CAA700C53543 /* ReportIssue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportIssue.swift; sourceTree = "<group>"; };
 		7A8943F92919DBAB00C53543 /* CallAdmin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallAdmin.swift; sourceTree = "<group>"; };
+		B2D16B4C29C8DEB6007A30B2 /* Crisis Management-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Crisis Management-Bridging-Header.h"; sourceTree = "<group>"; };
+		B2D16B4D29C8DEB7007A30B2 /* CHCSVParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHCSVParser.m; sourceTree = "<group>"; };
+		B2D16B4E29C8DEB7007A30B2 /* CHCSVParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHCSVParser.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,8 @@
 			isa = PBXGroup;
 			children = (
 				6578089D29118D2C00E72F43 /* AppDelegate.swift */,
+				B2D16B4E29C8DEB7007A30B2 /* CHCSVParser.h */,
+				B2D16B4D29C8DEB7007A30B2 /* CHCSVParser.m */,
 				B2446FF829A7F4B00077691B /* Resources */,
 				6578089F29118D2C00E72F43 /* SceneDelegate.swift */,
 				657808A129118D2C00E72F43 /* InOutSchool.swift */,
@@ -98,6 +104,7 @@
 				657808A629118D2D00E72F43 /* Assets.xcassets */,
 				657808A829118D2D00E72F43 /* LaunchScreen.storyboard */,
 				657808AB29118D2D00E72F43 /* Info.plist */,
+				B2D16B4C29C8DEB6007A30B2 /* Crisis Management-Bridging-Header.h */,
 			);
 			path = "Crisis Management";
 			sourceTree = "<group>";
@@ -149,6 +156,7 @@
 				TargetAttributes = {
 					6578089929118D2C00E72F43 = {
 						CreatedOnToolsVersion = 13.4.1;
+						LastSwiftMigration = 1420;
 					};
 				};
 			};
@@ -196,6 +204,7 @@
 				65BCCCCF29A6B410003CA681 /* ViewControllerHelps.swift in Sources */,
 				652A84C02914E1100025B2E6 /* StudentProtocols.swift in Sources */,
 				1783567C2919938E00B33C56 /* Home.swift in Sources */,
+				B2D16B4F29C8DEB7007A30B2 /* CHCSVParser.m in Sources */,
 				65E79A0A29A6B2A400E848F1 /* StudentHelpResources.swift in Sources */,
 				659487D929BA4B1E00400A9C /* RecsourcePullDownViewController.swift in Sources */,
 				1783567E291993FD00B33C56 /* Settings.swift in Sources */,
@@ -349,12 +358,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FPP8KJ4225;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Crisis Management/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Crisis Management";
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -372,6 +383,8 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Crisis Management/Crisis Management-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
@@ -382,12 +395,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FPP8KJ4225;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Crisis Management/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Crisis Management";
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -405,6 +420,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Crisis Management/Crisis Management-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
