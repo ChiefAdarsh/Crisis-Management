@@ -76,8 +76,12 @@ class HomeViewController: UIViewController, BackTitle, UIDocumentPickerDelegate 
         
         var arrOfResourceData = [[String]]()
         
-        arrOfResourceData.append(["test", "test", "test", "test", "test", "test"])
-        arrOfResourceData.append(["test1", "test1", "test1", "test1", "test1", "test1"])
+        //arrOfResourceData.append(["Hot Springs", "Psych", "123-456-7890", "101 Burger Drive", "www.com", "test resource 1"])
+        //arrOfResourceData.append(["Cold Springs", "Eating Disorder", "098-765-4321", "202 Taco Drive", "www.com", "test resource 2"])
+        //arrOfResourceData.append(["Lukewarm Springs", "Crisis Line", "321-654-0987", "303 Pizza Drive", "www.com", "test resource 3"])
+        //arrOfResourceData.append(["Warm Springs", "Domestic Violence", "213-546-9870", "404 Apple Drive", "www.com", "test resource 4"])
+        //arrOfResourceData.append(["Chilly Springs", "Counseling Center", "563-784-1355", "505 Noodle Drive", "www.com", "test resource 5"])
+        //arrOfResourceData.append(["Freezing Springs", "Psych", "634-654-6786", "606 ", "606 Pineapple Drive", "test resource 6"])
         
         for(elements) in arrOfResourceData.enumerated()
         {
@@ -120,14 +124,24 @@ class HomeViewController: UIViewController, BackTitle, UIDocumentPickerDelegate 
         print("a file was selected")
         let rows = NSArray(contentsOfCSVURL: url, options: CHCSVParserOptions.sanitizesFields) as! [[String]]
         var countingHere = 0
+        var che = false
         for row in rows{
             //print(row)
             if countingHere == 0{
                 
             }
             else{
-                var tempResource = Resource(category: row[0], name: row[1], contact: row[2], address: row[3], city: "", state: "", zip: "", website: row[4], addInfo: row[5])
-                yourArray.append(tempResource)
+                var tempResource = Resource(category: row[1], name: row[0], contact: row[2], address: row[3], city: "", state: "", zip: "", website: row[4], addInfo: row[5])
+                for re in yourArray{
+                    if re.name == row[0]{
+                        che = true
+                    }
+                    
+                }
+                if !che{
+                    yourArray.append(tempResource)
+                }
+                
             }
             countingHere+=1
         }
