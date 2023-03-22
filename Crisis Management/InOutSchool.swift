@@ -11,6 +11,11 @@ class InOutSchoolController: UIViewController, BackTitle {
     
     /* Variables from Interface Builder */
     
+    @IBOutlet var importDatabaseButton: UIButton!
+    @IBOutlet var importCsvFiles: UIButton!
+    @IBOutlet var manuallyImport: UIButton!
+    
+    
     @IBOutlet weak var background: UIImageView!
     @IBOutlet var cisdLogo: UIImageView!
     
@@ -30,6 +35,13 @@ class InOutSchoolController: UIViewController, BackTitle {
     var homeViewController: HomeViewController!
     static var insideSchool: Bool!
     
+    
+    @IBAction func downloadImportFiles(_ sender: Any) {
+        importDatabaseButton.isHidden = false
+        importCsvFiles.isHidden = false
+        manuallyImport.isHidden = false
+    }
+    
     // When the view is initially loaded
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +57,10 @@ class InOutSchoolController: UIViewController, BackTitle {
         outSchoolButton.layer.cornerRadius = 25
         outSchoolButton.layer.masksToBounds = true
 
+        importDatabaseButton.isHidden = true
+        importCsvFiles.isHidden = true
+        manuallyImport.isHidden = true
+        
         
         
     }
