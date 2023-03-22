@@ -58,7 +58,9 @@ class HomeViewController: UIViewController, BackTitle, UIDocumentPickerDelegate 
     
     // Call In School or Out of School Version of 'Call An Admin' Screen
     @IBAction func generateCSVFile(_ sender: Any) {
-        
+        let downloadController = UIAlertController(title: "Downloading", message: "A template for the csv has been downloaded to your files app. Please edit it with a file editing app and save the file as a CSV with the information you want to add.", preferredStyle: .alert)
+        downloadController.addAction(UIAlertAction(title: "Ok", style: .default))
+        self.present(downloadController, animated: true, completion: nil)
         let sFileName = "test.csv"
         let documentDirectoryPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
         let documentURL = URL(fileURLWithPath: documentDirectoryPath).appendingPathComponent(sFileName)
@@ -138,9 +140,10 @@ class HomeViewController: UIViewController, BackTitle, UIDocumentPickerDelegate 
                     }
                     
                 }
-                if !che{
+                if che == false{
                     yourArray.append(tempResource)
                 }
+                che = false
                 
             }
             countingHere+=1
