@@ -68,13 +68,19 @@ class ViewControllerResPage: UIViewController {
         }
         someTableView.delegate = self
         someTableView.dataSource = self
-        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(ViewControllerResPage.tapFunction))
+                resWeb.isUserInteractionEnabled = true
+                resWeb.addGestureRecognizer(tap)
         super.viewDidLoad()
         someTableView.separatorStyle = .none
     }
 
-    
+    @objc
+        func tapFunction(sender:UITapGestureRecognizer) {
+            UIApplication.shared.open(URL(string: "https://" + (resWeb.text ?? ""))! as URL, options: [:], completionHandler: nil)        }
+
 }
+
 
 extension ViewControllerResPage: UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
