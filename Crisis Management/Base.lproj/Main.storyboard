@@ -2644,16 +2644,92 @@ Cg
             <objects>
                 <viewController id="P7h-il-48a" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uSR-ex-jb4">
-                        <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
+                        <rect key="frame" x="0.0" y="0.0" width="704" height="794"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="Background 1" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LtV-gj-Tlf">
+                                <rect key="frame" x="-672" y="-371" width="2048" height="1536"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="B7q-6U-mfK">
+                                <rect key="frame" x="102" y="100" width="500" height="594"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="95U-ee-L9i">
+                                        <rect key="frame" x="0.0" y="0.0" width="500" height="131.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="270" id="hcG-ms-YDu"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" cornerStyle="medium">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Import Database">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.23921570180000001" green="0.50196081400000003" blue="0.94117647410000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <font key="NSFont" size="30" name="Helvetica"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hs7-6x-SRU">
+                                        <rect key="frame" x="0.0" y="231.5" width="500" height="131"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="270" id="C2s-5S-5Se"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" cornerStyle="medium">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Manually Import">
+                                                    <attributes>
+                                                        <font key="NSFont" size="30" name="Helvetica"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iEg-gD-QtN">
+                                        <rect key="frame" x="0.0" y="462.5" width="500" height="131.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="270" id="zAs-Sq-Uud"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" cornerStyle="medium">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Import CSV Files">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.23921570180000001" green="0.50196081400000003" blue="0.94117647410000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <font key="NSFont" size="30" name="Helvetica"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="iEg-gD-QtN" firstAttribute="height" secondItem="95U-ee-L9i" secondAttribute="height" id="TdU-bz-vVX"/>
+                                    <constraint firstItem="iEg-gD-QtN" firstAttribute="top" secondItem="Hs7-6x-SRU" secondAttribute="bottom" constant="100" id="WEl-zj-Ifo"/>
+                                    <constraint firstItem="Hs7-6x-SRU" firstAttribute="height" secondItem="95U-ee-L9i" secondAttribute="height" id="abm-8f-xwd"/>
+                                    <constraint firstAttribute="width" constant="500" id="c5a-bG-syd"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="oiD-2D-Kcu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LtV-gj-Tlf" firstAttribute="centerX" secondItem="uSR-ex-jb4" secondAttribute="centerX" id="9OP-Ri-hwK"/>
+                            <constraint firstItem="LtV-gj-Tlf" firstAttribute="centerY" secondItem="uSR-ex-jb4" secondAttribute="centerY" id="IQf-ss-woC"/>
+                            <constraint firstItem="oiD-2D-Kcu" firstAttribute="bottom" secondItem="B7q-6U-mfK" secondAttribute="bottom" constant="100" id="PeB-oL-jQF"/>
+                            <constraint firstItem="B7q-6U-mfK" firstAttribute="top" secondItem="oiD-2D-Kcu" secondAttribute="top" constant="100" id="TKK-OO-42h"/>
+                            <constraint firstItem="B7q-6U-mfK" firstAttribute="centerY" secondItem="uSR-ex-jb4" secondAttribute="centerY" id="mvc-UH-JfH"/>
+                            <constraint firstItem="B7q-6U-mfK" firstAttribute="centerX" secondItem="uSR-ex-jb4" secondAttribute="centerX" id="rpm-YR-t6t"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Yf0-yN-bUr"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wUR-SM-QX9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-189" y="-663"/>
+            <point key="canvasLocation" x="-189.3884892086331" y="-663.30935251798564"/>
         </scene>
         <!--In Out School-->
         <scene sceneID="oJ2-dz-3c0">
@@ -2786,6 +2862,7 @@ Cg
                                 <buttonConfiguration key="configuration" style="plain" image="download_111133" title=""/>
                                 <connections>
                                     <action selector="downloadImportFiles:" destination="d7l-md-VJ3" eventType="touchUpInside" id="lT2-uw-EGC"/>
+                                    <segue destination="P7h-il-48a" kind="showDetail" id="TPL-UW-MoH"/>
                                 </connections>
                             </button>
                         </subviews>
