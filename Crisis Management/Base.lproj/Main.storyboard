@@ -2715,60 +2715,93 @@ Cg
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="42"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tHP-Cb-lZr">
-                                <rect key="frame" x="421" y="658" width="270" height="80"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="pGk-eh-Xgt">
+                                <rect key="frame" x="108" y="658" width="896" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OWX-x8-oVC">
+                                        <rect key="frame" x="0.0" y="0.0" width="270" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="270" id="8vk-ze-UML"/>
+                                            <constraint firstAttribute="height" constant="80" id="lmx-dj-JoN"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" cornerStyle="medium">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Import Database">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.23921570180000001" green="0.50196081400000003" blue="0.94117647410000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <font key="NSFont" size="30" name="Helvetica"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tHP-Cb-lZr">
+                                        <rect key="frame" x="313" y="0.0" width="270" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="270" id="dfI-02-w4H"/>
+                                            <constraint firstAttribute="height" constant="80" id="eUO-LG-8MU"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" cornerStyle="medium">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Import CSV Files">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.23921570180000001" green="0.50196081400000003" blue="0.94117647410000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <font key="NSFont" size="30" name="Helvetica"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yex-bd-gWG">
+                                        <rect key="frame" x="626" y="0.0" width="270" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="MOy-0g-Yal"/>
+                                            <constraint firstAttribute="width" constant="270" id="RU5-aG-OYn"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" cornerStyle="medium">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Manually Import">
+                                                    <attributes>
+                                                        <font key="NSFont" size="30" name="Helvetica"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Yex-bd-gWG" firstAttribute="width" secondItem="OWX-x8-oVC" secondAttribute="width" id="KvC-aQ-Vpw"/>
+                                    <constraint firstItem="tHP-Cb-lZr" firstAttribute="width" secondItem="OWX-x8-oVC" secondAttribute="width" id="ThZ-ld-9dS"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z8k-tS-CZ2">
+                                <rect key="frame" x="29" y="54" width="96" height="86"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" cornerStyle="medium">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Import CSV Files">
-                                            <attributes>
-                                                <font key="NSFont" size="30" name="Helvetica"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </buttonConfiguration>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yex-bd-gWG">
-                                <rect key="frame" x="734" y="658" width="270" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" cornerStyle="medium">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Manually Import">
-                                            <attributes>
-                                                <font key="NSFont" size="30" name="Helvetica"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </buttonConfiguration>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OWX-x8-oVC">
-                                <rect key="frame" x="107" y="658" width="270" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" cornerStyle="medium">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Import Database">
-                                            <attributes>
-                                                <font key="NSFont" size="30" name="Helvetica"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </buttonConfiguration>
+                                <buttonConfiguration key="configuration" style="plain" image="download_111133" title=""/>
+                                <connections>
+                                    <action selector="downloadImportFiles:" destination="d7l-md-VJ3" eventType="touchUpInside" id="lT2-uw-EGC"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="h7P-4o-38l"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="BKk-tH-tBi" firstAttribute="centerX" secondItem="gjn-j6-6KT" secondAttribute="centerX" id="1Hh-4q-K3d"/>
+                            <constraint firstItem="pGk-eh-Xgt" firstAttribute="top" secondItem="gFs-Lc-Jh1" secondAttribute="bottom" constant="116" id="4LJ-Eb-Dnk"/>
                             <constraint firstItem="gFs-Lc-Jh1" firstAttribute="centerY" secondItem="gjn-j6-6KT" secondAttribute="centerY" id="5UE-bx-4yK"/>
                             <constraint firstAttribute="bottom" secondItem="lck-0r-CDg" secondAttribute="bottom" id="7gE-Ci-28o"/>
                             <constraint firstAttribute="trailing" secondItem="lck-0r-CDg" secondAttribute="trailing" id="9MM-WC-RbR"/>
+                            <constraint firstItem="pGk-eh-Xgt" firstAttribute="leading" secondItem="h7P-4o-38l" secondAttribute="leading" constant="108" id="PTQ-A1-u5k"/>
+                            <constraint firstItem="pGk-eh-Xgt" firstAttribute="centerX" secondItem="gjn-j6-6KT" secondAttribute="centerX" id="S4g-B2-5cH"/>
                             <constraint firstItem="gFs-Lc-Jh1" firstAttribute="centerX" secondItem="gjn-j6-6KT" secondAttribute="centerX" id="WN7-X1-FXc"/>
                             <constraint firstItem="lck-0r-CDg" firstAttribute="top" secondItem="gjn-j6-6KT" secondAttribute="top" id="bb8-jl-A0h"/>
+                            <constraint firstItem="h7P-4o-38l" firstAttribute="trailing" secondItem="pGk-eh-Xgt" secondAttribute="trailing" constant="108" id="e64-HW-g89"/>
                             <constraint firstItem="lck-0r-CDg" firstAttribute="leading" secondItem="gjn-j6-6KT" secondAttribute="leading" id="fkV-PX-jnc"/>
                             <constraint firstItem="BKk-tH-tBi" firstAttribute="bottom" secondItem="h7P-4o-38l" secondAttribute="top" constant="61" id="xth-4c-qL1"/>
                         </constraints>
@@ -2786,7 +2819,10 @@ Cg
                         </userDefinedRuntimeAttributes>
                     </navigationItem>
                     <connections>
+                        <outlet property="importCsvFiles" destination="tHP-Cb-lZr" id="w9n-Is-Z0u"/>
+                        <outlet property="importDatabaseButton" destination="OWX-x8-oVC" id="nTA-0v-9gU"/>
                         <outlet property="inSchoolButton" destination="8gv-eP-UEP" id="ugX-BP-QdC"/>
+                        <outlet property="manuallyImport" destination="Yex-bd-gWG" id="3pF-fp-Eol"/>
                         <outlet property="outSchoolButton" destination="EfZ-3G-thS" id="Oic-Ql-pLs"/>
                         <outlet property="reportIssueLabel" destination="BKk-tH-tBi" id="hnu-Jm-FEF"/>
                         <outlet property="settingsButton" destination="7gm-tT-3E0" id="Uw9-3Q-w0F"/>
@@ -3571,17 +3607,17 @@ Teachers Can:
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JRs-AH-Hjm">
-                                <rect key="frame" x="127" y="-10" width="858" height="750"/>
+                                <rect key="frame" x="127" y="-10" width="450" height="750"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Eiu-vA-evr">
-                                        <rect key="frame" x="317" y="135" width="224" height="224"/>
+                                        <rect key="frame" x="113" y="135" width="224" height="224"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="224" id="QVw-kc-jxX"/>
                                             <constraint firstAttribute="width" constant="224" id="bS5-eT-KTr"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coppell High School" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QGG-Tq-WUB">
-                                        <rect key="frame" x="280" y="61.5" width="298" height="41"/>
+                                        <rect key="frame" x="76" y="61.5" width="298" height="41"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="34"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -3598,7 +3634,7 @@ Teachers Can:
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="CoppellCowboys" translatesAutoresizingMaskIntoConstraints="NO" id="Xmb-zA-4Uf">
-                                        <rect key="frame" x="707" y="411" width="75" height="75"/>
+                                        <rect key="frame" x="299" y="411" width="75" height="75"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="75" id="Jrx-UK-jtF"/>
                                             <constraint firstAttribute="width" constant="75" id="UXY-SA-aPX"/>
@@ -3616,7 +3652,7 @@ Teachers Can:
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Watermark" translatesAutoresizingMaskIntoConstraints="NO" id="dJ9-G7-j5G">
-                                        <rect key="frame" x="254" y="618" width="350" height="116"/>
+                                        <rect key="frame" x="50" y="618" width="350" height="116"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="350" id="BYM-7z-h76"/>
                                             <constraint firstAttribute="height" constant="116" id="wsw-Hf-eQ2"/>
@@ -3672,7 +3708,7 @@ Teachers Can:
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="fwR-N6-1gy">
-                                        <rect key="frame" x="76" y="415" width="559" height="66"/>
+                                        <rect key="frame" x="76" y="415" width="151" height="66"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STAFF" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lz0-JR-P6h">
                                                 <rect key="frame" x="0.0" y="0.0" width="76" height="30"/>
@@ -4022,17 +4058,17 @@ Teachers Can:
                                 <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SHOOOSH" id="PAE-ek-tQP" customClass="TableViewCellSHEESH" customModule="Crisis_Management" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="1012" height="45"/>
+                                        <rect key="frame" x="0.0" y="50" width="1012" height="45.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PAE-ek-tQP" id="Al3-Hb-PX5">
-                                            <rect key="frame" x="0.0" y="0.0" width="1012" height="45"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="1012" height="45.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IYV-eC-bfh">
-                                                    <rect key="frame" x="0.0" y="0.0" width="1012" height="45"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="1012" height="45.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Pd-BD-QUs">
-                                                            <rect key="frame" x="8" y="12" width="996" height="21"/>
+                                                            <rect key="frame" x="8" y="12" width="996" height="21.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -4680,6 +4716,7 @@ Teachers Can:
         <image name="Watermark" width="500" height="116"/>
         <image name="checkmark.circle.fill" catalog="system" width="128" height="123"/>
         <image name="doc.fill.badge.plus" catalog="system" width="120" height="128"/>
+        <image name="download_111133" width="72" height="72"/>
         <image name="house.fill" catalog="system" width="128" height="104"/>
         <image name="info.circle.fill" catalog="system" width="128" height="123"/>
         <image name="list.bullet.rectangle.portrait.fill" catalog="system" width="115" height="128"/>

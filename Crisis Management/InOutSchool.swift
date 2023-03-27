@@ -37,9 +37,16 @@ class InOutSchoolController: UIViewController, BackTitle {
     
     
     @IBAction func downloadImportFiles(_ sender: Any) {
-        importDatabaseButton.isHidden = false
-        importCsvFiles.isHidden = false
-        manuallyImport.isHidden = false
+        if importDatabaseButton.isHidden {
+            importDatabaseButton.isHidden = false
+            importCsvFiles.isHidden = false
+            manuallyImport.isHidden = false
+        } else {
+            importDatabaseButton.isHidden = true
+            importCsvFiles.isHidden = true
+            manuallyImport.isHidden = true
+        }
+        
     }
     
     // When the view is initially loaded
@@ -61,8 +68,7 @@ class InOutSchoolController: UIViewController, BackTitle {
         importCsvFiles.isHidden = true
         manuallyImport.isHidden = true
         
-        
-        
+        importDatabaseButton.titleLabel!.font = UIFont.init(name: "Helvetica", size: 80)
     }
     
     override func viewDidAppear(_ animated: Bool) {
