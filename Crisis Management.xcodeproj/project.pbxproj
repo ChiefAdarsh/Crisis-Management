@@ -361,7 +361,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = GXGL7V7T5B;
+				DEVELOPMENT_TEAM = LSQF3Y27V3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Crisis Management/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Crisis Management";
@@ -377,7 +377,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.coppellisd.Crisis-Managements";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ashwinindurti.Crisis-Managements";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -398,7 +398,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = GXGL7V7T5B;
+				DEVELOPMENT_TEAM = LSQF3Y27V3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Crisis Management/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Crisis Management";
@@ -414,7 +414,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.coppellisd.Crisis-Managements";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ashwinindurti.Crisis-Managements";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;

@@ -16,7 +16,7 @@ class CallAdminInSchoolController: UIViewController, BackTitle, UIDocumentPicker
     var txtString: String!
     var backTitle: String!
     let documentPicker = UIDocumentPickerViewController(documentTypes: ["public.text"], in: .import)
-    var archiveURLs: [URL] = [URL(fileURLWithPath: "www.apple.com"),URL(fileURLWithPath: "www.apple.com"),URL(fileURLWithPath: "www.apple.com"),URL(fileURLWithPath: "www.apple.com"),URL(fileURLWithPath: "www.apple.com"),URL(fileURLWithPath: "www.apple.com"),URL(fileURLWithPath: "www.apple.com"),URL(fileURLWithPath: "www.apple.com"),URL(fileURLWithPath: "www.apple.com"),URL(fileURLWithPath: "www.apple.com"),URL(fileURLWithPath: "www.apple.com"),URL(fileURLWithPath: "www.apple.com"),URL(fileURLWithPath: "www.apple.com"),URL(fileURLWithPath: "www.apple.com")]
+    var archiveURLs: [URL] = []
     lazy var numAdminURL: URL = documentsDirectory.appendingPathComponent("numAdmin")
         .appendingPathExtension("plist")
     let documentsDirectory = FileManager.default.urls(for: .documentDirectory,in: .userDomainMask).first!
@@ -191,13 +191,13 @@ class PrincipalContactsTableViewController: UITableViewController, BackTitle {
         // Configure the cell...
 
         let label = cell.viewWithTag(1000) as! UILabel
-        let image = cell.viewWithTag(1234) as! UIImageView
+//        let image = cell.viewWithTag(1234) as! UIImageView
         let subtitle = cell.viewWithTag(2468) as! UILabel
         
         for i in 0...(principalList.count - 1) {
             if indexPath.row == i {
                 label.text = principalList[i].fullName
-                image.image = UIImage(named: principalList[i].imgStr!)
+//                image.image = UIImage(named: principalList[i].imgStr!)
                 subtitle.text = principalList[i].adminTypeDetailed
                 cell.accessoryType = .disclosureIndicator
             }
