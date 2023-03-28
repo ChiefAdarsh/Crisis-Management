@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 class Resource: Codable {
     var category: String
     var name: String
@@ -71,6 +72,9 @@ class ViewControllerResPage: UIViewController {
         let tap = UITapGestureRecognizer(target: self, action: #selector(ViewControllerResPage.tapFunction))
                 resWeb.isUserInteractionEnabled = true
                 resWeb.addGestureRecognizer(tap)
+        let tapAddy = UITapGestureRecognizer(target: self, action: #selector(ViewControllerResPage.tapFunctionAddy))
+                resAddress.isUserInteractionEnabled = true
+                resAddress.addGestureRecognizer(tapAddy)
         super.viewDidLoad()
         someTableView.separatorStyle = .none
     }
@@ -78,6 +82,12 @@ class ViewControllerResPage: UIViewController {
     @objc
         func tapFunction(sender:UITapGestureRecognizer) {
             UIApplication.shared.open(URL(string: "https://" + (resWeb.text ?? ""))! as URL, options: [:], completionHandler: nil)        }
+    
+    @objc
+        func tapFunctionAddy(sender:UITapGestureRecognizer) {
+            var tempAddress = resAddress.text?.replacingOccurrences(of: " ", with: "%20")
+            UIApplication.shared.open(URL(string: "https://maps.apple.com/?address=" + (tempAddress ?? ""))! as URL, options: [:], completionHandler: nil)
+                    }
 
 }
 
@@ -107,7 +117,7 @@ extension ViewControllerResPage: UITableViewDataSource, UITableViewDelegate{
         resCat.text = resources[indexPath.row].category
         resCont.text = resources[indexPath.row].contact
         resWeb.text = resources[indexPath.row].website
-        resAddress.text = addy
+        resAddress.text = resources[indexPath.row].address
         resAddInfo.text = resources[indexPath.row].addInfo
     }
     
