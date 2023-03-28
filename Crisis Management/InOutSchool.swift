@@ -14,6 +14,7 @@ class InOutSchoolController: UIViewController, BackTitle {
     @IBOutlet var importDatabaseButton: UIButton!
     @IBOutlet var importCsvFiles: UIButton!
     @IBOutlet var manuallyImport: UIButton!
+    @IBOutlet var downloadImportFiles: UIButton!
     
     
     @IBOutlet weak var background: UIImageView!
@@ -36,18 +37,18 @@ class InOutSchoolController: UIViewController, BackTitle {
     static var insideSchool: Bool!
     
     
-    @IBAction func downloadImportFiles(_ sender: Any) {
-        if importDatabaseButton.isHidden {
-            importDatabaseButton.isHidden = false
-            importCsvFiles.isHidden = false
-            manuallyImport.isHidden = false
-        } else {
-            importDatabaseButton.isHidden = true
-            importCsvFiles.isHidden = true
-            manuallyImport.isHidden = true
-        }
-        
-    }
+//    @IBAction func downloadImportFiles(_ sender: Any) {
+////        if importDatabaseButton.isHidden {
+////            importDatabaseButton.isHidden = false
+////            importCsvFiles.isHidden = false
+////            manuallyImport.isHidden = false
+////        } else {
+////            importDatabaseButton.isHidden = true
+////            importCsvFiles.isHidden = true
+////            manuallyImport.isHidden = true
+////        }
+//
+//    }
     
     // When the view is initially loaded
     override func viewDidLoad() {
@@ -64,11 +65,7 @@ class InOutSchoolController: UIViewController, BackTitle {
         outSchoolButton.layer.cornerRadius = 25
         outSchoolButton.layer.masksToBounds = true
 
-        importDatabaseButton.isHidden = true
-        importCsvFiles.isHidden = true
-        manuallyImport.isHidden = true
         
-        importDatabaseButton.titleLabel!.font = UIFont.init(name: "Helvetica", size: 80)
     }
     
     override func viewDidAppear(_ animated: Bool) {

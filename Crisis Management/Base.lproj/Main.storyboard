@@ -2791,78 +2791,13 @@ Cg
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="42"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="pGk-eh-Xgt">
-                                <rect key="frame" x="108" y="658" width="896" height="80"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OWX-x8-oVC">
-                                        <rect key="frame" x="0.0" y="0.0" width="270" height="80"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="270" id="8vk-ze-UML"/>
-                                            <constraint firstAttribute="height" constant="80" id="lmx-dj-JoN"/>
-                                        </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" cornerStyle="medium">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="Import Database">
-                                                    <attributes>
-                                                        <color key="NSColor" red="0.23921570180000001" green="0.50196081400000003" blue="0.94117647410000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <font key="NSFont" size="30" name="Helvetica"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
-                                        </buttonConfiguration>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tHP-Cb-lZr">
-                                        <rect key="frame" x="313" y="0.0" width="270" height="80"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="270" id="dfI-02-w4H"/>
-                                            <constraint firstAttribute="height" constant="80" id="eUO-LG-8MU"/>
-                                        </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" cornerStyle="medium">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="Import CSV Files">
-                                                    <attributes>
-                                                        <color key="NSColor" red="0.23921570180000001" green="0.50196081400000003" blue="0.94117647410000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <font key="NSFont" size="30" name="Helvetica"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
-                                        </buttonConfiguration>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yex-bd-gWG">
-                                        <rect key="frame" x="626" y="0.0" width="270" height="80"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="80" id="MOy-0g-Yal"/>
-                                            <constraint firstAttribute="width" constant="270" id="RU5-aG-OYn"/>
-                                        </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" cornerStyle="medium">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="Manually Import">
-                                                    <attributes>
-                                                        <font key="NSFont" size="30" name="Helvetica"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
-                                        </buttonConfiguration>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="Yex-bd-gWG" firstAttribute="width" secondItem="OWX-x8-oVC" secondAttribute="width" id="KvC-aQ-Vpw"/>
-                                    <constraint firstItem="tHP-Cb-lZr" firstAttribute="width" secondItem="OWX-x8-oVC" secondAttribute="width" id="ThZ-ld-9dS"/>
-                                </constraints>
-                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z8k-tS-CZ2">
                                 <rect key="frame" x="29" y="54" width="96" height="86"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="download_111133" title=""/>
                                 <connections>
-                                    <action selector="downloadImportFiles:" destination="d7l-md-VJ3" eventType="touchUpInside" id="lT2-uw-EGC"/>
-                                    <segue destination="P7h-il-48a" kind="showDetail" id="TPL-UW-MoH"/>
+                                    <segue destination="P7h-il-48a" kind="showDetail" id="O8M-RG-OhG"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -2870,15 +2805,11 @@ Cg
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="BKk-tH-tBi" firstAttribute="centerX" secondItem="gjn-j6-6KT" secondAttribute="centerX" id="1Hh-4q-K3d"/>
-                            <constraint firstItem="pGk-eh-Xgt" firstAttribute="top" secondItem="gFs-Lc-Jh1" secondAttribute="bottom" constant="116" id="4LJ-Eb-Dnk"/>
                             <constraint firstItem="gFs-Lc-Jh1" firstAttribute="centerY" secondItem="gjn-j6-6KT" secondAttribute="centerY" id="5UE-bx-4yK"/>
                             <constraint firstAttribute="bottom" secondItem="lck-0r-CDg" secondAttribute="bottom" id="7gE-Ci-28o"/>
                             <constraint firstAttribute="trailing" secondItem="lck-0r-CDg" secondAttribute="trailing" id="9MM-WC-RbR"/>
-                            <constraint firstItem="pGk-eh-Xgt" firstAttribute="leading" secondItem="h7P-4o-38l" secondAttribute="leading" constant="108" id="PTQ-A1-u5k"/>
-                            <constraint firstItem="pGk-eh-Xgt" firstAttribute="centerX" secondItem="gjn-j6-6KT" secondAttribute="centerX" id="S4g-B2-5cH"/>
                             <constraint firstItem="gFs-Lc-Jh1" firstAttribute="centerX" secondItem="gjn-j6-6KT" secondAttribute="centerX" id="WN7-X1-FXc"/>
                             <constraint firstItem="lck-0r-CDg" firstAttribute="top" secondItem="gjn-j6-6KT" secondAttribute="top" id="bb8-jl-A0h"/>
-                            <constraint firstItem="h7P-4o-38l" firstAttribute="trailing" secondItem="pGk-eh-Xgt" secondAttribute="trailing" constant="108" id="e64-HW-g89"/>
                             <constraint firstItem="lck-0r-CDg" firstAttribute="leading" secondItem="gjn-j6-6KT" secondAttribute="leading" id="fkV-PX-jnc"/>
                             <constraint firstItem="BKk-tH-tBi" firstAttribute="bottom" secondItem="h7P-4o-38l" secondAttribute="top" constant="61" id="xth-4c-qL1"/>
                         </constraints>
@@ -2896,10 +2827,8 @@ Cg
                         </userDefinedRuntimeAttributes>
                     </navigationItem>
                     <connections>
-                        <outlet property="importCsvFiles" destination="tHP-Cb-lZr" id="w9n-Is-Z0u"/>
-                        <outlet property="importDatabaseButton" destination="OWX-x8-oVC" id="nTA-0v-9gU"/>
+                        <outlet property="downloadImportFiles" destination="z8k-tS-CZ2" id="X0N-Bo-pfz"/>
                         <outlet property="inSchoolButton" destination="8gv-eP-UEP" id="ugX-BP-QdC"/>
-                        <outlet property="manuallyImport" destination="Yex-bd-gWG" id="3pF-fp-Eol"/>
                         <outlet property="outSchoolButton" destination="EfZ-3G-thS" id="Oic-Ql-pLs"/>
                         <outlet property="reportIssueLabel" destination="BKk-tH-tBi" id="hnu-Jm-FEF"/>
                         <outlet property="settingsButton" destination="7gm-tT-3E0" id="Uw9-3Q-w0F"/>
