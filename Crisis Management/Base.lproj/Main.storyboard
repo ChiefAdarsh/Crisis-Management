@@ -2639,10 +2639,10 @@ Cg
             </objects>
             <point key="canvasLocation" x="480" y="-1455"/>
         </scene>
-        <!--View Controller-->
+        <!--Import View Controller-->
         <scene sceneID="kkW-xW-51q">
             <objects>
-                <viewController id="P7h-il-48a" sceneMemberID="viewController">
+                <viewController id="P7h-il-48a" customClass="importViewController" customModule="Crisis_Management" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uSR-ex-jb4">
                         <rect key="frame" x="0.0" y="0.0" width="704" height="794"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2659,16 +2659,8 @@ Cg
                                             <constraint firstAttribute="width" constant="270" id="hcG-ms-YDu"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" cornerStyle="medium">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="Import Database">
-                                                    <attributes>
-                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                        <font key="NSFont" size="36" name="Helvetica"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <buttonConfiguration key="configuration" style="gray" title="Import Database" cornerStyle="medium">
+                                            <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="40"/>
                                         </buttonConfiguration>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hs7-6x-SRU">
@@ -2677,15 +2669,8 @@ Cg
                                             <constraint firstAttribute="width" constant="270" id="C2s-5S-5Se"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" cornerStyle="medium">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="Manually Import">
-                                                    <attributes>
-                                                        <font key="NSFont" size="36" name="Helvetica"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <buttonConfiguration key="configuration" style="gray" title="Manually Import" cornerStyle="medium">
+                                            <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="40"/>
                                         </buttonConfiguration>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iEg-gD-QtN">
@@ -2694,15 +2679,8 @@ Cg
                                             <constraint firstAttribute="width" constant="270" id="zAs-Sq-Uud"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" cornerStyle="medium">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="Import CSV Files">
-                                                    <attributes>
-                                                        <color key="NSColor" red="0.23921570180000001" green="0.50196081400000003" blue="0.94117647410000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <font key="NSFont" size="36" name="Helvetica"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <buttonConfiguration key="configuration" style="gray" title="Import CSV Files" cornerStyle="medium">
+                                            <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="40"/>
                                         </buttonConfiguration>
                                     </button>
                                 </subviews>
@@ -2728,6 +2706,11 @@ Cg
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Yf0-yN-bUr"/>
+                    <connections>
+                        <outlet property="importCSVFilesButton" destination="iEg-gD-QtN" id="Wst-6w-LqS"/>
+                        <outlet property="importDatabaseButtons" destination="95U-ee-L9i" id="gFy-8j-uGv"/>
+                        <outlet property="importManuallyButton" destination="Hs7-6x-SRU" id="Gws-hD-igC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wUR-SM-QX9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -4066,17 +4049,17 @@ Teachers Can:
                                 <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SHOOOSH" id="PAE-ek-tQP" customClass="TableViewCellSHEESH" customModule="Crisis_Management" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="1012" height="45.5"/>
+                                        <rect key="frame" x="0.0" y="50" width="1012" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PAE-ek-tQP" id="Al3-Hb-PX5">
-                                            <rect key="frame" x="0.0" y="0.0" width="1012" height="45.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="1012" height="45"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IYV-eC-bfh">
-                                                    <rect key="frame" x="0.0" y="0.0" width="1012" height="45.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="1012" height="45"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Pd-BD-QUs">
-                                                            <rect key="frame" x="8" y="12" width="996" height="21.5"/>
+                                                            <rect key="frame" x="8" y="12" width="996" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>

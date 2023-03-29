@@ -173,6 +173,18 @@ class InOutSchoolController: UIViewController, BackTitle {
     }
 }
 
+class importViewController: UIViewController{
+    
+    @IBOutlet var importDatabaseButtons: UIButton!
+    @IBOutlet var importManuallyButton: UIButton!
+    @IBOutlet var importCSVFilesButton: UIButton!
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+}
+
 protocol BackTitle {
     var backTitle: String! { get set }
 }
