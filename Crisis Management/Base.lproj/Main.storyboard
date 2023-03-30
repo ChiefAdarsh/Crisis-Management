@@ -110,6 +110,27 @@
                                             <segue destination="Rh8-Im-fqb" kind="show" id="9SS-ND-wyZ"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="lTY-aG-bK8" style="IBUITableViewCellStyleDefault" id="p9H-Ra-pIL">
+                                        <rect key="frame" x="0.0" y="278" width="1112" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="p9H-Ra-pIL" id="tt1-SX-eEI">
+                                            <rect key="frame" x="0.0" y="0.0" width="1112" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Import Data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lTY-aG-bK8">
+                                                    <rect key="frame" x="20" y="0.0" width="1072" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <connections>
+                                            <segue destination="UtX-Qj-VYh" kind="showDetail" id="luJ-kV-F0k"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -2585,6 +2606,80 @@ Cg
             </objects>
             <point key="canvasLocation" x="480" y="-1455"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="NUZ-FD-CxE">
+            <objects>
+                <viewController id="UtX-Qj-VYh" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wYq-Ma-86l">
+                        <rect key="frame" x="0.0" y="0.0" width="704" height="794"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="Background 1" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HdD-0j-EAo">
+                                <rect key="frame" x="0.0" y="0.0" width="704" height="794"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="OJi-FJ-2QR">
+                                <rect key="frame" x="102" y="100" width="500" height="594"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IWr-IJ-NNZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="500" height="131.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="270" id="TKz-QU-p5D"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Import Database" cornerStyle="medium">
+                                            <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="40"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Jr-jZ-6jg">
+                                        <rect key="frame" x="0.0" y="231.5" width="500" height="131"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="270" id="N3t-Eh-10s"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Manually Import" cornerStyle="medium">
+                                            <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="40"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mPN-rt-gb7">
+                                        <rect key="frame" x="0.0" y="462.5" width="500" height="131.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="270" id="Rkw-NN-zUa"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Import CSV Files" cornerStyle="medium">
+                                            <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="40"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="74L-S5-C82" kind="show" id="puJ-Uq-3n8"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="mPN-rt-gb7" firstAttribute="top" secondItem="0Jr-jZ-6jg" secondAttribute="bottom" constant="100" id="Mkv-Fx-eu7"/>
+                                    <constraint firstItem="mPN-rt-gb7" firstAttribute="height" secondItem="IWr-IJ-NNZ" secondAttribute="height" id="SQg-wO-pVG"/>
+                                    <constraint firstAttribute="width" constant="500" id="VC2-lz-l70"/>
+                                    <constraint firstItem="0Jr-jZ-6jg" firstAttribute="height" secondItem="IWr-IJ-NNZ" secondAttribute="height" id="hxq-I2-dBa"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="eOx-ba-6IW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eOx-ba-6IW" firstAttribute="bottom" secondItem="OJi-FJ-2QR" secondAttribute="bottom" constant="100" id="K8Y-6s-PPr"/>
+                            <constraint firstItem="HdD-0j-EAo" firstAttribute="leading" secondItem="wYq-Ma-86l" secondAttribute="leading" id="Rse-4T-FO6"/>
+                            <constraint firstAttribute="trailing" secondItem="HdD-0j-EAo" secondAttribute="trailing" id="Uz8-1W-YDS"/>
+                            <constraint firstItem="OJi-FJ-2QR" firstAttribute="centerX" secondItem="wYq-Ma-86l" secondAttribute="centerX" id="eeF-ta-QLO"/>
+                            <constraint firstItem="OJi-FJ-2QR" firstAttribute="centerY" secondItem="wYq-Ma-86l" secondAttribute="centerY" id="fd1-JM-O0m"/>
+                            <constraint firstItem="HdD-0j-EAo" firstAttribute="top" secondItem="wYq-Ma-86l" secondAttribute="top" id="lJ2-MR-hcT"/>
+                            <constraint firstAttribute="bottom" secondItem="HdD-0j-EAo" secondAttribute="bottom" id="mKW-TG-PyC"/>
+                            <constraint firstItem="OJi-FJ-2QR" firstAttribute="top" secondItem="eOx-ba-6IW" secondAttribute="top" constant="100" id="xmw-m8-qvd"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6g8-g9-gFJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-203" y="-663"/>
+        </scene>
         <!--In Out School-->
         <scene sceneID="oJ2-dz-3c0">
             <objects>
@@ -2816,26 +2911,6 @@ Cg
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TC6-Iv-Bjg">
-                                <rect key="frame" x="115" y="271" width="85" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.57380741830000004" green="0.56553578380000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Buttoon"/>
-                                <connections>
-                                    <action selector="generateCSVFile:" destination="mZL-HH-Ccl" eventType="touchUpInside" id="iHs-UA-AKA"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vz8-DE-xbA">
-                                <rect key="frame" x="83" y="454" width="149" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" systemColor="systemTealColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Impoort Buttoon"/>
-                                <connections>
-                                    <action selector="importCSV:" destination="mZL-HH-Ccl" eventType="touchUpInside" id="KRr-7K-blq"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vbO-kg-TLr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -3490,17 +3565,17 @@ Teachers Can:
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JRs-AH-Hjm">
-                                <rect key="frame" x="127" y="-10" width="858" height="750"/>
+                                <rect key="frame" x="127" y="-10" width="450" height="750"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Eiu-vA-evr">
-                                        <rect key="frame" x="317" y="135" width="224" height="224"/>
+                                        <rect key="frame" x="113" y="135" width="224" height="224"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="224" id="QVw-kc-jxX"/>
                                             <constraint firstAttribute="width" constant="224" id="bS5-eT-KTr"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coppell High School" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QGG-Tq-WUB">
-                                        <rect key="frame" x="280" y="61.5" width="298" height="41"/>
+                                        <rect key="frame" x="76" y="61.5" width="298" height="41"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="34"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -3517,7 +3592,7 @@ Teachers Can:
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="CoppellCowboys" translatesAutoresizingMaskIntoConstraints="NO" id="Xmb-zA-4Uf">
-                                        <rect key="frame" x="707" y="411" width="75" height="75"/>
+                                        <rect key="frame" x="299" y="411" width="75" height="75"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="75" id="Jrx-UK-jtF"/>
                                             <constraint firstAttribute="width" constant="75" id="UXY-SA-aPX"/>
@@ -3535,7 +3610,7 @@ Teachers Can:
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Watermark" translatesAutoresizingMaskIntoConstraints="NO" id="dJ9-G7-j5G">
-                                        <rect key="frame" x="254" y="618" width="350" height="116"/>
+                                        <rect key="frame" x="50" y="618" width="350" height="116"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="350" id="BYM-7z-h76"/>
                                             <constraint firstAttribute="height" constant="116" id="wsw-Hf-eQ2"/>
@@ -3591,7 +3666,7 @@ Teachers Can:
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="fwR-N6-1gy">
-                                        <rect key="frame" x="76" y="415" width="559" height="66"/>
+                                        <rect key="frame" x="76" y="415" width="151" height="66"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STAFF" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lz0-JR-P6h">
                                                 <rect key="frame" x="0.0" y="0.0" width="76" height="30"/>
@@ -4578,6 +4653,87 @@ Teachers Can:
             </objects>
             <point key="canvasLocation" x="3377.1582733812952" y="-582.73381294964031"/>
         </scene>
+        <!--Import View Controller-->
+        <scene sceneID="kQO-vn-0bM">
+            <objects>
+                <viewController id="74L-S5-C82" customClass="ImportViewController" customModule="Crisis_Management" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="F1s-Qh-xII">
+                        <rect key="frame" x="0.0" y="0.0" width="704" height="794"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="Background 1" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YJV-aF-NhS">
+                                <rect key="frame" x="0.0" y="0.0" width="704" height="794"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="80i-Ut-oR5">
+                                <rect key="frame" x="102" y="100" width="500" height="594"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tLG-Ne-nYu">
+                                        <rect key="frame" x="0.0" y="0.0" width="500" height="131.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="270" id="N2M-Yb-RUP"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Download Template" cornerStyle="medium">
+                                            <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="40"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="generateCSVFile:" destination="74L-S5-C82" eventType="touchUpInside" id="nFn-4P-qOZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B1Z-pB-gjk">
+                                        <rect key="frame" x="0.0" y="231.5" width="500" height="131"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="270" id="asP-WV-g56"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Import Resources" cornerStyle="medium">
+                                            <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="40"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="importCSV:" destination="74L-S5-C82" eventType="touchUpInside" id="Veb-Kr-w8A"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ee5-Nc-aUU">
+                                        <rect key="frame" x="0.0" y="462.5" width="500" height="131.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="270" id="Qac-vy-oOy"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Import Admins" cornerStyle="medium">
+                                            <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="40"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="importCSV:" destination="74L-S5-C82" eventType="touchUpInside" id="O2l-N1-aPE"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ee5-Nc-aUU" firstAttribute="height" secondItem="tLG-Ne-nYu" secondAttribute="height" id="DZF-B1-acl"/>
+                                    <constraint firstItem="B1Z-pB-gjk" firstAttribute="height" secondItem="tLG-Ne-nYu" secondAttribute="height" id="b17-9X-qQT"/>
+                                    <constraint firstItem="ee5-Nc-aUU" firstAttribute="top" secondItem="B1Z-pB-gjk" secondAttribute="bottom" constant="100" id="kcf-uC-OOK"/>
+                                    <constraint firstAttribute="width" constant="500" id="mzl-vk-8JI"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="oX0-Mj-xui"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="80i-Ut-oR5" firstAttribute="centerY" secondItem="F1s-Qh-xII" secondAttribute="centerY" id="4Yh-HK-TXe"/>
+                            <constraint firstItem="80i-Ut-oR5" firstAttribute="top" secondItem="oX0-Mj-xui" secondAttribute="top" constant="100" id="FOR-9M-ZIL"/>
+                            <constraint firstAttribute="trailing" secondItem="YJV-aF-NhS" secondAttribute="trailing" id="IZv-XX-4kH"/>
+                            <constraint firstAttribute="bottom" secondItem="YJV-aF-NhS" secondAttribute="bottom" id="U0P-vy-pCG"/>
+                            <constraint firstItem="YJV-aF-NhS" firstAttribute="leading" secondItem="F1s-Qh-xII" secondAttribute="leading" id="V3y-go-dgi"/>
+                            <constraint firstItem="YJV-aF-NhS" firstAttribute="top" secondItem="F1s-Qh-xII" secondAttribute="top" id="eUg-6J-pXY"/>
+                            <constraint firstItem="80i-Ut-oR5" firstAttribute="centerX" secondItem="F1s-Qh-xII" secondAttribute="centerX" id="lmU-hq-BOH"/>
+                            <constraint firstItem="oX0-Mj-xui" firstAttribute="bottom" secondItem="80i-Ut-oR5" secondAttribute="bottom" constant="100" id="oJb-Kf-6Yp"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="3fF-UW-wrn"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eW9-7Z-8Qm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-203" y="112"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="g2K-FP-Mqr"/>
@@ -4633,9 +4789,6 @@ Teachers Can:
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemTealColor">
-            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tertiarySystemFillColor">
             <color red="0.46274509803921571" green="0.46274509803921571" blue="0.50196078431372548" alpha="0.12" colorSpace="custom" customColorSpace="sRGB"/>

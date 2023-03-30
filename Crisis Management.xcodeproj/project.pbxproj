@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1783567C2919938E00B33C56 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1783567B2919938E00B33C56 /* Home.swift */; };
 		1783567E291993FD00B33C56 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1783567D291993FD00B33C56 /* Settings.swift */; };
+		650C6E9529D4C21700E4EA2C /* ImportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650C6E9429D4C21700E4EA2C /* ImportViewController.swift */; };
 		652A84C02914E1100025B2E6 /* StudentProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652A84BF2914E1100025B2E6 /* StudentProtocols.swift */; };
 		6578089E29118D2C00E72F43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6578089D29118D2C00E72F43 /* AppDelegate.swift */; };
 		657808A029118D2C00E72F43 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6578089F29118D2C00E72F43 /* SceneDelegate.swift */; };
@@ -33,6 +34,7 @@
 /* Begin PBXFileReference section */
 		1783567B2919938E00B33C56 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		1783567D291993FD00B33C56 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		650C6E9429D4C21700E4EA2C /* ImportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportViewController.swift; sourceTree = "<group>"; };
 		652A84BF2914E1100025B2E6 /* StudentProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProtocols.swift; sourceTree = "<group>"; };
 		6578089A29118D2C00E72F43 /* Crisis Management.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Crisis Management.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6578089D29118D2C00E72F43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				B2D16B4D29C8DEB7007A30B2 /* CHCSVParser.m */,
 				B2446FF829A7F4B00077691B /* Resources */,
 				6578089F29118D2C00E72F43 /* SceneDelegate.swift */,
+				650C6E9429D4C21700E4EA2C /* ImportViewController.swift */,
 				657808A129118D2C00E72F43 /* InOutSchool.swift */,
 				1783567B2919938E00B33C56 /* Home.swift */,
 				1783567D291993FD00B33C56 /* Settings.swift */,
@@ -201,6 +204,7 @@
 				65E79A0829A6B28900E848F1 /* MedicalViewController.swift in Sources */,
 				659487DB29BA4B5600400A9C /* TableViewLabel.swift in Sources */,
 				65E79A0E29A6B39200E848F1 /* StudentHelpTableViewController.swift in Sources */,
+				650C6E9529D4C21700E4EA2C /* ImportViewController.swift in Sources */,
 				65BCCCCF29A6B410003CA681 /* ViewControllerHelps.swift in Sources */,
 				652A84C02914E1100025B2E6 /* StudentProtocols.swift in Sources */,
 				1783567C2919938E00B33C56 /* Home.swift in Sources */,
