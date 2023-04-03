@@ -35,6 +35,7 @@
 		1783567B2919938E00B33C56 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		1783567D291993FD00B33C56 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		650C6E9429D4C21700E4EA2C /* ImportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportViewController.swift; sourceTree = "<group>"; };
+		650C6E9629DB538C00E4EA2C /* Crisis Management.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Crisis Management.entitlements"; sourceTree = "<group>"; };
 		652A84BF2914E1100025B2E6 /* StudentProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProtocols.swift; sourceTree = "<group>"; };
 		6578089A29118D2C00E72F43 /* Crisis Management.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Crisis Management.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6578089D29118D2C00E72F43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +91,7 @@
 		6578089C29118D2C00E72F43 /* Crisis Management */ = {
 			isa = PBXGroup;
 			children = (
+				650C6E9629DB538C00E4EA2C /* Crisis Management.entitlements */,
 				6578089D29118D2C00E72F43 /* AppDelegate.swift */,
 				B2D16B4E29C8DEB7007A30B2 /* CHCSVParser.h */,
 				B2D16B4D29C8DEB7007A30B2 /* CHCSVParser.m */,
@@ -363,9 +365,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "Crisis Management/Crisis Management.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = GXGL7V7T5B;
+				DEVELOPMENT_TEAM = VTDF44SLUM;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Crisis Management/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Crisis Management";
@@ -384,7 +387,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ashwinindurti.Crisis-Managementsss";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MACCATALYST = YES;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "Crisis Management/Crisis Management-Bridging-Header.h";
@@ -400,9 +403,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "Crisis Management/Crisis Management.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = GXGL7V7T5B;
+				DEVELOPMENT_TEAM = VTDF44SLUM;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Crisis Management/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Crisis Management";
@@ -421,7 +425,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ashwinindurti.Crisis-Managementsss";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MACCATALYST = YES;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "Crisis Management/Crisis Management-Bridging-Header.h";

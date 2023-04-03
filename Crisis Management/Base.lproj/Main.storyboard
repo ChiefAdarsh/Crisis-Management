@@ -2969,7 +2969,7 @@ Cg
                                 <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PLO-ZD-8rx">
-                                <rect key="frame" x="20" y="70" width="1072" height="744"/>
+                                <rect key="frame" x="20" y="70" width="1072" height="694"/>
                                 <attributedString key="attributedText">
                                     <fragment>
                                         <string key="content">The Crisis Management app allows you to help the students that need immediate attention both in and out of school. Get the information that you need to react to the situation at hand and easily contact the recommended people for further assistance.
@@ -3292,7 +3292,7 @@ Teachers Can:
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Grr-zW-Ibz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-288" y="877"/>
+            <point key="canvasLocation" x="-203" y="877"/>
         </scene>
         <!--HelpProtocols-->
         <scene sceneID="MXq-ZR-sg1">
@@ -4390,7 +4390,7 @@ Teachers Can:
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HhO-5E-gjL">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HhO-5E-gjL">
                                 <rect key="frame" x="374" y="300" width="364" height="210"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
@@ -4401,7 +4401,7 @@ Teachers Can:
                                     <segue destination="icg-eg-Gxl" kind="show" id="EnA-lR-UrP"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="swv-fD-N1i">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="swv-fD-N1i">
                                 <rect key="frame" x="374" y="530" width="364" height="210"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
@@ -4412,17 +4412,6 @@ Teachers Can:
                                     <segue destination="Q75-Rd-804" kind="show" id="LQd-jK-fWE"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gIE-Kw-cOZ">
-                                <rect key="frame" x="466" y="223" width="180" height="34.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="180" id="gxD-yX-THG"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Upload"/>
-                                <connections>
-                                    <action selector="upload:" destination="N08-fA-HJS" eventType="touchUpInside" id="wn7-V2-UlN"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Jbi-V9-d1F"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -4430,14 +4419,11 @@ Teachers Can:
                             <constraint firstItem="xHt-pL-dU7" firstAttribute="centerX" secondItem="6BR-wk-ybt" secondAttribute="centerX" id="44a-DS-ea0"/>
                             <constraint firstItem="HhO-5E-gjL" firstAttribute="centerX" secondItem="6BR-wk-ybt" secondAttribute="centerX" id="48x-qE-HOI"/>
                             <constraint firstItem="Jbi-V9-d1F" firstAttribute="bottom" secondItem="swv-fD-N1i" secondAttribute="bottom" constant="44" id="6ch-kt-qEb"/>
-                            <constraint firstItem="gIE-Kw-cOZ" firstAttribute="centerX" secondItem="6BR-wk-ybt" secondAttribute="centerX" id="9Sa-Md-2gt"/>
                             <constraint firstItem="Vke-Ba-USb" firstAttribute="leading" secondItem="Jbi-V9-d1F" secondAttribute="leading" id="BaQ-sR-5du"/>
                             <constraint firstItem="xHt-pL-dU7" firstAttribute="top" secondItem="Jbi-V9-d1F" secondAttribute="top" constant="25" id="F6E-ng-QnE"/>
-                            <constraint firstItem="HhO-5E-gjL" firstAttribute="top" secondItem="gIE-Kw-cOZ" secondAttribute="bottom" constant="42.5" id="LN7-f4-xwe"/>
                             <constraint firstItem="Vke-Ba-USb" firstAttribute="trailing" secondItem="Jbi-V9-d1F" secondAttribute="trailing" id="O6X-pZ-HGR"/>
                             <constraint firstItem="FZM-hD-Fvg" firstAttribute="top" secondItem="xHt-pL-dU7" secondAttribute="bottom" constant="20" id="Tg2-H7-0Hh"/>
                             <constraint firstItem="FZM-hD-Fvg" firstAttribute="centerX" secondItem="6BR-wk-ybt" secondAttribute="centerX" id="XD6-Hg-vRq"/>
-                            <constraint firstItem="gIE-Kw-cOZ" firstAttribute="top" secondItem="FZM-hD-Fvg" secondAttribute="bottom" constant="30" id="a4i-wz-Oyd"/>
                             <constraint firstItem="Vke-Ba-USb" firstAttribute="top" secondItem="6BR-wk-ybt" secondAttribute="top" id="a5h-u7-4BD"/>
                             <constraint firstItem="swv-fD-N1i" firstAttribute="centerX" secondItem="6BR-wk-ybt" secondAttribute="centerX" id="ajp-b2-BN5"/>
                             <constraint firstItem="xHt-pL-dU7" firstAttribute="centerX" secondItem="6BR-wk-ybt" secondAttribute="centerX" id="cVM-OW-JGM"/>
@@ -4448,9 +4434,6 @@ Teachers Can:
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="cGA-dt-3eE"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="uploadBtn" destination="gIE-Kw-cOZ" id="unU-1l-V9P"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EOF-Gx-PzH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -4741,7 +4724,7 @@ Teachers Can:
         <segue reference="heE-ca-QwX"/>
         <segue reference="YFM-d9-O2o"/>
         <segue reference="X3q-Oe-BrU"/>
-        <segue reference="nKW-bZ-WCm"/>
+        <segue reference="1t6-MS-5u2"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Background 1" width="2048" height="1536"/>
