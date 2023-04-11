@@ -10,12 +10,40 @@ import UIKit
 import UniformTypeIdentifiers
 
 class ImportViewController: UIViewController, UIDocumentPickerDelegate {
+    
+    @IBAction func importDataBut(_ sender: Any) {
+        var alertController:UIAlertController?
+            alertController = UIAlertController(title: "Database URL",
+                message: "Enter a valid database URL", preferredStyle: .alert)
 
+        alertController!.addTextField(configurationHandler: {(textField: UITextField!) in textField.placeholder = "Enter Database URL"
+            })
+
+        let saveAction = UIAlertAction(title: "Import", style: UIAlertAction.Style.default, handler: { alert -> Void in
+            let textField = (alertController?.textFields![0])! as UITextField
+            let url = textField.text!
+            print(url)
+        })
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: {(action : UIAlertAction!) -> Void in })
+        
+        alertController!.addAction(cancelAction)
+        alertController!.addAction(saveAction)
+        self.present(alertController!, animated: true, completion: nil)
+        
+//        let alertController = UIAlertController(title: "Database URL", message: "Please enter a valid Database URL", preferredStyle: .alert)
+//        alertController.addAction(UIAlertAction.init(title: "Ok", style: .default, handler: nil))
+//        self.present(alertController, animated: true, completion: nil)
+//        present(alertController, animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+    
+    
+    
     
     @IBAction func generateCSVFile(_ sender: Any) {
         
