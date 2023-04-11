@@ -368,7 +368,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Crisis Management/Crisis Management.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = CWDNF587A9;
+				DEVELOPMENT_TEAM = VTDF44SLUM;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Crisis Management/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Crisis Management";
