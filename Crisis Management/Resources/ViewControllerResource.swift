@@ -45,11 +45,24 @@ class ViewControllerResPage: UIViewController {
     
     @IBOutlet weak var ba: UIImageView!
     static var category: String!
-    
+    var currDel = false
     var order: String = ""
     var resources = [Resource]()
-    //try adding to function on top of superview so expected declaratin doesnt arise
+    @IBOutlet weak var deleteRez: UIButton!
     
+    @IBAction func deleteRezzing(_ sender: Any) {
+        print("check tap")
+        let tableViewEditingMode = someTableView.isEditing
+        someTableView.setEditing(!tableViewEditingMode, animated: true)
+        if(currDel){
+            currDel = false
+            deleteRez.setTitle("Delete Resources", for: .normal)
+        }
+        else{
+            currDel = true
+            deleteRez.setTitle("Done Deleting", for: .normal)
+        }
+    }
     
     
 
@@ -119,6 +132,21 @@ extension ViewControllerResPage: UITableViewDataSource, UITableViewDelegate{
         resWeb.text = resources[indexPath.row].website
         resAddress.text = resources[indexPath.row].address
         resAddInfo.text = resources[indexPath.row].addInfo
+    }
+    
+    func tableView(_ tableView: UITableView, moveRowAt
+    fromIndexPath: IndexPath, to: IndexPath) {
+        let movedEmoji2 = resources.remove(at: fromIndexPath.row)
+        resources.insert(movedEmoji2, at: to.row)
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+      if editingStyle == .delete {
+        print("Deleted")
+
+          resources.remove(at: indexPath.row)
+        self.someTableView.deleteRows(at: [indexPath], with: .automatic)
+      }
     }
     
     

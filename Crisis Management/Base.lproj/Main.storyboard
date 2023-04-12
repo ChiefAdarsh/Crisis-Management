@@ -4241,6 +4241,15 @@ Teachers Can:
                                     <constraint firstItem="k2g-iy-0ph" firstAttribute="width" secondItem="NCl-1H-tfi" secondAttribute="width" id="mDF-0n-jCd"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nrp-hR-lNl">
+                                <rect key="frame" x="458" y="55" width="160" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Delete Resources"/>
+                                <connections>
+                                    <action selector="deleteRezzing:" destination="kDY-r4-Pcj" eventType="touchUpInside" id="2Hi-XT-0dG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="GwJ-fG-nAf"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -4261,6 +4270,7 @@ Teachers Can:
                     <navigationItem key="navigationItem" id="JX5-ct-1mz"/>
                     <connections>
                         <outlet property="ba" destination="loL-s0-nqj" id="cKP-NZ-D5b"/>
+                        <outlet property="deleteRez" destination="Nrp-hR-lNl" id="zPF-A3-eVZ"/>
                         <outlet property="resAddInfo" destination="U3Z-Nu-Bvt" id="GYQ-XC-TP3"/>
                         <outlet property="resAddress" destination="2Fb-nX-BH5" id="sx4-dt-FJd"/>
                         <outlet property="resCat" destination="k2g-iy-0ph" id="hDk-w0-TzT"/>
@@ -4272,7 +4282,7 @@ Teachers Can:
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G0t-Ly-Dqu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3407" y="145"/>
+            <point key="canvasLocation" x="3406.5" y="145"/>
         </scene>
         <!--New Or Existing-->
         <scene sceneID="guk-eH-hYz">
