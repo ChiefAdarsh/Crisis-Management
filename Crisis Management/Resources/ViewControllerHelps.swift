@@ -15,10 +15,25 @@ class HelpViewController: UIViewController {
     static var empty = [String]()
     @IBOutlet weak var sheesh: UITableView!
     static var tb: UITableView!
+    var isDeleting = false
     
     
     @IBOutlet var stackView: UIStackView!
     
+    @IBOutlet weak var deleteResources: UIButton!
+    
+    @IBAction func deleteCatt(_ sender: Any) {
+        let tableViewEditingMode = sheesh.isEditing
+        sheesh.setEditing(!tableViewEditingMode, animated: true)
+        if(isDeleting){
+            isDeleting = false
+            deleteResources.setTitle("Delete Categories", for: .normal)
+        }
+        else{
+            isDeleting = true
+            deleteResources.setTitle("Done Deleting", for: .normal)
+        }
+    }
     
     
     
@@ -40,15 +55,16 @@ class HelpViewController: UIViewController {
 
         
         for yeahh in yourArray{
+            if(!HelpViewController.empty.contains("Food")){
+                HelpViewController.empty.append("Food")
+            }
             if(!HelpViewController.empty.contains(yeahh.category)){
                 //if(yeahh.category != "Housing" && yeahh.category != "Shelter" && yeahh.category != "General Health" && yeahh.category != "Mental Health" && yeahh.category != "Aids and HIV" && yeahh.category != "Substance Abuse" && yeahh.category != "Pregnancy"){
                     HelpViewController.empty.append(yeahh.category)
                 //}
                 
             }
-            if(!HelpViewController.empty.contains("Food")){
-                HelpViewController.empty.append("Food")
-            }
+            
             
         }
         
@@ -110,5 +126,21 @@ extension HelpViewController: UITableViewDataSource, UITableViewDelegate{
         ViewControllerResPage.category = HelpViewController.empty[indexPath.row]
     }
     
+    func tableView(_ tableView: UITableView, moveRowAt
+    fromIndexPath: IndexPath, to: IndexPath) {
+        let movedEmoji = HelpViewController.empty.remove(at: fromIndexPath.row)
+        HelpViewController.empty.insert(movedEmoji, at: to.row)
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+      if editingStyle == .delete {
+        print("Deleted")
+
+          HelpViewController.empty.remove(at: indexPath.row)
+        self.sheesh.deleteRows(at: [indexPath], with: .automatic)
+      }
+    }
+    
+   
     
 }
