@@ -10,11 +10,9 @@ import MobileCoreServices
 import UniformTypeIdentifiers
 
 extension String {
-
     var numberOfLines: Int {
         return self.components(separatedBy: "\n").count
     }
-
 }
 
 @main
@@ -38,6 +36,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             hasAlreadyLaunched = true
         }else{
             UserDefaults.standard.set(true, forKey: "hasAlreadyLaunched")
+        }
+        
+        if let dataUrl = URL(string: "http://student-central-resources-default-rtdb.firebaseio.com/users.json") {
+           URLSession.shared.dataTask(with: dataUrl) { data, response, error in
+              if let data = data {
+                 if let jsonString = String(data: data, encoding: .utf8) {
+                    print("json:", jsonString)
+                 }
+               }
+           }.resume()
         }
         
         AppDelegate.numResourceURL = AppDelegate.documentsDirectory.appendingPathComponent("numResource")

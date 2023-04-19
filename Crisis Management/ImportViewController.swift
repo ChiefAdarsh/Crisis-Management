@@ -22,7 +22,18 @@ class ImportViewController: UIViewController, UIDocumentPickerDelegate {
         let saveAction = UIAlertAction(title: "Import", style: UIAlertAction.Style.default, handler: { alert -> Void in
             let textField = (alertController?.textFields![0])! as UITextField
             let url = textField.text!
-            print(url)
+            
+            if let dataUrl = URL(string: "https://student-central-resources-default-rtdb.firebaseio.com/users.json") {
+               URLSession.shared.dataTask(with: dataUrl) { data, response, error in
+                  if let data = data {
+                     if let jsonString = String(data: data, encoding: .utf8) {
+                        print("json:", jsonString)
+                     }
+                   }
+               }.resume()
+            }
+            
+//            print(url)
         })
         let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: {(action : UIAlertAction!) -> Void in })
         
