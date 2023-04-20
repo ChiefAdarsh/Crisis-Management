@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  Crisis Management
 //
-//  Created by Adarsh Goura on 11/1/22.
+//  Created by Yadushan on 11/1/22.
 //
 
 import UIKit

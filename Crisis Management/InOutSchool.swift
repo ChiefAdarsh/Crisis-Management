@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  Crisis Management
 //
-//  Created by Adarsh Goura on 11/1/22.
+//  Created by Rushil Patel on 11/1/22.
 //
 
 import UIKit

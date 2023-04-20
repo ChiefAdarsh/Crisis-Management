@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Crisis Management
 //
-//  Created by Adarsh Goura on 11/1/22.
+//  Created by Rushil and Yadushan on 11/1/22.
 //hi
 
 import UIKit
