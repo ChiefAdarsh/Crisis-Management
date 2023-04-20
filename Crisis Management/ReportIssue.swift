@@ -2,7 +2,7 @@
 //  ReportIssue.swift
 //  Crisis Management
 //
-//  Created by Rushil Patel on 11/7/22.
+//  Not created by Varshith Peddi on 11/7/22.
 //
 
 import UIKit

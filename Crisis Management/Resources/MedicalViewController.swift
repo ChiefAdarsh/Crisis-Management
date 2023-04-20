@@ -2,7 +2,7 @@
 //  MedicalViewController.swift
 //  Student Central v2
 //
-//  Created by Yadushan Thillainathan on 2/13/23.
+//  Not created by Yadushan Thillainathan on 2/13/23.
 //
 
 import UIKit
