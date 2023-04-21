@@ -28,6 +28,7 @@
 		65E79A0E29A6B39200E848F1 /* StudentHelpTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E79A0D29A6B39200E848F1 /* StudentHelpTableViewController.swift */; };
 		7A8943F82919CAA700C53543 /* ReportIssue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8943F72919CAA700C53543 /* ReportIssue.swift */; };
 		7A8943FA2919DBAB00C53543 /* CallAdmin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8943F92919DBAB00C53543 /* CallAdmin.swift */; };
+		87347E7D29F1AB89002094A1 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87347E7C29F1AB89002094A1 /* WelcomeViewController.swift */; };
 		B2D16B4F29C8DEB7007A30B2 /* CHCSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = B2D16B4D29C8DEB7007A30B2 /* CHCSVParser.m */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +57,7 @@
 		65E79A0D29A6B39200E848F1 /* StudentHelpTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentHelpTableViewController.swift; sourceTree = "<group>"; };
 		7A8943F72919CAA700C53543 /* ReportIssue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportIssue.swift; sourceTree = "<group>"; };
 		7A8943F92919DBAB00C53543 /* CallAdmin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallAdmin.swift; sourceTree = "<group>"; };
+		87347E7C29F1AB89002094A1 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		B2D16B4C29C8DEB6007A30B2 /* Crisis Management-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Crisis Management-Bridging-Header.h"; sourceTree = "<group>"; };
 		B2D16B4D29C8DEB7007A30B2 /* CHCSVParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHCSVParser.m; sourceTree = "<group>"; };
 		B2D16B4E29C8DEB7007A30B2 /* CHCSVParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHCSVParser.h; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				650C6E9629DB538C00E4EA2C /* Crisis Management.entitlements */,
+				87347E7C29F1AB89002094A1 /* WelcomeViewController.swift */,
 				6578089D29118D2C00E72F43 /* AppDelegate.swift */,
 				B2D16B4E29C8DEB7007A30B2 /* CHCSVParser.h */,
 				B2D16B4D29C8DEB7007A30B2 /* CHCSVParser.m */,
@@ -202,6 +205,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				657808A229118D2C00E72F43 /* InOutSchool.swift in Sources */,
+				87347E7D29F1AB89002094A1 /* WelcomeViewController.swift in Sources */,
 				659487DD29BA4B7100400A9C /* newOrExisting.swift in Sources */,
 				65E79A0829A6B28900E848F1 /* MedicalViewController.swift in Sources */,
 				659487DB29BA4B5600400A9C /* TableViewLabel.swift in Sources */,
