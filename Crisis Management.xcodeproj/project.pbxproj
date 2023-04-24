@@ -17,6 +17,7 @@
 		657808A529118D2C00E72F43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 657808A329118D2C00E72F43 /* Main.storyboard */; };
 		657808A729118D2D00E72F43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 657808A629118D2D00E72F43 /* Assets.xcassets */; };
 		657808AA29118D2D00E72F43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 657808A829118D2D00E72F43 /* LaunchScreen.storyboard */; };
+		657E0B7329F70899008B3DEF /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657E0B7229F70899008B3DEF /* WelcomeViewController.swift */; };
 		659487D929BA4B1E00400A9C /* RecsourcePullDownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659487D829BA4B1E00400A9C /* RecsourcePullDownViewController.swift */; };
 		659487DB29BA4B5600400A9C /* TableViewLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659487DA29BA4B5600400A9C /* TableViewLabel.swift */; };
 		659487DD29BA4B7100400A9C /* newOrExisting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659487DC29BA4B7100400A9C /* newOrExisting.swift */; };
@@ -45,6 +46,7 @@
 		657808A629118D2D00E72F43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		657808A929118D2D00E72F43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		657808AB29118D2D00E72F43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		657E0B7229F70899008B3DEF /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		659487D829BA4B1E00400A9C /* RecsourcePullDownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecsourcePullDownViewController.swift; sourceTree = "<group>"; };
 		659487DA29BA4B5600400A9C /* TableViewLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewLabel.swift; sourceTree = "<group>"; };
 		659487DC29BA4B7100400A9C /* newOrExisting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newOrExisting.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 			children = (
 				650C6E9629DB538C00E4EA2C /* Crisis Management.entitlements */,
 				6578089D29118D2C00E72F43 /* AppDelegate.swift */,
+				657E0B7229F70899008B3DEF /* WelcomeViewController.swift */,
 				B2D16B4E29C8DEB7007A30B2 /* CHCSVParser.h */,
 				B2D16B4D29C8DEB7007A30B2 /* CHCSVParser.m */,
 				B2446FF829A7F4B00077691B /* Resources */,
@@ -202,6 +205,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				657808A229118D2C00E72F43 /* InOutSchool.swift in Sources */,
+				657E0B7329F70899008B3DEF /* WelcomeViewController.swift in Sources */,
 				659487DD29BA4B7100400A9C /* newOrExisting.swift in Sources */,
 				65E79A0829A6B28900E848F1 /* MedicalViewController.swift in Sources */,
 				659487DB29BA4B5600400A9C /* TableViewLabel.swift in Sources */,
