@@ -143,8 +143,10 @@ extension ViewControllerResPage: UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
       if editingStyle == .delete {
         print("Deleted")
-
-          print(resources.remove(at: indexPath.row))
+          print(resources.count)
+         resources.remove(at: indexPath.row)
+          print("------------------------")
+          print(resources.count)
         self.someTableView.deleteRows(at: [indexPath], with: .automatic)
       }
     }
