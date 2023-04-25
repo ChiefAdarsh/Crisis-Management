@@ -3074,7 +3074,7 @@ Teachers Can:
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OdT-lX-cSn">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OdT-lX-cSn">
                                 <rect key="frame" x="268" y="131" width="584" height="49"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="584" id="jkr-1F-SEm"/>
@@ -3549,6 +3549,7 @@ Teachers Can:
                             <color key="tintColor" systemColor="labelColor"/>
                         </barButtonItem>
                     </navigationItem>
+                    <value key="contentSizeForViewInPopover" type="size" width="1119" height="819"/>
                     <connections>
                         <outlet property="fi5" destination="qx2-B8-3rb" id="HkC-Fb-nYN"/>
                         <outlet property="fo4" destination="xJj-bi-X5Y" id="Nfr-d2-U8J"/>
