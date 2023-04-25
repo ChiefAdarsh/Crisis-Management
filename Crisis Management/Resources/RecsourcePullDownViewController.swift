@@ -88,13 +88,20 @@ class ResourcesPullDownViewController: UIViewController {
                 try? jsonData.write(to: AppDelegate.numResourceURL, options: .noFileProtection)
             }
             
+            if AppDelegate.archiveURLs.isEmpty {
+                AppDelegate.archiveURLs.append(AppDelegate.documentsDirectory.appendingPathComponent("resource1")
+                    .appendingPathExtension("plist"))
+            }
+            
+            print("count:", AppDelegate.extraResources.count)
             for i in 0...AppDelegate.extraResources.count-1 {
+                print("i:", i)
                 let resource = AppDelegate.extraResources[i]
                 let jsonEncoder = JSONEncoder()
                 if let jsonData = try? jsonEncoder.encode(resource),
                    let jsonString = String(data: jsonData, encoding: .utf8) {
                     print(jsonString)
-
+                    print("archiveurls:", AppDelegate.archiveURLs)
                     try? jsonData.write(to: AppDelegate.archiveURLs[i], options: .noFileProtection)
                 }
             }
