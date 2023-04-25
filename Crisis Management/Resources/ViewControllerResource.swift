@@ -145,6 +145,7 @@ extension ViewControllerResPage: UITableViewDataSource, UITableViewDelegate{
         print("Deleted")
           print(resources.count)
          resources.remove(at: indexPath.row)
+          yourArray.remove(at: indexPath.row)
           print("------------------------")
           print(resources.count)
         self.someTableView.deleteRows(at: [indexPath], with: .automatic)

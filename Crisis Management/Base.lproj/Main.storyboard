@@ -2623,7 +2623,7 @@ Cg
                                 <rect key="frame" x="310" y="100" width="500" height="619"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IWr-IJ-NNZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="500" height="139.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="500" height="259.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="270" id="TKz-QU-p5D"/>
                                         </constraints>
@@ -2635,18 +2635,8 @@ Cg
                                             <action selector="importDataBut:" destination="UtX-Qj-VYh" eventType="touchUpInside" id="bVM-SC-fES"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Jr-jZ-6jg">
-                                        <rect key="frame" x="0.0" y="240" width="500" height="139.5"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="270" id="N3t-Eh-10s"/>
-                                        </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" title="Manually Import" cornerStyle="medium">
-                                            <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="40"/>
-                                        </buttonConfiguration>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mPN-rt-gb7">
-                                        <rect key="frame" x="0.0" y="479" width="500" height="139.5"/>
+                                        <rect key="frame" x="0.0" y="360" width="500" height="259.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="270" id="Rkw-NN-zUa"/>
                                         </constraints>
@@ -2660,10 +2650,8 @@ Cg
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="mPN-rt-gb7" firstAttribute="top" secondItem="0Jr-jZ-6jg" secondAttribute="bottom" constant="100" id="Mkv-Fx-eu7"/>
                                     <constraint firstItem="mPN-rt-gb7" firstAttribute="height" secondItem="IWr-IJ-NNZ" secondAttribute="height" id="SQg-wO-pVG"/>
                                     <constraint firstAttribute="width" constant="500" id="VC2-lz-l70"/>
-                                    <constraint firstItem="0Jr-jZ-6jg" firstAttribute="height" secondItem="IWr-IJ-NNZ" secondAttribute="height" id="hxq-I2-dBa"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -4195,8 +4183,8 @@ Teachers Can:
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="58" translatesAutoresizingMaskIntoConstraints="NO" id="2KG-Ve-HHN">
                                 <rect key="frame" x="470" y="98" width="629" height="636"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NCl-1H-tfi">
-                                        <rect key="frame" x="0.0" y="0.0" width="629" height="206"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NCl-1H-tfi">
+                                        <rect key="frame" x="0.0" y="0.0" width="629" height="59"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="59" id="9uH-Rn-c9l"/>
                                         </constraints>
@@ -4204,8 +4192,8 @@ Teachers Can:
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k2g-iy-0ph">
-                                        <rect key="frame" x="0.0" y="264" width="629" height="60"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k2g-iy-0ph">
+                                        <rect key="frame" x="0.0" y="117" width="629" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="xUf-J8-tgh"/>
                                         </constraints>
@@ -4213,8 +4201,8 @@ Teachers Can:
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sJe-UQ-0TO">
-                                        <rect key="frame" x="0.0" y="382" width="629" height="40"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sJe-UQ-0TO">
+                                        <rect key="frame" x="0.0" y="235" width="629" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="PqP-Cy-txV"/>
                                         </constraints>
@@ -4222,8 +4210,8 @@ Teachers Can:
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Fb-nX-BH5">
-                                        <rect key="frame" x="0.0" y="480" width="629" height="40"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Fb-nX-BH5">
+                                        <rect key="frame" x="0.0" y="333" width="629" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="3kN-K6-3Hl"/>
                                         </constraints>
@@ -4231,8 +4219,8 @@ Teachers Can:
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AZR-KP-NyX">
-                                        <rect key="frame" x="0.0" y="578" width="629" height="0.0"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AZR-KP-NyX">
+                                        <rect key="frame" x="0.0" y="431" width="629" height="75"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="75" id="fyc-b4-9JT"/>
                                         </constraints>
@@ -4240,8 +4228,8 @@ Teachers Can:
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="23" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U3Z-Nu-Bvt">
-                                        <rect key="frame" x="0.0" y="636" width="629" height="0.0"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="23" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U3Z-Nu-Bvt">
+                                        <rect key="frame" x="0.0" y="564" width="629" height="72"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="365" id="rww-OI-kNN"/>
                                         </constraints>
