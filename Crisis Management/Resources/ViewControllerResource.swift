@@ -144,7 +144,7 @@ extension ViewControllerResPage: UITableViewDataSource, UITableViewDelegate{
       if editingStyle == .delete {
         print("Deleted")
 
-          resources.remove(at: indexPath.row)
+          print(resources.remove(at: indexPath.row))
         self.someTableView.deleteRows(at: [indexPath], with: .automatic)
       }
     }
