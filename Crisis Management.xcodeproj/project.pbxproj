@@ -372,7 +372,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Crisis Management/Crisis Management.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = FPP8KJ4225;
+				DEVELOPMENT_TEAM = ZACY5J55B2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Crisis Management/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Crisis Management";
