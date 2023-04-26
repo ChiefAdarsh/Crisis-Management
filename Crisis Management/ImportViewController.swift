@@ -160,35 +160,115 @@ class ImportViewController: UIViewController, UIDocumentPickerDelegate {
     
     func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentAt url: URL) {
         
-        print(url)
+//        print(url)
+//        var urlString = url.absoluteString
+//        print("AAA file was selected")
+//
+//        if urlString.contains("test.csv") {
+//            print("resources file selected")
+//            let rows = NSArray(contentsOfCSVURL: url, options: CHCSVParserOptions.sanitizesFields) as! [[String]]
+//            var countingHere = 0
+//            var che = false
+//            for row in rows{
+//                //print(row)
+//                if countingHere == 0{
+//
+//                }
+//                else{
+//                    var tempResource = Resource(category: row[1], name: row[0], contact: row[2], address: row[3], city: "", state: "", zip: "", website: row[4], addInfo: row[5])
+//                    for re in yourArray{
+//                        if re.name == row[0]{
+//                            che = true
+//                        }
+//
+//                    }
+//                    if che == false{
+//                        yourArray.append(tempResource)
+//                    }
+//                    che = false
+//
+//                }
+//                countingHere+=1
+//            }
+//        } else if urlString.contains("admintemplate.csv") {
+//            print("admin file selected")
+//            let rows = NSArray(contentsOfCSVURL: url, options: CHCSVParserOptions.sanitizesFields) as! [[String]]
+//            print(rows)
+//            print(rows.count)
+//
+//            for i in 0...rows.count-1 {
+//                print(rows[i][0])
+//                print(rows[i][0].contains("IMAGE"))
+//                if (rows[i][0].contains("IMAGE") == false) {
+//                    var newAdmin = Admin(imgStr: rows[i][0], adminType: rows[i][1].lowercased(), lastName: rows[i][2], firstName: rows[i][3], username: rows[i][4], callExt: Int(rows[i][5])!, adminTypeDetailed: rows[i][6])
+//                    adminList.append(newAdmin)
+//                }
+//                for admin in adminList {
+//                    if admin.adminType == "p" {
+//                        print("Principal \(admin.fullName)")
+//                        principalList.append(admin)
+//                    } else if admin.adminType == "c" {
+//                        print("Counselor \(admin.fullName)")
+//                        counselorList.append(admin)
+//                    } else {
+//                        print(admin.fullName)
+//                    }
+//                }
+//            }
+//        }
+        
+        print("url:", url)
         var urlString = url.absoluteString
-        print("a file was selected")
+        print("adfjkhgkjfd file was selected")
         
         if urlString.contains("test.csv") {
             print("resources file selected")
             let rows = NSArray(contentsOfCSVURL: url, options: CHCSVParserOptions.sanitizesFields) as! [[String]]
+            print("AAAADARSH")
             var countingHere = 0
             var che = false
-            for row in rows{
-                //print(row)
-                if countingHere == 0{
+            for row in rows {
+                print("row:",row)
+                var make = Resource(category: row[1], name: row[0], contact: row[2], address: row[3], city: "", state: "", zip: "", website: row[4], addInfo: row[5])
+                for re in yourArray{
+                    if re.name == row[0]{
+                        che = true
+                    }
                     
                 }
-                else{
-                    var tempResource = Resource(category: row[1], name: row[0], contact: row[2], address: row[3], city: "", state: "", zip: "", website: row[4], addInfo: row[5])
-                    for re in yourArray{
-                        if re.name == row[0]{
-                            che = true
+                print("che:", che)
+                if che == false {
+                    print("TRUEE")
+                    print(make.category + make.name + make.contact + make.address + make.website + make.addInfo)
+                    yourArray.append(make)
+                    AppDelegate.extraResources.append(make)
+                    //HelpViewController.empty.append(selectedCategory)
+                    print(HelpViewController.empty)
+                    AppDelegate.numOfResources += 1
+                    let numResource = numResource(numOfResources: AppDelegate.numOfResources)
+                    
+                    AppDelegate.archiveURLs.append(AppDelegate.documentsDirectory.appendingPathComponent("resource\(AppDelegate.numOfResources)").appendingPathExtension("plist"))
+                    
+                    let jsonEncoder = JSONEncoder()
+                    if let jsonData = try? jsonEncoder.encode(numResource),
+                       let jsonString = String(data: jsonData, encoding: .utf8) {
+                        print(jsonString)
+
+                        try? jsonData.write(to: AppDelegate.numResourceURL, options: .noFileProtection)
+                    }
+                    
+                    for i in 0...AppDelegate.extraResources.count-1 {
+                        let resource = AppDelegate.extraResources[i]
+                        let jsonEncoder = JSONEncoder()
+                        if let jsonData = try? jsonEncoder.encode(resource),
+                           let jsonString = String(data: jsonData, encoding: .utf8) {
+                            print(jsonString)
+
+                            try? jsonData.write(to: AppDelegate.archiveURLs[i], options: .noFileProtection)
                         }
-                        
                     }
-                    if che == false{
-                        yourArray.append(tempResource)
-                    }
-                    che = false
-                    
                 }
-                countingHere+=1
+                che = false
             }
         } else if urlString.contains("admintemplate.csv") {
             print("admin file selected")
