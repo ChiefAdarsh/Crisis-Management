@@ -25,6 +25,7 @@ class ResourcesPullDownViewController: UIViewController {
     @IBOutlet weak var enterAddInfo: UITextField!
     @IBOutlet weak var erro: UILabel!
     @IBOutlet weak var creat3: UIButton!
+
     let transparentView = UIView()
     let tableView = UITableView()
     var selectedCategory = ""
@@ -56,7 +57,29 @@ class ResourcesPullDownViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(CellClass.self, forCellReuseIdentifier: "Cell")
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
     }
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        print("Hello")
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            if view.frame.origin.y == 0 {
+                self.view.frame.origin.y -= keyboardSize.height-6*enterWebsite.frame.height
+                self.view.frame.origin.y -= keyboardSize.height-6*enterAddInfo.frame.height
+            }
+        }
+    }
+    
+    @objc func keyboardWillHide(notification: NSNotification) {
+        if view.frame.origin.y != 0 {
+            self.view.frame.origin.y = 0
+        }
+    }
+    
+
     
     @IBAction func createRes(_ sender: Any) {
         if !enterCat.hasText && selectedCategory.isEmpty && !enterName.hasText {
