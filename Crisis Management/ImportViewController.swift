@@ -236,6 +236,10 @@ class ImportViewController: UIViewController, UIDocumentPickerDelegate {
                     }
                     
                 }
+                if countingHere == 0 {
+                    countingHere += 1
+                    continue
+                }
                 print("che:", che)
                 if che == false {
                     print("TRUEE")
