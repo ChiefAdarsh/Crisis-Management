@@ -33,7 +33,8 @@ class ResourcesPullDownViewController: UIViewController {
     var sele = "";
     var dataSource = [String]()
     var boool: Bool = false
-    
+    var bool: Bool = false
+    var bol: Bool = false
     
     //PARAMETERS
     static var newCat: Bool!
@@ -78,12 +79,27 @@ class ResourcesPullDownViewController: UIViewController {
         boool = true
     }
     
+    @IBAction func addressEdited(_ sender: Any) {
+        print("Hello")
+        bol = true
+    }
+    
     @objc func keyboardWillShow(notification: NSNotification) {
-        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue, boool {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
             if view.frame.origin.y == 0 {
-                self.view.frame.origin.y -= keyboardSize.height-6*enterWebsite.frame.height
+                if boool {
+                    self.view.frame.origin.y -= keyboardSize.height-6*enterWebsite.frame.height
+                    boool = false
+                }
+                if bool {
+                    self.view.frame.origin.y -= keyboardSize.height-6*enterAddInfo.frame.height
+                    bool = false
+                }
+                if bol {
+                    self.view.frame.origin.y -= keyboardSize.height-6*enterAddress.frame.height
+                    bol = false
+                }
             }
-            boool = false
         }
     }
     @objc func keyboardWillHide(notification: NSNotification) {
@@ -94,19 +110,9 @@ class ResourcesPullDownViewController: UIViewController {
     
     @IBAction func addInfoEdited(_ sender: Any) {
         print("Hello")
-        func keyboardWillShow(notification: NSNotification) {
-            if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
-                if view.frame.origin.y == 0 {
-                    self.view.frame.origin.y -= keyboardSize.height-6*enterAddInfo.frame.height
-                }
-            }
-        }
-        func keyboardWillHide(notification: NSNotification) {
-            if view.frame.origin.y != 0 {
-                self.view.frame.origin.y = 0
-            }
-        }
+        bool = true
     }
+    
     
     
 //    @objc func keyboardWillHide(notification: NSNotification) {

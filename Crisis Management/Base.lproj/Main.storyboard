@@ -4219,8 +4219,8 @@ Teachers Can:
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AZR-KP-NyX">
-                                        <rect key="frame" x="0.0" y="431" width="629" height="75"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AZR-KP-NyX">
+                                        <rect key="frame" x="0.0" y="431" width="629" height="147"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="75" id="fyc-b4-9JT"/>
                                         </constraints>
@@ -4228,8 +4228,8 @@ Teachers Can:
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="23" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U3Z-Nu-Bvt">
-                                        <rect key="frame" x="0.0" y="564" width="629" height="72"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="23" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U3Z-Nu-Bvt">
+                                        <rect key="frame" x="0.0" y="636" width="629" height="0.0"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="365" id="rww-OI-kNN"/>
                                         </constraints>
@@ -4555,6 +4555,9 @@ Teachers Can:
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="street-address"/>
+                                <connections>
+                                    <action selector="addressEdited:" destination="IKQ-93-9pZ" eventType="editingDidBegin" id="IUS-tj-erk"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Website" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Flu-Jo-dDL" userLabel="websiteText">
                                 <rect key="frame" x="171" y="431" width="513" height="34"/>
