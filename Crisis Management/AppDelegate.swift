@@ -15,6 +15,30 @@ extension String {
     }
 }
 
+extension StringProtocol {
+    func index<S: StringProtocol>(of string: S, options: String.CompareOptions = []) -> Index? {
+        range(of: string, options: options)?.lowerBound
+    }
+    func endIndex<S: StringProtocol>(of string: S, options: String.CompareOptions = []) -> Index? {
+        range(of: string, options: options)?.upperBound
+    }
+    func indices<S: StringProtocol>(of string: S, options: String.CompareOptions = []) -> [Index] {
+        ranges(of: string, options: options).map(\.lowerBound)
+    }
+    func ranges<S: StringProtocol>(of string: S, options: String.CompareOptions = []) -> [Range<Index>] {
+        var result: [Range<Index>] = []
+        var startIndex = self.startIndex
+        while startIndex < endIndex,
+            let range = self[startIndex...]
+                .range(of: string, options: options) {
+                result.append(range)
+                startIndex = range.lowerBound < range.upperBound ? range.upperBound :
+                    index(range.lowerBound, offsetBy: 1, limitedBy: endIndex) ?? endIndex
+        }
+        return result
+    }
+}
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -38,15 +62,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UserDefaults.standard.set(true, forKey: "hasAlreadyLaunched")
         }
         
-        if let dataUrl = URL(string: "http://student-central-resources-default-rtdb.firebaseio.com/users.json") {
-           URLSession.shared.dataTask(with: dataUrl) { data, response, error in
-              if let data = data {
-                 if let jsonString = String(data: data, encoding: .utf8) {
-                    print("json:", jsonString)
-                 }
-               }
-           }.resume()
-        }
+//        if let dataUrl = URL(string: "https://student-central-resources-default-rtdb.firebaseio.com/users.json") {
+//           URLSession.shared.dataTask(with: dataUrl) { data, response, error in
+//              if let data = data {
+//
+//                 if let jsonString = String(data: data, encoding: .utf8) {
+//                     let resourceS = jsonString[jsonString.index(jsonString.startIndex, offsetBy: 24)...jsonString.index(jsonString.index(of: "teacherInfo")!, offsetBy: -3)]
+//
+//                    print("jsonnn:", resourceS)
+//                     let resourceData = resourceS.data(using: .utf8)!
+//
+//                     do {
+//                         let f = try JSONDecoder().decode([String: Resource].self, from: resourceData)
+//                         print(f.values)
+//                         yourArray.append(contentsOf: f.values)
+//                     } catch {
+//                         print("error:", error)
+//                     }
+//                 }
+//               }
+//           }.resume()
+//        }
         
         AppDelegate.numResourceURL = AppDelegate.documentsDirectory.appendingPathComponent("numResource")
             .appendingPathExtension("plist")

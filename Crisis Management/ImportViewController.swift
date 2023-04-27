@@ -23,11 +23,53 @@ class ImportViewController: UIViewController, UIDocumentPickerDelegate {
             let textField = (alertController?.textFields![0])! as UITextField
             let url = textField.text!
             
-            if let dataUrl = URL(string: "https://student-central-resources-default-rtdb.firebaseio.com/users.json") {
+            if let dataUrl = URL(string: url) {
                URLSession.shared.dataTask(with: dataUrl) { data, response, error in
                   if let data = data {
+                      
                      if let jsonString = String(data: data, encoding: .utf8) {
-                        print("json:", jsonString)
+                         let resourceS = jsonString[jsonString.index(jsonString.startIndex, offsetBy: 24)...jsonString.index(jsonString.index(of: "teacherInfo")!, offsetBy: -3)]
+                         
+                        print("jsonnn:", resourceS)
+                         let resourceData = resourceS.data(using: .utf8)!
+                        
+                         do {
+                             let f = try JSONDecoder().decode([String: Resource].self, from: resourceData)
+                             print(f.values)
+                             yourArray.append(contentsOf: f.values)
+                             AppDelegate.extraResources.append(contentsOf: f.values)
+                             let im = AppDelegate.numOfResources
+                             AppDelegate.numOfResources += f.values.count
+                             
+                             print("count:", AppDelegate.extraResources.count)
+                             for i in 0...AppDelegate.extraResources.count-1 {
+                                 print("i:", i)
+                                 AppDelegate.archiveURLs.append(AppDelegate.documentsDirectory.appendingPathComponent("resource\(im+i)")
+                                     .appendingPathExtension("plist"))
+                                 let resource = AppDelegate.extraResources[i]
+                                 let jsonEncoder = JSONEncoder()
+                                 if let jsonData = try? jsonEncoder.encode(resource),
+                                    let jsonString = String(data: jsonData, encoding: .utf8) {
+                                     print(jsonString)
+                                     print("archiveurls:", AppDelegate.archiveURLs)
+                                     try? jsonData.write(to: AppDelegate.archiveURLs[im+i], options: .noFileProtection)
+                                 }
+                             }
+                             
+                             let numResource = numResource(numOfResources: AppDelegate.numOfResources)
+                             
+                             let jsonEncoder = JSONEncoder()
+                             if let jsonData = try? jsonEncoder.encode(numResource),
+                                let jsonString = String(data: jsonData, encoding: .utf8) {
+                                 print(jsonString)
+
+                                 try? jsonData.write(to: AppDelegate.numResourceURL, options: .noFileProtection)
+                             }
+                             
+                             
+                         } catch {
+                             print("error:", error)
+                         }
                      }
                    }
                }.resume()
