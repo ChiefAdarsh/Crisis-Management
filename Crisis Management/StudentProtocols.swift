@@ -86,41 +86,110 @@ class ChecklistViewController: UIViewController, BackTitle {
     }
     
     @IBAction func submitPressed(_ sender: Any) {
-        ChecklistViewController.situations = criterias
-        print("Submit button pressed")
+        if(selected1 == false){
+            check1.backgroundColor = .systemRed
+        }
+        if(selected2 == false){
+            check2.backgroundColor = .systemRed
+        }
+        if(selected3 == false){
+            check3.backgroundColor = .systemRed
+        }
+        if(selected4 == false){
+            check4.backgroundColor = .systemRed
+        }
+        if(selected5 == false){
+            check5.backgroundColor = .systemRed
+        }
+        if(selected1 == true || selected2 == true || selected3 == true || selected4 == true || selected5 == true){
+            check1.backgroundColor = .clear
+            check2.backgroundColor = .clear
+            check3.backgroundColor = .clear
+            check4.backgroundColor = .clear
+            check5.backgroundColor = .clear
+            ChecklistViewController.situations = criterias
+            print("Submit button pressed")
+            guard let vc = (storyboard?.instantiateViewController(withIdentifier: "protocol") as? ProtocolsViewController) else{
+                print("failed to get vc")
+                return
+            }
+            show(vc, sender: nil)
+        }
     }
     
     func updateCheckTitle(button check: UIButton) {
         if check.currentTitle == "" {
             check.setTitle("☑️", for: .normal)
+            check1.backgroundColor = .clear
+            check2.backgroundColor = .clear
+            check3.backgroundColor = .clear
+            check4.backgroundColor = .clear
+            check5.backgroundColor = .clear
         } else {
             check.setTitle("", for: .normal)
         }
     }
+    
+    var selected1 = false
+    var selected2 = false
+    var selected3 = false
+    var selected4 = false
+    var selected5 = false
+    
     @IBAction func check1Pressed(_ sender: Any) {
         updateCheckTitle(button: check1)
+        if(selected1 == false){
+            selected1 = true
+        }
+        else{
+            selected1 = false
+        }
         print("Current title of check 1 is: \"\(check1.currentTitle ?? "nil")\"")
     }
     
     @IBAction func check2Pressed(_ sender: UIButton) {
         updateCheckTitle(button: check2)
+        if(selected2 == false){
+            selected2 = true
+        }
+        else{
+            selected2 = false
+        }
         print("Current title of check 2 is: \"\(check2.currentTitle ?? "nil")\"")
     }
     
     @IBAction func check3Pressed(_ sender: Any) {
         updateCheckTitle(button: check3)
+        if(selected3 == false){
+            selected3 = true
+        }
+        else{
+            selected3 = false
+        }
         print("Current title of check 3 is: \"\(check3.currentTitle ?? "nil")\"")
     }
     
     
     @IBAction func check4Pressed(_ sender: Any) {
         updateCheckTitle(button: check4)
+        if(selected4 == false){
+            selected4 = true
+        }
+        else{
+            selected4 = false
+        }
         print("Current title of check 4 is: \"\(check4.currentTitle ?? "nil")\"")
     }
     
     
     @IBAction func check5Pressed(_ sender: Any) {
         updateCheckTitle(button: check5)
+        if(selected5 == false){
+            selected5 = true
+        }
+        else{
+            selected5 = false
+        }
         print("Current title of check 5 is: \"\(check5.currentTitle ?? "nil")\"")
     }
     
@@ -154,12 +223,12 @@ class ProtocolsViewController: UIViewController, BackTitle {
     // Goes to Call Recommended people screen
 
     @IBAction func CallRecommended(_ sender: Any){
-//         var callAdminController: UIViewController!
-//        if InOutSchoolController.insideSchool {
-//            callAdminController = storyboard!.instantiateViewController(withIdentifier: "adminInSchool") as! CallAdminInSchoolController
-//        } else {
-////            callAdminController = storyboard!.instantiateViewController(withIdentifier: "adminOutSchool") as! CallAdminOutSchoolController
-//        }
-//        self.navigationController?.pushViewController(callAdminController, animated: true)
+         var callAdminController: UIViewController!
+        if InOutSchoolController.insideSchool {
+            callAdminController = storyboard!.instantiateViewController(withIdentifier: "adminInSchool") as! CallAdminInSchoolController
+        } else {
+            callAdminController = storyboard!.instantiateViewController(withIdentifier: "adminOutSchool") as! CallAdminOutSchoolController
+        }
+        self.navigationController?.pushViewController(callAdminController, animated: true)
     }
 }

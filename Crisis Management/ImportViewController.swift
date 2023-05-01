@@ -318,6 +318,8 @@ class ImportViewController: UIViewController, UIDocumentPickerDelegate {
             }
         } else if urlString.contains("admintemplate.csv") {
             print("admin file selected")
+            principalList = []
+            counselorList = []
             let rows = NSArray(contentsOfCSVURL: url, options: CHCSVParserOptions.sanitizesFields) as! [[String]]
             print(rows)
             print(rows.count)

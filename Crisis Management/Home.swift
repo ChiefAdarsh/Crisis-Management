@@ -248,14 +248,13 @@ class HomeViewController: UIViewController, BackTitle, UIDocumentPickerDelegate 
     
     
     @IBAction func callAdminPressed(_ sender: UIButton) {
-        //        var callAdminController: UIViewController!
-        //        if InOutSchoolController.insideSchool {
-        //            callAdminController = storyboard!.instantiateViewController(withIdentifier: "adminInSchool") as! CallAdminInSchoolController
-        //        } else {
-        //
-        //        }
-        //        self.navigationController?.pushViewController(callAdminController, animated: true)
-        //    }
+        var callAdminController: UIViewController!
+        if InOutSchoolController.insideSchool {
+            callAdminController = storyboard!.instantiateViewController(withIdentifier: "adminInSchool") as! CallAdminInSchoolController
+        } else {
+            callAdminController = storyboard!.instantiateViewController(withIdentifier: "adminOutSchool") as! CallAdminOutSchoolController
+        }
+        self.navigationController?.pushViewController(callAdminController, animated: true)
     }
 }
 
