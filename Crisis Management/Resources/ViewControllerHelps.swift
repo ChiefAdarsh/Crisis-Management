@@ -135,9 +135,53 @@ extension HelpViewController: UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
       if editingStyle == .delete {
         print("Deleted")
-
+          var category: String = HelpViewController.empty[indexPath.row]
+          
+          print("count:", yourArray.count)
+          var index = 0
+          for _ in 0...yourArray.count-1 {
+              if index > yourArray.count {
+                  continue
+              }
+              let yeahh = yourArray[index]
+              if(yeahh.category == category) {
+                  yourArray.remove(at: index)
+                  index -= 1
+                  AppDelegate.numOfResources -= 1
+                  AppDelegate.archiveURLs.removeLast()
+              }
+              index += 1
+          }
+          
+//          self.sheesh.cellForRow(at: indexPath.row).
           HelpViewController.empty.remove(at: indexPath.row)
         self.sheesh.deleteRows(at: [indexPath], with: .automatic)
+          
+          let numResource = numResource(numOfResources: AppDelegate.numOfResources)
+          
+//          AppDelegate.archiveURLs.append(AppDelegate.documentsDirectory.appendingPathComponent("resource\(AppDelegate.numOfResources)").appendingPathExtension("plist"))
+          
+          let jsonEncoder = JSONEncoder()
+          if let jsonData = try? jsonEncoder.encode(numResource),
+             let jsonString = String(data: jsonData, encoding: .utf8) {
+              print(jsonString)
+
+              try? jsonData.write(to: AppDelegate.numResourceURL, options: .noFileProtection)
+          }
+          print(yourArray)
+          for i in 0...yourArray.count {
+              if i > yourArray.count-1 {
+                  continue
+              }
+              let resource = yourArray[i]
+              let jsonEncoder = JSONEncoder()
+              if let jsonData = try? jsonEncoder.encode(resource),
+                 let jsonString = String(data: jsonData, encoding: .utf8) {
+                  print(jsonString)
+
+                  try? jsonData.write(to: AppDelegate.archiveURLs[i], options: .noFileProtection)
+              }
+          }
       }
     }
     
