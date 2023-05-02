@@ -102,6 +102,7 @@ class ResourcesPullDownViewController: UIViewController {
             }
         }
     }
+    
     @objc func keyboardWillHide(notification: NSNotification) {
         if view.frame.origin.y != 0 {
             self.view.frame.origin.y = 0

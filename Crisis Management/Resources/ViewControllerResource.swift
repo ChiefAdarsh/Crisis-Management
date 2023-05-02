@@ -140,16 +140,65 @@ extension ViewControllerResPage: UITableViewDataSource, UITableViewDelegate{
         resources.insert(movedEmoji2, at: to.row)
     }
     
+//    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+//      if editingStyle == .delete {
+//        print("Deleted")
+//        print(resources.count)
+//        resources.remove(at: indexPath.row)
+//        yourArray.remove(at: indexPath.row)
+//        print("------------------------")
+//        print(resources.count)
+//        print("------------------------")
+//        self.someTableView.deleteRows(at: [indexPath], with: .automatic)
+//      }
+//    }
+    
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
       if editingStyle == .delete {
         print("Deleted")
-          print(resources.count)
-         resources.remove(at: indexPath.row)
-          yourArray.remove(at: indexPath.row)
-          print("------------------------")
-          print(resources.count)
+        print(resources.count)
+        resources.remove(at: indexPath.row)
+        yourArray.remove(at: indexPath.row)
+          AppDelegate.numOfResources -= 1
+          AppDelegate.archiveURLs.removeLast()
+        
+          
+        print("------------------------")
+        print(resources.count)
+        print("------------------------")
         self.someTableView.deleteRows(at: [indexPath], with: .automatic)
+        
+          let numResource = numResource(numOfResources: AppDelegate.numOfResources)
+          
+//          AppDelegate.archiveURLs.append(AppDelegate.documentsDirectory.appendingPathComponent("resource\(AppDelegate.numOfResources)").appendingPathExtension("plist"))
+          
+          let jsonEncoder = JSONEncoder()
+          if let jsonData = try? jsonEncoder.encode(numResource),
+             let jsonString = String(data: jsonData, encoding: .utf8) {
+              print(jsonString)
+
+              try? jsonData.write(to: AppDelegate.numResourceURL, options: .noFileProtection)
+          }
+          print(yourArray)
+          for i in 0...yourArray.count {
+              if i > yourArray.count-1 {
+                  continue
+              }
+              let resource = yourArray[i]
+              let jsonEncoder = JSONEncoder()
+              if let jsonData = try? jsonEncoder.encode(resource),
+                 let jsonString = String(data: jsonData, encoding: .utf8) {
+                  print(jsonString)
+
+                  try? jsonData.write(to: AppDelegate.archiveURLs[i], options: .noFileProtection)
+              }
+          }
+        
       }
+        
+        
+        
+        
     }
     
     
