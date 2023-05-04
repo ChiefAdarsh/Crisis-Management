@@ -431,8 +431,9 @@ var numberStart = "214496"
 var adminList: [Admin] = []
 var principalList: [Admin] = []
 var counselorList: [Admin] = []
-//var emergencyContactsList: [String] = ["Principal: Laura Springer                      6110", "Associate Principal: Melissa Arnold    6122", "Lead Counselor: Ann Cinelli                 6112", "Coppell Police Department                 972-304-3600", "Dallas Police Department                    214-744-4444", "Irving Police Department                     972-723-1010", "Lewisville Police Department              972-219-3600", "Child Protective Services                     800-252-5400", "Dallas County Mobile Crisis                 866-260-8000"]
-var emergencyContactsList: [String] = []
+var emergencyContactsList: [String] = ["Coppell Police Department                 972-304-3600", "Dallas Police Department                    214-744-4444", "Irving Police Department                     972-723-1010", "Lewisville Police Department              972-219-3600", "Child Protective Services                     800-252-5400", "Dallas County Mobile Crisis                 866-260-8000"]
+//var emergencyContactsList: [String] = []
+//"Principal: Laura Springer                      6110", "Associate Principal: Melissa Arnold    6122", "Lead Counselor: Ann Cinelli                 6112",
 
 var selectedAdmin: Admin = Admin(imgStr: "", adminType: "c", lastName: "", firstName: "", username: "", callExt: 0, adminTypeDetailed: "")
 
