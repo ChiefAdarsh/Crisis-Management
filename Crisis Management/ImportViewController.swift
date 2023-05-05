@@ -324,25 +324,25 @@ class ImportViewController: UIViewController, UIDocumentPickerDelegate {
             print(rows)
             print(rows.count)
             
-            for i in 0...rows.count-1 {
-                print(rows[i][0])
-                print(rows[i][0].contains("IMAGE"))
-                if (rows[i][0].contains("IMAGE") == false) {
-                    var newAdmin = Admin(imgStr: rows[i][0], adminType: rows[i][1].lowercased(), lastName: rows[i][2], firstName: rows[i][3], username: rows[i][4], callExt: Int(rows[i][5])!, adminTypeDetailed: rows[i][6])
-                    adminList.append(newAdmin)
-                }
-                for admin in adminList {
-                    if admin.adminType == "p" {
-                        print("Principal \(admin.fullName)")
-                        principalList.append(admin)
-                    } else if admin.adminType == "c" {
-                        print("Counselor \(admin.fullName)")
-                        counselorList.append(admin)
-                    } else {
-                        print(admin.fullName)
-                    }
-                }
-            }
+//            for i in 0...rows.count-1 {
+//                print(rows[i][0])
+//                print(rows[i][0].contains("IMAGE"))
+//                if (rows[i][0].contains("IMAGE") == false) {
+//                    var newAdmin = Admin(imgStr: rows[i][0], adminType: rows[i][1].lowercased(), lastName: rows[i][2], firstName: rows[i][3], username: rows[i][4], callExt: Int(rows[i][5])!, adminTypeDetailed: rows[i][6])
+//                    adminList.append(newAdmin)
+//                }
+//                for admin in adminList {
+//                    if admin.adminType == "p" {
+//                        print("Principal \(admin.fullName)")
+//                        principalList.append(admin)
+//                    } else if admin.adminType == "c" {
+//                        print("Counselor \(admin.fullName)")
+//                        counselorList.append(admin)
+//                    } else {
+//                        print(admin.fullName)
+//                    }
+//                }
+//            }
             
 //
         }
