@@ -497,9 +497,6 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="fu1-dK-1Vi" kind="showDetail" id="w8F-eK-XBa"/>
-                                </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="eXR-yA-Caf" style="IBUITableViewCellStyleDefault" id="pL5-2d-qIK">
                                 <rect key="frame" x="0.0" y="256.5" width="1115" height="100"/>
@@ -519,6 +516,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="fu1-dK-1Vi" kind="showDetail" id="eA6-rx-GZc"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="yBx-1J-H5o" style="IBUITableViewCellStyleDefault" id="aUf-t9-Ue0">
                                 <rect key="frame" x="0.0" y="356.5" width="1115" height="100"/>
@@ -3556,8 +3556,8 @@ Teachers Can:
                         <rect key="frame" x="0.0" y="0.0" width="1115" height="819"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JRs-AH-Hjm">
-                                <rect key="frame" x="127" y="-10" width="450" height="750"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JRs-AH-Hjm">
+                                <rect key="frame" x="332" y="20" width="450" height="750"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Eiu-vA-evr">
                                         <rect key="frame" x="113" y="134" width="224" height="224"/>
@@ -4469,7 +4469,7 @@ Teachers Can:
                                 <rect key="frame" x="308" y="100" width="500" height="619"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tLG-Ne-nYu">
-                                        <rect key="frame" x="0.0" y="0.0" width="500" height="139.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="500" height="259.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="270" id="N2M-Yb-RUP"/>
                                         </constraints>
@@ -4482,7 +4482,7 @@ Teachers Can:
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B1Z-pB-gjk">
-                                        <rect key="frame" x="0.0" y="240" width="500" height="139.5"/>
+                                        <rect key="frame" x="0.0" y="360" width="500" height="259.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="270" id="asP-WV-g56"/>
                                         </constraints>
@@ -4494,24 +4494,9 @@ Teachers Can:
                                             <action selector="importCSV:" destination="74L-S5-C82" eventType="touchUpInside" id="Veb-Kr-w8A"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ee5-Nc-aUU">
-                                        <rect key="frame" x="0.0" y="479" width="500" height="139.5"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="270" id="Qac-vy-oOy"/>
-                                        </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" title="Import Admins" cornerStyle="medium">
-                                            <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="40"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="importCSV:" destination="74L-S5-C82" eventType="touchUpInside" id="O2l-N1-aPE"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="ee5-Nc-aUU" firstAttribute="height" secondItem="tLG-Ne-nYu" secondAttribute="height" id="DZF-B1-acl"/>
                                     <constraint firstItem="B1Z-pB-gjk" firstAttribute="height" secondItem="tLG-Ne-nYu" secondAttribute="height" id="b17-9X-qQT"/>
-                                    <constraint firstItem="ee5-Nc-aUU" firstAttribute="top" secondItem="B1Z-pB-gjk" secondAttribute="bottom" constant="100" id="kcf-uC-OOK"/>
                                     <constraint firstAttribute="width" constant="500" id="mzl-vk-8JI"/>
                                 </constraints>
                             </stackView>
